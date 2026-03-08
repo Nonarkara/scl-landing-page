@@ -1,0 +1,319 @@
+{
+  "meta": {
+    "title": "depa Smart City Leadership",
+    "description": "depa Smart City Leadership 多语言落地页，整合当前课程信息、校友目录与项目影像档案。",
+    "skipToContent": "跳转到主要内容"
+  },
+  "nav": {
+    "home": "首页",
+    "about": "课程设计",
+    "journey": "形式与时间线",
+    "gallery": "图库",
+    "alumni": "校友",
+    "contact": "联系我们",
+    "apply": "depa 官方页面",
+    "programLabel": "depa 高管课程",
+    "changeLanguage": "切换语言",
+    "openMenu": "打开菜单",
+    "closeMenu": "关闭菜单"
+  },
+  "announcement": {
+    "badge": {
+      "open": "官方更新",
+      "closed": "申请已截止",
+      "inSession": "课程进行中",
+      "completed": "课程档案"
+    },
+    "text": {
+      "open": "第 {{cohort}} 期现正接受申请，截止至 {{deadline}}，请以 depa 官方公告页面为准。",
+      "closed": "第 {{cohort}} 期申请已截止。课程结构与来源信息请以 depa 官方页面为准。",
+      "inSession": "第 {{cohort}} 期正在进行中。项目细节仍以 depa 官方页面为准。",
+      "completed": "第 {{cohort}} 期已结束。项目概览仍以 depa 官方页面为准。"
+    },
+    "cta": "打开来源",
+    "ariaClose": "关闭公告"
+  },
+  "hero": {
+    "eyebrow": "depa 高管课程 • SCL #{{cohort}}",
+    "title": "Smart City Leadership",
+    "valueStatement": "一门真正面向管理层的短期课程，帮助领导者更清楚地判断智慧城市工作应当如何被认真地推进。",
+    "subtitle": "SCL 的价值不在于把页面做得像招生广告，而在于让读者迅速把握可信智慧城市项目背后的战略逻辑、制度逻辑与实施逻辑，尤其是在泰国语境下。",
+    "ctaPrimary": "阅读 depa 官方来源",
+    "ctaSecondary": "查看课程结构",
+    "imageAlt": "俯瞰曼谷的 SCL network 参访现场",
+    "imageCaption": "当 cohort 能一起走进真实环境并对照系统如何运作时，这个项目的价值才最清楚。",
+    "status": {
+      "open": "申请开放至 {{deadline}}",
+      "closed": "当前一轮申请已关闭",
+      "inSession": "当前 cohort 正在进行中",
+      "completed": "最近一次公布的 cohort 已结束"
+    },
+    "facts": {
+      "durationLabel": "形式",
+      "durationValue": "{{days}} 天，{{hours}} 小时",
+      "audienceLabel": "参与者",
+      "audienceValue": "公共与私营部门中高层领导者",
+      "modelLabel": "教学方式",
+      "modelValue": "课堂学习、国内考察与 {{speakers}}+ 位讲者",
+      "feeLabel": "费用",
+      "archiveLabel": "校友档案",
+      "archiveValue": "{{cohorts}} 届，共 {{alumni}} 位领导者",
+      "deadlineLabel": "当前状态"
+    },
+    "pointsTitle": "这门课程的真正价值",
+    "points": {
+      "judgment": {
+        "title": "它压缩的是战略判断力。",
+        "description": "重点不只是接触“智慧城市”这个词，而是更快形成判断：什么值得优先做、什么需要追问、一个严肃的城市项目应当长什么样。"
+      },
+      "implementation": {
+        "title": "它讨论的是落地，不是口号。",
+        "description": "官方结构把专家授课和机构参照、实地考察放在一起，使讨论始终贴近真实的运行环境。"
+      },
+      "scope": {
+        "title": "它提供的是一套完整的城市视角。",
+        "description": "环境、交通、能源、治理、人才、经济与宜居性被视为同一系统，而不是分散的主题。"
+      },
+      "investment": {
+        "title": "它要求的投入是有分量的。",
+        "description": "无论时间还是费用，这都更像一项高管层面的正式投入，而不是一次轻量化讲座，这会直接影响 cohort 内部的讨论质量。"
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "课程设计",
+    "title": "为需要明确执行路径的领导者设计的短期课程",
+    "description": "根据 depa 官方说明，SCL 面向需要快速掌握智慧城市项目设计、公共与私营场景中的数字应用，以及多方协同推进机制的管理者。",
+    "audienceTitle": "适合来自以下领域的领导者",
+    "audience": {
+      "public": "中央政府部门",
+      "local": "地方行政机构",
+      "utilities": "基础设施与公用事业",
+      "academic": "高校与研究机构",
+      "private": "私营运营方与解决方案伙伴"
+    },
+    "outcomesTitle": "参与者将获得",
+    "outcomes": {
+      "strategy": {
+        "title": "更清晰的战略框架",
+        "description": "理解一个可信、宜居、且符合城市优先事项的智慧城市项目应具备哪些要素。"
+      },
+      "delivery": {
+        "title": "可操作的落地参照",
+        "description": "看到数字系统、运营方式与城市基础设施在真实组织中的应用方式。"
+      },
+      "network": {
+        "title": "更强的领导者网络",
+        "description": "把政府、学界、公用事业和私营部门参与者连接在同一届 cohort 中。"
+      }
+    },
+    "highlights": {
+      "hours": "学习小时",
+      "days": "课程天数",
+      "experts": "讲者人数",
+      "alumni": "校友记录"
+    },
+    "learningSitesTitle": "官方文章提到的学习参照点",
+    "learningSitesDescription": "SCL #6 官方公告提到的学习内容覆盖公共基础设施、数字运营、创意经济机构，以及沉浸式技术实验室等场景。",
+    "imageAlt": "Smart City Leadership 课堂讨论现场",
+    "imageCaption": "当这门课程被理解为一场关于真实治理与实施的工作讨论，而不是宣传活动时，它的价值会更清楚。",
+    "pillarsTitle": "核心主题",
+    "learningSites": {
+      "site1": "EGAT Learning Center",
+      "site2": "Smart Water Operation Center (SWOC)",
+      "site3": "PROEN Data Center",
+      "site4": "Creative Economy Agency 生态",
+      "site5": "KMITL Interactive Digital Center (KIDC)"
+    },
+    "pillars": {
+      "environment": "智慧环境",
+      "economy": "智慧经济",
+      "mobility": "智慧交通",
+      "energy": "智慧能源",
+      "people": "智慧人才",
+      "living": "智慧生活",
+      "governance": "智慧治理"
+    },
+    "pillarTopics": {
+      "environment": ["空气质量与排放监测", "智能废物管理系统", "防洪与水资源管理"],
+      "economy": ["数字支付与金融科技", "智慧农业技术", "智慧旅游平台"],
+      "mobility": ["智能交通管理", "电动车基础设施与充电", "互联公共交通"],
+      "energy": ["太阳能与可再生能源整合", "智能电网管理", "能效优化系统"],
+      "people": ["数字素养培训", "STEM 人才培养", "市民参与技术"],
+      "living": ["远程医疗与健康科技", "公共安全系统", "生活质量监测"],
+      "governance": ["开放数据平台", "电子政务服务", "公民参与机制"]
+    },
+    "pillarStats": {
+      "environment": "覆盖 37 个智慧城市区域中的 32 个",
+      "economy": "智慧城市项目总投资超 119 亿泰铢",
+      "mobility": "泰国市政当局最关注的领域",
+      "energy": "EGAT + SWOC 为 SCL 考察合作伙伴",
+      "people": "5 届共培训 223 位领导者",
+      "living": "远程医疗已覆盖 18 个府",
+      "governance": "目标：2027 年建成 105 座智慧城市"
+    }
+  },
+  "journey": {
+    "eyebrow": "形式与时间线",
+    "title": "像高管冲刺项目一样组织",
+    "subtitle": "SCL 将课堂教学、现场学习与 cohort 交流结合起来，帮助参与者把政策与技术议题转换为实施视角。",
+    "trackKicker": "学习路径",
+    "trackTitle": "整体体验如何组织",
+    "modes": {
+      "classroom": {
+        "title": "高密度课堂学习",
+        "description": "为需要高信噪比内容的领导者压缩核心信息，而不是拉成长篇学术课程。"
+      },
+      "field": {
+        "title": "国内考察",
+        "description": "参与者可以看到数字系统与运营模式如何在泰国组织中实际运行。"
+      },
+      "network": {
+        "title": "跨部门 cohort 交流",
+        "description": "公共与私营部门参与者同班学习，使 cohort 本身成为协同空间。"
+      }
+    },
+    "schedule": {
+      "status": {
+        "open": "申请开放中",
+        "closed": "申请已关闭",
+        "inSession": "当前课程进行中",
+        "completed": "最近一期已完成"
+      },
+      "title": "当前公布的课程安排",
+      "description": "本区块依据 depa 官方 SCL #6 页面整理，核对日期为 2026 年 3 月 7 日。",
+      "deadlineLabel": "申请截止",
+      "datesLabel": "授课日期",
+      "datesValue": "2026 年 5 月 11、12、18、19、20、25、26 日",
+      "venueLabel": "地点",
+      "venueValue": "曼谷 The Quarter Ladprao by UHG，另含国内考察",
+      "feeLabel": "费用"
+    },
+    "process": {
+      "title": "申请路径",
+      "description": "官方文章说明，申请者应先阅读课程详情，从 depa 下载表格，再通过公布的邮箱提交材料。",
+      "steps": {
+        "review": {
+          "title": "阅读 depa 官方公告",
+          "description": "在源页面确认课程范围、时间安排，以及课程是否适合你的角色。"
+        },
+        "submit": {
+          "title": "下载并通过邮件提交申请",
+          "description": "公告指向下载表格并通过页面列出的邮箱提交申请材料。"
+        },
+        "attend": {
+          "title": "加入 7 天 cohort",
+          "description": "通过筛选后，参与者进入短期高管课程与国内考察环节。"
+        }
+      },
+      "cta": "前往 depa 源页面"
+    },
+    "fieldwork": {
+      "eyebrow": "不止课堂",
+      "title": "真正拉开差距的，是 cohort 结束后仍持续打开的进入权",
+      "description": "当 cohort 能围绕真实系统再次聚合时，SCL 的价值最明显。这个网络会不定期回到运行中的城市系统、技术简报和现场学习环境，让成员继续从实施角度理解 smart-city 工作，而不是停留在口号层面。",
+      "points": {
+        "cadence": {
+          "title": "周期性重新聚合",
+          "description": "每年会有几次围绕定向参访、技术讲解和重点更新的重新聚合机会。"
+        },
+        "access": {
+          "title": "高价值现场进入权",
+          "description": "吸引力在于进入真正重要的地方，例如 EEC 场景、工业解决方案工厂、实验室和运行中心。"
+        },
+        "context": {
+          "title": "与同侪一起解读",
+          "description": "这些参访之所以有价值，是因为参与者能与理解监管、采购、基础设施和执行逻辑的同侪一起读懂所见内容。"
+        }
+      },
+      "sitesLabel": "延伸网络中的学习场景示例",
+      "imageAlt": "SCL 实地参访照片 {{number}}"
+    },
+    "sourceNote": "申请时间、费用、地点和课程安排均依据 depa 官方 SCL #6 文章。"
+  },
+  "alumni": {
+    "badge": "官方校友目录",
+    "title": "高管校友名录",
+    "subtitle": "基于 depa 公布的 {{cohorts}} 届官方名单，搜索 {{count}} 位 SCL 领导者，并对泰文与英文姓名提供更稳健的匹配。",
+    "heroBannerAlt": "SCL 校友合影",
+    "network": {
+      "eyebrow": "SCL network",
+      "title": "校友价值不只是名录本身，而是课程之后仍然持续的进入权。",
+      "description": "在课程结束之后，SCL 网络仍会通过调研式参访和闭门学习活动不定期重新聚合。成员每年有若干机会参与曼谷及外地的 smart-city 现场学习，包括具有较高进入门槛的地点，例如东部经济走廊、解决方案工厂、控制中心和应用技术实验室。",
+      "caption": "SCL 校友活动的意义在于让领导者持续贴近真实的运行环境，而不只停留在课堂概念里。",
+      "imageAlt": "SCL network 活动照片 {{number}}",
+      "sitesLabel": "近期参访主题",
+      "perks": {
+        "visits": {
+          "title": "持续发生的调研参访",
+          "description": "每年会有几次机会通过技术型、研究型现场参访重新打开学习，这种延续性是原始 cohort 之外的重要价值。"
+        },
+        "access": {
+          "title": "进入真正重要的现场",
+          "description": "吸引力在于进入权的质量。这不是普通参观，而是进入工厂、实验室、城市系统和开发区，看到真正有意义的方案如何被建造。"
+        },
+        "peers": {
+          "title": "更强的 SCL family",
+          "description": "这些行程之所以有价值，是因为网络里本来就汇聚了政府、公用事业、大学和私营运营方，大家可以共同理解所看到的内容。"
+        }
+      }
+    },
+    "batch": "第",
+    "viewList": "打开官方名单",
+    "searchPlaceholder": "按姓名、职务、机构或届别搜索...",
+    "searchHint": "搜索会对官方公告文本做规范化处理，因此 OCR 空格问题不会影响匹配。",
+    "positionDisclaimer": "所列职务和隶属机构反映的是学员参加课程时的信息，职务和机构可能已发生变更。",
+    "noResults": "未找到匹配的校友。",
+    "found": "找到",
+    "people": "人",
+    "totalLabel": "校友记录",
+    "batchesLabel": "届别",
+    "officialListsLabel": "官方来源",
+    "clearSearch": "清除搜索",
+    "officialList": "官方公告",
+    "featuredCohorts": "浏览各届",
+    "latest": "最新一届",
+    "searchThisCohort": "搜索第 {{id}} 届全部学员",
+    "demographics": "领域分布",
+    "sector": {
+      "all": "全部领域",
+      "public": "公共部门",
+      "private": "私营企业",
+      "academic": "学术机构",
+      "stateEnterprise": "国有企业",
+      "other": "其他"
+    }
+  },
+  "gallery": {
+    "badge": "课程档案",
+    "title": "体验现场",
+    "subtitle": "来自工作坊、实地考察与 cohort 活动的 SCL 影像档案。",
+    "featured": "精选 {{count}} 张",
+    "archiveCount": "档案中共有 {{count}} 张照片",
+    "browseAll": "浏览完整图库",
+    "showLess": "只看精选",
+    "openImage": "打开图片",
+    "close": "关闭预览",
+    "previous": "上一张",
+    "next": "下一张",
+    "imageAlt": "Smart City Leadership 项目照片 {{number}}",
+    "counter": "第 {{current}} 张，共 {{total}} 张"
+  },
+  "logoBar": {
+    "label": "主办单位"
+  },
+  "footer": {
+    "kicker": "高管课程",
+    "navHeading": "快速链接",
+    "sourcesHeading": "官方来源",
+    "description": "depa Smart City Leadership 的多语言落地页，整合当前课程信息、校友搜索与影像档案。",
+    "officialProgram": "depa 官方 SCL #6 文章",
+    "officialAlumni": "最新官方校友名单",
+    "sourceNote": "本页链接到 depa 当前发布 cohort 的官方文章，以及 depa 发布的校友公告名单。",
+    "rights": "© 2026 泰国数字经济促进局（depa）版权所有。",
+    "privacyPolicy": "隐私政策",
+    "termsOfService": "使用条款",
+    "dataProtection": "数据保护",
+    "disclaimer": "本网站由泰国数字经济促进局（depa）运营，隶属于泰国数字经济与社会部。校友数据来自 depa 官方公告，仅供信息参考。"
+  }
+}

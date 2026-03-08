@@ -1,0 +1,319 @@
+{
+  "meta": {
+    "title": "depa Smart City Leadership",
+    "description": "Smart City Leadership by depa: official cohort details, alumni directory, and a multilingual archive for Thailand's smart-city executive program.",
+    "skipToContent": "Skip to main content"
+  },
+  "nav": {
+    "home": "Home",
+    "about": "Program Design",
+    "journey": "Format & Timeline",
+    "gallery": "Gallery",
+    "alumni": "Alumni",
+    "contact": "Contact",
+    "apply": "Official depa page",
+    "programLabel": "depa executive program",
+    "changeLanguage": "Change language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "announcement": {
+    "badge": {
+      "open": "Official update",
+      "closed": "Applications closed",
+      "inSession": "Program in session",
+      "completed": "Program archive"
+    },
+    "text": {
+      "open": "Cohort {{cohort}} is accepting applications through {{deadline}} on depa's official announcement page.",
+      "closed": "Cohort {{cohort}} applications have closed. Review the official depa page for the course structure and source details.",
+      "inSession": "Cohort {{cohort}} is currently underway. The official depa page remains the source of record for the program details.",
+      "completed": "Cohort {{cohort}} has concluded. The official depa page remains the source of record for the program overview."
+    },
+    "cta": "Open source",
+    "ariaClose": "Close announcement"
+  },
+  "hero": {
+    "eyebrow": "depa executive program • SCL #{{cohort}}",
+    "title": "Smart City Leadership",
+    "valueStatement": "A serious short-format program for leaders who need sharper judgment about how smart-city work actually gets delivered.",
+    "subtitle": "SCL is most useful when read not as a promotional course page, but as a compact operating brief: it helps public and private leaders understand the strategic, institutional, and implementation logic behind credible smart-city projects in Thailand.",
+    "ctaPrimary": "Read the official depa source",
+    "ctaSecondary": "See the program structure",
+    "imageAlt": "SCL network visit overlooking Bangkok",
+    "imageCaption": "The strongest value is what happens when the cohort can step into real environments together and compare how systems actually operate.",
+    "status": {
+      "open": "Applications open until {{deadline}}",
+      "closed": "The current intake has closed",
+      "inSession": "The current cohort is now underway",
+      "completed": "The latest published cohort has concluded"
+    },
+    "facts": {
+      "durationLabel": "Format",
+      "durationValue": "{{days}} days, {{hours}} hours",
+      "audienceLabel": "Participants",
+      "audienceValue": "Mid-to-senior public and private leaders",
+      "modelLabel": "Teaching model",
+      "modelValue": "Classroom instruction, domestic study visits, and {{speakers}}+ speakers",
+      "feeLabel": "Fee",
+      "archiveLabel": "Alumni archive",
+      "archiveValue": "{{alumni}} leaders across {{cohorts}} cohorts",
+      "deadlineLabel": "Current status"
+    },
+    "pointsTitle": "Why the program matters",
+    "points": {
+      "judgment": {
+        "title": "It compresses strategic judgment.",
+        "description": "The value is not just exposure to smart-city terminology, but a clearer sense of what to prioritize, what to question, and what a serious city program should look like."
+      },
+      "implementation": {
+        "title": "It is grounded in delivery, not slogans.",
+        "description": "The official structure combines expert teaching with institutional references and study visits, which keeps the conversation close to operating reality."
+      },
+      "scope": {
+        "title": "It gives leaders a coherent lens across domains.",
+        "description": "Environment, mobility, energy, governance, people, economy, and livability are treated as part of one city system rather than isolated themes."
+      },
+      "investment": {
+        "title": "It signals a meaningful commitment.",
+        "description": "The time and fee structure place the program closer to an executive commitment than a casual seminar, which changes the level of discussion inside the cohort."
+      }
+    }
+  },
+  "about": {
+    "eyebrow": "Program design",
+    "title": "A compact course for leaders who need implementation clarity",
+    "description": "The official depa outline positions SCL as a fast executive program covering smart-city project design, digital adoption across public and private contexts, and the practical coordination required to move city initiatives forward.",
+    "audienceTitle": "Well suited for leaders from",
+    "audience": {
+      "public": "Central government",
+      "local": "Local administration",
+      "utilities": "Infrastructure and utilities",
+      "academic": "Universities and institutes",
+      "private": "Private operators and solution partners"
+    },
+    "outcomesTitle": "Participants leave with",
+    "outcomes": {
+      "strategy": {
+        "title": "Sharper strategic framing",
+        "description": "A structured view of what makes a smart-city initiative credible, livable, and aligned with city priorities."
+      },
+      "delivery": {
+        "title": "Practical delivery references",
+        "description": "Examples of how digital systems, operations, and civic infrastructure are applied in real organizations."
+      },
+      "network": {
+        "title": "A stronger leadership network",
+        "description": "A cohort environment that connects government, academia, utilities, and private-sector operators."
+      }
+    },
+    "highlights": {
+      "hours": "Learning hours",
+      "days": "Program days",
+      "experts": "Expert speakers",
+      "alumni": "Alumni records"
+    },
+    "learningSitesTitle": "Learning references named in the official article",
+    "learningSitesDescription": "The published SCL #6 announcement highlights site-based learning and organizational references including public infrastructure, digital operations, creative economy institutions, and immersive technology labs.",
+    "imageAlt": "Smart City Leadership workshop session",
+    "imageCaption": "The program is strongest when it reads as a working conversation among leaders, not as a promotional event.",
+    "pillarsTitle": "Core domains",
+    "learningSites": {
+      "site1": "EGAT Learning Center",
+      "site2": "Smart Water Operation Center (SWOC)",
+      "site3": "PROEN Data Center",
+      "site4": "Creative Economy Agency ecosystem",
+      "site5": "KMITL Interactive Digital Center (KIDC)"
+    },
+    "pillars": {
+      "environment": "Smart Environment",
+      "economy": "Smart Economy",
+      "mobility": "Smart Mobility",
+      "energy": "Smart Energy",
+      "people": "Smart People",
+      "living": "Smart Living",
+      "governance": "Smart Governance"
+    },
+    "pillarTopics": {
+      "environment": ["Air quality & emissions monitoring", "Waste management systems", "Flood prevention & water resources"],
+      "economy": ["Digital payments & fintech", "Agricultural technology", "Smart tourism platforms"],
+      "mobility": ["Intelligent traffic management", "EV infrastructure & charging", "Connected public transit"],
+      "energy": ["Solar & renewable integration", "Smart grid management", "Energy efficiency systems"],
+      "people": ["Digital literacy programs", "STEM workforce development", "Civic technology engagement"],
+      "living": ["Telemedicine & health tech", "Public safety systems", "Quality of life monitoring"],
+      "governance": ["Open data platforms", "E-government services", "Citizen participation systems"]
+    },
+    "pillarStats": {
+      "environment": "Active in 32 of 37 smart city zones",
+      "economy": "THB 11.9B+ invested through smart city programs",
+      "mobility": "Most-requested pillar by Thai municipalities",
+      "energy": "EGAT + SWOC among SCL study-visit partners",
+      "people": "223 leaders trained across 5 cohorts",
+      "living": "Telemedicine deployed in 18 provinces",
+      "governance": "Target: 105 smart cities by 2027"
+    }
+  },
+  "journey": {
+    "eyebrow": "Format and timeline",
+    "title": "Structured like an executive sprint",
+    "subtitle": "SCL combines classroom instruction, curated site references, and a cohort format that helps participants translate policy and technology themes into an implementation lens.",
+    "trackKicker": "Learning flow",
+    "trackTitle": "How the experience is shaped",
+    "modes": {
+      "classroom": {
+        "title": "Focused classroom sessions",
+        "description": "Core instruction is delivered in a compact format for leaders who need signal, not academic sprawl."
+      },
+      "field": {
+        "title": "Domestic study visits",
+        "description": "Participants examine how digital systems and operating models are applied in real Thai organizations."
+      },
+      "network": {
+        "title": "Cross-sector cohort exchange",
+        "description": "The cohort mixes public and private participants, which turns the program into a stronger coordination space."
+      }
+    },
+    "schedule": {
+      "status": {
+        "open": "Applications live",
+        "closed": "Applications closed",
+        "inSession": "Current cohort in session",
+        "completed": "Latest cohort completed"
+      },
+      "title": "Current published logistics",
+      "description": "These details follow depa's official SCL #6 article as of March 7, 2026.",
+      "deadlineLabel": "Application deadline",
+      "datesLabel": "Training dates",
+      "datesValue": "May 11, 12, 18, 19, 20, 25, and 26, 2026",
+      "venueLabel": "Venue",
+      "venueValue": "The Quarter Ladprao by UHG, Bangkok, plus domestic study visits",
+      "feeLabel": "Fee"
+    },
+    "process": {
+      "title": "Application path",
+      "description": "The official article states that applicants should review the course details, download the form from depa, and submit their materials by email.",
+      "steps": {
+        "review": {
+          "title": "Review the official depa announcement",
+          "description": "Use the source page to confirm the scope, schedule, and whether the program fits your role."
+        },
+        "submit": {
+          "title": "Download and email the application",
+          "description": "The article directs applicants to download the form and submit it through the listed email channels."
+        },
+        "attend": {
+          "title": "Join the seven-day cohort",
+          "description": "Accepted participants move into the short-format executive program and domestic study visits."
+        }
+      },
+      "cta": "Go to depa source page"
+    },
+    "fieldwork": {
+      "eyebrow": "Beyond the classroom",
+      "title": "The real differentiator is the access that keeps opening after the cohort",
+      "description": "SCL is strongest when the cohort can reassemble around live systems. The network periodically returns to operating environments, technical briefings, and site study sessions so members continue to read smart-city work through implementation, not slogans.",
+      "points": {
+        "cadence": {
+          "title": "Periodic reconvenings",
+          "description": "The network can regroup a few times each year for targeted visits, technical walkthroughs, and focused updates."
+        },
+        "access": {
+          "title": "High-value sites",
+          "description": "The draw is access to meaningful places such as EEC environments, industrial solution factories, labs, and operating centers."
+        },
+        "context": {
+          "title": "Interpretation with peers",
+          "description": "These visits matter because participants read them with other leaders who understand regulation, procurement, infrastructure, and execution."
+        }
+      },
+      "sitesLabel": "Examples from the extended network",
+      "imageAlt": "SCL field visit photo {{number}}"
+    },
+    "sourceNote": "Application timing, fee, venue, and schedule are based on depa's official SCL #6 article."
+  },
+  "alumni": {
+    "badge": "Official alumni directory",
+    "title": "Executive Alumni",
+    "subtitle": "Search across {{count}} leaders from {{cohorts}} official SCL cohorts, with resilient matching for Thai and English names pulled from depa announcement lists.",
+    "heroBannerAlt": "SCL alumni cohort group photo",
+    "network": {
+      "eyebrow": "The SCL network",
+      "title": "The alumni value is not just the directory. It is the continuing access.",
+      "description": "Beyond the course itself, the SCL network periodically reconvenes around study visits and closed-door learning sessions. Members are occasionally brought into smart-city field visits in Bangkok and elsewhere, including high-value sites such as the Eastern Economic Corridor, solution factories, control rooms, and applied technology labs.",
+      "caption": "SCL alumni activity is designed to keep leaders close to real operating environments, not only classroom ideas.",
+      "imageAlt": "SCL network visit photo {{number}}",
+      "sitesLabel": "Recent visit themes",
+      "perks": {
+        "visits": {
+          "title": "Recurring study visits",
+          "description": "A few times each year, the network can reopen around scientific and technical site visits that extend the learning beyond the original cohort."
+        },
+        "access": {
+          "title": "Access to meaningful sites",
+          "description": "The draw is the quality of access: not tourist stops, but factories, labs, city systems, and development zones where real smart-city solutions are being built."
+        },
+        "peers": {
+          "title": "A stronger SCL family",
+          "description": "These trips work because the alumni base already includes public agencies, utilities, universities, and private operators who can interpret what they are seeing together."
+        }
+      }
+    },
+    "batch": "Cohort",
+    "viewList": "Open official list",
+    "searchPlaceholder": "Search by name, role, organization, or cohort...",
+    "searchHint": "Search is normalized from the official announcement text so OCR spacing issues do not block matches.",
+    "positionDisclaimer": "Positions and affiliations shown reflect the time each participant joined the program. Titles and organizations may have changed since.",
+    "noResults": "No alumni found matching your search.",
+    "found": "Found",
+    "people": "people",
+    "totalLabel": "Alumni records",
+    "batchesLabel": "Cohorts",
+    "officialListsLabel": "Official sources",
+    "clearSearch": "Clear search",
+    "officialList": "Official announcement",
+    "featuredCohorts": "Browse cohorts",
+    "latest": "Latest cohort",
+    "searchThisCohort": "Search all {{id}} people",
+    "demographics": "Sector breakdown",
+    "sector": {
+      "all": "All sectors",
+      "public": "Public sector",
+      "private": "Private sector",
+      "academic": "Academic",
+      "stateEnterprise": "State enterprise",
+      "other": "Other"
+    }
+  },
+  "gallery": {
+    "badge": "Program archive",
+    "title": "Inside the Experience",
+    "subtitle": "A visual archive from workshops, site visits, and cohort sessions collected in the SCL media set.",
+    "featured": "Featured {{count}}",
+    "archiveCount": "{{count}} photos in the archive",
+    "browseAll": "Browse full gallery",
+    "showLess": "Show featured set",
+    "openImage": "Open image",
+    "close": "Close gallery preview",
+    "previous": "Previous image",
+    "next": "Next image",
+    "imageAlt": "Smart City Leadership program photo {{number}}",
+    "counter": "Image {{current}} of {{total}}"
+  },
+  "logoBar": {
+    "label": "Presented by"
+  },
+  "footer": {
+    "kicker": "Executive program",
+    "navHeading": "Quick links",
+    "sourcesHeading": "Official sources",
+    "description": "A multilingual landing page for depa Smart City Leadership, combining verified cohort details, alumni search, and a visual archive in one place.",
+    "officialProgram": "SCL #6 official depa article",
+    "officialAlumni": "Latest official alumni list",
+    "sourceNote": "This landing page links to depa's official article for the current published cohort and depa announcement lists for alumni data.",
+    "rights": "© 2026 Digital Economy Promotion Agency (depa). All rights reserved.",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "dataProtection": "Data Protection",
+    "disclaimer": "This site is operated by the Digital Economy Promotion Agency (depa), Ministry of Digital Economy and Society, Kingdom of Thailand. Alumni data is sourced from official depa announcements and is shown for informational purposes."
+  }
+}

@@ -1,0 +1,289 @@
+:root {
+  color-scheme: light;
+  --bg-primary: #f7f5f0;
+  --bg-secondary: #fcfbf8;
+  --bg-ink: #111111;
+  --surface-card: rgba(255, 255, 255, 0.82);
+  --surface-strong: #ffffff;
+  --border-glass: rgba(17, 17, 17, 0.055);
+  --border-strong: rgba(17, 17, 17, 0.1);
+  --text-main: #111111;
+  --text-primary: #111111;
+  --text-secondary: #4b4b4b;
+  --text-muted: #787878;
+  --text-accent: #111111;
+  --shadow-soft: none;
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-pill: 999px;
+  --transition-smooth: all 0.3s ease;
+  --transition-fast: all 0.18s ease;
+  --navbar-height: 76px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  min-width: 320px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a,
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  background: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  line-height: 1.02;
+  letter-spacing: -0.045em;
+}
+
+a {
+  color: inherit;
+}
+
+::selection {
+  background: rgba(17, 17, 17, 0.12);
+  color: var(--text-main);
+}
+
+.text-gradient {
+  color: var(--text-main);
+  display: inline-block;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 36px;
+}
+
+.section {
+  padding: 56px 0;
+  position: relative;
+  scroll-margin-top: var(--navbar-height);
+}
+
+.grid-bg {
+  display: none;
+}
+
+.glass-panel {
+  background: transparent;
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  box-shadow: none;
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-muted);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  color: var(--text-main);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.badge-glow {
+  box-shadow: none;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 20px;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--text-main);
+  color: #ffffff;
+  border: 1px solid var(--text-main);
+}
+
+.btn-primary:hover {
+  background: #000000;
+  border-color: #000000;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-main);
+  border: 1px solid var(--border-strong);
+}
+
+.btn-ghost:hover {
+  border-color: var(--text-main);
+}
+
+.btn-sm {
+  padding: 10px 16px;
+  font-size: 0.9rem;
+}
+
+.inline-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-main);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.inline-link:hover {
+  text-decoration: underline;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mb-4 {
+  margin-bottom: 16px;
+}
+
+.mb-6 {
+  margin-bottom: 24px;
+}
+
+.mb-12 {
+  margin-bottom: 48px;
+}
+
+.mr-2 {
+  margin-right: 8px;
+}
+
+.ml-1 {
+  margin-left: 4px;
+}
+
+.ml-2 {
+  margin-left: 8px;
+}
+
+.mt-4 {
+  margin-top: 16px;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-title {
+  font-size: clamp(2.6rem, 5vw, 4.3rem);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  opacity: 0;
+}
+
+.animate-fade-in.is-visible {
+  animation: fadeIn 0.7s ease forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in {
+    opacity: 1;
+    animation: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+
+  .section {
+    padding: 44px 0;
+  }
+
+  .mb-12 {
+    margin-bottom: 36px;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid rgba(17, 17, 17, 0.45);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
