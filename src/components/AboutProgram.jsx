@@ -54,7 +54,7 @@ const AboutProgram = () => {
 
           <figure className="about-image animate-fade-in" style={{ animationDelay: '0.16s' }}>
             <img
-              src={encodeURI('/Photos/2023-05-16 14.07.38.jpg')}
+              src={encodeURI(import.meta.env.BASE_URL + 'Photos/2023-05-16 14.07.38.jpg')}
               alt={t('about.imageAlt')}
               loading="lazy"
             />

@@ -2,6 +2,8 @@ import { useTranslation } from 'react-i18next';
 import { useFadeIn } from '../hooks/useFadeIn';
 import './LogoBar.css';
 
+const B = import.meta.env.BASE_URL;
+
 const LogoBar = () => {
   const { t } = useTranslation();
   const ref = useFadeIn();
@@ -12,17 +14,17 @@ const LogoBar = () => {
         <span className="logo-bar-label">{t('logoBar.label')}</span>
         <div className="logo-bar-logos">
           <img
-            src="/logos/depa.jpg"
+            src={B + 'logos/depa.jpg'}
             alt="depa — Digital Economy Promotion Agency"
             className="logo-bar-img logo-depa"
           />
           <img
-            src={encodeURI('/logos/Smart City Logo.jpg')}
+            src={encodeURI(B + 'logos/Smart City Logo.jpg')}
             alt="Smart City Thailand Office"
             className="logo-bar-img logo-smartcity"
           />
           <img
-            src="/logos/Logo_of_the_Ministry_of_Digital_Economy_and_Society_of_Thailand.svg"
+            src={B + 'logos/Logo_of_the_Ministry_of_Digital_Economy_and_Society_of_Thailand.svg'}
             alt="Ministry of Digital Economy and Society"
             className="logo-bar-img logo-mdes"
           />
