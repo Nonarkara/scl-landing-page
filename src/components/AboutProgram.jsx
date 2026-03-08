@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { programDetails, programLearningSites } from '../data/program';
+import { aboutPhoto, programDetails, programLearningSites } from '../data/program';
 import { useFadeIn } from '../hooks/useFadeIn';
 import './AboutProgram.css';
 
@@ -54,7 +54,7 @@ const AboutProgram = () => {
 
           <figure className="about-image animate-fade-in" style={{ animationDelay: '0.16s' }}>
             <img
-              src={encodeURI(import.meta.env.BASE_URL + 'Photos/2023-05-16 14.07.38.jpg')}
+              src={encodeURI(aboutPhoto)}
               alt={t('about.imageAlt')}
               loading="lazy"
             />
