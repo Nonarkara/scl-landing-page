@@ -3,25 +3,19 @@
 }
 
 .logo-bar--top {
-  padding: 16px 0 0;
+  padding: 18px 0 14px;
   border-bottom: 1px solid var(--border-glass);
 }
 
 .logo-bar--footer {
-  padding: 18px 0 16px;
+  padding: 20px 0 18px;
   border-top: 1px solid var(--border-glass);
 }
 
 .logo-bar-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px 28px;
-  flex-wrap: wrap;
-}
-
-.logo-bar--footer .logo-bar-inner {
-  justify-content: center;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
 }
 
 .logo-bar-label {
@@ -30,17 +24,14 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .logo-bar-logos {
   display: flex;
   align-items: center;
-  gap: clamp(18px, 3vw, 34px);
+  gap: clamp(24px, 4vw, 46px);
   flex-wrap: wrap;
-  justify-content: flex-end;
-}
-
-.logo-bar--footer .logo-bar-logos {
   justify-content: center;
 }
 
@@ -52,41 +43,31 @@
 }
 
 .logo-depa {
-  height: 34px;
+  height: 44px;
 }
 
 .logo-smartcity {
-  height: 46px;
+  height: 68px;
 }
 
 .logo-mdes {
-  height: 42px;
+  height: 54px;
 }
 
 .logo-bar--footer .logo-depa {
-  height: 30px;
+  height: 38px;
 }
 
 .logo-bar--footer .logo-smartcity {
-  height: 40px;
+  height: 58px;
 }
 
 .logo-bar--footer .logo-mdes {
-  height: 36px;
+  height: 46px;
 }
 
 @media (max-width: 760px) {
-  .logo-bar-inner {
-    justify-content: center;
-  }
-
-  .logo-bar-label {
-    width: 100%;
-    text-align: center;
-  }
-
   .logo-bar-logos {
-    justify-content: center;
     gap: 18px 24px;
   }
 }
@@ -97,14 +78,14 @@
   }
 
   .logo-depa {
-    height: 30px;
+    height: 34px;
   }
 
   .logo-smartcity {
-    height: 40px;
+    height: 52px;
   }
 
   .logo-mdes {
-    height: 36px;
+    height: 42px;
   }
 }

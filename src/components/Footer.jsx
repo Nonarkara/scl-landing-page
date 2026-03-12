@@ -42,7 +42,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <LogoBar placement="footer" showLabel={false} />
+      <LogoBar placement="footer" />
 
       <div className="container footer-legal-bar">
         <div className="footer-legal-content">

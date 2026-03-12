@@ -11,12 +11,12 @@ const logos = [
     className: 'logo-bar-img logo-depa',
   },
   {
-    src: `${B}logos/smart-city-thailand.jpg`,
+    src: `${B}logos/smart-city-thailand.png`,
     alt: 'Smart City Thailand',
     className: 'logo-bar-img logo-smartcity',
   },
   {
-    src: `${B}logos/ministry-digital-economy-and-society.jpg`,
+    src: `${B}logos/Logo_of_the_Ministry_of_Digital_Economy_and_Society_of_Thailand.svg`,
     alt: 'Ministry of Digital Economy and Society',
     className: 'logo-bar-img logo-mdes',
   },
