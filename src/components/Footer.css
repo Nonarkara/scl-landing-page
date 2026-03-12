@@ -1,5 +1,5 @@
 .site-footer {
-  padding: 28px 0 0;
+  padding: 24px 0 0;
   border-top: 3px solid var(--border-strong);
   background: transparent;
 }
@@ -9,7 +9,7 @@
   grid-template-columns: 1.45fr 0.85fr 0.95fr;
   gap: 20px;
   align-items: start;
-  padding-bottom: 20px;
+  padding-bottom: 18px;
 }
 
 .footer-title {

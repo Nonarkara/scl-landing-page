@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { alumniBatches, getApplicationUrl } from '../data/program';
+import LogoBar from './LogoBar';
 import './Footer.css';
 
 const Footer = () => {
@@ -40,6 +41,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
+
+      <LogoBar placement="footer" showLabel={false} />
 
       <div className="container footer-legal-bar">
         <div className="footer-legal-content">

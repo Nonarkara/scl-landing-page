@@ -1,5 +1,5 @@
 .hero {
-  padding: 108px 0 48px;
+  padding: 88px 0 48px;
   min-height: auto;
 }
 
@@ -122,7 +122,7 @@
 
 @media (max-width: 900px) {
   .hero {
-    padding-top: 100px;
+    padding-top: 78px;
   }
 
   .hero-shell {
@@ -133,7 +133,7 @@
 
 @media (max-width: 640px) {
   .hero {
-    padding: 92px 0 40px;
+    padding: 68px 0 40px;
   }
 
   .hero-title {
