@@ -135,13 +135,41 @@
       "governance": "Smart Governance"
     },
     "pillarTopics": {
-      "environment": ["Air quality & emissions monitoring", "Waste management systems", "Flood prevention & water resources"],
-      "economy": ["Digital payments & fintech", "Agricultural technology", "Smart tourism platforms"],
-      "mobility": ["Intelligent traffic management", "EV infrastructure & charging", "Connected public transit"],
-      "energy": ["Solar & renewable integration", "Smart grid management", "Energy efficiency systems"],
-      "people": ["Digital literacy programs", "STEM workforce development", "Civic technology engagement"],
-      "living": ["Telemedicine & health tech", "Public safety systems", "Quality of life monitoring"],
-      "governance": ["Open data platforms", "E-government services", "Citizen participation systems"]
+      "environment": [
+        "Air quality & emissions monitoring",
+        "Waste management systems",
+        "Flood prevention & water resources"
+      ],
+      "economy": [
+        "Digital payments & fintech",
+        "Agricultural technology",
+        "Smart tourism platforms"
+      ],
+      "mobility": [
+        "Intelligent traffic management",
+        "EV infrastructure & charging",
+        "Connected public transit"
+      ],
+      "energy": [
+        "Solar & renewable integration",
+        "Smart grid management",
+        "Energy efficiency systems"
+      ],
+      "people": [
+        "Digital literacy programs",
+        "STEM workforce development",
+        "Civic technology engagement"
+      ],
+      "living": [
+        "Telemedicine & health tech",
+        "Public safety systems",
+        "Quality of life monitoring"
+      ],
+      "governance": [
+        "Open data platforms",
+        "E-government services",
+        "Citizen participation systems"
+      ]
     },
     "pillarStats": {
       "environment": "Active in 32 of 37 smart city zones",
@@ -315,5 +343,13 @@
     "termsOfService": "Terms of Service",
     "dataProtection": "Data Protection",
     "disclaimer": "This site is operated by the Digital Economy Promotion Agency (depa), Ministry of Digital Economy and Society, Kingdom of Thailand. Alumni data is sourced from official depa announcements and is shown for informational purposes."
+  },
+  "countdown": {
+    "until": "Until SCL #6",
+    "since": "Since SCL #6",
+    "days": "Days",
+    "hours": "Hrs",
+    "minutes": "Min",
+    "seconds": "Sec"
   }
 }

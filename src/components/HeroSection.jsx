@@ -9,6 +9,7 @@ import {
   heroPhoto,
   programDetails,
 } from '../data/program';
+import Countdown from './Countdown';
 import './HeroSection.css';
 
 const HeroSection = () => {
@@ -84,6 +85,7 @@ const HeroSection = () => {
         </div>
 
         <div className="hero-summary animate-fade-in is-visible" style={{ animationDelay: '0.12s' }}>
+          <Countdown />
           <div className="hero-facts">
             {heroFacts.map((fact) => (
               <div key={fact.label} className="hero-fact">
