@@ -5,6 +5,7 @@
   z-index: 1000;
   padding: 10px 0;
   transition: var(--transition-fast);
+  border-top: 3px solid var(--depa-yellow);
 }
 
 .navbar.glass-nav {

@@ -12,6 +12,10 @@
   --text-secondary: #4b4b4b;
   --text-muted: #787878;
   --text-accent: #111111;
+  --depa-yellow: #ffd100;
+  --depa-yellow-soft: rgba(255, 209, 0, 0.08);
+  --depa-yellow-mid: rgba(255, 209, 0, 0.18);
+  --depa-yellow-muted: rgba(255, 209, 0, 0.45);
   --shadow-soft: none;
   --radius-sm: 8px;
   --radius-md: 14px;
@@ -79,7 +83,7 @@ a {
 }
 
 ::selection {
-  background: rgba(17, 17, 17, 0.12);
+  background: var(--depa-yellow-mid);
   color: var(--text-main);
 }
 
@@ -104,21 +108,67 @@ a {
   display: none;
 }
 
+/* depa yellow accent patterns */
+.depa-rule {
+  height: 3px;
+  background: var(--depa-yellow);
+  border: 0;
+  border-radius: 2px;
+}
+
+.depa-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: var(--depa-yellow);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.depa-stripe-top {
+  position: relative;
+}
+
+.depa-stripe-top::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--depa-yellow);
+}
+
 .glass-panel {
   background: transparent;
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-md);
   box-shadow: none;
+  transition: border-color 0.25s ease;
+}
+
+.glass-panel:hover {
+  border-color: var(--depa-yellow-muted);
 }
 
 .section-kicker {
   display: inline-flex;
   align-items: center;
+  gap: 8px;
   color: var(--text-muted);
   letter-spacing: 0.14em;
   text-transform: uppercase;
   font-size: 0.78rem;
   font-weight: 700;
+}
+
+.section-kicker::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 3px;
+  background: var(--depa-yellow);
+  border-radius: 2px;
 }
 
 .badge {
@@ -283,7 +333,7 @@ a {
 }
 
 :focus-visible {
-  outline: 2px solid rgba(17, 17, 17, 0.45);
+  outline: 2px solid var(--depa-yellow);
   outline-offset: 3px;
   border-radius: 4px;
 }
