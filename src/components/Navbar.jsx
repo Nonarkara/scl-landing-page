@@ -4,8 +4,8 @@ import { Globe, Menu, X } from 'lucide-react';
 import { getApplicationUrl } from '../data/program';
 import './Navbar.css';
 
-const NAV_SECTIONS = ['home', 'about', 'journey', 'alumni', 'gallery'];
-const NAV_LINKS = ['about', 'journey', 'alumni', 'gallery'];
+const NAV_SECTIONS = ['home', 'about', 'journey', 'testimonials', 'alumni', 'gallery'];
+const NAV_LINKS = ['about', 'journey', 'testimonials', 'alumni', 'gallery'];
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();

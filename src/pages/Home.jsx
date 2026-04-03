@@ -2,6 +2,7 @@ import LogoBar from '../components/LogoBar';
 import HeroSection from '../components/HeroSection';
 import AboutProgram from '../components/AboutProgram';
 import ProgramJourney from '../components/ProgramJourney';
+import Testimonials from '../components/Testimonials';
 import Alumni from '../components/Alumni';
 import Gallery from '../components/Gallery';
 
@@ -13,6 +14,7 @@ const Home = () => {
       <HeroSection />
       <AboutProgram />
       <ProgramJourney />
+      <Testimonials />
       <Alumni />
       <Gallery />
     </>

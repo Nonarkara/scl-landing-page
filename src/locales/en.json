@@ -15,7 +15,8 @@
     "programLabel": "depa executive program",
     "changeLanguage": "Change language",
     "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "testimonials": "Testimonials"
   },
   "announcement": {
     "badge": {
@@ -351,5 +352,45 @@
     "hours": "Hrs",
     "minutes": "Min",
     "seconds": "Sec"
+  },
+  "testimonials": {
+    "kicker": "Alumni Perspectives",
+    "title": "What alumni say",
+    "desc": "Leaders from across Thailand share their SCL experience",
+    "jumpot": {
+      "name": "Jumpot Wannachatrasiri",
+      "role": "Deputy Permanent Secretary, Ministry of Interior",
+      "quote": "An excellent and highly engaging program that expands your perspective with modern policy tools you can apply to develop cities that truly serve their citizens."
+    },
+    "chatchawal": {
+      "name": "Chatchawal Benchasiriwong",
+      "role": "Governor of Roi Et Province",
+      "quote": "depa's SCL program systematically builds understanding of Smart City concepts. You can apply the technology to drive urban development effectively — ideal for local leaders who want sustainable, livable cities."
+    },
+    "samrit": {
+      "name": "Samrit Liangprasit",
+      "role": "President, Satun Provincial Administrative Organization",
+      "quote": "SCL#5 is a quality program offering knowledge from distinguished experts across disciplines, combined with real site visits. The workshops can be directly applied to promote Smart City development."
+    },
+    "trisupong": {
+      "name": "Pol.Sub.Lt.Dr. Trisupong Thoopkrachang",
+      "role": "Mayor of Rangsit City",
+      "quote": "SCL comprehensively fills your knowledge on smart-city development. It doesn't just build city leaders — it builds livable cities."
+    },
+    "wipawan": {
+      "name": "Dr. Wipawan Worawanpricha",
+      "role": "Secretary to the President, Nonthaburi PAO",
+      "quote": "SCL made me understand that Smart City success goes beyond technology. What matters most is the people — if they don't use it, no technology is useful."
+    },
+    "wisal": {
+      "name": "Wisal Jirapappan",
+      "role": "Deputy Mayor, Yala City Municipality",
+      "quote": "SCL#2 enabled us to continuously develop Yala Municipality with Smart City systems, gaining national recognition among local government organizations."
+    },
+    "ketsirin": {
+      "name": "Ketsirin Paengsen",
+      "role": "Head, Mae Moh Livable City Project, EGAT",
+      "quote": "Developed smart-city leadership with a sustainable vision — from clear long-term planning centered on citizens, to data-driven execution and cross-sector collaboration."
+    }
   }
 }

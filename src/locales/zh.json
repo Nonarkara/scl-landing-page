@@ -15,7 +15,8 @@
     "programLabel": "depa 高管课程",
     "changeLanguage": "切换语言",
     "openMenu": "打开菜单",
-    "closeMenu": "关闭菜单"
+    "closeMenu": "关闭菜单",
+    "testimonials": "校友心声"
   },
   "announcement": {
     "badge": {
@@ -351,5 +352,45 @@
     "hours": "时",
     "minutes": "分",
     "seconds": "秒"
+  },
+  "testimonials": {
+    "kicker": "校友心声",
+    "title": "校友评价",
+    "desc": "来自泰国各地的领导者分享他们的SCL体验",
+    "jumpot": {
+      "name": "Jumpot Wannachatrasiri",
+      "role": "内政部副常任秘书",
+      "quote": "这是一个优秀且极具吸引力的项目，能够拓展视野并提供现代政策工具，可以切实应用于城市发展以服务市民。"
+    },
+    "chatchawal": {
+      "name": "Chatchawal Benchasiriwong",
+      "role": "黎逸府府尹",
+      "quote": "depa的SCL项目系统性地构建了智慧城市概念的理解。技术可以有效地应用于推动城市发展——非常适合追求可持续宜居城市的地方领导者。"
+    },
+    "samrit": {
+      "name": "Samrit Liangprasit",
+      "role": "沙敦府行政组织主席",
+      "quote": "SCL#5是一个高质量的项目，提供来自各学科杰出专家的知识，结合实地考察。工作坊内容可以直接应用于推动智慧城市发展。"
+    },
+    "trisupong": {
+      "name": "Trisupong Thoopkrachang博士",
+      "role": "兰实市市长",
+      "quote": "SCL全面充实了智慧城市发展知识。它不仅培养城市领导者——更是在打造宜居城市。"
+    },
+    "wipawan": {
+      "name": "Wipawan Worawanpricha博士",
+      "role": "暖武里府行政组织主席秘书",
+      "quote": "SCL让我理解到智慧城市的成功不仅仅是技术。最重要的是人——如果人们不使用，再好的技术也没有用。"
+    },
+    "wisal": {
+      "name": "Wisal Jirapappan",
+      "role": "也拉市副市长",
+      "quote": "SCL#2使我们能够持续以智慧城市系统发展也拉市政府，获得了全国地方政府组织的认可。"
+    },
+    "ketsirin": {
+      "name": "Ketsirin Paengsen",
+      "role": "泰国电力局湄磨宜居城市项目负责人",
+      "quote": "发展了智慧城市领导力，从清晰的长期规划以市民为中心，到数据驱动的执行和跨部门合作，增强了可持续城市推进的视野。"
+    }
   }
 }

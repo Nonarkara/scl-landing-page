@@ -1,0 +1,110 @@
+.testimonials-section {
+  border-top: 1px solid var(--border-glass);
+}
+
+.testimonials-header {
+  margin-bottom: 36px;
+}
+
+.testimonials-title {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin: 10px 0 8px;
+}
+
+.testimonials-desc {
+  color: var(--text-secondary);
+  font-size: 1.02rem;
+  line-height: 1.7;
+  max-width: 38rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  padding: 28px;
+  margin: 0;
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  transition: border-color 0.25s ease;
+}
+
+.testimonial-card:hover {
+  border-color: var(--depa-yellow-muted);
+}
+
+.testimonial-quote {
+  flex: 1;
+  margin-bottom: 20px;
+  padding-left: 16px;
+  border-left: 3px solid var(--depa-yellow);
+  color: var(--text-secondary);
+  font-size: 0.94rem;
+  line-height: 1.85;
+  font-style: normal;
+}
+
+.testimonial-footer {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-glass);
+}
+
+.testimonial-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--depa-yellow);
+  color: var(--bg-ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.testimonial-name {
+  display: block;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.3;
+  color: var(--text-main);
+}
+
+.testimonial-role {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  line-height: 1.4;
+  margin-top: 2px;
+}
+
+.testimonial-batch {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 1px 8px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--bg-ink);
+  background: var(--depa-yellow);
+  border-radius: var(--radius-pill);
+}
+
+@media (max-width: 640px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonial-card {
+    padding: 22px;
+  }
+}
