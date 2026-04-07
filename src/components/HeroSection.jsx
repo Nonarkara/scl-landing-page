@@ -1,15 +1,14 @@
-import {
-  ArrowRight,
-} from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import {
+  formatProgramCurrency,
   formatProgramDate,
   getApplicationUrl,
   getProgramPhase,
   heroPhoto,
   programDetails,
 } from '../data/program';
-import Countdown from './Countdown';
+import IndexTeaser from './IndexTeaser';
 import './HeroSection.css';
 
 const HeroSection = () => {
@@ -18,6 +17,7 @@ const HeroSection = () => {
   const officialUrl = getApplicationUrl(currentLanguage);
   const programPhase = getProgramPhase();
   const applicationDeadline = formatProgramDate(programDetails.applicationDeadline, currentLanguage);
+  const feeLabel = formatProgramCurrency(programDetails.feeTHB, currentLanguage);
 
   const heroFacts = [
     {
@@ -32,15 +32,36 @@ const HeroSection = () => {
       value: t('hero.facts.audienceValue'),
     },
     {
+      label: t('hero.facts.modelLabel'),
+      value: t('hero.facts.modelValue', {
+        speakers: programDetails.speakerCount,
+      }),
+    },
+    {
       label: t('hero.facts.archiveLabel'),
       value: t('hero.facts.archiveValue', {
         alumni: programDetails.alumniCount,
         cohorts: programDetails.cohortCount,
       }),
     },
+  ];
+
+  const heroBrief = [
     {
       label: t('hero.facts.deadlineLabel'),
       value: t(`hero.status.${programPhase}`, { deadline: applicationDeadline }),
+    },
+    {
+      label: t('journey.schedule.datesLabel'),
+      value: t('journey.schedule.datesValue'),
+    },
+    {
+      label: t('journey.schedule.venueLabel'),
+      value: t('journey.schedule.venueValue'),
+    },
+    {
+      label: t('journey.schedule.feeLabel'),
+      value: feeLabel,
     },
   ];
 
@@ -75,17 +96,36 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <figure className="hero-media animate-fade-in is-visible" style={{ animationDelay: '0.08s' }}>
-            <img
-              src={encodeURI(heroPhoto)}
-              alt={t('hero.imageAlt')}
-            />
-            <figcaption>{t('hero.imageCaption')}</figcaption>
-          </figure>
+          <div className="hero-rail animate-fade-in is-visible" style={{ animationDelay: '0.08s' }}>
+            <figure className="hero-media">
+              <img
+                src={encodeURI(heroPhoto)}
+                alt={t('hero.imageAlt')}
+                fetchPriority="high"
+                decoding="async"
+              />
+              <figcaption>{t('hero.imageCaption')}</figcaption>
+            </figure>
+
+            <aside className="hero-brief" aria-label={t('journey.schedule.title')}>
+              <div className="hero-brief-head">
+                <span className="hero-brief-kicker">{t('journey.schedule.title')}</span>
+                <p>{t('journey.schedule.description')}</p>
+              </div>
+
+              <div className="hero-brief-list">
+                {heroBrief.map((item) => (
+                  <div key={item.label} className="hero-brief-item">
+                    <span>{item.label}</span>
+                    <strong>{item.value}</strong>
+                  </div>
+                ))}
+              </div>
+            </aside>
+          </div>
         </div>
 
         <div className="hero-summary animate-fade-in is-visible" style={{ animationDelay: '0.12s' }}>
-          <Countdown />
           <div className="hero-facts">
             {heroFacts.map((fact) => (
               <div key={fact.label} className="hero-fact">
@@ -95,6 +135,8 @@ const HeroSection = () => {
             ))}
           </div>
         </div>
+
+        <IndexTeaser />
       </div>
     </section>
   );

@@ -210,12 +210,12 @@
         "completed": "最近一期已完成"
       },
       "title": "当前公布的课程安排",
-      "description": "本区块依据 depa 官方 SCL #6 页面整理，核对日期为 2026 年 3 月 7 日。",
+      "description": "本区块依据 depa 官方 SCL #6 页面整理，最近核对日期为 2026 年 4 月 4 日。",
       "deadlineLabel": "申请截止",
       "datesLabel": "授课日期",
       "datesValue": "2026 年 5 月 11、12、18、19、20、25、26 日",
       "venueLabel": "地点",
-      "venueValue": "曼谷 The Quarter Ladprao by UHG，另含国内考察",
+      "venueValue": "泰国数字经济促进局 A 楼，234/431 Soi Ladprao 10，Chatuchak，Bangkok，另含国内考察",
       "feeLabel": "费用"
     },
     "process": {
@@ -344,6 +344,35 @@
     "termsOfService": "使用条款",
     "dataProtection": "数据保护",
     "disclaimer": "本网站由泰国数字经济促进局（depa）运营，隶属于泰国数字经济与社会部。校友数据来自 depa 官方公告，仅供信息参考。"
+  },
+  "index": {
+    "kicker": "Smart City Thailand Index",
+    "title": "一个衡量城市是否真正\"智慧\"的数据工具",
+    "description": "一个独立的评分框架，对泰国 37+ 座智慧城市在 7 个宜居维度进行排名，配有公开的交互式探索工具。",
+    "cards": {
+      "rankings": {
+        "kicker": "城市排名",
+        "title": "37 座城市评分与排名",
+        "description": "基于 7 个宜居维度的综合评分，按 alpha、beta、gamma 三级分类"
+      },
+      "allocator": {
+        "kicker": "权重调节器",
+        "title": "拖动即可实时重排",
+        "description": "在雷达图上调整维度权重，城市排名即刻重新排列"
+      },
+      "map": {
+        "kicker": "交互式地图",
+        "title": "看看智慧城市到底在哪里",
+        "description": "按区域聚类，附带维度分布图和多图层视图"
+      },
+      "reality": {
+        "kicker": "现实检验",
+        "title": "官方认证 vs. 实际得分",
+        "description": "将政府认证状态与基于证据的结果评级进行对比"
+      }
+    },
+    "cta": "探索完整指数",
+    "meta": "{{cities}} 座城市 · {{pillars}} 个维度 · α/β/γ 分级"
   },
   "countdown": {
     "until": "SCL #6 倒计时",

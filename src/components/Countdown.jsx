@@ -5,8 +5,8 @@ import './Countdown.css';
 
 const TARGET = new Date(programDetails.programStart).getTime();
 
-function getTimeLeft() {
-  const diff = TARGET - Date.now();
+function getTimeLeft(now) {
+  const diff = TARGET - now;
   if (diff <= 0) return null;
   return {
     days: Math.floor(diff / 86400000),
@@ -16,8 +16,8 @@ function getTimeLeft() {
   };
 }
 
-function getTimeSince() {
-  const diff = Date.now() - TARGET;
+function getTimeSince(now) {
+  const diff = now - TARGET;
   if (diff < 0) return null;
   return {
     days: Math.floor(diff / 86400000),
@@ -29,7 +29,7 @@ function getTimeSince() {
 
 const Countdown = () => {
   const { t } = useTranslation();
-  const [now, setNow] = useState(Date.now());
+  const [now, setNow] = useState(() => Date.now());
 
   useEffect(() => {
     const id = setInterval(() => setNow(Date.now()), 1000);
@@ -37,7 +37,7 @@ const Countdown = () => {
   }, []);
 
   const isPast = now >= TARGET;
-  const time = isPast ? getTimeSince() : getTimeLeft();
+  const time = isPast ? getTimeSince(now) : getTimeLeft(now);
 
   if (!time) return null;
 

@@ -22,7 +22,7 @@ export const programDetails = {
   applicationDeadline: '2026-04-06T23:59:59+07:00',
   programStart: '2026-05-11T09:00:00+07:00',
   programEnd: '2026-05-26T18:00:00+07:00',
-  venueBangkok: 'The Quarter Ladprao by UHG, Bangkok',
+  venueBangkok: 'Digital Economy Promotion Agency (Building A), 234/431 Soi Ladprao 10, Chatuchak, Bangkok 10900',
 };
 
 export const applicationUrl = OFFICIAL_PROGRAM_URLS.th;

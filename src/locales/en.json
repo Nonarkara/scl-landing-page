@@ -210,12 +210,12 @@
         "completed": "Latest cohort completed"
       },
       "title": "Current published logistics",
-      "description": "These details follow depa's official SCL #6 article as of March 7, 2026.",
+      "description": "These details follow depa's official SCL #6 article as verified on April 4, 2026.",
       "deadlineLabel": "Application deadline",
       "datesLabel": "Training dates",
       "datesValue": "May 11, 12, 18, 19, 20, 25, and 26, 2026",
       "venueLabel": "Venue",
-      "venueValue": "The Quarter Ladprao by UHG, Bangkok, plus domestic study visits",
+      "venueValue": "Digital Economy Promotion Agency (Building A), 234/431 Soi Ladprao 10, Chatuchak, Bangkok 10900, plus domestic study visits",
       "feeLabel": "Fee"
     },
     "process": {
@@ -344,6 +344,35 @@
     "termsOfService": "Terms of Service",
     "dataProtection": "Data Protection",
     "disclaimer": "This site is operated by the Digital Economy Promotion Agency (depa), Ministry of Digital Economy and Society, Kingdom of Thailand. Alumni data is sourced from official depa announcements and is shown for informational purposes."
+  },
+  "index": {
+    "kicker": "Smart City Thailand Index",
+    "title": "A data tool for measuring what's actually smart",
+    "description": "An independent scoring framework ranking 37+ Thai smart cities across 7 livability pillars — with interactive exploration tools open to the public.",
+    "cards": {
+      "rankings": {
+        "kicker": "Rankings",
+        "title": "37 cities scored and ranked",
+        "description": "Composite scores across 7 livability pillars with alpha, beta, and gamma tier classification"
+      },
+      "allocator": {
+        "kicker": "Priority allocator",
+        "title": "Drag to re-rank in real time",
+        "description": "Adjust pillar weights on a radar chart and watch cities re-sort instantly"
+      },
+      "map": {
+        "kicker": "Interactive map",
+        "title": "See where smart cities actually are",
+        "description": "Regional clusters with stacked pillar breakdowns and multiple layer views"
+      },
+      "reality": {
+        "kicker": "Reality check",
+        "title": "Official status vs. actual scores",
+        "description": "Government certification compared against evidence-based outcome ratings"
+      }
+    },
+    "cta": "Explore the full Index",
+    "meta": "{{cities}} cities · {{pillars}} pillars · \u03b1/\u03b2/\u03b3 tiers"
   },
   "countdown": {
     "until": "Until SCL #6",

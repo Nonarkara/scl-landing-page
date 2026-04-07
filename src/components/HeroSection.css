@@ -6,13 +6,14 @@
 .hero-shell {
   max-width: 1120px;
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-  gap: 36px;
-  align-items: end;
+  grid-template-columns: minmax(0, 0.84fr) minmax(0, 1.16fr);
+  gap: 40px;
+  align-items: start;
 }
 
 .hero-copy {
   text-align: left;
+  padding-top: 8px;
 }
 
 .hero-eyebrow {
@@ -67,6 +68,13 @@
   font-size: 0.92rem;
 }
 
+.hero-rail {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(240px, 0.42fr);
+  gap: 18px;
+  align-items: end;
+}
+
 .hero-media {
   display: grid;
   gap: 12px;
@@ -84,6 +92,61 @@
   color: var(--text-muted);
   font-size: 0.82rem;
   line-height: 1.6;
+}
+
+.hero-brief {
+  display: grid;
+  gap: 16px;
+  align-content: start;
+  padding-top: 2px;
+  border-top: 3px solid var(--depa-yellow);
+}
+
+.hero-brief-head {
+  display: grid;
+  gap: 8px;
+}
+
+.hero-brief-kicker {
+  color: var(--text-muted);
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.hero-brief-head p {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.7;
+}
+
+.hero-brief-list {
+  display: grid;
+  gap: 12px;
+}
+
+.hero-brief-item {
+  padding-top: 12px;
+  border-top: 1px solid var(--border-glass);
+}
+
+.hero-brief-item span {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.hero-brief-item strong {
+  display: block;
+  color: var(--text-main);
+  font-size: 0.96rem;
+  line-height: 1.6;
+  font-weight: 600;
 }
 
 .hero-summary {
@@ -129,6 +192,10 @@
     grid-template-columns: 1fr;
     gap: 28px;
   }
+
+  .hero-rail {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 640px) {
@@ -151,6 +218,10 @@
 
   .hero-actions .btn {
     width: 100%;
+  }
+
+  .hero-brief-item strong {
+    font-size: 0.92rem;
   }
 
   .hero-facts {
