@@ -84,7 +84,6 @@ const MapGraphic = () => (
       opacity="0.06"
       stroke="#111"
       strokeWidth="0.8"
-      opacity="0.2"
     />
     <circle cx="78" cy="30" r="4" fill={PILLAR_COLORS.livability} opacity="0.8" />
     <circle cx="85" cy="42" r="3.5" fill={PILLAR_COLORS.economy} opacity="0.8" />
