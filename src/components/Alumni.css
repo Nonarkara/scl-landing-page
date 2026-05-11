@@ -475,6 +475,66 @@
   text-decoration: underline;
 }
 
+.search-suggestions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.suggestion-label {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.suggestion-tag {
+  padding: 4px 10px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-glass);
+  border-radius: 4px;
+  color: var(--text-secondary);
+  font-size: 0.78rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.suggestion-tag:hover {
+  background: var(--bg-hover);
+  border-color: var(--border-strong);
+  color: var(--text-main);
+  transform: translateY(-1px);
+}
+
+.alumni-list-item {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--border-glass);
+  transition: opacity 0.3s ease;
+}
+
+.alumni-name {
+  margin-bottom: 4px;
+  color: var(--text-main);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.alumni-org {
+  color: var(--text-secondary);
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.alumni-badges-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
 @media (max-width: 720px) {
   .alumni-network {
     grid-template-columns: 1fr;
@@ -487,6 +547,10 @@
   .demo-stats-row {
     grid-template-columns: 1fr;
     gap: 12px;
+  }
+  
+  .search-suggestions {
+    gap: 6px;
   }
 }
 

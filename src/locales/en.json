@@ -289,6 +289,7 @@
     },
     "batch": "Cohort",
     "viewList": "Open official list",
+    "suggestions": "Search suggestions",
     "searchPlaceholder": "Search by name, role, organization, or cohort...",
     "searchHint": "Search is normalized from the official announcement text so OCR spacing issues do not block matches.",
     "positionDisclaimer": "Positions and affiliations shown reflect the time each participant joined the program. Titles and organizations may have changed since.",

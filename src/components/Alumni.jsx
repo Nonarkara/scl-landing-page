@@ -206,6 +206,20 @@ const Alumni = () => {
                 </button>
               )}
             </div>
+            
+            <div className="search-suggestions">
+              <span className="suggestion-label">{t('alumni.suggestions')}:</span>
+              {['Mayor', 'CEO', 'Director', 'Digital', 'เทศบาล', 'บริษัท'].map(tag => (
+                <button 
+                  key={tag} 
+                  className="suggestion-tag"
+                  onClick={() => setSearchTerm(tag)}
+                >
+                  {tag}
+                </button>
+              ))}
+            </div>
+
             <p className="search-hint">{t('alumni.searchHint')}</p>
             <p className="search-hint position-disclaimer">{t('alumni.positionDisclaimer')}</p>
           </div>
