@@ -454,5 +454,59 @@
       "role": "泰国电力局湄磨宜居城市项目负责人",
       "quote": "发展了智慧城市领导力，从清晰的长期规划以市民为中心，到数据驱动的执行和跨部门合作，增强了可持续城市推进的视野。"
     }
+  },
+  "history": {
+    "kicker": "我们的故事",
+    "title": "从第1期到全球影响力",
+    "2020_title": "创立（第1期）",
+    "2020_desc": "怀着弥合技术与城市治理之间差距的愿景而启动。40位先驱者加入了第一期。",
+    "2022_title": "扩展网络",
+    "2022_desc": "到第3期，SCL已成为国家标杆，吸引了来自30多个省份的省长和首席执行官。",
+    "2022_title2": "扩展（第3期）",
+    "2022_desc2": "引入泰国智慧城市指数整合，使课程数据驱动。",
+    "2024_title": "人工智能时代（第5期）",
+    "2024_desc": "彻底改革课程，聚焦人工智能治理和可持续城市技术。",
+    "2026_title": "现在（第6期）",
+    "2026_desc": "有史以来最大的一期，120多名参与者代表50多个省份。"
+  },
+  "loading": {
+    "alumni": "正在加载校友数据...",
+    "alumniRefresh": "如果加载时间过长，请尝试刷新页面。"
+  },
+  "smartInsights": {
+    "kicker": "数据洞察",
+    "title": "网络中的模式",
+    "totalAlumni": "校友总数",
+    "provincesCovered": "覆盖77个省份中的",
+    "leadershipRoles": "担任领导职务",
+    "roleSubtitle": "省长、市长、首席执行官、董事",
+    "publicSector": "公共部门",
+    "privateSector": "私营部门: {{pct}}%",
+    "publicPrivateRatio": "公私比例",
+    "ratioSubtitle": "跨部门均衡代表",
+    "leadershipComposition": "领导力构成",
+    "topProvinces": "主要省份",
+    "cohortGrowth": "学员增长",
+    "topOrganizations": "主要机构"
+  },
+  "curriculumPlaceholder": {
+    "title": "世界级课程",
+    "desc": "我们的课程旨在提供关于智慧城市发展、数字经济和人工智能时代领导力的可行见解。",
+    "cta": "查看详细课程",
+    "certificationTitle": "认证",
+    "certificationDesc": "完成所有模块和毕业项目的参与者将获得depa泰国颁发的官方SCL认证。"
+  },
+  "faculty": {
+    "partialList": "这只是部分名单。SCL拥有30多位轮值教员、客座讲师和来自全球科技公司和智慧城市成功案例的城市实践者。"
+  },
+  "faq": {
+    "searchPlaceholder": "搜索问题...",
+    "noResults": "没有找到匹配的问题。",
+    "clearFilters": "清除筛选",
+    "contactTitle": "还有问题？",
+    "contactDesc": "我们随时帮助您引领城市的数字化转型。",
+    "contactCta": "联系团队",
+    "resultsFound": "找到 {{count}} 个答案",
+    "resultsFound_plural": "找到 {{count}} 个答案"
   }
 }

@@ -186,8 +186,8 @@ const Alumni = () => {
   if (!allEntries || allEntries.length === 0) {
     return (
       <div className="container" style={{ padding: '100px 20px', textAlign: 'center' }}>
-        <h2>Loading Alumni Data...</h2>
-        <p>If this takes too long, please try refreshing the page.</p>
+        <h2>{t('loading.alumni')}</h2>
+        <p>{t('loading.alumniRefresh')}</p>
       </div>
     );
   }

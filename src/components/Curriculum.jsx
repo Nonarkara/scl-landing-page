@@ -1,8 +1,10 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { BookOpen, Users, Lightbulb, BarChart, Globe, Zap } from 'lucide-react';
 import './Curriculum.css';
 
 const Curriculum = () => {
+  const { t } = useTranslation();
   const modules = [
     {
       icon: <Globe size={24} />,
@@ -61,8 +63,8 @@ const Curriculum = () => {
 
         <div className="curriculum-footer">
           <div className="curriculum-cert-box">
-            <h4>Certification</h4>
-            <p>Participants who complete all modules and the capstone project will receive an official SCL Certification from depa Thailand.</p>
+            <h4>{t('curriculumPlaceholder.certificationTitle')}</h4>
+            <p>{t('curriculumPlaceholder.certificationDesc')}</p>
           </div>
         </div>
       </div>

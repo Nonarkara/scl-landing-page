@@ -454,5 +454,59 @@
       "role": "Head, Mae Moh Livable City Project, EGAT",
       "quote": "Developed smart-city leadership with a sustainable vision — from clear long-term planning centered on citizens, to data-driven execution and cross-sector collaboration."
     }
+  },
+  "history": {
+    "kicker": "OUR STORY",
+    "title": "From Batch #1 to Global Impact",
+    "2020_title": "The Inception (Batch #1)",
+    "2020_desc": "Launched with a vision to bridge the gap between technology and urban governance. 40 pioneers joined the first cohort.",
+    "2022_title": "Expanding the Network",
+    "2022_desc": "By Batch #3, SCL became a national benchmark, attracting governors and CEOs from across 30+ provinces.",
+    "2022_title2": "Expansion (Batch #3)",
+    "2022_desc2": "Introduced the Smart City Thailand Index integration, making the program data-driven.",
+    "2024_title": "The AI Era (Batch #5)",
+    "2024_desc": "Overhauled the curriculum to focus on AI governance and sustainable urban tech.",
+    "2026_title": "Now (Batch #6)",
+    "2026_desc": "Our largest cohort ever, with 120+ participants representing 50+ provinces."
+  },
+  "loading": {
+    "alumni": "Loading Alumni Data...",
+    "alumniRefresh": "If this takes too long, please try refreshing the page."
+  },
+  "smartInsights": {
+    "kicker": "DATA INSIGHTS",
+    "title": "Patterns in the Network",
+    "totalAlumni": "Total Alumni",
+    "provincesCovered": "of 77 provinces",
+    "leadershipRoles": "In Leadership Roles",
+    "roleSubtitle": "Governors, Mayors, CEOs, Directors",
+    "publicSector": "Public Sector",
+    "privateSector": "Private: {{pct}}%",
+    "publicPrivateRatio": "Public-to-Private Ratio",
+    "ratioSubtitle": "Balanced cross-sector representation",
+    "leadershipComposition": "Leadership Composition",
+    "topProvinces": "Top Provinces",
+    "cohortGrowth": "Cohort Growth",
+    "topOrganizations": "Top Organizations"
+  },
+  "curriculumPlaceholder": {
+    "title": "World-Class Curriculum",
+    "desc": "Our program is designed to provide actionable insights into smart city development, digital economy, and leadership in the age of AI.",
+    "cta": "View Detailed Curriculum",
+    "certificationTitle": "Certification",
+    "certificationDesc": "Participants who complete all modules and the capstone project will receive an official SCL Certification from depa Thailand."
+  },
+  "faculty": {
+    "partialList": "This is a partial list. SCL draws from a rotating faculty of 30+ experts, guest speakers, and city practitioners from global technology firms and smart city success stories."
+  },
+  "faq": {
+    "searchPlaceholder": "Search questions...",
+    "noResults": "No questions match your search.",
+    "clearFilters": "Clear filters",
+    "contactTitle": "Still have questions?",
+    "contactDesc": "We're here to help you lead your city's digital transformation.",
+    "contactCta": "Contact the Team",
+    "resultsFound": "{{count}} answer found",
+    "resultsFound_plural": "{{count}} answers found"
   }
 }

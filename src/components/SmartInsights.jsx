@@ -26,34 +26,34 @@ const SmartInsights = ({ demographics }) => {
     {
       icon: <Users size={20} />,
       value: total,
-      label: 'Total Alumni',
-      sub: `${coverageRate}% of 77 provinces`,
+      label: t('smartInsights.totalAlumni'),
+      sub: `${coverageRate}% ${t('smartInsights.provincesCovered')}`,
     },
     {
       icon: <Briefcase size={20} />,
       value: `${leadershipDensity}%`,
-      label: 'In Leadership Roles',
-      sub: 'Governors, Mayors, CEOs, Directors',
+      label: t('smartInsights.leadershipRoles'),
+      sub: t('smartInsights.roleSubtitle'),
     },
     {
       icon: <Building2 size={20} />,
       value: `${sectorPercentages.public || 0}%`,
-      label: 'Public Sector',
-      sub: `Private: ${sectorPercentages.private || 0}%`,
+      label: t('smartInsights.publicSector'),
+      sub: t('smartInsights.privateSector', { pct: sectorPercentages.private || 0 }),
     },
     {
       icon: <TrendingUp size={20} />,
       value: `${publicPrivateRatio}:1`,
-      label: 'Public-to-Private Ratio',
-      sub: 'Balanced cross-sector representation',
+      label: t('smartInsights.publicPrivateRatio'),
+      sub: t('smartInsights.ratioSubtitle'),
     },
   ];
 
   return (
     <div className="smart-insights">
       <div className="smart-insights-header">
-        <span className="section-kicker">DATA INSIGHTS</span>
-        <h3 className="smart-insights-title">Patterns in the Network</h3>
+        <span className="section-kicker">{t('smartInsights.kicker')}</span>
+        <h3 className="smart-insights-title">{t('smartInsights.title')}</h3>
       </div>
 
       <div className="smart-stats-grid">
@@ -70,7 +70,7 @@ const SmartInsights = ({ demographics }) => {
       <div className="smart-insights-row">
         <div className="smart-panel">
           <h4 className="smart-panel-title">
-            <GraduationCap size={16} /> Leadership Composition
+            <GraduationCap size={16} /> {t('smartInsights.leadershipComposition')}
           </h4>
           <div className="smart-bars">
             {Object.entries(roleGroupCounts)
@@ -96,7 +96,7 @@ const SmartInsights = ({ demographics }) => {
 
         <div className="smart-panel">
           <h4 className="smart-panel-title">
-            <MapPin size={16} /> Top Provinces
+            <MapPin size={16} /> {t('smartInsights.topProvinces')}
           </h4>
           <div className="smart-ranking">
             {topProvinces.map(([province, count], i) => (
@@ -119,7 +119,7 @@ const SmartInsights = ({ demographics }) => {
       <div className="smart-insights-row">
         <div className="smart-panel smart-panel-wide">
           <h4 className="smart-panel-title">
-            <TrendingUp size={16} /> Cohort Growth
+            <TrendingUp size={16} /> {t('smartInsights.cohortGrowth')}
           </h4>
           <div className="smart-batch-chart">
             {batchCounts.map(([batch, count]) => (
@@ -139,7 +139,7 @@ const SmartInsights = ({ demographics }) => {
 
         <div className="smart-panel">
           <h4 className="smart-panel-title">
-            <Building2 size={16} /> Top Organizations
+            <Building2 size={16} /> {t('smartInsights.topOrganizations')}
           </h4>
           <div className="smart-org-list">
             {topOrganizations.map(([org, count], i) => (

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { Linkedin, Mail } from 'lucide-react';
 import './Faculty.css';
 
@@ -46,6 +47,7 @@ const facultyData = [
 ];
 
 export default function Faculty() {
+  const { t } = useTranslation();
   return (
     <div className="faculty-page container">
       <div className="faculty-header">
@@ -88,8 +90,7 @@ export default function Faculty() {
 
       <div className="faculty-footer">
         <p>
-          <strong>This is a partial list.</strong> SCL draws from a rotating faculty of 30+ experts,
-          guest speakers, and city practitioners from global technology firms and smart city success stories.
+          {t('faculty.partialList')}
         </p>
       </div>
     </div>

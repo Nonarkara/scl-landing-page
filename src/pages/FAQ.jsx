@@ -1,4 +1,5 @@
 import React, { useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { ChevronDown, ChevronUp, Search, X } from 'lucide-react';
 import faqData from '../data/faqData';
 import './FAQ.css';
@@ -19,6 +20,7 @@ const categoryLabels = {
 const categoryOrder = Object.keys(categoryLabels);
 
 export default function FAQ() {
+  const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(null);
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState('all');
@@ -74,7 +76,7 @@ export default function FAQ() {
           <Search size={18} className="faq-search-icon" />
           <input
             type="text"
-            placeholder="Search questions..."
+            placeholder={t('faq.searchPlaceholder')}
             value={searchTerm}
             onChange={(e) => {
               setSearchTerm(e.target.value);
@@ -144,18 +146,18 @@ export default function FAQ() {
 
       {filteredFAQs.length === 0 && (
         <div className="faq-empty">
-          <p>No questions match your search.</p>
+          <p>{t('faq.noResults')}</p>
           <button className="btn btn-primary" onClick={() => { setSearchTerm(''); setActiveCategory('all'); }}>
-            Clear filters
+            {t('faq.clearFilters')}
           </button>
         </div>
       )}
 
       <div className="faq-contact">
-        <h3>Still have questions?</h3>
-        <p>We're here to help you lead your city's digital transformation.</p>
+        <h3>{t('faq.contactTitle')}</h3>
+        <p>{t('faq.contactDesc')}</p>
         <a href="mailto:scp@depa.or.th?subject=SCL%20Program%20Inquiry" className="btn btn-primary">
-          Contact the Team
+          {t('faq.contactCta')}
         </a>
       </div>
     </div>

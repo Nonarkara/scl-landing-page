@@ -1,6 +1,6 @@
-import LogoBar from '../components/LogoBar';
-
 import { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
+import LogoBar from '../components/LogoBar';
 import { useSearchParams } from 'react-router-dom';
 import HeroSection from '../components/HeroSection';
 import AboutProgram from '../components/AboutProgram';
@@ -11,6 +11,7 @@ import { ArrowRight, History, BookOpen, Map, MessageSquare, Mail } from 'lucide-
 import { Link } from 'react-router-dom';
 
 const Home = () => {
+  const { t } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
   const activeTab = searchParams.get('tab') || 'about';
   const tabContentRef = useRef(null);
@@ -76,38 +77,38 @@ const Home = () => {
                 <AboutProgram />
                 <div className="history-section">
                   <div className="section-header">
-                    <span className="section-kicker">OUR STORY</span>
-                    <h2 className="section-title">From Batch #1 to Global Impact</h2>
+                    <span className="section-kicker">{t('history.kicker')}</span>
+                    <h2 className="section-title">{t('history.title')}</h2>
                   </div>
                   <div className="history-timeline">
                     <div className="history-item">
                       <div className="history-year">2020</div>
                       <div className="history-content">
-                        <h3>The Inception (Batch #1)</h3>
-                        <p>Launched with a vision to bridge the gap between technology and urban governance. 40 pioneers joined the first cohort.</p>
+                        <h3>{t('history.2020_title')}</h3>
+                        <p>{t('history.2020_desc')}</p>
                       </div>
                     </div>
                     <div className="history-item">
                       <div className="history-year">2022</div>
                       <div className="history-content">
-                        <h3>Expanding the Network</h3>
-                        <p>By Batch #3, SCL became a national benchmark, attracting governors and CEOs from across 30+ provinces.</p>
-                        <h3>Expansion (Batch #3)</h3>
-                        <p>Introduced the Smart City Thailand Index integration, making the program data-driven.</p>
+                        <h3>{t('history.2022_title')}</h3>
+                        <p>{t('history.2022_desc')}</p>
+                        <h3>{t('history.2022_title2')}</h3>
+                        <p>{t('history.2022_desc2')}</p>
                       </div>
                     </div>
                     <div className="history-item">
                       <div className="history-year">2024</div>
                       <div className="history-content">
-                        <h3>The AI Era (Batch #5)</h3>
-                        <p>Overhauled the curriculum to focus on AI governance and sustainable urban tech.</p>
+                        <h3>{t('history.2024_title')}</h3>
+                        <p>{t('history.2024_desc')}</p>
                       </div>
                     </div>
                     <div className="history-item">
                       <div className="history-year">2026</div>
                       <div className="history-content">
-                        <h3>Now (Batch #6)</h3>
-                        <p>Our largest cohort ever, with 120+ participants representing 50+ provinces.</p>
+                        <h3>{t('history.2026_title')}</h3>
+                        <p>{t('history.2026_desc')}</p>
                       </div>
                     </div>
                   </div>
@@ -118,9 +119,9 @@ const Home = () => {
             {activeTab === 'curriculum' && (
               <div className="tab-pane">
                 <div className="curriculum-placeholder">
-                  <h2>World-Class Curriculum</h2>
-                  <p>Our program is designed to provide actionable insights into smart city development, digital economy, and leadership in the age of AI.</p>
-                  <Link to="/curriculum" className="btn btn-primary">View Detailed Curriculum</Link>
+                  <h2>{t('curriculumPlaceholder.title')}</h2>
+                  <p>{t('curriculumPlaceholder.desc')}</p>
+                  <Link to="/curriculum" className="btn btn-primary">{t('curriculumPlaceholder.cta')}</Link>
                 </div>
               </div>
             )}
