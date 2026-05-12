@@ -63,7 +63,7 @@ export default function FAQ() {
       <div className="faq-contact">
         <h3>Still have questions?</h3>
         <p>We're here to help you lead your city's digital transformation.</p>
-        <button className="btn btn-primary">Contact the Team</button>
+        <a href="mailto:scp@depa.or.th?subject=SCL%20Program%20Inquiry" className="btn btn-primary">Contact the Team</a>
       </div>
     </div>
   );

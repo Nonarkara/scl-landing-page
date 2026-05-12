@@ -62,6 +62,16 @@
   overflow: hidden;
   cursor: pointer;
   aspect-ratio: 4 / 3;
+  border-radius: 8px;
+  transition: transform 0.15s ease;
+}
+
+.masonry-item:hover {
+  transform: translateY(-2px);
+}
+
+.masonry-item:active {
+  transform: scale(0.98);
 }
 
 .masonry-item img {
@@ -75,7 +85,7 @@
 
 .masonry-item:hover img,
 .masonry-item:focus-visible img {
-  transform: scale(1.01);
+  transform: scale(1.03);
   filter: saturate(1);
 }
 
@@ -107,6 +117,15 @@
   border-radius: 50%;
   color: #ffffff;
   cursor: pointer;
+  transition: transform 0.12s ease, background 0.15s ease;
+}
+
+.lightbox-close:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.lightbox-close:active {
+  transform: scale(0.92);
 }
 
 .lightbox-frame {
@@ -146,6 +165,15 @@
   border-radius: 50%;
   color: #ffffff;
   cursor: pointer;
+  transition: transform 0.12s ease, background 0.15s ease;
+}
+
+.lightbox-nav:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.lightbox-nav:active {
+  transform: scale(0.92);
 }
 
 @media (max-width: 900px) {

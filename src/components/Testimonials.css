@@ -201,11 +201,15 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 0 20px rgba(255, 242, 0, 0.4);
-  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: transform 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .video-thumbnail:hover .play-button {
   transform: scale(1.1);
+}
+
+.video-thumbnail:active .play-button {
+  transform: scale(0.95);
 }
 
 .video-play-overlay span {
@@ -247,11 +251,15 @@
   color: var(--text-muted);
   opacity: 0.3;
   filter: grayscale(1);
-  transition: opacity 0.3s ease;
+  transition: opacity 0.2s ease, transform 0.12s ease;
 }
 
 .ticker-item:hover {
   opacity: 0.6;
+}
+
+.ticker-item:active {
+  transform: scale(0.96);
 }
 
 @keyframes scroll {

@@ -76,9 +76,9 @@ const HeroSection = () => {
               )}
               
               <div className="hero-secondary-actions">
-                <button className="btn btn-outline btn-brochure">
+                <a href="mailto:scp@depa.or.th?subject=Request%20SCL%20Program%20Brochure" className="btn btn-outline btn-brochure">
                   <Download size={18} /> Download Brochure
-                </button>
+                </a>
               </div>
             </div>
           </div>

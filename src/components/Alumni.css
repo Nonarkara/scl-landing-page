@@ -178,18 +178,29 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 0;
+  padding: 6px 10px;
   color: var(--text-secondary);
   font-size: 0.84rem;
   font-weight: 600;
   cursor: pointer;
   white-space: nowrap;
+  border-radius: 6px;
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.sector-tab:hover {
+  color: var(--text-main);
+  background: var(--bg-surface);
+}
+
+.sector-tab:active {
+  transform: scale(0.96);
 }
 
 .sector-tab-active {
   color: var(--text-main);
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  background: var(--depa-yellow-soft);
+  text-decoration: none;
 }
 
 .sector-tab-count {
@@ -247,6 +258,22 @@
   transform: translateY(-50%);
   color: var(--text-muted);
   cursor: pointer;
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: color 0.15s ease, background 0.15s ease, transform 0.12s ease;
+}
+
+.clear-search:hover {
+  background: var(--bg-surface);
+  color: var(--text-main);
+}
+
+.clear-search:active {
+  transform: translateY(-50%) scale(0.92);
 }
 
 .search-hint {
@@ -323,63 +350,6 @@
   gap: 0;
 }
 
-.alumni-list-item {
-  padding: 14px 0;
-  border-bottom: 1px solid var(--border-glass);
-}
-
-.alumni-badges-row {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 10px;
-}
-
-.alumni-badge {
-  color: white;
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  padding: 4px 8px;
-  border-radius: 4px;
-  background-color: var(--batch-unknown-color);
-}
-
-.batch-1-badge { background-color: var(--batch-1-color); }
-.batch-2-badge { background-color: var(--batch-2-color); }
-.batch-3-badge { background-color: var(--batch-3-color); }
-.batch-4-badge { background-color: var(--batch-4-color); }
-.batch-5-badge { background-color: var(--batch-5-color); }
-.batch-6-badge { background-color: var(--batch-6-color); }
-
-.alumni-sector-tag {
-  color: var(--text-muted);
-  font-size: 0.74rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.alumni-name {
-  margin-bottom: 6px;
-  color: var(--text-main);
-  font-size: 1rem;
-  line-height: 1.4;
-}
-
-.alumni-org {
-  color: var(--text-secondary);
-  font-size: 0.9rem;
-  line-height: 1.7;
-}
-
-.alumni-source {
-  margin-top: 12px;
-  color: var(--text-main);
-  font-size: 0.85rem;
-}
-
 .no-results {
   padding: 30px 0;
   display: grid;
@@ -413,12 +383,16 @@
   background: var(--bg-secondary);
   border-radius: 8px;
   box-shadow: var(--shadow-soft);
-  transition: all 0.2s ease;
+  transition: transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
 }
 
 .alumni-card:hover {
   background: var(--surface-card);
   transform: translateX(4px);
+}
+
+.alumni-card:active {
+  transform: translateX(4px) scale(0.99);
 }
 
 .alumni-batch-wrapper[data-batch="1"] .alumni-card { border-left-color: var(--batch-1-color); }
@@ -541,15 +515,21 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  padding: 0;
+  padding: 6px 10px;
+  border-radius: 6px;
   color: var(--text-main);
   font-size: 0.86rem;
   font-weight: 600;
   cursor: pointer;
+  transition: transform 0.12s ease, background 0.15s ease;
 }
 
 .batch-search-btn:hover {
-  text-decoration: underline;
+  background: var(--bg-surface);
+}
+
+.batch-search-btn:active {
+  transform: scale(0.96);
 }
 
 .search-suggestions {
@@ -575,20 +555,40 @@
   font-size: 0.78rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: transform 0.12s ease, background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
 .suggestion-tag:hover {
-  background: var(--bg-hover);
+  background: var(--bg-hover, rgba(12, 47, 83, 0.04));
   border-color: var(--border-strong);
   color: var(--text-main);
   transform: translateY(-1px);
+}
+
+.suggestion-tag:active {
+  transform: scale(0.95);
+}
+
+.suggestion-tag--highlight {
+  background: var(--depa-yellow-soft);
+  border-color: var(--depa-yellow-muted);
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.suggestion-tag--highlight:hover {
+  background: var(--depa-yellow-mid);
+  border-color: var(--depa-gold);
 }
 
 .alumni-list-item {
   padding: 20px 0;
   border-bottom: 1px solid var(--border-glass);
   transition: opacity 0.3s ease;
+}
+
+.alumni-list-item:last-child {
+  border-bottom: none;
 }
 
 .alumni-name {
@@ -610,6 +610,217 @@
   align-items: center;
   gap: 12px;
   margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.alumni-badge {
+  color: white;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 4px;
+  background-color: var(--batch-unknown-color);
+}
+
+.batch-1-badge { background-color: var(--batch-1-color); }
+.batch-2-badge { background-color: var(--batch-2-color); }
+.batch-3-badge { background-color: var(--batch-3-color); }
+.batch-4-badge { background-color: var(--batch-4-color); }
+.batch-5-badge { background-color: var(--batch-5-color); }
+.batch-6-badge { background-color: var(--batch-6-color); }
+
+.alumni-sector-tag {
+  color: var(--text-muted);
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.alumni-source {
+  margin-top: 12px;
+  color: var(--text-main);
+  font-size: 0.85rem;
+}
+
+.alumni-actions-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.alumni-update-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-glass);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.alumni-update-btn:hover {
+  background: var(--depa-yellow-soft);
+  border-color: var(--depa-yellow-muted);
+  color: var(--text-main);
+}
+
+.alumni-update-btn:active {
+  transform: scale(0.96);
+}
+
+.map-container-wrapper {
+  margin: 24px 0;
+}
+
+.map-caption {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Update Modal */
+.update-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(12, 47, 83, 0.35);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.update-modal {
+  background: var(--bg-secondary);
+  border-radius: 16px;
+  border: 1px solid var(--border-glass);
+  box-shadow: 0 20px 60px rgba(12, 47, 83, 0.15);
+  width: 100%;
+  max-width: 480px;
+  overflow: hidden;
+  animation: modal-in 0.2s ease;
+}
+
+@keyframes modal-in {
+  from { opacity: 0; transform: translateY(12px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.update-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 20px;
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.update-modal-header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.update-modal-close {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.update-modal-close:hover {
+  background: var(--border-glass);
+  color: var(--text-main);
+}
+
+.update-modal-body {
+  padding: 20px;
+}
+
+.update-modal-intro {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.update-modal-current {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  background: var(--bg-primary);
+  border-radius: 10px;
+  border: 1px solid var(--border-glass);
+  margin-bottom: 18px;
+}
+
+.update-modal-current strong {
+  color: var(--text-main);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.update-modal-current span {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.update-modal-form {
+  display: grid;
+  gap: 14px;
+}
+
+.update-modal-form label {
+  display: grid;
+  gap: 6px;
+}
+
+.update-modal-form label span {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.update-modal-form input {
+  padding: 10px 12px;
+  border: 1px solid var(--border-glass);
+  border-radius: 8px;
+  background: var(--surface-strong);
+  color: var(--text-main);
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.update-modal-form input:focus {
+  border-color: var(--depa-gold);
+  box-shadow: 0 0 0 3px rgba(255, 198, 0, 0.15);
+}
+
+.update-modal-submit {
+  margin-top: 4px;
+  width: 100%;
+  justify-content: center;
 }
 
 @media (max-width: 720px) {

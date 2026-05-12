@@ -32,11 +32,16 @@
   overflow: hidden;
   cursor: pointer;
   background: var(--bg-surface);
-  transition: all 0.2s ease;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.12s ease;
 }
 
 .faq-item:hover {
   border-color: var(--depa-yellow-muted);
+  transform: translateY(-1px);
+}
+
+.faq-item:active {
+  transform: scale(0.995);
 }
 
 .faq-item.active {

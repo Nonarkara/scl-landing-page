@@ -123,13 +123,18 @@
   color: var(--text-secondary);
   font-weight: 600;
   white-space: nowrap;
-  transition: all 0.3s ease;
+  transition: transform 0.12s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
   cursor: pointer;
 }
 
 .tab-btn:hover {
   background: var(--bg-surface);
   color: var(--text-main);
+  transform: translateY(-1px);
+}
+
+.tab-btn:active {
+  transform: scale(0.97) translateY(0);
 }
 
 .tab-btn.active {
@@ -215,13 +220,39 @@
   gap: 30px;
 }
 
+.curriculum-placeholder {
+  text-align: center;
+  padding: 48px 32px;
+  background: var(--surface-strong);
+  border-radius: 24px;
+  border: 1px solid var(--border-glass);
+  box-shadow: var(--shadow-soft);
+}
+
+.curriculum-placeholder h2 {
+  font-size: 1.75rem;
+  margin-bottom: 16px;
+  color: var(--text-main);
+}
+
+.curriculum-placeholder p {
+  color: var(--text-secondary);
+  max-width: 42rem;
+  margin: 0 auto 32px;
+  line-height: 1.7;
+}
+
 .curriculum-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .curriculum-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-4px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.curriculum-card:active {
+  transform: translateY(-1px) scale(0.99);
 }
 
 .curriculum-icon-box {

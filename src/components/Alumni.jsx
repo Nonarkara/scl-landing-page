@@ -9,7 +9,9 @@ import {
   FileText,
   GraduationCap,
   Landmark,
+  Mail,
   Search,
+  Send,
   Users,
   X,
 } from 'lucide-react';
@@ -37,6 +39,69 @@ const SECTOR_ICONS = {
   other: <FileText size={15} />,
 };
 
+const UpdateModal = ({ entry, onClose, t }) => {
+  const [newTitle, setNewTitle] = useState('');
+  const [newLocation, setNewLocation] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(`SCL Alumni Update: ${entry.displayName}`);
+    const body = encodeURIComponent(
+      `Name: ${entry.displayName}\nCurrent Record: ${entry.detail}\n\nUpdated Title/Position: ${newTitle || '(no change)'}\nUpdated Location/Organization: ${newLocation || '(no change)'}\n\nSubmitted via SCL Alumni Directory`
+    );
+    window.location.href = `mailto:scp@depa.or.th?subject=${subject}&body=${body}`;
+    onClose();
+  };
+
+  if (!entry) return null;
+
+  return (
+    <div className="update-modal-backdrop" onClick={onClose}>
+      <div className="update-modal" onClick={(e) => e.stopPropagation()}>
+        <div className="update-modal-header">
+          <h3>{t('alumni.updateTitle', 'Update Your Information')}</h3>
+          <button type="button" className="update-modal-close" onClick={onClose} aria-label="Close">
+            <X size={18} />
+          </button>
+        </div>
+        <div className="update-modal-body">
+          <p className="update-modal-intro">
+            {t('alumni.updateIntro', 'If your position or location has changed, please let us know.')}
+          </p>
+          <div className="update-modal-current">
+            <strong>{entry.displayName}</strong>
+            <span>{entry.detail}</span>
+          </div>
+          <form onSubmit={handleSubmit} className="update-modal-form">
+            <label>
+              <span>{t('alumni.newTitle', 'New Title / Position')}</span>
+              <input
+                type="text"
+                value={newTitle}
+                onChange={(e) => setNewTitle(e.target.value)}
+                placeholder={t('alumni.titlePlaceholder', 'e.g. Mayor of ...')}
+              />
+            </label>
+            <label>
+              <span>{t('alumni.newLocation', 'New Organization / Location')}</span>
+              <input
+                type="text"
+                value={newLocation}
+                onChange={(e) => setNewLocation(e.target.value)}
+                placeholder={t('alumni.locationPlaceholder', 'e.g. Bangkok Metropolitan ...')}
+              />
+            </label>
+            <button type="submit" className="btn btn-primary update-modal-submit">
+              <Send size={16} />
+              {t('alumni.sendUpdate', 'Send Update to scp@depa.or.th')}
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Alumni = () => {
   const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState('');
@@ -44,6 +109,8 @@ const Alumni = () => {
   const [activeSector, setActiveSector] = useState('all');
   const [sortOrder, setSortOrder] = useState('relevance');
   const [filterBatch, setFilterBatch] = useState('all');
+  const [showAllBrowse, setShowAllBrowse] = useState(false);
+  const [updateEntry, setUpdateEntry] = useState(null);
   const deferredSearchTerm = useDeferredValue(searchTerm);
   const searchInputRef = useRef(null);
   const sectionRef = useRef(null);
@@ -53,33 +120,38 @@ const Alumni = () => {
   const demographics = useMemo(() => computeDemographics(allEntries), [allEntries]);
   const searchKey = normalizeSearchText(deferredSearchTerm);
 
+  const hasActiveFilter = searchKey || filterBatch !== 'all' || sortOrder !== 'relevance' || activeSector !== 'all';
+
   const searchResults = useMemo(() => {
     let results = [...allEntries];
-    
+
     // Apply search filter
     if (searchKey) {
       results = results.filter((entry) => entry.searchIndex.includes(searchKey));
     }
-    
+
     // Apply sector filter
     if (activeSector !== 'all') {
       results = results.filter((entry) => entry.sector === activeSector);
     }
-    
+
     // Apply batch filter
     if (filterBatch !== 'all') {
       results = results.filter((entry) => entry.batch.toString() === filterBatch);
     }
-    
+
     // Apply sorting
     if (sortOrder === 'asc') {
       results.sort((a, b) => a.displayName.localeCompare(b.displayName, 'th'));
     } else if (sortOrder === 'desc') {
       results.sort((a, b) => b.displayName.localeCompare(a.displayName, 'th'));
+    } else if (showAllBrowse || hasActiveFilter) {
+      // Default sort by name when browsing all
+      results.sort((a, b) => a.displayName.localeCompare(b.displayName, 'th'));
     }
-    
-    return searchKey || filterBatch !== 'all' || sortOrder !== 'relevance' ? results : [];
-  }, [allEntries, searchKey, activeSector, filterBatch, sortOrder]);
+
+    return hasActiveFilter || showAllBrowse ? results : [];
+  }, [allEntries, searchKey, activeSector, filterBatch, sortOrder, showAllBrowse, hasActiveFilter]);
 
   // Filter batch entries by sector
   const filteredGroupedEntries = useMemo(() => {
@@ -102,6 +174,12 @@ const Alumni = () => {
     setSearchTerm(`SCL ${batchId}`);
     searchInputRef.current?.focus();
     searchInputRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  };
+
+  const handleBrowseAll = () => {
+    setShowAllBrowse(true);
+    setSortOrder('asc');
+    searchInputRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
   };
 
   if (!allEntries || allEntries.length === 0) {
@@ -176,7 +254,7 @@ const Alumni = () => {
             <p className="alumni-network-sites-line">
               <strong>{t('alumni.network.sitesLabel')}</strong> {networkVisitSites.join(' · ')}
             </p>
-            </div>
+          </div>
         </div>
 
         <div className="alumni-tools">
@@ -225,7 +303,10 @@ const Alumni = () => {
                 placeholder={t('alumni.searchPlaceholder')}
                 aria-label={t('alumni.searchPlaceholder')}
                 value={searchTerm}
-                onChange={(event) => setSearchTerm(event.target.value)}
+                onChange={(event) => {
+                  setSearchTerm(event.target.value);
+                  if (event.target.value) setShowAllBrowse(false);
+                }}
               />
               {searchTerm && (
                 <button
@@ -238,37 +319,47 @@ const Alumni = () => {
                 </button>
               )}
             </div>
-            
+
             <div className="search-suggestions">
               <span className="suggestion-label">{t('alumni.suggestions')}:</span>
-              {['เทศบาล', 'อบจ', 'นายก', 'ผู้ว่า', 'ผู้อำนวยการ', 'บริษัท'].map(tag => (
-                <button 
-                  key={tag} 
+              {['เทศบาล', 'อบจ', 'นายก', 'ผู้ว่า', 'ผู้อำนวยการ', 'บริษัท'].map((tag) => (
+                <button
+                  key={tag}
                   className="suggestion-tag"
-                  onClick={() => setSearchTerm(tag)}
+                  onClick={() => {
+                    setSearchTerm(tag);
+                    setShowAllBrowse(false);
+                  }}
                 >
                   {tag}
                 </button>
               ))}
+              <button
+                type="button"
+                className="suggestion-tag suggestion-tag--highlight"
+                onClick={handleBrowseAll}
+              >
+                {t('alumni.browseAll', 'Browse all A-Z')}
+              </button>
             </div>
 
             <p className="search-hint">{t('alumni.searchHint')}</p>
             <p className="search-hint position-disclaimer">{t('alumni.positionDisclaimer')}</p>
 
             <div className="filter-bar">
-              <select 
+              <select
                 className="filter-select"
                 value={filterBatch}
                 onChange={(e) => setFilterBatch(e.target.value)}
                 aria-label={t('alumni.filterByBatch')}
               >
-                <option value="all">{t('alumni.allBatches', 'All Batches')}</option>
-                {alumniBatches.map(b => (
+                <option value="all">{t('alumni.allBatches', 'All Cohorts')}</option>
+                {alumniBatches.map((b) => (
                   <option key={b.id} value={b.id}>SCL {b.id}</option>
                 ))}
               </select>
 
-              <select 
+              <select
                 className="filter-select"
                 value={sortOrder}
                 onChange={(e) => setSortOrder(e.target.value)}
@@ -279,33 +370,47 @@ const Alumni = () => {
                 <option value="desc">{t('alumni.sortDesc', 'Z-A (ฮ-ก)')}</option>
               </select>
             </div>
-            </div>
+          </div>
         </div>
-        </div>
-        
-        {/* Map and Insights temporarily disabled for debugging blank page */}
-        {/* 
+
         {demographics.provinces && Object.keys(demographics.provinces).length > 0 && (
           <div className="map-container-wrapper">
             <ThailandMap demographics={demographics} />
-            <p className="map-caption text-center mt-4 text-sm text-gray-500 italic">
-              {t('alumni.mapCaption', 'See where our alums are from?')}
+            <p className="map-caption">
+              {t('alumni.mapCaption', 'See where our alumni are from, and where we still need to reach.')}
             </p>
           </div>
         )}
-        */}
 
-        {(searchKey || filterBatch !== 'all' || sortOrder !== 'relevance') ? (
+        <CohortInsights allEntries={allEntries} demographics={demographics} />
+
+        {(hasActiveFilter || showAllBrowse) ? (
           <div className="search-results-container is-visible">
             <div className="results-header">
               <h3 className="results-title">
-                {t('alumni.found')} <strong>{searchResults.length}</strong> {t('alumni.people')}
+                {showAllBrowse && !searchKey
+                  ? <>{t('alumni.browseAll', 'Browse all')} <strong>{searchResults.length}</strong> {t('alumni.people')}</>
+                  : <>{t('alumni.found')} <strong>{searchResults.length}</strong> {t('alumni.people')}</>
+                }
                 {activeSector !== 'all' && (
                   <span className="results-sector-badge">
                     {t(`alumni.sector.${activeSector}`)}
                   </span>
                 )}
               </h3>
+              {showAllBrowse && (
+                <button
+                  type="button"
+                  className="batch-search-btn"
+                  onClick={() => {
+                    setShowAllBrowse(false);
+                    setSortOrder('relevance');
+                  }}
+                >
+                  <X size={14} />
+                  {t('alumni.closeBrowse', 'Close browse view')}
+                </button>
+              )}
             </div>
 
             {searchResults.length > 0 ? (
@@ -325,17 +430,27 @@ const Alumni = () => {
                       <div className="alumni-details">
                         <h4 className="alumni-name">{entry.displayName}</h4>
                         <p className="alumni-org">{entry.detail}</p>
-                        {batch && (
-                          <a
-                            href={batch.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-link alumni-source"
+                        <div className="alumni-actions-row">
+                          {batch && (
+                            <a
+                              href={batch.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-link alumni-source"
+                            >
+                              {t('alumni.officialList')}
+                              <ExternalLink size={13} />
+                            </a>
+                          )}
+                          <button
+                            type="button"
+                            className="alumni-update-btn"
+                            onClick={() => setUpdateEntry(entry)}
                           >
-                            {t('alumni.officialList')}
-                            <ExternalLink size={13} />
-                          </a>
-                        )}
+                            <Mail size={13} />
+                            {t('alumni.updateBtn', 'Position or location changed? Click here')}
+                          </button>
+                        </div>
                       </div>
                     </article>
                   );
@@ -451,6 +566,15 @@ const Alumni = () => {
             </div>
           </>
         )}
+      </div>
+
+      {updateEntry && (
+        <UpdateModal
+          entry={updateEntry}
+          onClose={() => setUpdateEntry(null)}
+          t={t}
+        />
+      )}
     </section>
   );
 };

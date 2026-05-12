@@ -1,0 +1,19 @@
+.curriculum-page {
+  padding: 96px 0 48px;
+}
+
+.curriculum-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.94rem;
+  text-decoration: none;
+  margin-bottom: 32px;
+  transition: color 0.15s ease;
+}
+
+.curriculum-back-link:hover {
+  color: var(--text-main);
+}

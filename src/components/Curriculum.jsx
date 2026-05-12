@@ -1,6 +1,6 @@
 import React from 'react';
 import { BookOpen, Users, Lightbulb, BarChart, Globe, Zap } from 'lucide-react';
-import './AboutProgram.css'; // Reusing some shared styles
+import './Curriculum.css';
 
 const Curriculum = () => {
   const modules = [
@@ -37,32 +37,32 @@ const Curriculum = () => {
   ];
 
   return (
-    <section className="curriculum-section py-20">
+    <section className="curriculum-section">
       <div className="container">
-        <div className="section-header text-center mb-16">
+        <div className="curriculum-header">
           <span className="section-kicker">DETAILED CURRICULUM</span>
           <h2 className="section-title">A Comprehensive Roadmap for Smart Leadership</h2>
-          <p className="section-desc max-w-2xl mx-auto">
+          <p className="section-desc">
             Our 7-week intensive program is structured into specialized modules led by industry experts and academic pioneers.
           </p>
         </div>
 
-        <div className="curriculum-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="curriculum-grid">
           {modules.map((module, index) => (
-            <div key={index} className="curriculum-card glass-panel p-8 animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-              <div className="curriculum-icon-box mb-6 text-depa-yellow-dark">
+            <div key={index} className="curriculum-card animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div className="curriculum-icon-box">
                 {module.icon}
               </div>
-              <h3 className="text-xl font-bold mb-4">{module.title}</h3>
-              <p className="text-gray-600 leading-relaxed">{module.desc}</p>
+              <h3>{module.title}</h3>
+              <p>{module.desc}</p>
             </div>
           ))}
         </div>
 
-        <div className="curriculum-footer mt-16 text-center">
-          <div className="bg-depa-yellow/10 p-8 rounded-3xl border border-depa-yellow/20 inline-block">
-            <h4 className="font-bold mb-2">Certification</h4>
-            <p className="text-gray-700">Participants who complete all modules and the capstone project will receive an official SCL Certification from depa Thailand.</p>
+        <div className="curriculum-footer">
+          <div className="curriculum-cert-box">
+            <h4>Certification</h4>
+            <p>Participants who complete all modules and the capstone project will receive an official SCL Certification from depa Thailand.</p>
           </div>
         </div>
       </div>

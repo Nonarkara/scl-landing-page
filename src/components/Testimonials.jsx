@@ -65,7 +65,7 @@ const Testimonials = () => {
 
           {/* Video Placeholder */}
           <div className="video-testimonial-placeholder animate-fade-in" style={{ animationDelay: '0.1s' }}>
-            <div className="video-thumbnail">
+            <div className="video-thumbnail" onClick={() => window.location.href = 'mailto:scp@depa.or.th?subject=Request%20SCL%20Alumni%20Video%20Testimonials'} style={{ cursor: 'pointer' }}>
               <img src={`${BASE_URL}Photos%20More/117867_0.jpg`} alt="Video Testimonial Thumbnail" />
               <div className="video-play-overlay">
                 <div className="play-button">
@@ -101,7 +101,7 @@ const Testimonials = () => {
               <span className="testimonial-item-index">0{i + 2}</span>
               <p className="testimonial-item-quote">{t(`testimonials.${item.id}.quote`)}</p>
               <footer className="testimonial-item-footer">
-                <img src={`/alumni/${item.id}.jpg`} alt={t(`testimonials.${item.id}.name`)} className="testimonial-avatar" />
+                <img src={`${BASE_URL}alumni/${item.id}.jpg`} alt={t(`testimonials.${item.id}.name`)} className="testimonial-avatar" />
                 <div className="testimonial-item-meta">
                   <cite className="testimonial-item-name">{t(`testimonials.${item.id}.name`)}</cite>
                   <div className="testimonial-item-role">{t(`testimonials.${item.id}.role`)}</div>

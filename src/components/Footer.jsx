@@ -22,11 +22,11 @@ const Footer = () => {
         <div className="footer-nav-group">
           <h4 className="footer-heading">{t('footer.navHeading')}</h4>
           <div className="footer-links">
-            <a href="#home">{t('nav.home')}</a>
-            <a href="#about">{t('nav.about')}</a>
-            <a href="#journey">{t('nav.journey')}</a>
-            <a href="#alumni">{t('nav.alumni')}</a>
-            <a href="#gallery">{t('nav.gallery')}</a>
+            <Link to="/">{t('nav.home')}</Link>
+            <Link to="/?tab=about">{t('nav.about')}</Link>
+            <Link to="/?tab=journey">{t('nav.journey')}</Link>
+            <Link to="/alumni">{t('nav.alumni')}</Link>
+            <Link to="/gallery">{t('nav.gallery')}</Link>
           </div>
         </div>
 

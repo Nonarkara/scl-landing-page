@@ -123,6 +123,7 @@
 .about-pillar-item {
   padding-top: 14px;
   border-top: 1px solid var(--border-glass);
+  transition: transform 0.12s ease;
 }
 
 .about-list-item:first-child,
@@ -130,6 +131,10 @@
 .about-pillar-item:first-child {
   border-top: 0;
   padding-top: 0;
+}
+
+.about-list-item:active {
+  transform: scale(0.998);
 }
 
 .about-list-item h3 {

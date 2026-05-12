@@ -56,7 +56,7 @@ const Home = () => {
             {activeTab === 'about' && (
               <div className="tab-pane animate-fade-in">
                 <AboutProgram />
-                <div className="history-section mt-12">
+                <div className="history-section">
                   <div className="section-header">
                     <span className="section-kicker">OUR STORY</span>
                     <h2 className="section-title">From Batch #1 to Global Impact</h2>
@@ -99,9 +99,9 @@ const Home = () => {
 
             {activeTab === 'curriculum' && (
               <div className="tab-pane">
-                <div className="p-12 text-center bg-white rounded-3xl border border-gray-100 shadow-sm">
-                  <h2 className="text-3xl font-bold mb-4">World-Class Curriculum</h2>
-                  <p className="text-gray-600 mb-8 max-w-2xl mx-auto">Our program is designed to provide actionable insights into smart city development, digital economy, and leadership in the age of AI.</p>
+                <div className="curriculum-placeholder">
+                  <h2>World-Class Curriculum</h2>
+                  <p>Our program is designed to provide actionable insights into smart city development, digital economy, and leadership in the age of AI.</p>
                   <Link to="/curriculum" className="btn btn-primary">View Detailed Curriculum</Link>
                 </div>
               </div>
@@ -133,7 +133,7 @@ const Home = () => {
                 SCL #7 applications will open soon. Join the priority waitlist to receive the official brochure and application notification.
               </p>
               <div className="cta-actions">
-                <Link to="/faq" className="btn btn-outline flex items-center gap-2">
+                <Link to="/faq" className="btn btn-outline">
                   Learn More <ArrowRight size={18} />
                 </Link>
                 <a href="#home" className="btn btn-primary">

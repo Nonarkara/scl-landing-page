@@ -16,15 +16,15 @@ const facultyData = [
     image: "/alumni/chatchawal.jpg"
   },
   {
-    name: "Smart City Expert #1",
-    role: "Industry Specialist",
-    bio: "International expert in urban mobility and sustainable city planning.",
+    name: "Dr. Smart City Specialist",
+    role: "International Urban Mobility Expert",
+    bio: "Leading researcher in sustainable transportation systems and smart urban infrastructure across ASEAN cities.",
     image: "/alumni/samrit.jpg"
   },
   {
-    name: "Policy Advisor #1",
-    role: "Government Liaison",
-    bio: "Specializing in regulatory frameworks for digital innovation and city governance.",
+    name: "Senior Policy Advisor",
+    role: "Digital Governance Consultant",
+    bio: "Advising on regulatory frameworks for digital innovation, data privacy, and smart city governance standards.",
     image: "/alumni/trisupong.jpg"
   }
 ];
@@ -44,8 +44,8 @@ export default function Faculty() {
             <div className="faculty-image">
               <img src={member.image} alt={member.name} />
               <div className="faculty-social">
-                <a href="#" className="social-link"><Linkedin size={18} /></a>
-                <a href="#" className="social-link"><Mail size={18} /></a>
+                <a href="https://www.linkedin.com/company/depa-thailand" target="_blank" rel="noopener noreferrer" className="social-link"><Linkedin size={18} /></a>
+                <a href="mailto:scp@depa.or.th" className="social-link"><Mail size={18} /></a>
               </div>
             </div>
             <div className="faculty-info">

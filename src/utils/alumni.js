@@ -271,6 +271,7 @@ export function computeDemographics(entries) {
     total: entries.length,
     sectors: sectorCounts,
     provinces: provinceCounts,
+    provinceRoles,
     batchCount: new Set(entries.map((e) => e.batch)).size,
   };
 }

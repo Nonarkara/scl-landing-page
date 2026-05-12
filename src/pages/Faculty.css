@@ -32,12 +32,16 @@
   border-radius: 20px;
   overflow: hidden;
   border: 1px solid var(--border-glass);
-  transition: all 0.3s ease;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .faculty-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   border-color: var(--depa-yellow-muted);
+}
+
+.faculty-card:active {
+  transform: translateY(-2px) scale(0.99);
 }
 
 .faculty-image {
@@ -83,12 +87,16 @@
   align-items: center;
   justify-content: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: all 0.2s ease;
+  transition: transform 0.12s ease, background 0.15s ease;
 }
 
 .social-link:hover {
   background: var(--depa-yellow);
   transform: scale(1.1);
+}
+
+.social-link:active {
+  transform: scale(0.95);
 }
 
 .faculty-info {
