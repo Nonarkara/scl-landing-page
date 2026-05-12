@@ -87,6 +87,7 @@ const Home = () => {
                         <h3>{t('history.2020_title')}</h3>
                         <p>{t('history.2020_desc')}</p>
                       </div>
+                      <img src="/Photos/2022-05-11%2018.36.29.jpg" alt="SCL Batch 1" className="history-image" loading="lazy" />
                     </div>
                     <div className="history-item">
                       <div className="history-year">2022</div>
@@ -96,6 +97,7 @@ const Home = () => {
                         <h3>{t('history.2022_title2')}</h3>
                         <p>{t('history.2022_desc2')}</p>
                       </div>
+                      <img src="/Photos/2022-09-01%2013.46.33.jpg" alt="SCL Batch 2-3" className="history-image" loading="lazy" />
                     </div>
                     <div className="history-item">
                       <div className="history-year">2024</div>
@@ -103,6 +105,7 @@ const Home = () => {
                         <h3>{t('history.2024_title')}</h3>
                         <p>{t('history.2024_desc')}</p>
                       </div>
+                      <img src="/Photos%20More/475150289_1065516965619781_1154610351092339627_n.jpg" alt="SCL Batch 5" className="history-image" loading="lazy" />
                     </div>
                     <div className="history-item">
                       <div className="history-year">2026</div>
@@ -110,6 +113,7 @@ const Home = () => {
                         <h3>{t('history.2026_title')}</h3>
                         <p>{t('history.2026_desc')}</p>
                       </div>
+                      <img src="/Photos%20More/475554453_1066072178897593_3452435967247513607_n.jpg" alt="SCL Batch 6" className="history-image" loading="lazy" />
                     </div>
                   </div>
                 </div>
@@ -122,6 +126,11 @@ const Home = () => {
                   <h2>{t('curriculumPlaceholder.title')}</h2>
                   <p>{t('curriculumPlaceholder.desc')}</p>
                   <Link to="/curriculum" className="btn btn-primary">{t('curriculumPlaceholder.cta')}</Link>
+                  <div className="curriculum-photo-strip">
+                    <img src="/Photos/2022-05-26%2010.07.12.jpg" alt="Classroom" loading="lazy" />
+                    <img src="/Photos/2022-05-26%2015.06.36.jpg" alt="Site visit" loading="lazy" />
+                    <img src="/Photos%20More/475372709_1066072248897586_6192145527577200572_n.jpg" alt="Workshop" loading="lazy" />
+                  </div>
                 </div>
               </div>
             )}
@@ -146,17 +155,17 @@ const Home = () => {
         <div className="container">
           <div className="cta-card glass-panel">
             <div className="cta-content">
-              <span className="section-kicker">NEXT COHORT</span>
-              <h2 className="cta-title">Ready to lead the future of Smart Cities?</h2>
+              <span className="section-kicker">{t('cta.kicker')}</span>
+              <h2 className="cta-title">{t('cta.title')}</h2>
               <p className="cta-desc">
-                SCL #7 applications will open soon. Join the priority waitlist to receive the official brochure and application notification.
+                {t('cta.desc')}
               </p>
               <div className="cta-actions">
                 <Link to="/faq" className="btn btn-outline">
-                  Learn More <ArrowRight size={18} />
+                  {t('cta.learnMore')} <ArrowRight size={18} />
                 </Link>
                 <a href="#home" className="btn btn-primary">
-                  Join the Waitlist
+                  {t('cta.waitlist')}
                 </a>
               </div>
             </div>

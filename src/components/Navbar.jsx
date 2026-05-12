@@ -25,7 +25,7 @@ const Navbar = () => {
   const languages = [
     { code: 'th', label: 'TH', name: 'ภาษาไทย' },
     { code: 'en', label: 'EN', name: 'English' },
-    { code: 'zh', label: 'ZH', name: '中文' },
+    { code: 'cn', label: 'CN', name: '中文' },
   ];
 
   const currentLang = (i18n.resolvedLanguage ?? i18n.language).split('-')[0];

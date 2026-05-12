@@ -46,7 +46,7 @@ function App() {
       canonicalTag.setAttribute('href', siteUrl);
     }
 
-    document.documentElement.lang = currentLanguage;
+    document.documentElement.lang = currentLanguage === 'cn' ? 'zh-CN' : currentLanguage;
 
     const schema = {
       '@context': 'https://schema.org',
@@ -60,7 +60,7 @@ function App() {
       },
       url: siteUrl,
       sameAs: officialUrl,
-      inLanguage: currentLanguage,
+      inLanguage: currentLanguage === 'cn' ? 'zh-CN' : currentLanguage,
       startDate: programDetails.programStart,
       endDate: programDetails.programEnd,
       courseMode: 'onsite',

@@ -1,13 +1,13 @@
 const OFFICIAL_PROGRAM_URLS = {
   th: 'https://www.depa.or.th/th/article-view/smart-city-leadership-program-6-scl-6',
   en: 'https://www.depa.or.th/en/article-view/smart-city-leadership-program-6-scl-6',
-  zh: 'https://www.depa.or.th/en/article-view/smart-city-leadership-program-6-scl-6',
+  cn: 'https://www.depa.or.th/en/article-view/smart-city-leadership-program-6-scl-6',
 };
 
 const LANGUAGE_TO_LOCALE = {
   th: 'th-TH',
   en: 'en-US',
-  zh: 'zh-CN',
+  cn: 'zh-CN',
 };
 
 export const programDetails = {
