@@ -24,8 +24,8 @@
 
 .faculty-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
 }
 
 .faculty-card {
@@ -33,65 +33,63 @@
   overflow: hidden;
   border: 1px solid var(--border-glass);
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  background: var(--surface-strong);
 }
 
 .faculty-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-4px);
   border-color: var(--depa-yellow-muted);
+  box-shadow: 0 12px 32px rgba(12, 47, 83, 0.08);
 }
 
 .faculty-card:active {
   transform: translateY(-2px) scale(0.99);
 }
 
-.faculty-image {
-  position: relative;
-  height: 320px;
-  overflow: hidden;
+.faculty-info {
+  padding: 28px;
 }
 
-.faculty-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.5s ease;
+.faculty-name {
+  font-size: 1.2rem;
+  margin-bottom: 6px;
+  line-height: 1.3;
 }
 
-.faculty-card:hover .faculty-image img {
-  transform: scale(1.05);
+.faculty-role {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--depa-yellow-dark, #8a6d3b);
+  margin-bottom: 14px;
 }
 
-.faculty-social {
-  position: absolute;
-  bottom: 16px;
-  right: 16px;
+.faculty-bio {
+  font-size: 0.92rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.faculty-social-row {
   display: flex;
   gap: 8px;
-  transform: translateY(20px);
-  opacity: 0;
-  transition: all 0.3s ease;
-}
-
-.faculty-card:hover .faculty-social {
-  transform: translateY(0);
-  opacity: 1;
+  margin-top: 18px;
 }
 
 .social-link {
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
-  background: white;
-  color: var(--text-main);
-  display: flex;
+  background: var(--bg-surface);
+  color: var(--text-secondary);
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.12s ease, background 0.15s ease;
+  transition: transform 0.12s ease, background 0.15s ease, color 0.15s ease;
 }
 
 .social-link:hover {
   background: var(--depa-yellow);
+  color: var(--text-main);
   transform: scale(1.1);
 }
 
@@ -99,31 +97,31 @@
   transform: scale(0.95);
 }
 
-.faculty-info {
-  padding: 24px;
-}
-
-.faculty-name {
-  font-size: 1.25rem;
-  margin-bottom: 4px;
-}
-
-.faculty-role {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--depa-yellow-dark, #8a6d3b);
-  margin-bottom: 12px;
-}
-
-.faculty-bio {
-  font-size: 0.925rem;
-  color: var(--text-secondary);
-  line-height: 1.6;
-}
-
 .faculty-footer {
   margin-top: 60px;
   text-align: center;
-  color: var(--text-muted);
-  font-style: italic;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faculty-footer strong {
+  color: var(--text-main);
+}
+
+@media (max-width: 768px) {
+  .faculty-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .faculty-info {
+    padding: 22px;
+  }
+
+  .faculty-page {
+    padding-top: 100px;
+  }
 }
