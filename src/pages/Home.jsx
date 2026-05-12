@@ -6,7 +6,7 @@ import AboutProgram from '../components/AboutProgram';
 import ProgramJourney from '../components/ProgramJourney';
 import Testimonials from '../components/Testimonials';
 
-import { ArrowRight, History, BookOpen, Map, MessageSquare } from 'lucide-react';
+import { ArrowRight, History, BookOpen, Map, MessageSquare, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
