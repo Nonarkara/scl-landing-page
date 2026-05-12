@@ -6,11 +6,12 @@ import { getApplicationUrl } from '../data/program';
 import './Navbar.css';
 
 const NAV_LINKS = [
-  { path: '/curriculum', key: 'curriculum' },
-  { path: '/faculty', key: 'faculty' },
-  { path: '/alumni', key: 'alumni' },
-  { path: '/gallery', key: 'gallery' },
-  { path: '/faq', key: 'faq' }
+  { path: '/?tab=about', key: 'about', label: 'About & History' },
+  { path: '/?tab=journey', key: 'journey', label: 'The Journey' },
+  { path: '/alumni', key: 'alumni', label: 'Alumni' },
+  { path: '/?tab=testimonials', key: 'testimonials', label: 'Voices' },
+  { path: '/faculty', key: 'faculty', label: 'Faculty' },
+  { path: '/faq', key: 'faq', label: 'FAQ' }
 ];
 
 const Navbar = () => {
@@ -102,16 +103,20 @@ const Navbar = () => {
         </Link>
 
         <div className="nav-links desktop-only">
-          {NAV_LINKS.map(({ path, key }) => (
-            <Link
-              key={key}
-              to={path}
-              className={`nav-link ${location.pathname === path ? 'nav-link--active' : ''}`}
-              aria-current={location.pathname === path ? 'page' : undefined}
-            >
-              {t(`nav.${key}`)}
-            </Link>
-          ))}
+          {NAV_LINKS.map(({ path, key, label }) => {
+            const isActive = location.pathname === path.split('?')[0] && 
+                           (path.includes('?') ? location.search.includes(path.split('?')[1]) : true);
+            return (
+              <Link
+                key={key}
+                to={path}
+                className={`nav-link ${isActive ? 'nav-link--active' : ''}`}
+                aria-current={isActive ? 'page' : undefined}
+              >
+                {t(`nav.${key}`, label)}
+              </Link>
+            );
+          })}
 
           <a
             href={officialUrl}
@@ -152,16 +157,20 @@ const Navbar = () => {
 
       {mobileMenuOpen && (
         <div ref={mobileMenuRef} className="mobile-menu glass-panel animate-fade-in is-visible">
-          {NAV_LINKS.map(({ path, key }) => (
-            <Link
-              key={key}
-              to={path}
-              className={`nav-link ${location.pathname === path ? 'nav-link--active' : ''}`}
-              onClick={handleNavClick}
-            >
-              {t(`nav.${key}`)}
-            </Link>
-          ))}
+          {NAV_LINKS.map(({ path, key, label }) => {
+            const isActive = location.pathname === path.split('?')[0] && 
+                           (path.includes('?') ? location.search.includes(path.split('?')[1]) : true);
+            return (
+              <Link
+                key={key}
+                to={path}
+                className={`nav-link ${isActive ? 'nav-link--active' : ''}`}
+                onClick={handleNavClick}
+              >
+                {t(`nav.${key}`, label)}
+              </Link>
+            );
+          })}
 
           <div className="mobile-langs">
             {languages.map((language) => (

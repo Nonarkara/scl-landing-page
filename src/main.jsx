@@ -7,7 +7,7 @@ import './i18n' // Import i18n configuration
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/scl-landing-page">
+    <BrowserRouter basename="/">
       <App />
     </BrowserRouter>
   </StrictMode>,
