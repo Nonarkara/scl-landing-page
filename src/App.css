@@ -13,7 +13,7 @@
   top: 12px;
   z-index: 2000;
   padding: 10px 14px;
-  border-radius: 14px;
+  border-radius: 4px;
   background: var(--bg-ink);
   color: #fffaf4;
   text-decoration: none;
@@ -25,86 +25,52 @@
   transform: translateY(0);
 }
 
-/* Bottom CTA */
+/* Bottom CTA: no card wrapper, just content on the page */
 .bottom-cta {
-  padding: 80px 0;
-}
-
-.cta-card {
-  position: relative;
-  padding: 64px;
-  border-radius: 24px;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  background: linear-gradient(135deg, var(--bg-surface) 0%, var(--bg-primary) 100%);
-  border: 1px solid var(--border-glass);
+  padding: 100px 0 80px;
+  border-top: 1px solid var(--border-glass);
 }
 
 .cta-content {
-  position: relative;
-  z-index: 1;
-  max-width: 600px;
+  max-width: 560px;
 }
 
 .cta-title {
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin: 12px 0 24px;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  margin: 12px 0 20px;
   line-height: 1.1;
   letter-spacing: -0.04em;
 }
 
 .cta-desc {
-  font-size: 1.125rem;
+  font-size: 1.05rem;
   color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 32px;
+  line-height: 1.7;
+  margin-bottom: 28px;
 }
 
 .cta-actions {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
-.cta-icon-bg {
-  position: absolute;
-  right: 48px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: var(--depa-yellow);
-  opacity: 0.1;
-  pointer-events: none;
-}
-
 @media (max-width: 768px) {
-  .cta-card {
-    padding: 40px 24px;
-    text-align: center;
-    justify-content: center;
-  }
-  
-  .cta-actions {
-    justify-content: center;
-  }
-  
-  .cta-icon-bg {
-    display: none;
+  .bottom-cta {
+    padding: 64px 0 48px;
   }
 }
 
-/* Tabs System */
+/* Tabs: underline style, not pills */
 .tabs-navigation-wrapper {
-  margin-bottom: 40px;
-  border-bottom: 1px solid var(--border-glass);
+  margin-bottom: 48px;
 }
 
 .tabs-navigation {
   display: flex;
-  justify-content: center;
-  gap: 8px;
+  gap: 0;
   overflow-x: auto;
-  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-glass);
   scrollbar-width: none;
 }
 
@@ -115,153 +81,162 @@
 .tab-btn {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 12px 24px;
-  border-radius: 12px;
-  border: 1px solid transparent;
+  gap: 8px;
+  padding: 16px 20px;
+  border-radius: 0;
+  border: none;
+  border-bottom: 2px solid transparent;
   background: transparent;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   font-weight: 600;
+  font-size: 0.9rem;
   white-space: nowrap;
-  transition: transform 0.12s ease, background 0.15s ease, color 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  transition: color 0.15s ease, border-color 0.2s ease;
   cursor: pointer;
+  letter-spacing: 0.01em;
 }
 
 .tab-btn:hover {
-  background: var(--bg-surface);
   color: var(--text-main);
-  transform: translateY(-1px);
-}
-
-.tab-btn:active {
-  transform: scale(0.97) translateY(0);
 }
 
 .tab-btn.active {
-  background: var(--depa-yellow);
   color: var(--text-main);
-  border-color: var(--depa-yellow-dark);
-  box-shadow: 0 4px 15px rgba(255, 242, 0, 0.2);
+  border-bottom-color: var(--depa-navy);
+  background: transparent;
+  box-shadow: none;
 }
 
 .tab-content-area {
-  min-height: 400px;
+  min-height: 300px;
 }
 
-/* History Timeline */
+/* History: no card wrapper, editorial timeline */
 .history-section {
-  padding: 60px 40px;
-  background: var(--bg-surface);
-  border-radius: 32px;
-  border: 1px solid var(--border-glass);
+  padding: 48px 0 0;
+  margin-top: 48px;
+  border-top: 1px solid var(--border-glass);
 }
 
 .history-timeline {
-  margin-top: 40px;
-  display: flex;
-  flex-direction: column;
+  margin-top: 32px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 32px;
-  position: relative;
-}
-
-.history-timeline::before {
-  content: '';
-  position: absolute;
-  left: 20px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--border-glass);
 }
 
 .history-item {
   position: relative;
-  padding-left: 60px;
+  padding-top: 20px;
+}
+
+.history-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--border-glass);
+}
+
+.history-item:first-child::before {
+  background: var(--depa-yellow);
 }
 
 .history-year {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 42px;
-  height: 42px;
-  background: var(--depa-yellow);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  font-size: 0.75rem;
-  z-index: 1;
-  border: 4px solid var(--bg-surface);
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.08em;
+  margin-bottom: 12px;
 }
 
 .history-content h3 {
-  font-size: 1.25rem;
+  font-size: 1.05rem;
   margin-bottom: 8px;
   letter-spacing: -0.02em;
+  line-height: 1.25;
 }
 
 .history-content p {
   color: var(--text-secondary);
-  line-height: 1.6;
+  line-height: 1.65;
+  font-size: 0.88rem;
 }
 
-/* Hero V2 Wrapper */
-.hero-v2-wrapper {
-  background: radial-gradient(circle at top right, rgba(255, 242, 0, 0.05), transparent 40%),
-              radial-gradient(circle at bottom left, rgba(0, 0, 0, 0.02), transparent 40%);
-}
-
-/* Curriculum Styles */
+/* Curriculum */
 .curriculum-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
 .curriculum-placeholder {
-  text-align: center;
-  padding: 48px 32px;
-  background: var(--surface-strong);
-  border-radius: 24px;
-  border: 1px solid var(--border-glass);
-  box-shadow: var(--shadow-soft);
+  padding: 48px 0;
 }
 
 .curriculum-placeholder h2 {
-  font-size: 1.75rem;
-  margin-bottom: 16px;
+  font-size: 1.6rem;
+  margin-bottom: 14px;
   color: var(--text-main);
+  letter-spacing: -0.03em;
 }
 
 .curriculum-placeholder p {
   color: var(--text-secondary);
   max-width: 42rem;
-  margin: 0 auto 32px;
+  margin: 0 0 24px;
   line-height: 1.7;
+  font-size: 0.95rem;
 }
 
 .curriculum-card {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  padding: 28px;
+  background: var(--surface-strong);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.2s ease;
 }
 
 .curriculum-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-}
-
-.curriculum-card:active {
-  transform: translateY(-1px) scale(0.99);
+  border-color: var(--border-strong);
 }
 
 .curriculum-icon-box {
-  width: 50px;
-  height: 50px;
-  background: var(--depa-yellow);
-  border-radius: 12px;
+  width: 40px;
+  height: 40px;
+  background: var(--depa-yellow-soft);
+  border-radius: var(--radius-sm);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--text-main);
+  color: var(--depa-yellow-dark);
+  margin-bottom: 16px;
+}
+
+@media (max-width: 900px) {
+  .history-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .curriculum-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .history-timeline {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .curriculum-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tab-btn {
+    padding: 12px 14px;
+    font-size: 0.84rem;
+  }
 }

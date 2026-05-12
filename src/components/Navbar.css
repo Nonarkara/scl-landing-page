@@ -69,22 +69,26 @@
 .nav-link {
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 600;
   transition: color 0.15s ease;
-  padding: 6px 8px;
-  border-radius: 6px;
+  padding: 4px 0;
+  margin: 0 10px;
+  border-bottom: 2px solid transparent;
   white-space: nowrap;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+  color: var(--text-main);
+}
+
 .nav-link--active {
   color: var(--text-main);
-  background: var(--bg-surface);
+  border-bottom-color: var(--depa-navy);
 }
 
 .nav-link:active {
-  transform: scale(0.96);
+  transform: scale(0.98);
 }
 
 .nav-apply {
@@ -106,21 +110,24 @@
 }
 
 .lang-inline-btn {
-  min-width: 30px;
-  padding: 6px 7px;
-  border-radius: 6px;
-  color: var(--text-secondary);
-  font-size: 0.8rem;
+  min-width: 28px;
+  padding: 4px 6px;
+  color: var(--text-muted);
+  font-size: 0.78rem;
   font-weight: 700;
   line-height: 1;
   cursor: pointer;
-  transition: background 0.15s ease, color 0.15s ease, transform 0.12s ease;
+  transition: color 0.15s ease;
+  border-bottom: 1px solid transparent;
 }
 
-.lang-inline-btn:hover,
+.lang-inline-btn:hover {
+  color: var(--text-main);
+}
+
 .lang-inline-btn.active {
   color: var(--text-main);
-  background: var(--bg-surface);
+  border-bottom-color: var(--depa-navy);
 }
 
 .lang-inline-btn:active {

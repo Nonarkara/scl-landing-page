@@ -258,7 +258,18 @@
       "sitesLabel": "Examples from the extended network",
       "imageAlt": "SCL field visit photo {{number}}"
     },
-    "sourceNote": "Application timing, fee, venue, and schedule are based on depa's official SCL #6 article."
+    "sourceNote": "Application timing, fee, venue, and schedule are based on depa's official SCL #6 article.",
+    "liveBadge": "Data live & updated today",
+    "title": "Leading the",
+    "highlight": "Future",
+    "title2": "of Smart Thailand",
+    "subtitle": "SCL #6 is currently underway. Register your interest to be notified when applications open for SCL #7.",
+    "emailPlaceholder": "Enter your email address",
+    "waitlistCta": "Join SCL #7 Waitlist",
+    "waitlistSuccess": "Thank you! We'll notify you when SCL #7 opens.",
+    "brochure": "Download Brochure",
+    "statAlumni": "Alumni",
+    "statProvinces": "Provinces"
   },
   "alumni": {
     "badge": "Official alumni directory",

@@ -258,7 +258,18 @@
       "sitesLabel": "延伸网络中的学习场景示例",
       "imageAlt": "SCL 实地参访照片 {{number}}"
     },
-    "sourceNote": "申请时间、费用、地点和课程安排均依据 depa 官方 SCL #6 文章。"
+    "sourceNote": "申请时间、费用、地点和课程安排均依据 depa 官方 SCL #6 文章。",
+    "liveBadge": "数据今日实时更新",
+    "title": "引领",
+    "highlight": "未来",
+    "title2": "智慧泰国",
+    "subtitle": "SCL #6 正在进行中。注册您的兴趣，以便在 SCL #7 开放申请时收到通知。",
+    "emailPlaceholder": "输入您的电子邮件地址",
+    "waitlistCta": "加入 SCL #7 候补名单",
+    "waitlistSuccess": "谢谢！SCL #7 开放时我们会通知您。",
+    "brochure": "下载手册",
+    "statAlumni": "校友",
+    "statProvinces": "省份"
   },
   "alumni": {
     "badge": "官方校友目录",
