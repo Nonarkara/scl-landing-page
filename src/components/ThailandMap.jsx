@@ -33,7 +33,7 @@ const ThailandMap = ({ demographics }) => {
   const maxCount = Math.max(...markers.map(m => m.count), 1);
   
   return (
-    <div className="thailand-map-wrapper animate-fade-in">
+    <div className="thailand-map-wrapper">
       <div className="map-header">
         <h3 className="map-title">{t('alumni.mapTitle', 'Alumni Distribution by Province')}</h3>
         <p className="map-subtitle">{t('alumni.mapSubtitle', 'Based on available organization data')}</p>

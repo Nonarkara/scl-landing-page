@@ -104,6 +104,15 @@ const Alumni = () => {
     searchInputRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
   };
 
+  if (!allEntries || allEntries.length === 0) {
+    return (
+      <div className="container" style={{ padding: '100px 20px', textAlign: 'center' }}>
+        <h2>Loading Alumni Data...</h2>
+        <p>If this takes too long, please try refreshing the page.</p>
+      </div>
+    );
+  }
+
   return (
     <section id="alumni" className="section alumni-section" ref={sectionRef}>
       <div className="container">
@@ -167,7 +176,7 @@ const Alumni = () => {
             <p className="alumni-network-sites-line">
               <strong>{t('alumni.network.sitesLabel')}</strong> {networkVisitSites.join(' · ')}
             </p>
-          </div>
+            </div>
         </div>
 
         <div className="alumni-tools">
@@ -270,7 +279,8 @@ const Alumni = () => {
                 <option value="desc">{t('alumni.sortDesc', 'Z-A (ฮ-ก)')}</option>
               </select>
             </div>
-          </div>
+            </div>
+        </div>
         </div>
         
         {/* Render Map Visualization if demographics data is available */}
