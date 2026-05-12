@@ -75,35 +75,47 @@ const Home = () => {
                       <div className="history-content">
                         <h3>Expanding the Network</h3>
                         <p>By Batch #3, SCL became a national benchmark, attracting governors and CEOs from across 30+ provinces.</p>
+                        <h3>Expansion (Batch #3)</h3>
+                        <p>Introduced the Smart City Thailand Index integration, making the program data-driven.</p>
+                      </div>
+                    </div>
+                    <div className="history-item">
+                      <div className="history-year">2024</div>
+                      <div className="history-content">
+                        <h3>The AI Era (Batch #5)</h3>
+                        <p>Overhauled the curriculum to focus on AI governance and sustainable urban tech.</p>
                       </div>
                     </div>
                     <div className="history-item">
                       <div className="history-year">2026</div>
                       <div className="history-content">
-                        <h3>SCL #6 & Beyond</h3>
-                        <p>Now a multi-stakeholder ecosystem with 400+ alumni leading Thailand's digital future.</p>
+                        <h3>Now (Batch #6)</h3>
+                        <p>Our largest cohort ever, with 120+ participants representing 50+ provinces.</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             )}
+
             {activeTab === 'curriculum' && (
-              <div className="tab-pane animate-fade-in">
-                <div className="p-8 text-center bg-white/30 rounded-3xl border border-white/40 backdrop-blur-md">
+              <div className="tab-pane">
+                <div className="p-12 text-center bg-white rounded-3xl border border-gray-100 shadow-sm">
                   <h2 className="text-3xl font-bold mb-4">World-Class Curriculum</h2>
                   <p className="text-gray-600 mb-8 max-w-2xl mx-auto">Our program is designed to provide actionable insights into smart city development, digital economy, and leadership in the age of AI.</p>
                   <Link to="/curriculum" className="btn btn-primary">View Detailed Curriculum</Link>
                 </div>
               </div>
             )}
+
             {activeTab === 'journey' && (
-              <div className="tab-pane animate-fade-in">
+              <div className="tab-pane">
                 <ProgramJourney />
               </div>
             )}
-            {activeTab === 'testimonials' && (
-              <div className="tab-pane animate-fade-in">
+
+            {activeTab === 'voices' && (
+              <div className="tab-pane">
                 <Testimonials />
               </div>
             )}
@@ -114,7 +126,7 @@ const Home = () => {
       {/* Bottom CTA Section */}
       <section className="bottom-cta section">
         <div className="container">
-          <div className="cta-card glass-panel animate-fade-in">
+          <div className="cta-card glass-panel">
             <div className="cta-content">
               <span className="section-kicker">NEXT COHORT</span>
               <h2 className="cta-title">Ready to lead the future of Smart Cities?</h2>

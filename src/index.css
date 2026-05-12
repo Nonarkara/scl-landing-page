@@ -108,7 +108,14 @@ a {
 }
 
 .grid-bg {
-  display: none;
+  position: fixed; /* Fixed to avoid pushing content */
+  inset: 0;
+  background-image: radial-gradient(var(--border-glass) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: -2;
+  pointer-events: none;
+  opacity: 0.3;
+  display: block;
 }
 
 /* depa yellow accent patterns */
@@ -301,7 +308,7 @@ a {
 }
 
 .animate-fade-in {
-  opacity: 0;
+  opacity: 1; /* Ensure visibility by default */
 }
 
 .animate-fade-in.is-visible {

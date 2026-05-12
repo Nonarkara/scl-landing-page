@@ -99,7 +99,7 @@ const Testimonials = () => {
               <span className="testimonial-item-index">0{i + 2}</span>
               <p className="testimonial-item-quote">{t(`testimonials.${item.id}.quote`)}</p>
               <footer className="testimonial-item-footer">
-                <img src={`%BASE_URL%alumni/${item.id}.jpg`} alt={t(`testimonials.${item.id}.name`)} className="testimonial-avatar" />
+                <img src={`/alumni/${item.id}.jpg`} alt={t(`testimonials.${item.id}.name`)} className="testimonial-avatar" />
                 <div className="testimonial-item-meta">
                   <cite className="testimonial-item-name">{t(`testimonials.${item.id}.name`)}</cite>
                   <div className="testimonial-item-role">{t(`testimonials.${item.id}.role`)}</div>

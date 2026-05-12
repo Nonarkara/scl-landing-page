@@ -45,7 +45,7 @@ export default function Faculty() {
         {facultyData.map((member, index) => (
           <div key={index} className="faculty-card glass-panel animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
             <div className="faculty-image">
-              <img src={member.image} alt={member.name} />
+                  <img src="/faculty/placeholder.jpg" alt={member.name} />
               <div className="faculty-social">
                 <a href="#" className="social-link"><Linkedin size={18} /></a>
                 <a href="#" className="social-link"><Mail size={18} /></a>

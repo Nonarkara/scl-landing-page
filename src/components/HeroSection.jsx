@@ -87,7 +87,7 @@ const HeroSection = () => {
       
       <div className="container">
         <div className="hero-shell">
-          <div className="hero-copy animate-fade-in is-visible">
+          <div className="hero-copy is-visible">
             <div className="live-data-badge">
               <span className="live-data-dot"></span>
               Data live & updated today
@@ -139,7 +139,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          <div className="hero-visual-v2 animate-fade-in" style={{ animationDelay: '0.15s' }}>
+          <div className="hero-visual-v2">
             <div className="hero-image-stack">
               <div className="hero-image-card">
                 <img
@@ -159,13 +159,12 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-            
+          </div>
             {/* Floating Info Cards */}
             <div className="hero-floating-card hero-floating-card-1">
               <div className="card-icon"><ArrowRight size={14} /></div>
               <div className="card-text">7 Weeks Intensive</div>
             </div>
-          </div>
         </div>
 
         <div className="hero-index-v2">
