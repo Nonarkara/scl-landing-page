@@ -108,9 +108,9 @@ const Alumni = () => {
     <section id="alumni" className="section alumni-section" ref={sectionRef}>
       <div className="container">
         <div className="alumni-header">
-          <span className="section-kicker animate-fade-in">{t('alumni.badge')}</span>
-          <h2 className="alumni-title animate-fade-in" style={{ animationDelay: '0.06s' }}>{t('alumni.title')}</h2>
-          <p className="alumni-subtitle animate-fade-in" style={{ animationDelay: '0.12s' }}>
+          <span className="section-kicker">{t('alumni.badge')}</span>
+          <h2 className="alumni-title">{t('alumni.title')}</h2>
+          <p className="alumni-subtitle">
             {t('alumni.subtitle', {
               count: totalRecords,
               cohorts: alumniBatches.length,
@@ -118,7 +118,7 @@ const Alumni = () => {
           </p>
         </div>
 
-        <figure className="alumni-hero-banner animate-fade-in" style={{ animationDelay: '0.13s' }}>
+        <figure className="alumni-hero-banner">
           <img
             src={encodeURI(alumniHeroBanner)}
             alt={t('alumni.heroBannerAlt')}
@@ -126,7 +126,7 @@ const Alumni = () => {
           />
         </figure>
 
-        <div className="alumni-network animate-fade-in" style={{ animationDelay: '0.14s' }}>
+        <div className="alumni-network">
           <div className="alumni-network-visuals">
             <figure className="alumni-network-lead">
               <img
@@ -170,7 +170,7 @@ const Alumni = () => {
           </div>
         </div>
 
-        <div className="alumni-tools animate-fade-in" style={{ animationDelay: '0.18s' }}>
+        <div className="alumni-tools">
           <div className="demographics-panel">
             <div className="demo-stats-row">
               <div className="demo-stat">
@@ -284,7 +284,7 @@ const Alumni = () => {
         )}
 
         {(searchKey || filterBatch !== 'all' || sortOrder !== 'relevance') ? (
-          <div className="search-results-container animate-fade-in is-visible">
+          <div className="search-results-container is-visible">
             <div className="results-header">
               <h3 className="results-title">
                 {t('alumni.found')} <strong>{searchResults.length}</strong> {t('alumni.people')}
@@ -304,8 +304,7 @@ const Alumni = () => {
                   return (
                     <article
                       key={entry.id}
-                      className="alumni-list-item animate-fade-in is-visible"
-                      style={{ animationDelay: `${(index % 12) * 0.04}s` }}
+                      className="alumni-list-item is-visible"
                     >
                       <div className="alumni-badges-row">
                         <span className={`alumni-badge batch-${entry.batch}-badge`}>SCL {entry.batch}</span>
@@ -361,8 +360,7 @@ const Alumni = () => {
                   <div
                     key={batch.id}
                     data-batch={batch.id}
-                    className="alumni-batch-wrapper animate-fade-in"
-                    style={{ animationDelay: `${index * 0.07}s` }}
+                    className="alumni-batch-wrapper"
                   >
                     <div className={`alumni-card ${isExpanded ? 'expanded-card' : ''}`}>
                       <button

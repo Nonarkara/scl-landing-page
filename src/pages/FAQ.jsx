@@ -54,7 +54,7 @@ export default function FAQ() {
               {activeIndex === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
             </div>
             {activeIndex === index && (
-              <div className="faq-answer animate-fade-in">
+              <div className="faq-answer">
                 <p>{item.answer}</p>
               </div>
             )}

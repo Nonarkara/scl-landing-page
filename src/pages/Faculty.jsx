@@ -8,25 +8,25 @@ const facultyData = [
     name: "Dr. Passakon Prathombutr",
     role: "Senior Executive Vice President, depa",
     bio: "Lead expert in Smart City development and digital transformation in Thailand.",
-    image: "%BASE_URL%alumni/jumpot.jpg" // Placeholder using an existing image
+    image: "/alumni/jumpot.jpg"
   },
   {
     name: "Nuttapon Nimmanphatcharin",
     role: "President/CEO, depa",
     bio: "Driving the digital economy agenda and nationwide smart city initiatives.",
-    image: "%BASE_URL%alumni/chatchawal.jpg" // Placeholder
+    image: "/alumni/chatchawal.jpg"
   },
   {
     name: "Smart City Expert #1",
     role: "Industry Specialist",
     bio: "International expert in urban mobility and sustainable city planning.",
-    image: "%BASE_URL%alumni/samrit.jpg" // Placeholder
+    image: "/alumni/samrit.jpg"
   },
   {
     name: "Policy Advisor #1",
     role: "Government Liaison",
     bio: "Specializing in regulatory frameworks for digital innovation and city governance.",
-    image: "%BASE_URL%alumni/trisupong.jpg" // Placeholder
+    image: "/alumni/trisupong.jpg"
   }
 ];
 
@@ -43,9 +43,9 @@ export default function Faculty() {
 
       <div className="faculty-grid">
         {facultyData.map((member, index) => (
-          <div key={index} className="faculty-card glass-panel animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+          <div key={index} className="faculty-card glass-panel">
             <div className="faculty-image">
-                  <img src="/faculty/placeholder.jpg" alt={member.name} />
+              <img src="/faculty/placeholder.jpg" alt={member.name} />
               <div className="faculty-social">
                 <a href="#" className="social-link"><Linkedin size={18} /></a>
                 <a href="#" className="social-link"><Mail size={18} /></a>
