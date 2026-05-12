@@ -45,8 +45,8 @@ const Alumni = () => {
   const [sortOrder, setSortOrder] = useState('relevance');
   const [filterBatch, setFilterBatch] = useState('all');
   const deferredSearchTerm = useDeferredValue(searchTerm);
-  const sectionRef = useFadeIn();
   const searchInputRef = useRef(null);
+  const sectionRef = useRef(null);
 
   const allEntries = useMemo(() => buildAlumniEntries(alumniData), []);
   const groupedEntries = useMemo(() => groupEntriesByBatch(allEntries), [allEntries]);
@@ -283,7 +283,8 @@ const Alumni = () => {
         </div>
         </div>
         
-        {/* Render Map Visualization if demographics data is available */}
+        {/* Map and Insights temporarily disabled for debugging blank page */}
+        {/* 
         {demographics.provinces && Object.keys(demographics.provinces).length > 0 && (
           <div className="map-container-wrapper">
             <ThailandMap demographics={demographics} />
@@ -292,6 +293,7 @@ const Alumni = () => {
             </p>
           </div>
         )}
+        */}
 
         {(searchKey || filterBatch !== 'all' || sortOrder !== 'relevance') ? (
           <div className="search-results-container is-visible">
@@ -447,7 +449,6 @@ const Alumni = () => {
                 );
               })}
             </div>
-            {demographics && <CohortInsights allEntries={allEntries} demographics={demographics} />}
           </>
         )}
       </div>
