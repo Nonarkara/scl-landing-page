@@ -2,10 +2,6 @@ import { useState } from 'react';
 import { ArrowRight, Download, Mail, CheckCircle2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import {
-  formatProgramCurrency,
-  formatProgramDate,
-  getApplicationUrl,
-  getProgramPhase,
   heroPhoto,
   programDetails,
 } from '../data/program';
@@ -13,61 +9,9 @@ import IndexTeaser from './IndexTeaser';
 import './HeroSection.css';
 
 const HeroSection = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [waitlistEmail, setWaitlistEmail] = useState('');
   const [waitlistSubmitted, setWaitlistSubmitted] = useState(false);
-  const currentLanguage = i18n.resolvedLanguage ?? i18n.language;
-  const officialUrl = getApplicationUrl(currentLanguage);
-  const programPhase = getProgramPhase();
-  const applicationDeadline = formatProgramDate(programDetails.applicationDeadline, currentLanguage);
-  const feeLabel = formatProgramCurrency(programDetails.feeTHB, currentLanguage);
-
-  const heroFacts = [
-    {
-      label: t('hero.facts.durationLabel'),
-      value: t('hero.facts.durationValue', {
-        days: programDetails.programDays,
-        hours: programDetails.learningHours,
-      }),
-    },
-    {
-      label: t('hero.facts.audienceLabel'),
-      value: t('hero.facts.audienceValue'),
-    },
-    {
-      label: t('hero.facts.modelLabel'),
-      value: t('hero.facts.modelValue', {
-        speakers: programDetails.speakerCount,
-      }),
-    },
-    {
-      label: t('hero.facts.archiveLabel'),
-      value: t('hero.facts.archiveValue', {
-        alumni: programDetails.alumniCount,
-        cohorts: programDetails.cohortCount,
-      }),
-    },
-  ];
-
-  const heroBrief = [
-    {
-      label: t('hero.facts.deadlineLabel'),
-      value: t(`hero.status.${programPhase}`, { deadline: applicationDeadline }),
-    },
-    {
-      label: t('journey.schedule.datesLabel'),
-      value: t('journey.schedule.datesValue'),
-    },
-    {
-      label: t('journey.schedule.venueLabel'),
-      value: t('journey.schedule.venueValue'),
-    },
-    {
-      label: t('journey.schedule.feeLabel'),
-      value: feeLabel,
-    },
-  ];
-
   const handleWaitlistSubmit = (e) => {
     e.preventDefault();
     if (waitlistEmail) {

@@ -6,7 +6,7 @@ import { alumniBatches } from '../data/program';
 import { SECTOR_KEYS } from '../utils/alumni';
 
 const CohortInsights = ({ allEntries, demographics }) => {
-  const { t } = transition => useTranslation();
+  const { t } = useTranslation();
 
   const totalProvinces = 77;
   const representedProvinces = demographics.provinces ? Object.keys(demographics.provinces).length : 0;

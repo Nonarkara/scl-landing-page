@@ -1,16 +1,15 @@
 import LogoBar from '../components/LogoBar';
-import { useState, useEffect } from 'react';
+
 import { useSearchParams } from 'react-router-dom';
 import HeroSection from '../components/HeroSection';
 import AboutProgram from '../components/AboutProgram';
 import ProgramJourney from '../components/ProgramJourney';
 import Testimonials from '../components/Testimonials';
-import { useTranslation } from 'react-i18next';
-import { Mail, ArrowRight, History, BookOpen, Map, MessageSquare } from 'lucide-react';
+
+import { ArrowRight, History, BookOpen, Map, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
-  const { t } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
   const activeTab = searchParams.get('tab') || 'about';
   
@@ -114,7 +113,7 @@ const Home = () => {
               </div>
             )}
 
-            {activeTab === 'voices' && (
+            {activeTab === 'testimonials' && (
               <div className="tab-pane">
                 <Testimonials />
               </div>

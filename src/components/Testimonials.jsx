@@ -1,6 +1,8 @@
 import { useTranslation } from 'react-i18next';
 import { useFadeIn } from '../hooks/useFadeIn';
 import { Play } from 'lucide-react';
+
+const BASE_URL = import.meta.env.BASE_URL || '/';
 import './Testimonials.css';
 
 const testimonials = [
@@ -52,7 +54,7 @@ const Testimonials = () => {
           <blockquote className="testimonial-feature animate-fade-in" style={{ animationDelay: '0.05s' }}>
             <p className="testimonial-feature-quote">{t(`testimonials.${featured.id}.quote`)}</p>
             <footer className="testimonial-feature-footer">
-              <img src={`%BASE_URL%alumni/${featured.id}.jpg`} alt={t(`testimonials.${featured.id}.name`)} className="testimonial-avatar" />
+              <img src={`${BASE_URL}alumni/${featured.id}.jpg`} alt={t(`testimonials.${featured.id}.name`)} className="testimonial-avatar" />
               <div className="testimonial-feature-meta">
                 <cite className="testimonial-feature-name">{t(`testimonials.${featured.id}.name`)}</cite>
                 <div className="testimonial-feature-role">{t(`testimonials.${featured.id}.role`)}</div>
@@ -64,7 +66,7 @@ const Testimonials = () => {
           {/* Video Placeholder */}
           <div className="video-testimonial-placeholder animate-fade-in" style={{ animationDelay: '0.1s' }}>
             <div className="video-thumbnail">
-              <img src="%BASE_URL%Photos%20More/117867_0.jpg" alt="Video Testimonial Thumbnail" />
+              <img src={`${BASE_URL}Photos%20More/117867_0.jpg`} alt="Video Testimonial Thumbnail" />
               <div className="video-play-overlay">
                 <div className="play-button">
                   <Play fill="currentColor" size={32} />

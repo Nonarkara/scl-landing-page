@@ -23,7 +23,7 @@ import {
   normalizeSearchText,
   SECTOR_KEYS,
 } from '../utils/alumni';
-import { useFadeIn } from '../hooks/useFadeIn';
+
 import ThailandMap from './ThailandMap';
 import CohortInsights from './CohortInsights';
 import './Alumni.css';
@@ -310,7 +310,7 @@ const Alumni = () => {
 
             {searchResults.length > 0 ? (
               <div className="alumni-list">
-                {searchResults.map((entry, index) => {
+                {searchResults.map((entry) => {
                   const batch = alumniBatches.find((item) => item.id === entry.batch);
 
                   return (
@@ -361,7 +361,7 @@ const Alumni = () => {
               </h3>
             </div>
             <div className="alumni-grid">
-              {alumniBatches.map((batch, index) => {
+              {alumniBatches.map((batch) => {
                 const isExpanded = expandedBatch === batch.id;
                 const batchEntries = filteredGroupedEntries[batch.id] || [];
                 const allBatchEntries = groupedEntries[batch.id] || [];
@@ -451,7 +451,6 @@ const Alumni = () => {
             </div>
           </>
         )}
-      </div>
     </section>
   );
 };
