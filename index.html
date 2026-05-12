@@ -2,6 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link rel="icon" href="/logos/depa.jpg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#16314b" />
@@ -31,9 +34,28 @@
       name="twitter:image"
       content="https://nonarkara.github.io/scl-landing-page/Photos%20More/475554453_1066072178897593_3452435967247513607_n.jpg"
     />
+    <script type="text/javascript">
+      // Single Page Apps for GitHub Pages
+      // MIT License
+      // https://github.com/rafgraph/spa-github-pages
+      // This script checks to see if a redirect is present in the query string,
+      // converts it back into the correct url and adds it to the
+      // browser's history using window.history.replaceState(...),
+      // which worldwide allows the user to refresh the page without getting a 404.
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, l.pathname.lastIndexOf('/')) + decoded + l.hash
+          );
+        }
+      }(window.location))
+    </script>
     <title>depa Smart City Leadership</title>
-    <script type="module" crossorigin src="/assets/index-Clxh0AHJ.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-CEHYz6pB.css">
+    <script type="module" crossorigin src="/assets/index-wN1Q7vPA.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Bp7WfBTN.css">
   </head>
   <body>
     <div id="root"></div>
