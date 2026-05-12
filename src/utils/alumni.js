@@ -262,26 +262,80 @@ export function computeDemographics(entries) {
   const sectorCounts = {};
   const provinceCounts = {};
   const provinceRoles = {};
+  const roleGroupCounts = {};
+  const batchCounts = {};
+  const orgCounts = {};
+  let maleCount = 0;
+  let femaleCount = 0;
 
   for (const entry of entries) {
+    // Sector
     sectorCounts[entry.sector] = (sectorCounts[entry.sector] || 0) + 1;
+
+    // Role groups
+    const rg = entry.roleGroup || 'Others';
+    roleGroupCounts[rg] = (roleGroupCounts[rg] || 0) + 1;
+
+    // Batch
+    batchCounts[entry.batch] = (batchCounts[entry.batch] || 0) + 1;
+
+    // Province
     if (entry.province) {
       provinceCounts[entry.province] = (provinceCounts[entry.province] || 0) + 1;
-      
       if (!provinceRoles[entry.province]) {
         provinceRoles[entry.province] = {};
       }
-      if (entry.roleGroup && entry.roleGroup !== 'Others') {
-        provinceRoles[entry.province][entry.roleGroup] = (provinceRoles[entry.province][entry.roleGroup] || 0) + 1;
+      if (rg !== 'Others') {
+        provinceRoles[entry.province][rg] = (provinceRoles[entry.province][rg] || 0) + 1;
       }
     }
+
+    // Organization extraction (simple: look for company/agency names after known keywords)
+    const orgMatch = entry.sourceLine.match(/(บริษัท\s+[^,]+|เทศบาล[^,]+|องค์การบริหารส่วน[^,]+|การไฟฟ้า[^,]+|มหาวิทยาลัย[^,]+|กระทรวง[^,]+|กรม[^,]+|โรงพยาบาล[^,]+|จังหวัด[^,]+)/);
+    if (orgMatch) {
+      const org = orgMatch[1].trim();
+      orgCounts[org] = (orgCounts[org] || 0) + 1;
+    }
+
+    // Gender estimate from Thai honorifics
+    if (/^นาย/.test(entry.displayName)) maleCount++;
+    else if (/^นาง|^น\.ส\./.test(entry.displayName)) femaleCount++;
   }
-  
+
+  const total = entries.length;
+  const sectorPercentages = {};
+  for (const [k, v] of Object.entries(sectorCounts)) {
+    sectorPercentages[k] = Math.round((v / total) * 100);
+  }
+
+  const topProvinces = Object.entries(provinceCounts)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 10);
+
+  const topOrganizations = Object.entries(orgCounts)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 8);
+
+  const batchList = Object.entries(batchCounts)
+    .sort((a, b) => Number(a[0]) - Number(b[0]));
+
+  const publicCount = (sectorCounts.public || 0) + (sectorCounts.stateEnterprise || 0);
+  const privateCount = (sectorCounts.private || 0);
+
   return {
-    total: entries.length,
+    total,
     sectors: sectorCounts,
+    sectorPercentages,
     provinces: provinceCounts,
     provinceRoles,
+    roleGroupCounts,
+    batchCounts: batchList,
+    topProvinces,
+    topOrganizations,
+    genderEstimate: { male: maleCount, female: femaleCount, unknown: total - maleCount - femaleCount },
+    coverageRate: Math.round((Object.keys(provinceCounts).length / 77) * 100),
+    publicPrivateRatio: privateCount > 0 ? Math.round((publicCount / privateCount) * 10) / 10 : publicCount,
+    leadershipDensity: Math.round(((roleGroupCounts['Governors'] || 0) + (roleGroupCounts['Mayors & Local Leaders'] || 0) + (roleGroupCounts['CEOs & MDs'] || 0) + (roleGroupCounts['Directors & Executives'] || 0)) / total * 100),
     batchCount: new Set(entries.map((e) => e.batch)).size,
   };
 }

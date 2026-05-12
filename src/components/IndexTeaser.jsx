@@ -132,12 +132,28 @@ const CARD_KEYS = ['rankings', 'allocator', 'map', 'reality'];
 const IndexTeaser = () => {
   const { t } = useTranslation();
 
+  const stats = [
+    { value: '37', label: 'Cities Verified', sub: 'out of 118 declared' },
+    { value: '7', label: 'Livability Pillars', sub: 'weighted & scored' },
+    { value: 'αβγ', label: 'Tier System', sub: 'based on evidence' },
+  ];
+
   return (
     <div className="index-teaser animate-fade-in is-visible" style={{ animationDelay: '0.16s' }}>
       <div className="index-teaser-header">
         <span className="section-kicker">{t('index.kicker')}</span>
         <h2 className="index-teaser-title">{t('index.title')}</h2>
         <p className="index-teaser-desc">{t('index.description')}</p>
+      </div>
+
+      <div className="index-teaser-stats">
+        {stats.map((stat) => (
+          <div key={stat.label} className="index-stat-item">
+            <span className="index-stat-value">{stat.value}</span>
+            <span className="index-stat-label">{stat.label}</span>
+            <span className="index-stat-sub">{stat.sub}</span>
+          </div>
+        ))}
       </div>
 
       <div className="index-teaser-grid">

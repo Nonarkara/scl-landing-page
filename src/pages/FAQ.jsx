@@ -1,69 +1,162 @@
-import React, { useState } from 'react';
-import { ChevronDown, ChevronUp } from 'lucide-react';
+import React, { useMemo, useState } from 'react';
+import { ChevronDown, ChevronUp, Search, X } from 'lucide-react';
+import faqData from '../data/faqData';
 import './FAQ.css';
 
-const faqData = [
-  {
-    question: "Who should apply for the SCL program?",
-    answer: "The program is designed for senior executives, governors, mayors, CEOs, and directors from both public and private sectors who are responsible for smart city initiatives or urban development."
-  },
-  {
-    question: "What is the duration and schedule of SCL #7?",
-    answer: "SCL #7 is tentatively scheduled for late 2026. The program typically runs for 7 weeks, with one full day of learning per week (42 total hours), including workshops and site visits."
-  },
-  {
-    question: "What is included in the THB 62,000 fee?",
-    answer: "The fee covers all academic materials, workshops, local site visit transport, meals during program days, and a certificate of completion. It does not include international travel or personal accommodation."
-  },
-  {
-    question: "What are the selection criteria?",
-    answer: "Selection is based on organizational role, leadership experience, and the potential impact of the applicant's work on Thailand's smart city development. We aim for a diverse cohort across sectors."
-  },
-  {
-    question: "Will I receive a certificate?",
-    answer: "Yes, participants who attend at least 80% of the program hours will receive an official Smart City Leadership certificate from the Digital Economy Promotion Agency (depa)."
-  }
-];
+const categoryLabels = {
+  program: 'Program Overview',
+  application: 'Eligibility & Application',
+  curriculum: 'Curriculum & Format',
+  faculty: 'Faculty & Speakers',
+  logistics: 'Fees & Logistics',
+  alumni: 'Alumni Network',
+  topics: 'Smart City Topics',
+  certification: 'Certification & Outcomes',
+  implementation: 'Practical Implementation',
+  partnerships: 'Partnerships',
+};
+
+const categoryOrder = Object.keys(categoryLabels);
 
 export default function FAQ() {
   const [activeIndex, setActiveIndex] = useState(null);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [activeCategory, setActiveCategory] = useState('all');
 
-  const toggleFAQ = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
+  const filteredFAQs = useMemo(() => {
+    let results = [...faqData];
+    if (activeCategory !== 'all') {
+      results = results.filter((item) => item.category === activeCategory);
+    }
+    if (searchTerm.trim()) {
+      const key = searchTerm.toLowerCase();
+      results = results.filter(
+        (item) =>
+          item.question.toLowerCase().includes(key) ||
+          item.answer.toLowerCase().includes(key)
+      );
+    }
+    return results;
+  }, [searchTerm, activeCategory]);
+
+  const groupedFAQs = useMemo(() => {
+    const groups = {};
+    for (const item of filteredFAQs) {
+      if (!groups[item.category]) groups[item.category] = [];
+      groups[item.category].push(item);
+    }
+    // Sort categories by predefined order
+    const sorted = {};
+    for (const cat of categoryOrder) {
+      if (groups[cat]) sorted[cat] = groups[cat];
+    }
+    return sorted;
+  }, [filteredFAQs]);
+
+  const toggleFAQ = (globalIndex) => {
+    setActiveIndex(activeIndex === globalIndex ? null : globalIndex);
   };
+
+  let globalIndex = 0;
 
   return (
     <div className="faq-page container">
       <div className="faq-header">
         <span className="section-kicker">GET ANSWERS</span>
         <h1 className="faq-title">Frequently Asked Questions</h1>
-        <p className="faq-subtitle">Everything you need to know about the SCL program and application process.</p>
+        <p className="faq-subtitle">
+          Everything you need to know about the SCL program, application, and outcomes.
+        </p>
+      </div>
+
+      <div className="faq-toolbar">
+        <div className="faq-search">
+          <Search size={18} className="faq-search-icon" />
+          <input
+            type="text"
+            placeholder="Search questions..."
+            value={searchTerm}
+            onChange={(e) => {
+              setSearchTerm(e.target.value);
+              setActiveIndex(null);
+            }}
+          />
+          {searchTerm && (
+            <button className="faq-search-clear" onClick={() => setSearchTerm('')}>
+              <X size={16} />
+            </button>
+          )}
+        </div>
+
+        <div className="faq-categories">
+          <button
+            className={`faq-cat-btn ${activeCategory === 'all' ? 'active' : ''}`}
+            onClick={() => { setActiveCategory('all'); setActiveIndex(null); }}
+          >
+            All ({faqData.length})
+          </button>
+          {categoryOrder.map((cat) => {
+            const count = faqData.filter((f) => f.category === cat).length;
+            return (
+              <button
+                key={cat}
+                className={`faq-cat-btn ${activeCategory === cat ? 'active' : ''}`}
+                onClick={() => { setActiveCategory(cat); setActiveIndex(null); }}
+              >
+                {categoryLabels[cat]} ({count})
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      <div className="faq-results-count">
+        {filteredFAQs.length} answer{filteredFAQs.length !== 1 ? 's' : ''} found
       </div>
 
       <div className="faq-list">
-        {faqData.map((item, index) => (
-          <div 
-            key={index} 
-            className={`faq-item ${activeIndex === index ? 'active' : ''}`}
-            onClick={() => toggleFAQ(index)}
-          >
-            <div className="faq-question">
-              <span>{item.question}</span>
-              {activeIndex === index ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-            </div>
-            {activeIndex === index && (
-              <div className="faq-answer">
-                <p>{item.answer}</p>
-              </div>
-            )}
+        {Object.entries(groupedFAQs).map(([category, items]) => (
+          <div key={category} className="faq-category-block">
+            <h3 className="faq-category-title">{categoryLabels[category]}</h3>
+            {items.map((item) => {
+              const idx = globalIndex++;
+              return (
+                <div
+                  key={idx}
+                  className={`faq-item ${activeIndex === idx ? 'active' : ''}`}
+                  onClick={() => toggleFAQ(idx)}
+                >
+                  <div className="faq-question">
+                    <span>{item.question}</span>
+                    {activeIndex === idx ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
+                  </div>
+                  {activeIndex === idx && (
+                    <div className="faq-answer">
+                      <p>{item.answer}</p>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         ))}
       </div>
 
+      {filteredFAQs.length === 0 && (
+        <div className="faq-empty">
+          <p>No questions match your search.</p>
+          <button className="btn btn-primary" onClick={() => { setSearchTerm(''); setActiveCategory('all'); }}>
+            Clear filters
+          </button>
+        </div>
+      )}
+
       <div className="faq-contact">
         <h3>Still have questions?</h3>
         <p>We're here to help you lead your city's digital transformation.</p>
-        <a href="mailto:scp@depa.or.th?subject=SCL%20Program%20Inquiry" className="btn btn-primary">Contact the Team</a>
+        <a href="mailto:scp@depa.or.th?subject=SCL%20Program%20Inquiry" className="btn btn-primary">
+          Contact the Team
+        </a>
       </div>
     </div>
   );

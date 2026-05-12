@@ -28,6 +28,7 @@ import {
 
 import ThailandMap from './ThailandMap';
 import CohortInsights from './CohortInsights';
+import SmartInsights from './SmartInsights';
 import './Alumni.css';
 
 const SECTOR_ICONS = {
@@ -381,6 +382,8 @@ const Alumni = () => {
             </p>
           </div>
         )}
+
+        <SmartInsights demographics={demographics} />
 
         <CohortInsights allEntries={allEntries} demographics={demographics} />
 

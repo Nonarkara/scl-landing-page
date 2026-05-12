@@ -1,5 +1,6 @@
 import LogoBar from '../components/LogoBar';
 
+import { useEffect, useRef } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import HeroSection from '../components/HeroSection';
 import AboutProgram from '../components/AboutProgram';
@@ -12,10 +13,27 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const activeTab = searchParams.get('tab') || 'about';
+  const tabContentRef = useRef(null);
   
   const setActiveTab = (tabId) => {
     setSearchParams({ tab: tabId });
   };
+
+  useEffect(() => {
+    if (tabContentRef.current) {
+      const y = tabContentRef.current.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({ top: y, behavior: 'smooth' });
+    }
+  }, [activeTab]);
+
+  useEffect(() => {
+    // On initial load with a tab param, scroll to tabs without animation
+    if (searchParams.get('tab') && tabContentRef.current) {
+      const y = tabContentRef.current.getBoundingClientRect().top + window.scrollY - 100;
+      window.scrollTo({ top: y, behavior: 'instant' });
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   
   const tabs = [
     { id: 'about', label: 'About & History', icon: <History size={18} /> },
@@ -52,7 +70,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="tab-content-area">
+          <div className="tab-content-area" ref={tabContentRef}>
             {activeTab === 'about' && (
               <div className="tab-pane animate-fade-in">
                 <AboutProgram />
