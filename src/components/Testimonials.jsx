@@ -66,7 +66,7 @@ const Testimonials = () => {
           {/* Video Placeholder */}
           <div className="video-testimonial-placeholder animate-fade-in" style={{ animationDelay: '0.1s' }}>
             <div className="video-thumbnail" onClick={() => window.location.href = 'mailto:scp@depa.or.th?subject=Request%20SCL%20Alumni%20Video%20Testimonials'} style={{ cursor: 'pointer' }}>
-              <img src={`${BASE_URL}Photos%20More/117867_0.jpg`} alt="Video Testimonial Thumbnail" />
+              <img src={`${BASE_URL}Photos%20More/475554453_1066072178897593_3452435967247513607_n.jpg`} alt="Video Testimonial Thumbnail" />
               <div className="video-play-overlay">
                 <div className="play-button">
                   <Play fill="currentColor" size={32} />

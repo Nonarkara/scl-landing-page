@@ -3,6 +3,13 @@ const standaloneTitles = new Set(['ว่าที่', 'Mr.', 'Mrs.', 'Ms.']);
 const roleKeywordPattern =
   /^(กรรมการ|ผู้|รอง|หัวหน้า|อาจารย์|นายก|เลขานุการ|ที่ปรึกษา|ประธาน|บริษัท|สำนักงาน|สำนัก|องค์การ|มหาวิทยาลัย|กระทรวง|เทศบาล|การไฟฟ้า|โรงพยาบาล|กรม|กอง|ฝ่าย|Global|Chief)/;
 
+const displayNameCorrections = [
+  {
+    match: 'ธูปกระจ่าง',
+    displayName: 'ตรีลุพธ์ ธูปกระจ่าง',
+  },
+];
+
 export function normalizeVisibleText(value = '') {
   return value
     .replace(/\u00a0/g, ' ')
@@ -130,6 +137,9 @@ function isLikelyCompleteName(value = '') {
 }
 
 function guessDisplayName(person, sourceLine) {
+  const correction = displayNameCorrections.find((item) => sourceLine.includes(item.match));
+  if (correction) return correction.displayName;
+
   const fallbackName = normalizeVisibleText(person.name);
   if (isLikelyCompleteName(fallbackName)) {
     return fallbackName;
