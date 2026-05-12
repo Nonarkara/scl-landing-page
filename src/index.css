@@ -1,22 +1,24 @@
 :root {
   color-scheme: light;
-  --bg-primary: #f7f5f0;
-  --bg-secondary: #fcfbf8;
-  --bg-ink: #111111;
-  --surface-card: rgba(255, 255, 255, 0.82);
+  --bg-primary: #f5f3ee;
+  --bg-secondary: #faf9f6;
+  --bg-ink: #0C2F53;
+  --surface-card: rgba(255, 255, 255, 0.88);
   --surface-strong: #ffffff;
-  --border-glass: rgba(17, 17, 17, 0.055);
-  --border-strong: rgba(17, 17, 17, 0.1);
-  --text-main: #111111;
-  --text-primary: #111111;
-  --text-secondary: #4b4b4b;
-  --text-muted: #787878;
-  --text-accent: #111111;
-  --depa-yellow: #ffd100;
-  --depa-yellow-soft: rgba(255, 209, 0, 0.08);
-  --depa-yellow-mid: rgba(255, 209, 0, 0.18);
-  --depa-yellow-muted: rgba(255, 209, 0, 0.45);
-  --shadow-soft: none;
+  --border-glass: rgba(12, 47, 83, 0.06);
+  --border-strong: rgba(12, 47, 83, 0.12);
+  --text-main: #0C2F53;
+  --text-primary: #0C2F53;
+  --text-secondary: #3d5a78;
+  --text-muted: #7a8da0;
+  --text-accent: #0C2F53;
+  --depa-navy: #0C2F53;
+  --depa-yellow: #FFF200;
+  --depa-gold: #FFC600;
+  --depa-yellow-soft: rgba(255, 242, 0, 0.06);
+  --depa-yellow-mid: rgba(255, 198, 0, 0.22);
+  --depa-yellow-muted: rgba(255, 198, 0, 0.50);
+  --shadow-soft: 0 2px 12px rgba(12, 47, 83, 0.06);
   --radius-sm: 8px;
   --radius-md: 14px;
   --radius-lg: 20px;
@@ -37,7 +39,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "IBM Plex Sans Thai", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background: var(--bg-primary);
   color: var(--text-main);
   line-height: 1.6;
@@ -72,10 +74,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  line-height: 1.02;
-  letter-spacing: -0.045em;
+  font-family: "IBM Plex Sans Thai", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+  color: var(--depa-navy);
 }
 
 a {
@@ -83,8 +86,8 @@ a {
 }
 
 ::selection {
-  background: var(--depa-yellow-mid);
-  color: var(--text-main);
+  background: var(--depa-gold);
+  color: var(--depa-navy);
 }
 
 .text-gradient {
@@ -111,7 +114,7 @@ a {
 /* depa yellow accent patterns */
 .depa-rule {
   height: 3px;
-  background: var(--depa-yellow);
+  background: linear-gradient(90deg, var(--depa-yellow), var(--depa-gold));
   border: 0;
   border-radius: 2px;
 }
@@ -201,14 +204,14 @@ a {
 }
 
 .btn-primary {
-  background: var(--text-main);
+  background: var(--depa-navy);
   color: #ffffff;
-  border: 1px solid var(--text-main);
+  border: 1px solid var(--depa-navy);
 }
 
 .btn-primary:hover {
-  background: #000000;
-  border-color: #000000;
+  background: #082440;
+  border-color: #082440;
 }
 
 .btn-ghost {
@@ -333,7 +336,7 @@ a {
 }
 
 :focus-visible {
-  outline: 2px solid var(--depa-yellow);
+  outline: 2px solid var(--depa-gold);
   outline-offset: 3px;
   border-radius: 4px;
 }

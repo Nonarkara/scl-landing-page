@@ -50,6 +50,26 @@
   font-weight: 600;
 }
 
+.testimonial-feature-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.testimonial-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-glass);
+}
+
+.testimonial-feature-meta,
+.testimonial-item-meta {
+  display: flex;
+  flex-direction: column;
+}
+
 .testimonial-feature-name {
   font-size: 1rem;
 }
@@ -108,6 +128,14 @@
 .testimonial-item-footer {
   padding-top: 10px;
   border-top: 1px solid var(--border-glass);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-item-footer .testimonial-avatar {
+  width: 48px;
+  height: 48px;
 }
 
 .testimonial-item-name {

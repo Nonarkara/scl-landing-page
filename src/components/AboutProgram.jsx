@@ -1,3 +1,4 @@
+import { ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { aboutPhoto, programDetails, programLearningSites } from '../data/program';
 import { useFadeIn } from '../hooks/useFadeIn';
@@ -78,12 +79,25 @@ const AboutProgram = () => {
           <section className="about-column animate-fade-in" style={{ animationDelay: '0.28s' }}>
             <span className="about-column-label">{t('about.learningSitesTitle')}</span>
             <p className="about-column-intro">{t('about.learningSitesDescription')}</p>
-            <div className="about-list">
-              {programLearningSites.map((site, index) => (
-                <div key={site} className="about-site-row">
-                  {t(`about.learningSites.site${index + 1}`)}
-                </div>
-              ))}
+            <div className="about-list learning-sites-grid">
+              {programLearningSites.map((site, index) => {
+                const siteKey = `site${index + 1}`;
+                return (
+                  <details key={site} className="learning-site-card">
+                    <summary className="learning-site-header">
+                      <span className="learning-site-number">{String(index + 1).padStart(2, '0')}</span>
+                      <span className="learning-site-name">{t(`about.learningSites.${siteKey}`)}</span>
+                      <ChevronDown size={16} className="learning-site-chevron" />
+                    </summary>
+                    <div className="learning-site-body">
+                      <p className="learning-site-desc">{t(`about.learningSites.${siteKey}Desc`)}</p>
+                      <div className="learning-site-meta">
+                        <span className="learning-site-domain">{t(`about.learningSites.${siteKey}Domain`)}</span>
+                      </div>
+                    </div>
+                  </details>
+                );
+              })}
             </div>
           </section>
 

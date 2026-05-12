@@ -1,0 +1,90 @@
+.thailand-map-wrapper {
+  margin: 3rem 0;
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.map-header {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.map-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-foreground);
+  margin: 0 0 0.5rem 0;
+}
+
+.map-subtitle {
+  color: var(--color-foreground-muted);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.map-container-inner {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Ensure Leaflet tooltips look modern */
+.leaflet-tooltip {
+  background-color: white !important;
+  border: none !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  color: var(--color-foreground) !important;
+  font-family: inherit !important;
+}
+
+.leaflet-tooltip::before {
+  border-top-color: white !important;
+}
+
+@media (max-width: 768px) {
+  .thailand-map-wrapper {
+    padding: 1.25rem;
+    margin: 2rem 0;
+  }
+}
+
+.map-legend {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 16px;
+  padding: 12px;
+  background: var(--surface-card);
+  border-radius: 8px;
+  border: 1px solid var(--border-glass);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.legend-dot.active {
+  background: var(--depa-gold);
+  border: 2px solid var(--depa-navy);
+}
+
+.legend-dot.inactive {
+  background: #e2e8f0;
+  border: 1px solid #cbd5e1;
+}

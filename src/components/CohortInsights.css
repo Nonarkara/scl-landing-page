@@ -1,0 +1,248 @@
+.cohort-insights-wrapper {
+  margin: 3rem 0;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.insights-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.insights-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--depa-navy);
+}
+
+.insights-grid-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.2rem;
+}
+
+.insight-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.insight-card.primary {
+  background: var(--bg-primary);
+  border-color: var(--border-strong);
+}
+
+.insight-value {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--depa-navy);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.insight-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.insight-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: var(--depa-yellow-soft);
+  color: var(--depa-navy);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  border: 1px solid var(--depa-yellow-muted);
+}
+
+.insights-grid-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+.insight-panel {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glass);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.panel-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--depa-navy);
+  margin-bottom: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panel-subtitle {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+/* Horizontal Bar Chart */
+.bar-chart {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.bar-label {
+  width: 40px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.bar-track {
+  flex: 1;
+  height: 24px;
+  background: var(--border-glass);
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 1s cubic-bezier(0.1, 0, 0.3, 1);
+  display: flex;
+  align-items: center;
+  padding: 0 8px;
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.bar-value {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--depa-navy);
+  width: 30px;
+  text-align: right;
+}
+
+/* Ring Chart / Coverage */
+.coverage-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.coverage-ring {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 1rem;
+}
+
+.coverage-ring svg {
+  transform: rotate(-90deg);
+  width: 100%;
+  height: 100%;
+}
+
+.ring-bg {
+  fill: none;
+  stroke: var(--border-glass);
+  stroke-width: 8;
+}
+
+.ring-fill {
+  fill: none;
+  stroke: var(--depa-navy);
+  stroke-width: 8;
+  stroke-linecap: round;
+  transition: stroke-dasharray 1s ease;
+}
+
+.ring-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.ring-value {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--depa-navy);
+  line-height: 1;
+}
+
+.ring-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Top List */
+.top-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.top-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed var(--border-glass);
+}
+
+.top-list-item:last-child {
+  border-bottom: none;
+}
+
+.item-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.item-count {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--depa-navy);
+  background: var(--depa-yellow-soft);
+  padding: 2px 8px;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .insights-grid-main {
+    grid-template-columns: 1fr;
+  }
+}

@@ -51,9 +51,12 @@ const Testimonials = () => {
           <blockquote className="testimonial-feature animate-fade-in" style={{ animationDelay: '0.05s' }}>
             <p className="testimonial-feature-quote">{t(`testimonials.${featured.id}.quote`)}</p>
             <footer className="testimonial-feature-footer">
-              <cite className="testimonial-feature-name">{t(`testimonials.${featured.id}.name`)}</cite>
-              <div className="testimonial-feature-role">{t(`testimonials.${featured.id}.role`)}</div>
-              <span className="testimonial-feature-batch">SCL #{featured.batch}</span>
+              <img src={`%BASE_URL%alumni/${featured.id}.jpg`} alt={t(`testimonials.${featured.id}.name`)} className="testimonial-avatar" />
+              <div className="testimonial-feature-meta">
+                <cite className="testimonial-feature-name">{t(`testimonials.${featured.id}.name`)}</cite>
+                <div className="testimonial-feature-role">{t(`testimonials.${featured.id}.role`)}</div>
+                <span className="testimonial-feature-batch">SCL #{featured.batch}</span>
+              </div>
             </footer>
           </blockquote>
         </div>
@@ -68,9 +71,12 @@ const Testimonials = () => {
               <span className="testimonial-item-index">0{i + 2}</span>
               <p className="testimonial-item-quote">{t(`testimonials.${item.id}.quote`)}</p>
               <footer className="testimonial-item-footer">
-                <cite className="testimonial-item-name">{t(`testimonials.${item.id}.name`)}</cite>
-                <div className="testimonial-item-role">{t(`testimonials.${item.id}.role`)}</div>
-                <span className="testimonial-item-batch">SCL #{item.batch}</span>
+                <img src={`%BASE_URL%alumni/${item.id}.jpg`} alt={t(`testimonials.${item.id}.name`)} className="testimonial-avatar" />
+                <div className="testimonial-item-meta">
+                  <cite className="testimonial-item-name">{t(`testimonials.${item.id}.name`)}</cite>
+                  <div className="testimonial-item-role">{t(`testimonials.${item.id}.role`)}</div>
+                  <span className="testimonial-item-batch">SCL #{item.batch}</span>
+                </div>
               </footer>
             </blockquote>
           ))}

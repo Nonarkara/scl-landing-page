@@ -24,6 +24,8 @@ import {
   SECTOR_KEYS,
 } from '../utils/alumni';
 import { useFadeIn } from '../hooks/useFadeIn';
+import ThailandMap from './ThailandMap';
+import CohortInsights from './CohortInsights';
 import './Alumni.css';
 
 const SECTOR_ICONS = {
@@ -40,6 +42,8 @@ const Alumni = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [expandedBatch, setExpandedBatch] = useState(alumniBatches[0]?.id ?? null);
   const [activeSector, setActiveSector] = useState('all');
+  const [sortOrder, setSortOrder] = useState('relevance');
+  const [filterBatch, setFilterBatch] = useState('all');
   const deferredSearchTerm = useDeferredValue(searchTerm);
   const sectionRef = useFadeIn();
   const searchInputRef = useRef(null);
@@ -50,13 +54,32 @@ const Alumni = () => {
   const searchKey = normalizeSearchText(deferredSearchTerm);
 
   const searchResults = useMemo(() => {
-    if (!searchKey) return [];
-    let results = allEntries.filter((entry) => entry.searchIndex.includes(searchKey));
+    let results = [...allEntries];
+    
+    // Apply search filter
+    if (searchKey) {
+      results = results.filter((entry) => entry.searchIndex.includes(searchKey));
+    }
+    
+    // Apply sector filter
     if (activeSector !== 'all') {
       results = results.filter((entry) => entry.sector === activeSector);
     }
-    return results;
-  }, [allEntries, searchKey, activeSector]);
+    
+    // Apply batch filter
+    if (filterBatch !== 'all') {
+      results = results.filter((entry) => entry.batch.toString() === filterBatch);
+    }
+    
+    // Apply sorting
+    if (sortOrder === 'asc') {
+      results.sort((a, b) => a.displayName.localeCompare(b.displayName, 'th'));
+    } else if (sortOrder === 'desc') {
+      results.sort((a, b) => b.displayName.localeCompare(a.displayName, 'th'));
+    }
+    
+    return searchKey || filterBatch !== 'all' || sortOrder !== 'relevance' ? results : [];
+  }, [allEntries, searchKey, activeSector, filterBatch, sortOrder]);
 
   // Filter batch entries by sector
   const filteredGroupedEntries = useMemo(() => {
@@ -209,7 +232,7 @@ const Alumni = () => {
             
             <div className="search-suggestions">
               <span className="suggestion-label">{t('alumni.suggestions')}:</span>
-              {['Mayor', 'CEO', 'Director', 'Digital', 'เทศบาล', 'บริษัท'].map(tag => (
+              {['เทศบาล', 'อบจ', 'นายก', 'ผู้ว่า', 'ผู้อำนวยการ', 'บริษัท'].map(tag => (
                 <button 
                   key={tag} 
                   className="suggestion-tag"
@@ -222,10 +245,40 @@ const Alumni = () => {
 
             <p className="search-hint">{t('alumni.searchHint')}</p>
             <p className="search-hint position-disclaimer">{t('alumni.positionDisclaimer')}</p>
+
+            <div className="filter-bar">
+              <select 
+                className="filter-select"
+                value={filterBatch}
+                onChange={(e) => setFilterBatch(e.target.value)}
+                aria-label={t('alumni.filterByBatch')}
+              >
+                <option value="all">{t('alumni.allBatches', 'All Batches')}</option>
+                {alumniBatches.map(b => (
+                  <option key={b.id} value={b.id}>SCL {b.id}</option>
+                ))}
+              </select>
+
+              <select 
+                className="filter-select"
+                value={sortOrder}
+                onChange={(e) => setSortOrder(e.target.value)}
+                aria-label={t('alumni.sortBy')}
+              >
+                <option value="relevance">{t('alumni.sortRelevance', 'Relevance')}</option>
+                <option value="asc">{t('alumni.sortAsc', 'A-Z (ก-ฮ)')}</option>
+                <option value="desc">{t('alumni.sortDesc', 'Z-A (ฮ-ก)')}</option>
+              </select>
+            </div>
           </div>
         </div>
+        
+        {/* Render Map Visualization if demographics data is available */}
+        {demographics.provinces && Object.keys(demographics.provinces).length > 0 && (
+          <ThailandMap demographics={demographics} />
+        )}
 
-        {searchKey ? (
+        {(searchKey || filterBatch !== 'all' || sortOrder !== 'relevance') ? (
           <div className="search-results-container animate-fade-in is-visible">
             <div className="results-header">
               <h3 className="results-title">
@@ -250,7 +303,7 @@ const Alumni = () => {
                       style={{ animationDelay: `${(index % 12) * 0.04}s` }}
                     >
                       <div className="alumni-badges-row">
-                        <span className="alumni-badge">SCL {entry.batch}</span>
+                        <span className={`alumni-badge batch-${entry.batch}-badge`}>SCL {entry.batch}</span>
                         <span className="alumni-sector-tag">{t(`alumni.sector.${entry.sector}`)}</span>
                       </div>
                       <div className="alumni-details">
@@ -302,6 +355,7 @@ const Alumni = () => {
                 return (
                   <div
                     key={batch.id}
+                    data-batch={batch.id}
                     className="alumni-batch-wrapper animate-fade-in"
                     style={{ animationDelay: `${index * 0.07}s` }}
                   >
@@ -320,7 +374,7 @@ const Alumni = () => {
                             </span>
                             <span className="batch-year">{batch.year}</span>
                             {batch.id === alumniBatches[0].id && (
-                              <span className="batch-pill">{t('alumni.latest')}</span>
+                              <span className={`batch-pill batch-${batch.id}-badge`}>{t('alumni.latest')}</span>
                             )}
                           </div>
                           <h3 className="alumni-action">
@@ -380,6 +434,7 @@ const Alumni = () => {
                 );
               })}
             </div>
+            {demographics && <CohortInsights allEntries={allEntries} demographics={demographics} />}
           </>
         )}
       </div>
