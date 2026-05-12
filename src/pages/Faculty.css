@@ -1,0 +1,121 @@
+.faculty-page {
+  padding-top: 120px;
+  padding-bottom: 80px;
+}
+
+.faculty-header {
+  text-align: center;
+  margin-bottom: 60px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.faculty-title {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  margin: 12px 0 16px;
+  letter-spacing: -0.04em;
+}
+
+.faculty-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.125rem;
+}
+
+.faculty-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.faculty-card {
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid var(--border-glass);
+  transition: all 0.3s ease;
+}
+
+.faculty-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--depa-yellow-muted);
+}
+
+.faculty-image {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+}
+
+.faculty-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.faculty-card:hover .faculty-image img {
+  transform: scale(1.05);
+}
+
+.faculty-social {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  display: flex;
+  gap: 8px;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.faculty-card:hover .faculty-social {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.social-link {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: white;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.social-link:hover {
+  background: var(--depa-yellow);
+  transform: scale(1.1);
+}
+
+.faculty-info {
+  padding: 24px;
+}
+
+.faculty-name {
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+
+.faculty-role {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--depa-yellow-dark, #8a6d3b);
+  margin-bottom: 12px;
+}
+
+.faculty-bio {
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.faculty-footer {
+  margin-top: 60px;
+  text-align: center;
+  color: var(--text-muted);
+  font-style: italic;
+}

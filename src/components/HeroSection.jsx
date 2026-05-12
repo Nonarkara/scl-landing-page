@@ -1,4 +1,5 @@
-import { ArrowRight } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowRight, Download, Mail, CheckCircle2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import {
   formatProgramCurrency,
@@ -13,6 +14,8 @@ import './HeroSection.css';
 
 const HeroSection = () => {
   const { t, i18n } = useTranslation();
+  const [waitlistEmail, setWaitlistEmail] = useState('');
+  const [waitlistSubmitted, setWaitlistSubmitted] = useState(false);
   const currentLanguage = i18n.resolvedLanguage ?? i18n.language;
   const officialUrl = getApplicationUrl(currentLanguage);
   const programPhase = getProgramPhase();
@@ -65,34 +68,61 @@ const HeroSection = () => {
     },
   ];
 
+  const handleWaitlistSubmit = (e) => {
+    e.preventDefault();
+    if (waitlistEmail) {
+      setWaitlistSubmitted(true);
+      setTimeout(() => setWaitlistSubmitted(false), 5000);
+      setWaitlistEmail('');
+    }
+  };
+
   return (
     <section id="home" className="hero">
       <div className="container">
         <div className="hero-shell">
           <div className="hero-copy animate-fade-in is-visible">
+            <div className="live-data-badge">
+              <span className="live-data-dot"></span>
+              Data live & updated today
+            </div>
             <div className="hero-eyebrow">
               {t('hero.eyebrow', { cohort: programDetails.cohortNumber })}
             </div>
             <h1 className="hero-title">{t('hero.title')}</h1>
             <p className="hero-value-statement">{t('hero.valueStatement')}</p>
-            <p className="hero-subtitle">{t('hero.subtitle')}</p>
+            <p className="hero-subtitle">
+              SCL #6 is currently underway. Register your interest to be notified when applications open for SCL #7.
+            </p>
 
-            <div className="hero-actions">
-              <a
-                href={officialUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary"
-              >
-                {t('hero.ctaPrimary')}
-              </a>
-              <a href="#about" className="inline-link hero-inline-link">
-                {t('hero.ctaSecondary')} <ArrowRight size={17} />
-              </a>
-            </div>
-
-            <div className="hero-status">
-              {t(`hero.status.${programPhase}`, { deadline: applicationDeadline })}
+            <div className="hero-actions hero-actions-waitlist">
+              <form onSubmit={handleWaitlistSubmit} className="waitlist-form">
+                <div className="waitlist-input-wrapper">
+                  <Mail className="waitlist-icon" size={18} />
+                  <input 
+                    type="email" 
+                    required
+                    placeholder="Enter your email address" 
+                    value={waitlistEmail}
+                    onChange={(e) => setWaitlistEmail(e.target.value)}
+                    className="waitlist-input"
+                  />
+                </div>
+                <button type="submit" className="btn btn-primary waitlist-submit">
+                  Join SCL #7 Waitlist
+                </button>
+              </form>
+              {waitlistSubmitted && (
+                <div className="waitlist-success">
+                  <CheckCircle2 size={16} /> Thank you! We'll notify you when SCL #7 opens.
+                </div>
+              )}
+              
+              <div className="hero-secondary-actions">
+                <button className="btn btn-outline btn-brochure">
+                  <Download size={18} /> Download Brochure
+                </button>
+              </div>
             </div>
           </div>
 

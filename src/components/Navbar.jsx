@@ -1,19 +1,23 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Globe, Menu, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 import { getApplicationUrl } from '../data/program';
 import './Navbar.css';
 
-const NAV_SECTIONS = ['home', 'about', 'journey', 'testimonials', 'alumni', 'gallery'];
-const NAV_LINKS = ['about', 'journey', 'testimonials', 'alumni', 'gallery'];
+const NAV_LINKS = [
+  { path: '/curriculum', key: 'curriculum' },
+  { path: '/faculty', key: 'faculty' },
+  { path: '/alumni', key: 'alumni' },
+  { path: '/gallery', key: 'gallery' },
+  { path: '/faq', key: 'faq' }
+];
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
+  const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [langMenuOpen, setLangMenuOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('home');
-  const langMenuRef = useRef(null);
   const mobileMenuRef = useRef(null);
   const toggleRef = useRef(null);
 
@@ -32,10 +36,6 @@ const Navbar = () => {
     };
 
     const handlePointerDown = (event) => {
-      // Close lang menu
-      if (langMenuRef.current && !langMenuRef.current.contains(event.target)) {
-        setLangMenuOpen(false);
-      }
       // Close mobile menu if click is outside both menu and toggle button
       if (
         mobileMenuRef.current &&
@@ -58,38 +58,9 @@ const Navbar = () => {
     };
   }, []);
 
-  // Track active section via IntersectionObserver
-  useEffect(() => {
-    const observers = [];
-    const sectionVisibility = {};
-
-    NAV_SECTIONS.forEach((id) => {
-      const el = document.getElementById(id);
-      if (!el) return;
-
-      sectionVisibility[id] = 0;
-
-      const obs = new IntersectionObserver(
-        ([entry]) => {
-          sectionVisibility[id] = entry.intersectionRatio;
-          // Set active to the section with the highest intersection ratio
-          const best = Object.entries(sectionVisibility).reduce((a, b) => (b[1] > a[1] ? b : a));
-          if (best[1] > 0) setActiveSection(best[0]);
-        },
-        { threshold: Array.from({ length: 11 }, (_, i) => i / 10), rootMargin: '-10% 0px -10% 0px' }
-      );
-
-      obs.observe(el);
-      observers.push(obs);
-    });
-
-    return () => observers.forEach((obs) => obs.disconnect());
-  }, []);
-
   useEffect(() => {
     const handleKeyDown = (event) => {
       if (event.key === 'Escape') {
-        setLangMenuOpen(false);
         setMobileMenuOpen(false);
       }
     };
@@ -113,7 +84,6 @@ const Navbar = () => {
   const changeLanguage = (languageCode) => {
     i18n.changeLanguage(languageCode);
     setMobileMenuOpen(false);
-    setLangMenuOpen(false);
   };
 
   const handleNavClick = () => {
@@ -123,24 +93,24 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${isScrolled ? 'glass-nav' : ''}`}>
       <div className="container nav-container">
-        <a href="#home" className="nav-logo" onClick={handleNavClick}>
+        <Link to="/" className="nav-logo" onClick={handleNavClick}>
           <span className="nav-brand-mark">SCL</span>
           <span className="nav-brand-copy">
             <strong>Smart City Leadership</strong>
             <small>{t('nav.programLabel')}</small>
           </span>
-        </a>
+        </Link>
 
         <div className="nav-links desktop-only">
-          {NAV_LINKS.map((section) => (
-            <a
-              key={section}
-              href={`#${section}`}
-              className={`nav-link ${activeSection === section ? 'nav-link--active' : ''}`}
-              aria-current={activeSection === section ? 'location' : undefined}
+          {NAV_LINKS.map(({ path, key }) => (
+            <Link
+              key={key}
+              to={path}
+              className={`nav-link ${location.pathname === path ? 'nav-link--active' : ''}`}
+              aria-current={location.pathname === path ? 'page' : undefined}
             >
-              {t(`nav.${section}`)}
-            </a>
+              {t(`nav.${key}`)}
+            </Link>
           ))}
 
           <a
@@ -152,36 +122,19 @@ const Navbar = () => {
             {t('nav.apply')}
           </a>
 
-          <div className="lang-switcher" ref={langMenuRef}>
-            <button
-              type="button"
-              className="lang-btn"
-              onClick={() => setLangMenuOpen((open) => !open)}
-              aria-label={t('nav.changeLanguage')}
-              aria-expanded={langMenuOpen}
-              aria-haspopup="menu"
-            >
-              <Globe size={16} />
-              <span className="current-lang">{currentLang.toUpperCase()}</span>
-            </button>
-
-            {langMenuOpen && (
-              <div className="lang-dropdown glass-panel" role="menu">
-                {languages.map((language) => (
-                  <button
-                    key={language.code}
-                    type="button"
-                    role="menuitemradio"
-                    aria-checked={currentLang === language.code}
-                    onClick={() => changeLanguage(language.code)}
-                    className={currentLang === language.code ? 'active' : ''}
-                  >
-                    <span>{language.label}</span>
-                    <span>{language.name}</span>
-                  </button>
-                ))}
-              </div>
-            )}
+          <div className="lang-switcher-inline">
+            <Globe size={16} className="lang-icon" />
+            {languages.map((language) => (
+              <button
+                key={language.code}
+                type="button"
+                aria-checked={currentLang === language.code}
+                onClick={() => changeLanguage(language.code)}
+                className={`lang-inline-btn ${currentLang === language.code ? 'active' : ''}`}
+              >
+                {language.label}
+              </button>
+            ))}
           </div>
         </div>
 
@@ -199,15 +152,15 @@ const Navbar = () => {
 
       {mobileMenuOpen && (
         <div ref={mobileMenuRef} className="mobile-menu glass-panel animate-fade-in is-visible">
-          {NAV_LINKS.map((section) => (
-            <a
-              key={section}
-              href={`#${section}`}
-              className={`nav-link ${activeSection === section ? 'nav-link--active' : ''}`}
+          {NAV_LINKS.map(({ path, key }) => (
+            <Link
+              key={key}
+              to={path}
+              className={`nav-link ${location.pathname === path ? 'nav-link--active' : ''}`}
               onClick={handleNavClick}
             >
-              {t(`nav.${section}`)}
-            </a>
+              {t(`nav.${key}`)}
+            </Link>
           ))}
 
           <div className="mobile-langs">

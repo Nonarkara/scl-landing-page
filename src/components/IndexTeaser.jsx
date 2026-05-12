@@ -1,4 +1,4 @@
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import './IndexTeaser.css';
 
@@ -165,6 +165,9 @@ const IndexTeaser = () => {
                 <p className="index-teaser-card-desc">
                   {t(`index.cards.${key}.description`)}
                 </p>
+                <div className="external-tool-tag">
+                  <ExternalLink size={12} /> External Tool
+                </div>
               </div>
             </a>
           );
@@ -178,7 +181,7 @@ const IndexTeaser = () => {
           rel="noopener noreferrer"
           className="btn btn-primary"
         >
-          {t('index.cta')} <ArrowRight size={17} />
+          {t('index.cta')} <ExternalLink size={17} />
         </a>
         <span className="index-teaser-meta">
           {t('index.meta', { cities: 37, pillars: 7 })}

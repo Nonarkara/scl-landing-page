@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useFadeIn } from '../hooks/useFadeIn';
+import { Play } from 'lucide-react';
 import './Testimonials.css';
 
 const testimonials = [
@@ -59,6 +60,33 @@ const Testimonials = () => {
               </div>
             </footer>
           </blockquote>
+
+          {/* Video Placeholder */}
+          <div className="video-testimonial-placeholder animate-fade-in" style={{ animationDelay: '0.1s' }}>
+            <div className="video-thumbnail">
+              <img src="%BASE_URL%Photos%20More/117867_0.jpg" alt="Video Testimonial Thumbnail" />
+              <div className="video-play-overlay">
+                <div className="play-button">
+                  <Play fill="currentColor" size={32} />
+                </div>
+                <span>Watch Alumni Stories</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Employer Logo Ticker */}
+        <div className="employer-ticker animate-fade-in" style={{ animationDelay: '0.15s' }}>
+          <p className="ticker-label">ALUMNI FROM LEADING ORGANIZATIONS</p>
+          <div className="ticker-track">
+            {['depa', 'EGAT', 'PTT', 'SCG', 'AIS', 'True', 'BMA', 'MEA', 'PEA', 'CEA'].map((org) => (
+              <div key={org} className="ticker-item">{org}</div>
+            ))}
+            {/* Duplicate for infinite loop effect if needed by CSS */}
+            {['depa', 'EGAT', 'PTT', 'SCG', 'AIS', 'True', 'BMA', 'MEA', 'PEA', 'CEA'].map((org) => (
+              <div key={`${org}-dup`} className="ticker-item">{org}</div>
+            ))}
+          </div>
         </div>
 
         <div className="testimonials-list">

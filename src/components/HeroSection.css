@@ -128,7 +128,114 @@
 
 .hero-brief-item {
   padding-top: 12px;
-  border-top: 1px solid var(--border-glass);
+  border: 1px solid var(--border-color);
+}
+
+/* Waitlist Form & Badges */
+.live-data-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  background-color: rgba(34, 197, 94, 0.1);
+  color: #166534;
+  font-size: 0.75rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.live-data-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  background-color: #22c55e;
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+.hero-actions-waitlist {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.waitlist-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 28rem;
+}
+
+@media (min-width: 640px) {
+  .waitlist-form {
+    flex-direction: row;
+  }
+}
+
+.waitlist-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.waitlist-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-tertiary);
+}
+
+.waitlist-input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: all 0.2s ease;
+}
+
+.waitlist-input:focus {
+  outline: none;
+  border-color: var(--depa-yellow);
+  box-shadow: 0 0 0 2px rgba(255, 242, 0, 0.2);
+}
+
+.waitlist-submit {
+  white-space: nowrap;
+}
+
+.waitlist-success {
+  color: #16a34a;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+.hero-secondary-actions {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-brochure {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .hero-brief-item span {

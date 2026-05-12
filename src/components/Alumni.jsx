@@ -275,7 +275,12 @@ const Alumni = () => {
         
         {/* Render Map Visualization if demographics data is available */}
         {demographics.provinces && Object.keys(demographics.provinces).length > 0 && (
-          <ThailandMap demographics={demographics} />
+          <div className="map-container-wrapper">
+            <ThailandMap demographics={demographics} />
+            <p className="map-caption text-center mt-4 text-sm text-gray-500 italic">
+              {t('alumni.mapCaption', 'See where our alums are from?')}
+            </p>
+          </div>
         )}
 
         {(searchKey || filterBatch !== 'all' || sortOrder !== 'relevance') ? (

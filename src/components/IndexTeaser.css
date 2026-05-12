@@ -89,6 +89,24 @@
   line-height: 1.65;
 }
 
+.external-tool-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-top: 12px;
+  opacity: 0.7;
+}
+
+.index-teaser-card:hover .external-tool-tag {
+  color: var(--depa-yellow-dark, #8a6d3b);
+  opacity: 1;
+}
+
 .index-teaser-footer {
   display: flex;
   align-items: center;
