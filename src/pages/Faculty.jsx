@@ -16,6 +16,8 @@ const facultyData = [
     },
     expanded: {
       en: "The person most responsible for how Thailand defines, certifies, and scales smart cities. Passakon led depa's strategy to designate smart city areas nationwide and architected the City Data Platform (CDP) now connecting municipal data across dozens of cities. His 30+ years span NECTEC, NSTDA, and depa — the full arc from early digital infrastructure to AI-integrated municipal systems. He holds a PhD in Software Architecture and Computer Networking from the University of Missouri and serves as President of the Thai ITS Association. In SCL, no other faculty member can provide what he does: the regulatory history, the funding logic, and an explanation of exactly why the national framework is built the way it is.",
+      th: "ดร. ภาสกรคือสถาปนิกหลักของกรอบแนวคิดเมืองอัจฉริยะแห่งชาติของไทย รวมถึง City Data Platform (CDP) ที่เชื่อมต่อข้อมูลเทศบาลกว่าหลายสิบเมืองในปัจจุบัน ประสบการณ์กว่า 30 ปีครอบคลุม NECTEC, NSTDA และ depa พร้อมปริญญาเอกด้านสถาปัตยกรรมซอฟต์แวร์จากมหาวิทยาลัยมิสซูรี และดำรงตำแหน่งประธานสมาคม ITS ไทย ใน SCL ไม่มีคณาจารย์ท่านใดให้สิ่งที่ท่านให้ได้: ประวัติกฎระเบียบ ตรรกะการจัดสรรงบประมาณ และคำอธิบายว่าเหตุใดกรอบแนวคิดระดับชาติจึงถูกสร้างขึ้นในลักษณะที่เป็นอยู่",
+      cn: "Passakon 是泰国国家智慧城市框架的主要架构师，包括如今连接数十个城市市政数据的城市数据平台（CDP）。三十余年履历横跨 NECTEC、NSTDA 和 depa，持有密苏里大学软件架构博士学位，兼任泰国 ITS 协会主席。在 SCL 中，没有其他教师能提供他所给予的内容：政策框架的历史沿革、depa 的资金逻辑，以及国家框架为何如此构建的第一手解释。",
     },
     linkedin: "https://www.linkedin.com/in/passakon-prathombutr-b74b268/",
   },
@@ -31,6 +33,8 @@ const facultyData = [
     },
     expanded: {
       en: "Imperial College-trained (EE), Supakorn led depa's Smart City Promotion division from 2017, oversaw the launch of Phuket as Thailand's first smart city pilot, and has represented Thailand at GSMA Smart Mobility and the ASEAN-Japan Smart Cities Network. As Acting President of depa, he is the institutional owner of the SCL programme itself — the person who decides its scope, resources, and future. His research background spans computer vision, intelligent transport, and IoT. In SCL, participants can ask him directly what depa will and won't fund, which city designations are under review, and where the national smart city agenda is heading — a conversation no consultant or academic can provide.",
+      th: "ศึกษาจาก Imperial College London (วิศวกรรมไฟฟ้า) ดร. ศุภกรนำแผนกส่งเสริมเมืองอัจฉริยะของ depa ตั้งแต่ปี 2560 กำกับดูแลการเปิดตัวภูเก็ตในฐานะเมืองอัจฉริยะนำร่องแห่งแรกของไทย และเป็นตัวแทนของไทยใน GSMA Smart Mobility และ ASEAN-Japan Smart Cities Network ในฐานะรักษาการผู้อำนวยการ depa ท่านคือเจ้าของสถาบันของหลักสูตร SCL ใน SCL ผู้เข้าร่วมสามารถถามท่านได้โดยตรงว่า depa จะและจะไม่สนับสนุนสิ่งใด การกำหนดเมืองใดอยู่ระหว่างการพิจารณา และวาระเมืองอัจฉริยะระดับชาติกำลังมุ่งหน้าไปทางใด",
+      cn: "毕业于帝国理工学院（电气工程），Dr. Supakorn 自 2017 年起领导 depa 智慧城市推广部门，监督普吉岛作为泰国首个智慧城市试点的启动，并代表泰国参加 GSMA Smart Mobility 和日本-东盟智慧城市网络。作为 depa 代理总裁，他是 SCL 课程的机构所有者。在 SCL 中，学员可以直接询问 depa 将支持什么、不支持什么，哪些城市认定正在审查，以及国家智慧城市议程的走向——这是任何顾问或学者都无法提供的对话。",
     },
     linkedin: "https://www.linkedin.com/in/supakorn-siddhichai/",
   },
@@ -46,6 +50,8 @@ const facultyData = [
     },
     expanded: {
       en: "Harvard-Yenching Scholar and PhD in Anthropology from Harvard, with additional degrees from MIT and Oxford. Non is the author of the Smart City Primer — the most accessible ASEAN-facing smart city framework text — and has co-designed SCL across five cohorts since 2022. His research spans Shanghai's historic urban neighborhoods, Bangkok's mobility corridors, and ASEAN secondary cities, applying ethnographic methods to understand how residents actually use (or avoid) smart infrastructure. He built the Smart City Thailand Index (SCITI) and the SLIC global 163-city ranking, and works across the ASEAN Smart Cities Network. The only SCL faculty member who designed the programme itself — he explains not just what the curriculum contains, but why each element was chosen and what failure mode it is designed to prevent.",
+      th: "นักวิชาการ Harvard-Yenching ปริญญาเอกมานุษยวิทยาจากฮาร์วาร์ด พร้อมปริญญาเพิ่มเติมจาก MIT และอ็อกซ์ฟอร์ด ดร. นนเป็นผู้เขียน Smart City Primer — ตำราเมืองอัจฉริยะที่เข้าถึงได้มากที่สุดในบริบทอาเซียน — และร่วมออกแบบ SCL มาห้ารุ่นตั้งแต่ปี 2565 งานวิจัยของท่านครอบคลุมย่านประวัติศาสตร์เซี่ยงไฮ้ ทางเดินการสัญจรในกรุงเทพฯ และเมืองรองในอาเซียน โดยใช้วิธีเชิงชาติพันธุ์วรรณาเพื่อเข้าใจว่าประชาชนใช้หรือหลีกเลี่ยงโครงสร้างพื้นฐานอัจฉริยะอย่างไร ท่านสร้าง SCITI และการจัดอันดับเมืองโลก SLIC ซึ่งมี 163 เมือง ในฐานะคณาจารย์เพียงคนเดียวที่ออกแบบหลักสูตรเอง ท่านอธิบายได้ไม่เพียงว่าหลักสูตรมีอะไร แต่ยังว่าทำไมแต่ละองค์ประกอบถึงถูกเลือก",
+      cn: "哈佛大学燕京学者，哈佛人类学博士，兼具 MIT 与牛津学位。Dr. Non 是《智慧城市手册》的作者——东盟语境下最易获取的智慧城市框架文本——并自 2022 年起联合设计 SCL 课程已历五届。其研究横跨上海历史街区、曼谷出行廊道和东盟次级城市，运用民族志方法理解居民如何真实使用（或回避）智慧基础设施。他还构建了 SCITI 和全球 163 城 SLIC 排名工具。作为唯一一位亲自设计课程的教师，他不仅解释课程内容，更阐明每个模块入选背后的逻辑。",
     },
     linkedin: "https://www.linkedin.com/in/drnon/",
   },
@@ -61,6 +67,8 @@ const facultyData = [
     },
     expanded: {
       en: "Georgia Tech-trained, Rutchanee leads KMITL's commercialisation and international research partnerships — translating engineering R&D in machine learning, embedded systems, and robotics into deployable city-scale solutions through structured incubation. KMITL is Thailand's leading engineering university; her role positions her at the intersection of academic research, startup development, and government procurement. Her partnership with DOST ISU (Philippines) is a working model for ASEAN-level smart city technology transfer. In SCL, she gives participants a direct connection to KMITL's research pipeline and international university network — infrastructure that city governments cannot build internally, and partnerships that outlast the programme itself.",
+      th: "ศึกษาจาก Georgia Tech ดร. รัชนีนำการค้าเชิงพาณิชย์และความร่วมมือวิจัยนานาชาติของ สจล. — แปลงงานวิจัยวิศวกรรมด้านแมชชีนเลิร์นนิ่ง ระบบฝังตัว และหุ่นยนต์ให้กลายเป็นโซลูชันระดับเมืองที่พร้อมติดตั้งผ่านการบ่มเพาะแบบมีโครงสร้าง ความร่วมมือกับ DOST ISU (ฟิลิปปินส์) เป็นแบบจำลองสำหรับการถ่ายทอดเทคโนโลยีเมืองอัจฉริยะในระดับอาเซียน ใน SCL ท่านเชื่อมต่อผู้เข้าร่วมกับท่อวิจัยและเครือข่ายมหาวิทยาลัยนานาชาติของ สจล. — สิ่งที่หน่วยงานเมืองสร้างขึ้นเองไม่ได้",
+      cn: "毕业于佐治亚理工学院，Dr. Rutchanee 主管 KMITL 的商业化与国际研究合作，将机器学习、嵌入式系统与机器人等工程研究通过系统性孵化转化为可部署的城市级解决方案。她与菲律宾 DOST ISU 的合作是东盟智慧城市技术转让的工作模板。在 SCL 中，她为学员搭建通往 KMITL 研究管线和国际大学网络的直接通道——这是城市政府无法内部构建的基础设施。",
     },
     linkedin: "https://www.linkedin.com/in/rutchanee-gullayanon-65779a76/",
   },
@@ -76,6 +84,8 @@ const facultyData = [
     },
     expanded: {
       en: "PhD in Civil Engineering from the University of Colorado, Kanop has turned a flood-prone southern city into an internationally recognised smart city model — winning the Best Partnership Award at the World Smart City Expo 2023 in South Korea. His deployments include a real-time flood early warning platform, a two-way resident-city digital communication system, and metaverse-enabled classrooms in public schools. He speaks at UN ESCAP and UN DESA forums and has been recognised by Thailand's Ministry of Digital Economy as 'Smart City Champion.' In SCL, he is a sitting mayor who has done the engineering — not a consultant describing what a mayor should do. His sessions consistently produce the most direct questions from other city leaders in the room.",
+      th: "ปริญญาเอกด้านวิศวกรรมโยธาจากมหาวิทยาลัยโคโลราโด ดร. กณพเปลี่ยนเมืองที่มักประสบอุทกภัยในภาคใต้ให้กลายเป็นต้นแบบเมืองอัจฉริยะระดับนานาชาติ — คว้ารางวัล Best Partnership Award จาก World Smart City Expo 2023 ที่เกาหลีใต้ การพัฒนาของท่านรวมถึงระบบเตือนภัยน้ำท่วมแบบเรียลไทม์ ระบบสื่อสารดิจิทัลสองทางระหว่างประชาชนกับเทศบาล และห้องเรียน Metaverse ในโรงเรียนรัฐ ท่านพูดในเวทีของ UN ESCAP และ UN DESA ใน SCL ท่านคือนายกเทศมนตรีที่นั่งอยู่ตรงหน้าซึ่งทำด้วยตัวเอง — ไม่ใช่ที่ปรึกษาที่อธิบายว่านายกฯ ควรทำอะไร",
+      cn: "获科罗拉多大学土木工程博士学位，Kanop 将泰国南部一座饱受洪涝困扰的城市打造为国际认可的智慧城市典范——荣获 2023 年世界智慧城市博览会（韩国）最佳伙伴关系奖。其部署成果包括实时洪水预警平台、居民与市政双向数字通信系统，以及公立学校的元宇宙课堂。他活跃于 UN ESCAP 和 UN DESA 论坛。在 SCL 中，他是一位亲自完成工程实施的现任市长——而非描述市长应该做什么的顾问。",
     },
     linkedin: "https://www.linkedin.com/in/kanop-ketchart-878579279/",
   },
@@ -91,6 +101,8 @@ const facultyData = [
     },
     expanded: {
       en: "Recipient of France's Chevalier dans l'Ordre des Palmes académiques and Director of UddC at Chulalongkorn — Thailand's leading applied urban research institution. Niramon leads GoodWalk Thailand, the country's most rigorous walkability index, and has driven participatory public space redesign across Bangkok producing evidence-based standards that now influence national urban policy. Her diagnostic is the question most smart city programmes skip: does the physical space actually work for the people in it? Walkability data, public realm quality, and stakeholder engagement determine whether smart infrastructure gets adopted or ignored. In SCL, she gives participants the street-level measurement tools that sit beneath any smart city indicator set — and a framework for evaluating whether their city's investments are landing where intended.",
+      th: "ผู้ได้รับเครื่องราชอิสริยาภรณ์ Chevalier dans l'Ordre des Palmes académiques ของฝรั่งเศส และผู้อำนวยการ UddC ที่จุฬาลงกรณ์มหาวิทยาลัย ดร. นิรมลนำโครงการ GoodWalk Thailand — ดัชนีความสะดวกในการเดินที่เข้มข้นที่สุดของประเทศ — และขับเคลื่อนการออกแบบพื้นที่สาธารณะแบบมีส่วนร่วมทั่วกรุงเทพฯ จนสร้างมาตรฐานเชิงหลักฐานที่ส่งผลต่อนโยบายเมืองระดับชาติ คำถามวินิจฉัยของท่าน: พื้นที่ทางกายภาพนี้ใช้งานได้จริงสำหรับผู้คนในนั้นหรือไม่? ใน SCL ท่านให้เครื่องมือวัดระดับถนนที่อยู่ใต้ชุดตัวชี้วัดเมืองอัจฉริยะใดๆ",
+      cn: "法国国家功勋奖章（棕榈叶骑士级）获得者，朱拉隆功大学城市设计与发展中心（UddC）主任。Dr. Niramon 主持 GoodWalk Thailand——泰国最严格的步行便利性指数——并在曼谷全市推动参与式公共空间再设计，形成影响国家城市政策的循证标准。她的诊断标准：这座城市对居住其中的人来说真的好用吗？在 SCL 中，她提供任何智慧城市指标体系底层的街道层面测量工具与评估框架。",
     },
     linkedin: "https://www.linkedin.com/in/niramon-serisakul/",
   },
@@ -106,6 +118,8 @@ const facultyData = [
     },
     expanded: {
       en: "Digital Practice Leader at Aurecon Thailand, co-founder of BIM Club Thailand, and executive committee member of the Thai BIM Association. Sanphawat is a licensed architect in Thailand, an Associate of the American Institute of Architects, and a LEED Accredited Professional. His 2025 peer-reviewed publication in the International Journal of Construction Management addresses digital twin sequencing for building operations in Thai construction contexts. With 20+ years in BIM and digital twin implementation across commercial and infrastructure projects, he bridges the gap between city-level digital twin ambition and the building-by-building data infrastructure that makes it work. In SCL, he gives participants the framework to evaluate vendor claims critically — separating genuine infrastructure intelligence from dashboard theatre.",
+      th: "ผู้นำด้านการปฏิบัติงานดิจิทัลที่ Aurecon Thailand ผู้ร่วมก่อตั้ง BIM Club Thailand และกรรมการบริหารสมาคม BIM ไทย ดร. สรรพวัฒน์เป็นสถาปนิกผู้มีใบอนุญาตในไทย สมาชิก American Institute of Architects และ LEED Accredited Professional งานวิจัยปี 2568 ที่ผ่านการทบทวนโดยผู้เชี่ยวชาญใน International Journal of Construction Management ครอบคลุมการจัดลำดับ Digital Twin สำหรับการดำเนินงานอาคารในบริบทการก่อสร้างไทย ใน SCL ท่านให้กรอบแนวคิดในการประเมินข้อเรียกร้องของผู้ขายอย่างมีวิจารณญาณ — แยกแยะความฉลาดด้านโครงสร้างพื้นฐานจริงจากการนำเสนอที่ดูดีแต่ไม่มีสาระ",
+      cn: "Aurecon 泰国数字实践主管、BIM Club 泰国联合创始人、泰国 BIM 协会执行委员。Sanphawat 是泰国注册建筑师、美国建筑师学会准会员及 LEED 认证专家。2025 年，他在《国际建设管理杂志》发表同行评审论文，聚焦泰国建筑运营的数字孪生实施序列。逾二十年经验横跨商业及基础设施项目的 BIM 与数字孪生实施。在 SCL 中，他提供批判性评估供应商方案的框架——区分真正的基础设施智能与华而不实的仪表板展示。",
     },
     linkedin: "https://www.linkedin.com/in/sanphawat-jatupatwarangkul-1913ba52/",
   },
@@ -121,6 +135,8 @@ const facultyData = [
     },
     expanded: {
       en: "Four-term Mayor of Yala and President of the National Municipal League of Thailand, Pongsak holds a University of Queensland degree and has turned a border city navigating significant governance and security complexity into Thailand's most-cited provincial smart city model. His interventions are relentlessly citizen-first: Yala Free WiFi as social cohesion infrastructure; a mobility big data and AI partnership with CITYDATA.ai for public health management; participatory governance formats — village meetings and age-segmented forums — as the human layer of the smart city stack. Yala's approach has been studied by UNICEF and profiled by GovInsider. In SCL, he is proof that smart governance works under resource constraints and social fragility — the condition most Thai municipalities actually face, not the ideal conditions that most smart city case studies assume.",
+      th: "นายกเทศมนตรีนครยะลาสี่สมัย และประธานสันนิบาตเทศบาลแห่งประเทศไทย วุฒิจากมหาวิทยาลัยควีนส์แลนด์ นายก A เปลี่ยนเมืองชายแดนที่เผชิญความซับซ้อนด้านการปกครองและความมั่นคงให้กลายเป็นต้นแบบเมืองอัจฉริยะระดับจังหวัดที่ถูกอ้างถึงมากที่สุดในไทย การแทรกแซงของท่านยึดประชาชนเป็นศูนย์กลาง: Yala Free WiFi เป็นโครงสร้างพื้นฐานด้านการเชื่อมต่อทางสังคม ความร่วมมือ Big Data กับ CITYDATA.ai สำหรับสาธารณสุข และรูปแบบการปกครองแบบมีส่วนร่วม ผลงานของท่านได้รับการศึกษาจาก UNICEF และนำเสนอโดย GovInsider ใน SCL ท่านคือหลักฐานว่าธรรมาภิบาลอัจฉริยะทำได้แม้ภายใต้ข้อจำกัดด้านทรัพยากรและความเปราะบางทางสังคม",
+      cn: "也拉市连任四届市长，泰国全国市政联盟主席，持有昆士兰大学学位。Pongsak 将一座面临复杂治理与安全挑战的泰南边境城市打造成全国被引用最多的省级智慧城市样板。其干预措施始终以市民为先：Yala Free WiFi 作为社会凝聚力基础设施，与 CITYDATA.ai 合作的大数据公共卫生管理，以及村民会议等参与式治理形式。其工作已被 UNICEF 研究并经 GovInsider 报道。在 SCL 中，他证明了智慧治理在资源约束与社会脆弱性下同样可行。",
     },
     linkedin: "https://www.linkedin.com/in/pongsak-yingchoncharoen-05106a26b/",
   },
@@ -146,8 +162,8 @@ export default function Faculty() {
 
       <figure className="faculty-photo-strip">
         <img
-          src="/Photos/SCL-6years-hero.jpg"
-          alt="SCL — Six Years of Smart City Leadership"
+          src="/Photos/2022-05-26%2010.07.12.jpg"
+          alt=""
           loading="lazy"
         />
         <figcaption>{t('faculty.photoCaption', 'A rotating faculty of policymakers, mayors, and practitioners teaches each cohort in person.')}</figcaption>
