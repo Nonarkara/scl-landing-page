@@ -103,8 +103,10 @@ const Home = () => {
                       <div className="history-content">
                         <h3>{t('history.2024_title')}</h3>
                         <p>{t('history.2024_desc')}</p>
+                        <h3>{t('history.2024_title2')}</h3>
+                        <p>{t('history.2024_desc2')}</p>
                       </div>
-                      <img src="/Photos/475264919_1066072412230903_4111193098320819467_n-1.jpg" alt="SCL Batch 5" className="history-image" loading="lazy" />
+                      <img src="/Photos/475264919_1066072412230903_4111193098320819467_n-1.jpg" alt="SCL Batch 4 and 5" className="history-image" loading="lazy" />
                     </div>
                     <div className="history-item">
                       <div className="history-year">2026</div>
