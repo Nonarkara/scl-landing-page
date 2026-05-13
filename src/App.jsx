@@ -10,6 +10,7 @@ import Faculty from './pages/Faculty';
 import FAQ from './pages/FAQ';
 import CurriculumPage from './pages/CurriculumPage';
 import GalleryPage from './pages/GalleryPage';
+import MethodologyPage from './pages/MethodologyPage';
 import './App.css';
 
 function App() {
@@ -106,6 +107,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/curriculum" element={<CurriculumPage />} />
+          <Route path="/methodology" element={<MethodologyPage />} />
           <Route path="/faculty" element={<Faculty />} />
           <Route path="/alumni" element={<AlumniPage />} />
           <Route path="/gallery" element={<GalleryPage />} />

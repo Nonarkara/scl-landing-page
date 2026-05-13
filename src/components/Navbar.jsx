@@ -7,6 +7,7 @@ import './Navbar.css';
 
 const NAV_LINKS = [
   { path: '/?tab=about', key: 'about', label: 'About & History' },
+  { path: '/methodology', key: 'methodology', label: 'Methodology' },
   { path: '/?tab=journey', key: 'journey', label: 'The Journey' },
   { path: '/alumni', key: 'alumni', label: 'Alumni' },
   { path: '/?tab=testimonials', key: 'testimonials', label: 'Voices' },
