@@ -6,9 +6,7 @@ import HeroSection from '../components/HeroSection';
 import AboutProgram from '../components/AboutProgram';
 import ProgramJourney from '../components/ProgramJourney';
 import Testimonials from '../components/Testimonials';
-import Methodology from '../components/Methodology';
-
-import { ArrowRight, History, BookOpen, Map, MessageSquare, Mail, FlaskConical } from 'lucide-react';
+import { ArrowRight, History, BookOpen, Map, MessageSquare, Mail } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
@@ -40,7 +38,6 @@ const Home = () => {
   const tabs = [
     { id: 'about', labelKey: 'home.tabs.about', fallback: 'About & History', icon: <History size={18} /> },
     { id: 'curriculum', labelKey: 'home.tabs.curriculum', fallback: 'Curriculum', icon: <BookOpen size={18} /> },
-    { id: 'methodology', labelKey: 'home.tabs.methodology', fallback: 'Methodology', icon: <FlaskConical size={18} /> },
     { id: 'journey', labelKey: 'home.tabs.journey', fallback: 'Format & Timeline', icon: <Map size={18} /> },
     { id: 'testimonials', labelKey: 'home.tabs.testimonials', fallback: 'Alumni Voices', icon: <MessageSquare size={18} /> },
   ];
@@ -134,12 +131,6 @@ const Home = () => {
                     <img src="/Photos%20additional/476143149_1822641635218271_446631311518332652_n.jpg" alt="Workshop" loading="lazy" />
                   </div>
                 </div>
-              </div>
-            )}
-
-            {activeTab === 'methodology' && (
-              <div className="tab-pane animate-fade-in">
-                <Methodology />
               </div>
             )}
 
