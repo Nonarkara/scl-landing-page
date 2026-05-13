@@ -167,7 +167,7 @@ export default function Faculty() {
 
       <figure className="faculty-photo-strip">
         <img
-          src="/Photos%20additional/487460980_1115778320593645_1910351410404612601_n.jpg"
+          src="/Photos/487460980_1115778320593645_1910351410404612601_n.jpg"
           alt=""
           loading="lazy"
         />

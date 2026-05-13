@@ -43,7 +43,7 @@ const TOOLS = [
   { key: 'solomon', url: 'https://solomon.nonarkara.org/' },
 ];
 
-const PHOTO_BASE = '/Photos additional/';
+const PHOTO_BASE = '/Photos/';
 const methodologyPhotos = [
   '539503324_1239502091554600_5125521868853307132_n.jpg',
   '540073752_1239501834887959_7514705360388831618_n.jpg',

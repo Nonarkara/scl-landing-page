@@ -37,7 +37,7 @@ export const programLearningSites = [
 
 const B = import.meta.env.BASE_URL;
 const fromBase = (path) => B + path;
-const fromMore = (name) => fromBase(`Photos More/${name}`);
+const fromMore = (name) => fromBase(`Photos/${name}`);
 
 const photosMoreNames = [
   '474976513_1065517048953106_1932510330371171192_n.jpg',
