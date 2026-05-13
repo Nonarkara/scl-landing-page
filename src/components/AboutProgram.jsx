@@ -1,4 +1,3 @@
-import { ChevronDown } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { aboutPhoto, programDetails, programLearningSites } from '../data/program';
 import { useFadeIn } from '../hooks/useFadeIn';
@@ -84,19 +83,12 @@ const AboutProgram = () => {
               {programLearningSites.map((site, index) => {
                 const siteKey = `site${index + 1}`;
                 return (
-                  <details key={site} className="learning-site-card">
-                    <summary className="learning-site-header">
+                  <div key={site} className="learning-site-card">
+                    <div className="learning-site-header">
                       <span className="learning-site-number">{String(index + 1).padStart(2, '0')}</span>
                       <span className="learning-site-name">{t(`about.learningSites.${siteKey}`)}</span>
-                      <ChevronDown size={16} className="learning-site-chevron" />
-                    </summary>
-                    <div className="learning-site-body">
-                      <p className="learning-site-desc">{t(`about.learningSites.${siteKey}Desc`)}</p>
-                      <div className="learning-site-meta">
-                        <span className="learning-site-domain">{t(`about.learningSites.${siteKey}Domain`)}</span>
-                      </div>
                     </div>
-                  </details>
+                  </div>
                 );
               })}
             </div>

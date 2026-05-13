@@ -145,6 +145,7 @@
   border-radius: 0;
   overflow: hidden;
   position: relative;
+  display: flex;
 }
 
 .bar-fill {
@@ -159,6 +160,27 @@
   color: var(--text-main);
   text-align: right;
   font-variant-numeric: tabular-nums;
+}
+
+.bar-legend {
+  display: flex;
+  gap: 16px;
+  margin-top: 10px;
+}
+
+.bar-legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.03em;
+}
+
+.bar-legend-dot {
+  width: 10px;
+  height: 10px;
+  flex-shrink: 0;
 }
 
 /* Ring Chart / Coverage */

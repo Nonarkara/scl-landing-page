@@ -323,16 +323,23 @@ const Alumni = () => {
 
             <div className="search-suggestions">
               <span className="suggestion-label">{t('alumni.suggestions')}:</span>
-              {['เทศบาล', 'อบจ', 'นายก', 'ผู้ว่า', 'ผู้อำนวยการ', 'บริษัท'].map((tag) => (
+              {[
+                { label: t('alumni.tag.municipality'), search: 'เทศบาล' },
+                { label: t('alumni.tag.provincial'), search: 'อบจ' },
+                { label: t('alumni.tag.mayor'), search: 'นายก' },
+                { label: t('alumni.tag.governor'), search: 'ผู้ว่า' },
+                { label: t('alumni.tag.director'), search: 'ผู้อำนวยการ' },
+                { label: t('alumni.tag.company'), search: 'บริษัท' },
+              ].map(({ label, search }) => (
                 <button
-                  key={tag}
+                  key={search}
                   className="suggestion-tag"
                   onClick={() => {
-                    setSearchTerm(tag);
+                    setSearchTerm(search);
                     setShowAllBrowse(false);
                   }}
                 >
-                  {tag}
+                  {label}
                 </button>
               ))}
               <button
@@ -346,6 +353,7 @@ const Alumni = () => {
 
             <p className="search-hint">{t('alumni.searchHint')}</p>
             <p className="search-hint position-disclaimer">{t('alumni.positionDisclaimer')}</p>
+            <p className="search-hint thai-names-note">{t('alumni.thaiNamesNote')}</p>
 
             <div className="filter-bar">
               <select

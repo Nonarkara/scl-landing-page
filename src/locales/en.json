@@ -380,7 +380,18 @@
       "stateEnterprise": "State enterprise",
       "other": "Other"
     },
-    "alumniPerBatch": "Alumni per batch"
+    "alumniPerBatch": "Alumni per batch",
+    "publicLabel": "Public / State",
+    "privateLabel": "Private / Other",
+    "thaiNamesNote": "All names in this directory are in Thai only, per the official depa announcement for each cohort.",
+    "tag": {
+      "municipality": "Municipality",
+      "provincial": "Provincial Admin.",
+      "mayor": "Mayor",
+      "governor": "Governor",
+      "director": "Director",
+      "company": "Company"
+    }
   },
   "gallery": {
     "badge": "Program archive",
@@ -505,8 +516,8 @@
     "title": "From Batch #1 to Global Impact",
     "2020_title": "The Inception (Batch #1)",
     "2020_desc": "Launched with a vision to bridge the gap between technology and urban governance. 40 pioneers joined the first cohort.",
-    "2022_title": "Expanding the Network",
-    "2022_desc": "By Batch #3, SCL became a national benchmark, attracting governors and CEOs from across 30+ provinces.",
+    "2022_title": "Expanding the Network (Batch #2)",
+    "2022_desc": "SCL became a national benchmark, attracting governors and CEOs from across 30+ provinces.",
     "2022_title2": "Expansion (Batch #3)",
     "2022_desc2": "Introduced the Smart City Thailand Index integration, making the program data-driven.",
     "2024_title": "The AI Era (Batch #5)",
@@ -612,11 +623,99 @@
       "partnerships": "Partnerships"
     }
   },
+  "methodology": {
+    "kicker": "Academic Foundation",
+    "title": "Six frameworks. One coherent practice.",
+    "subtitle": "SCL does not follow a single academic tradition. It draws from six established frameworks and threads them into a programme built for leaders who need to act, not merely analyse.",
+    "whyTitle": "Why framework literacy matters",
+    "whyDesc": "Most smart city failures are not technological. They are methodological — the wrong question was asked first, or the wrong stakeholders were in the room. Framework literacy gives leaders a structured way to diagnose which failure mode they face and how to move out of it.",
+    "frameworksTitle": "The six frameworks",
+    "frameworks": {
+      "bmc": {
+        "number": "01",
+        "name": "Business Model Canvas (adapted for cities)",
+        "source": "Manetti et al., Energies Vol. 12 No. 24, MDPI (2019)",
+        "tag": "Strategy",
+        "insight": "Most smart city pilots never scale because they have no viable value-capture mechanism. The Business Model Canvas — when adapted for public-sector contexts — replaces revenue streams with public value flows and treats the resident, not the investor, as the primary stakeholder.",
+        "inSCL": "Participants build a city-specific BMC early in the programme to stress-test whether their project has a sustainable logic before any procurement begins."
+      },
+      "designThinking": {
+        "number": "02",
+        "name": "Design Thinking",
+        "source": "UNDP Asia-Pacific — Three Design Thinking Lessons for Building Smart Cities",
+        "tag": "Citizen-centred",
+        "insight": "Start with the citizen's pain, not the vendor's technology. Prototype at district scale first. Co-create with residents as designers, not beneficiaries. UNDP's approach is a direct counter to the top-down vendor-driven smart city model.",
+        "inSCL": "The empathy-mapping session is a signature SCL moment. Leaders who make city decisions often have not spoken directly with the people those decisions affect."
+      },
+      "primer": {
+        "number": "03",
+        "name": "depa Smart City Primer",
+        "source": "Digital Economy Promotion Agency (depa) — Smart City Primer (official publication)",
+        "tag": "National standard",
+        "insight": "Thailand's national framework defines seven smart city dimensions that every city seeking depa certification must align to. This is the operating manual for Thai smart city development — not an aspirational document, but a compliance framework with institutional weight.",
+        "inSCL": "Since depa organises the programme, knowledge of the Primer is a threshold requirement, not optional background reading."
+      },
+      "uddc": {
+        "number": "04",
+        "name": "Urban Design Method (UddC)",
+        "source": "Urban Design and Development Center, Chulalongkorn University",
+        "tag": "Physical space",
+        "insight": "Physical space design is not a sidebar to digital infrastructure — it is the infrastructure. Walkability, public realm quality, and genuine stakeholder engagement determine whether smart interventions produce liveable cities or just expensive systems that residents avoid.",
+        "inSCL": "Faculty member Dr. Niramon Serisakul (Director, UddC) teaches directly inside the cohort. Her diagnostic: what does the city feel like to walk through?"
+      },
+      "asean": {
+        "number": "05",
+        "name": "ASEAN Smart Cities Framework",
+        "source": "ASEAN Smart Cities Network — Smart City Toolkit",
+        "tag": "Regional governance",
+        "insight": "Three pillars — Liveable, Competitive, Sustainable. City Action Plans are voluntary and peer-driven, not mandated from a centre. The ASEAN toolkit is organised by urban challenge rather than by product, making it interoperable across governance systems as different as Singapore and Cambodia.",
+        "inSCL": "Thailand operates within a regional smart city ecosystem. Leaders who understand ASEAN-level frameworks can access regional funding, case studies, and peer networks that nationally-framed programmes cannot reach."
+      },
+      "agile": {
+        "number": "06",
+        "name": "Agile Project Management",
+        "source": "Association for Project Management (APM) — Body of Knowledge",
+        "tag": "Delivery",
+        "insight": "Smart city projects managed as waterfall programmes almost always fail: requirements shift, technology evolves, and political timelines compress. Agile keeps scope flexible, delivers working iterations at every sprint, and maintains genuine stakeholder involvement throughout rather than at approval gates only.",
+        "quote": "\"Agile project management focuses on delivering the maximum value against business priorities in the time and budget allowed.\" — APM",
+        "inSCL": "The Capstone project is designed as an Agile sprint. Participants leave with a working deliverable, not a five-year plan."
+      }
+    },
+    "weavingTitle": "How SCL threads these together",
+    "weavingDesc": "The six frameworks are not taught as separate modules. They follow a deliberate sequence: the BMC establishes the business logic first. Design Thinking generates the citizen diagnosis. The depa Primer translates both into the Thai national context. The UddC method grounds the work in physical reality. The ASEAN framework opens the regional aperture. Agile PM then governs how the Capstone is actually delivered. Each framework addresses a failure mode the others cannot see alone — and together they form a diagnostic toolkit that survives contact with real cities.",
+    "toolsTitle": "Tools developed from the methodology",
+    "toolsSubtitle": "These four instruments were built directly from SCL's frameworks. They are not illustrative examples — they are applied products that city leaders can use today.",
+    "tools": {
+      "sciti": {
+        "name": "Smart City Thailand Index",
+        "tag": "National benchmark",
+        "desc": "A composite scoring system measuring 37+ Thai cities across 7 livability pillars — environment, economy, mobility, energy, governance, people, and living. Gives city leaders a data reference for where their city actually stands, not where it claims to stand."
+      },
+      "slic": {
+        "name": "SLIC — Strategic Livability Index for Cities",
+        "tag": "Global comparison",
+        "desc": "163 cities ranked globally using an Adaptive Multi-Pillar Index across five dimensions. Used to position Thai cities against international peers and identify which performance gaps are structural rather than resource-dependent."
+      },
+      "ascn": {
+        "name": "ASEAN Smart Cities Network Portal",
+        "tag": "Regional network",
+        "desc": "A portal mapping Thailand's position in the 26-city ASEAN Smart Cities Network — showing regional peer relationships, shared action plan themes, and bilateral cooperation opportunities across Southeast Asia."
+      },
+      "solomon": {
+        "name": "Solomon Islands — Pacific Urban Advisory",
+        "tag": "Applied methodology",
+        "desc": "A UN DESA-commissioned engagement applying SCL methodology to a Pacific small-island developing state — demonstrating that the framework transfers well beyond Southeast Asia's urban core."
+      }
+    },
+    "sourcesTitle": "Source references",
+    "aseanSecondSource": "ASEAN — Advancing Smart Cities Across ASEAN and Beyond"
+  },
   "home": {
     "tabs": {
       "about": "About & History",
       "curriculum": "Curriculum",
-      "journey": "The Journey",
+      "methodology": "Methodology",
+      "journey": "Format & Timeline",
       "testimonials": "Alumni Voices"
     }
   },

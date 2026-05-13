@@ -46,13 +46,35 @@ const CohortInsights = ({ allEntries, demographics }) => {
 
   const avgCohortSize = Math.round(allEntries.length / alumniBatches.length);
 
+  const batchPublicCounts = useMemo(() => {
+    const counts = {};
+    alumniBatches.forEach(b => { counts[b.id] = 0; });
+    allEntries.forEach(entry => {
+      if (counts[entry.batch] !== undefined) {
+        if (entry.sector === 'public' || entry.sector === 'stateEnterprise' || entry.sector === 'academic') {
+          counts[entry.batch]++;
+        }
+      }
+    });
+    return counts;
+  }, [allEntries]);
+
   const batchColors = {
-    1: 'var(--batch-1-color)',
-    2: 'var(--batch-2-color)',
-    3: 'var(--batch-3-color)',
-    4: 'var(--batch-4-color)',
-    5: 'var(--batch-5-color)',
-    6: 'var(--batch-6-color)'
+    1: '#3b82f6',
+    2: '#10b981',
+    3: '#f59e0b',
+    4: '#ec4899',
+    5: '#8b5cf6',
+    6: '#06b6d4'
+  };
+
+  const batchColorsLight = {
+    1: '#93c5fd',
+    2: '#6ee7b7',
+    3: '#fcd34d',
+    4: '#f9a8d4',
+    5: '#c4b5fd',
+    6: '#67e8f9'
   };
 
   return (
@@ -98,24 +120,38 @@ const CohortInsights = ({ allEntries, demographics }) => {
           </h4>
           <div className="bar-chart">
             {alumniBatches.slice().reverse().map(batch => {
-              const count = batchCounts[batch.id];
-              const percentage = (count / maxBatchCount) * 100;
+              const total = batchCounts[batch.id];
+              const pub = batchPublicCounts[batch.id];
+              const priv = total - pub;
+              const pubPct = (pub / maxBatchCount) * 100;
+              const privPct = (priv / maxBatchCount) * 100;
               return (
                 <div key={batch.id} className="bar-row">
                   <span className="bar-label">SCL{batch.id}</span>
                   <div className="bar-track">
                     <div
                       className="bar-fill"
-                      style={{
-                        width: `${Math.max(percentage, 2)}%`,
-                        background: batchColors[batch.id] || 'var(--depa-navy)'
-                      }}
+                      style={{ width: `${Math.max(pubPct, 1)}%`, background: batchColors[batch.id] || '#16314b' }}
+                    />
+                    <div
+                      className="bar-fill"
+                      style={{ width: `${Math.max(privPct, 1)}%`, background: batchColorsLight[batch.id] || '#8fa3b1' }}
                     />
                   </div>
-                  <span className="bar-value">{count}</span>
+                  <span className="bar-value">{total}</span>
                 </div>
               );
             })}
+          </div>
+          <div className="bar-legend">
+            <span className="bar-legend-item">
+              <span className="bar-legend-dot" style={{ background: '#3b82f6' }} />
+              {t('alumni.publicLabel', 'Public / State')}
+            </span>
+            <span className="bar-legend-item">
+              <span className="bar-legend-dot" style={{ background: '#93c5fd' }} />
+              {t('alumni.privateLabel', 'Private / Other')}
+            </span>
           </div>
         </div>
 

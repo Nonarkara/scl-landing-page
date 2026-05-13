@@ -23,7 +23,7 @@ const Footer = () => {
           <h4 className="footer-heading">{t('footer.navHeading')}</h4>
           <div className="footer-links">
             <Link to="/">{t('nav.home')}</Link>
-            <Link to="/?tab=about">{t('nav.about')}</Link>
+            <Link to="/curriculum">{t('nav.about')}</Link>
             <Link to="/?tab=journey">{t('nav.journey')}</Link>
             <Link to="/alumni">{t('nav.alumni')}</Link>
             <Link to="/gallery">{t('nav.gallery')}</Link>
