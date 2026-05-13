@@ -134,10 +134,20 @@
     "pillarsTitle": "Core domains",
     "learningSites": {
       "site1": "EGAT Learning Center",
+      "site1Desc": "National power utility training facility — a live demonstration site for smart grid management, renewable integration, and industrial operations.",
+      "site1Domain": "Energy & Infrastructure",
       "site2": "Smart Water Operation Center (SWOC)",
+      "site2Desc": "Provincial waterworks command center with real-time water quality monitoring, predictive maintenance, and citizen service dashboards.",
+      "site2Domain": "Smart Environment",
       "site3": "PROEN Data Center",
-      "site4": "Creative Economy Agency ecosystem",
-      "site5": "KMITL Interactive Digital Center (KIDC)"
+      "site3Desc": "Commercial-grade data center supporting cloud services, digital government platforms, and enterprise connectivity.",
+      "site3Domain": "Digital Infrastructure",
+      "site4": "Thailand Creative & Design Center ecosystem",
+      "site4Desc": "Creative economy campus anchoring Bangkok's design district — where policy, cultural entrepreneurship, and digital tools intersect.",
+      "site4Domain": "Smart Economy",
+      "site5": "KMITL Interactive Digital Center (KIDC)",
+      "site5Desc": "University-level immersive technology lab with VR/AR simulation, digital twin prototypes, and applied smart-systems research.",
+      "site5Domain": "Education & Innovation"
     },
     "pillars": {
       "environment": "Smart Environment",

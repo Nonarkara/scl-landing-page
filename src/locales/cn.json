@@ -134,10 +134,20 @@
     "pillarsTitle": "核心主题",
     "learningSites": {
       "site1": "EGAT Learning Center",
+      "site1Desc": "泰国国家电力公司培训中心，提供智能电网管理、可再生能源整合与工业运营的实地展示。",
+      "site1Domain": "能源与基础设施",
       "site2": "Smart Water Operation Center (SWOC)",
+      "site2Desc": "省级自来水指挥中心，实时展示水质监测、预测性维护与公民服务仪表板的集成应用。",
+      "site2Domain": "智慧环境",
       "site3": "PROEN Data Center",
-      "site4": "Creative Economy Agency 生态",
-      "site5": "KMITL Interactive Digital Center (KIDC)"
+      "site3Desc": "商业级数据中心，支撑云服务、数字政府平台与企业级网络连接。",
+      "site3Domain": "数字基础设施",
+      "site4": "泰国创意与设计中心（TCDC）生态",
+      "site4Desc": "锚定曼谷设计街区的创意经济园区，是政策、文化创业与数字工具的交汇点。",
+      "site4Domain": "智慧经济",
+      "site5": "KMITL Interactive Digital Center (KIDC)",
+      "site5Desc": "大学级沉浸式技术实验室，配备 VR/AR 模拟环境、数字孪生原型与智慧系统应用研究设施。",
+      "site5Domain": "教育与创新"
     },
     "pillars": {
       "environment": "智慧环境",
