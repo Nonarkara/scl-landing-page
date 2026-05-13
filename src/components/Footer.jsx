@@ -41,6 +41,14 @@ const Footer = () => {
             </a>
           </div>
         </div>
+
+        <div className="footer-contact-group">
+          <h4 className="footer-heading">{t('footer.contactHeading', 'Contact')}</h4>
+          <div className="footer-links">
+            <a href="mailto:scp@depa.or.th">scp@depa.or.th</a>
+            <a href="https://www.depa.or.th" target="_blank" rel="noopener noreferrer">depa.or.th</a>
+          </div>
+        </div>
       </div>
 
       <LogoBar placement="footer" />
