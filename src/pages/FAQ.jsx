@@ -137,7 +137,7 @@ export default function FAQ() {
                   {showPhotoBreak && (
                     <figure className="faq-photo-break">
                       <img
-                        src="/Photos%20additional/487223744_1115777977260346_2802745586154524455_n.jpg"
+                        src="/Photos/487223744_1115777977260346_2802745586154524455_n.jpg"
                         alt=""
                         loading="lazy"
                       />

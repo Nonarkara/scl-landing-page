@@ -38,7 +38,7 @@ const Curriculum = () => {
               </div>
               <figure className="curriculum-thumb">
                 <img
-                  src={`${import.meta.env.BASE_URL}${encodeURI(`Photos additional/${MODULE_PHOTOS[i]}`)}`}
+                  src={`${import.meta.env.BASE_URL}${encodeURI(`Photos/${MODULE_PHOTOS[i]}`)}`}
                   alt=""
                   loading="lazy"
                 />
