@@ -146,8 +146,8 @@ export default function Faculty() {
 
       <figure className="faculty-photo-strip">
         <img
-          src="/Photos/487460980_1115778320593645_1910351410404612601_n.jpg"
-          alt=""
+          src="/Photos/SCL-6years-hero.jpg"
+          alt="SCL — Six Years of Smart City Leadership"
           loading="lazy"
         />
         <figcaption>{t('faculty.photoCaption', 'A rotating faculty of policymakers, mayors, and practitioners teaches each cohort in person.')}</figcaption>
