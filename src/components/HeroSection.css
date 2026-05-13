@@ -78,12 +78,14 @@
 .live-data-badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   margin-bottom: 20px;
   color: var(--text-muted);
   font-size: 0.72rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  min-height: 18px;
 }
 
 .live-data-dot {
@@ -91,6 +93,30 @@
   height: 6px;
   border-radius: 50%;
   background: var(--depa-gold);
+  flex-shrink: 0;
+}
+
+.live-data-text {
+  transition: opacity 280ms ease, transform 280ms ease;
+  transform: translateY(0);
+}
+
+.live-data-text.is-hidden {
+  opacity: 0;
+  transform: translateY(-4px);
+}
+
+.live-data-text.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-data-text {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* Waitlist form: inline, minimal */

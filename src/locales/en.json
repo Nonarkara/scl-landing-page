@@ -16,7 +16,9 @@
     "changeLanguage": "Change language",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "testimonials": "Testimonials"
+    "testimonials": "Voices",
+    "faculty": "Faculty",
+    "faq": "FAQ"
   },
   "announcement": {
     "badge": {
@@ -36,6 +38,9 @@
   },
   "hero": {
     "eyebrow": "depa executive program • SCL #{{cohort}}",
+    "liveBadge": "Data live · Updated today",
+    "liveBadge2": "400+ alumni · 77 provinces represented",
+    "liveBadge3": "Six cohorts · 2020–2026 · depa flagship",
     "title": "Smart City Leadership",
     "valueStatement": "A serious short-format program for leaders who need sharper judgment about how smart-city work actually gets delivered.",
     "subtitle": "SCL is most useful when read not as a promotional course page, but as a compact operating brief: it helps public and private leaders understand the strategic, institutional, and implementation logic behind credible smart-city projects in Thailand.",
@@ -79,7 +84,15 @@
         "title": "It signals a meaningful commitment.",
         "description": "The time and fee structure place the program closer to an executive commitment than a casual seminar, which changes the level of discussion inside the cohort."
       }
-    }
+    },
+    "highlight": "Future",
+    "title2": "of Smart Thailand",
+    "emailPlaceholder": "Enter your email address",
+    "waitlistCta": "Join SCL #7 Waitlist",
+    "waitlistSuccess": "Thank you! We'll notify you when SCL #7 opens.",
+    "brochure": "Download Brochure",
+    "statAlumni": "Alumni",
+    "statProvinces": "Provinces"
   },
   "about": {
     "eyebrow": "Program design",
@@ -184,8 +197,8 @@
   },
   "journey": {
     "eyebrow": "Format and timeline",
-    "title": "Structured like an executive sprint",
-    "subtitle": "SCL combines classroom instruction, curated site references, and a cohort format that helps participants translate policy and technology themes into an implementation lens.",
+    "title": "Leading the",
+    "subtitle": "SCL #6 is currently underway. Register your interest to be notified when applications open for SCL #7.",
     "trackKicker": "Learning flow",
     "trackTitle": "How the experience is shaped",
     "modes": {
@@ -259,11 +272,11 @@
       "imageAlt": "SCL field visit photo {{number}}"
     },
     "sourceNote": "Application timing, fee, venue, and schedule are based on depa's official SCL #6 article.",
-    "liveBadge": "Data live & updated today",
-    "title": "Leading the",
+    "liveBadge": "Data live · Updated today",
+    "liveBadge2": "400+ alumni · 77 provinces represented",
+    "liveBadge3": "Six cohorts · 2020–2026 · depa flagship",
     "highlight": "Future",
     "title2": "of Smart Thailand",
-    "subtitle": "SCL #6 is currently underway. Register your interest to be notified when applications open for SCL #7.",
     "emailPlaceholder": "Enter your email address",
     "waitlistCta": "Join SCL #7 Waitlist",
     "waitlistSuccess": "Thank you! We'll notify you when SCL #7 opens.",
@@ -328,6 +341,7 @@
     "sendUpdate": "Send Update to scp@depa.or.th",
     "updateBtn": "Position or location changed? Click here",
     "insightsTitle": "SCL Insights",
+    "insightsEditorialLead": "Two cohorts a year. About eighty leaders per cohort. Five years in — and the network now reaches across most of the country.",
     "share": "Share",
     "totalLeaders": "Total Leaders",
     "provincesReached": "Provinces Reached",
@@ -355,7 +369,8 @@
       "academic": "Academic",
       "stateEnterprise": "State enterprise",
       "other": "Other"
-    }
+    },
+    "alumniPerBatch": "Alumni per batch"
   },
   "gallery": {
     "badge": "Program archive",
@@ -416,7 +431,16 @@
       }
     },
     "cta": "Explore the full Index",
-    "meta": "{{cities}} cities · {{pillars}} pillars · \u03b1/\u03b2/\u03b3 tiers"
+    "meta": "{{cities}} cities · {{pillars}} pillars · α/β/γ tiers",
+    "externalTool": "External tool",
+    "stats": {
+      "citiesLabel": "Cities verified",
+      "citiesSub": "out of 118 declared",
+      "pillarsLabel": "Livability pillars",
+      "pillarsSub": "weighted & scored",
+      "tierLabel": "Tier system",
+      "tierSub": "based on evidence"
+    }
   },
   "countdown": {
     "until": "Until SCL #6",
@@ -512,19 +536,81 @@
     "desc": "Our program is designed to provide actionable insights into smart city development, digital economy, and leadership in the age of AI.",
     "cta": "View Detailed Curriculum",
     "certificationTitle": "Certification",
-    "certificationDesc": "Participants who complete all modules and the capstone project will receive an official SCL Certification from depa Thailand."
+    "certificationDesc": "Participants who complete all modules and the capstone project receive an official SCL Certification from depa Thailand."
+  },
+  "curriculum": {
+    "kicker": "Curriculum",
+    "title": "Six modules built around how smart cities actually get delivered",
+    "subtitle": "Seven weeks. Six modules. Built around the seven smart-city pillars depa works against — and grounded in study visits, not slogans.",
+    "modules": {
+      "1": {
+        "title": "Digital Transformation & Smart City Vision",
+        "desc": "The global landscape of smart-city work, the strategic role of digital infrastructure, and where Thailand sits inside that picture."
+      },
+      "2": {
+        "title": "Data-Driven Governance",
+        "desc": "Using analytics and AI to improve urban services, traffic management, and resource allocation — and what to demand from a vendor pitch."
+      },
+      "3": {
+        "title": "Leadership & Stakeholder Management",
+        "desc": "Executive skills for leading cross-functional teams, working public-private boundaries, and aligning incentives across agencies."
+      },
+      "4": {
+        "title": "Innovation & Smart Economy",
+        "desc": "New business models and economic opportunities in the digital era, with case work from Thai and regional cities."
+      },
+      "5": {
+        "title": "Emerging Technologies (AI, IoT, 5G)",
+        "desc": "A working understanding of the technologies shaping next-generation cities and the procurement and integration patterns that matter."
+      },
+      "6": {
+        "title": "Capstone: City Transformation Plan",
+        "desc": "A real transformation plan for your city or organization, developed with faculty mentorship and presented at the closing session."
+      }
+    }
   },
   "faculty": {
-    "partialList": "This is a partial list. SCL draws from a rotating faculty of 30+ experts, guest speakers, and city practitioners from global technology firms and smart city success stories."
+    "kicker": "World-class expertise",
+    "title": "Faculty & Speakers",
+    "subtitle": "Industry leaders, mayors, and smart-city pioneers who teach inside the program — not as keynotes, but as working participants in each cohort.",
+    "photoCaption": "A rotating faculty of policymakers, mayors, and practitioners teaches each cohort in person.",
+    "partialList": "This is a partial list. SCL draws from a rotating faculty of 30+ experts, guest speakers, and city practitioners from global technology firms and smart-city success stories."
   },
   "faq": {
+    "kicker": "Get answers",
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything worth knowing about SCL — the program, the application, the people, the outcomes.",
     "searchPlaceholder": "Search questions...",
     "noResults": "No questions match your search.",
     "clearFilters": "Clear filters",
     "contactTitle": "Still have questions?",
     "contactDesc": "We're here to help you lead your city's digital transformation.",
     "contactCta": "Contact the Team",
-    "resultsFound": "{{count}} answer found",
-    "resultsFound_plural": "{{count}} answers found"
+    "allCategory": "All",
+    "resultsFound_one": "{{count}} answer found",
+    "resultsFound_other": "{{count}} answers found",
+    "categories": {
+      "program": "Program Overview",
+      "application": "Eligibility & Application",
+      "curriculum": "Curriculum & Format",
+      "faculty": "Faculty & Speakers",
+      "logistics": "Fees & Logistics",
+      "alumni": "Alumni Network",
+      "topics": "Smart City Topics",
+      "certification": "Certification & Outcomes",
+      "implementation": "Practical Implementation",
+      "partnerships": "Partnerships"
+    }
+  },
+  "home": {
+    "tabs": {
+      "about": "About & History",
+      "curriculum": "Curriculum",
+      "journey": "The Journey",
+      "testimonials": "Alumni Voices"
+    }
+  },
+  "common": {
+    "backToHome": "Back to Home"
   }
 }

@@ -1,9 +1,8 @@
 import React, { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Share2, Users, MapPin, Building2, TrendingUp } from 'lucide-react';
+import { Share2 } from 'lucide-react';
 import './CohortInsights.css';
 import { alumniBatches } from '../data/program';
-import { SECTOR_KEYS } from '../utils/alumni';
 
 const CohortInsights = ({ allEntries, demographics }) => {
   const { t } = useTranslation();
@@ -15,7 +14,7 @@ const CohortInsights = ({ allEntries, demographics }) => {
   const topProvinces = useMemo(() => {
     if (!demographics.provinces) return [];
     return Object.entries(demographics.provinces)
-      .filter(([name]) => name !== 'กรุงเทพมหานคร') // Exclude BKK for more interesting stats usually, or keep it. Let's keep it but it will be #1
+      .filter(([name]) => name !== 'กรุงเทพมหานคร')
       .sort((a, b) => b[1] - a[1])
       .slice(0, 5);
   }, [demographics.provinces]);
@@ -33,7 +32,6 @@ const CohortInsights = ({ allEntries, demographics }) => {
 
   const maxBatchCount = Math.max(...Object.values(batchCounts), 1);
 
-  // Find most common sector
   const mostCommonSector = useMemo(() => {
     let max = 0;
     let sector = 'other';
@@ -67,28 +65,28 @@ const CohortInsights = ({ allEntries, demographics }) => {
         </button>
       </div>
 
+      <p className="insights-editorial-lead">
+        {t('alumni.insightsEditorialLead', 'Two cohorts a year. About eighty leaders per cohort. Five years in — and the network reaches across most of the country.')}
+      </p>
+
       <div className="insights-grid-top">
-        <div className="insight-card primary">
+        <div className="insight-card">
           <span className="insight-value">{allEntries.length}</span>
           <span className="insight-label">{t('alumni.totalLeaders', 'Total Leaders')}</span>
-          <span className="insight-badge">Top 1%</span>
         </div>
         <div className="insight-card">
           <span className="insight-value">{representedProvinces}</span>
           <span className="insight-label">{t('alumni.provincesReached', 'Provinces Reached')}</span>
-          <MapPin size={24} color="var(--depa-navy)" style={{ position: 'absolute', bottom: '1.5rem', right: '1.5rem', opacity: 0.1, width: '48px', height: '48px' }} />
         </div>
         <div className="insight-card">
-          <span className="insight-value" style={{ fontSize: '1.5rem', marginTop: '0.5rem', marginBottom: '1.2rem' }}>
+          <span className="insight-value" style={{ fontSize: '1.4rem' }}>
             {t(`alumni.sector.${mostCommonSector}`)}
           </span>
           <span className="insight-label">{t('alumni.topSector', 'Top Sector')}</span>
-          <Building2 size={24} color="var(--depa-navy)" style={{ position: 'absolute', bottom: '1.5rem', right: '1.5rem', opacity: 0.1, width: '48px', height: '48px' }} />
         </div>
         <div className="insight-card">
           <span className="insight-value">{avgCohortSize}</span>
           <span className="insight-label">{t('alumni.avgCohort', 'Avg. Cohort Size')}</span>
-          <Users size={24} color="var(--depa-navy)" style={{ position: 'absolute', bottom: '1.5rem', right: '1.5rem', opacity: 0.1, width: '48px', height: '48px' }} />
         </div>
       </div>
 
@@ -96,7 +94,7 @@ const CohortInsights = ({ allEntries, demographics }) => {
         <div className="insight-panel">
           <h4 className="panel-title">
             {t('alumni.cohortGrowth', 'Cohort Growth')}
-            <span className="panel-subtitle">TOTAL ALUMNI PER BATCH</span>
+            <span className="panel-subtitle">{t('alumni.alumniPerBatch', 'Alumni per batch')}</span>
           </h4>
           <div className="bar-chart">
             {alumniBatches.slice().reverse().map(batch => {
@@ -104,16 +102,15 @@ const CohortInsights = ({ allEntries, demographics }) => {
               const percentage = (count / maxBatchCount) * 100;
               return (
                 <div key={batch.id} className="bar-row">
-                  <span className="bar-label">SCL {batch.id}</span>
+                  <span className="bar-label">SCL{batch.id}</span>
                   <div className="bar-track">
-                    <div 
-                      className="bar-fill" 
-                      style={{ 
-                        width: `${Math.max(percentage, 5)}%`,
+                    <div
+                      className="bar-fill"
+                      style={{
+                        width: `${Math.max(percentage, 2)}%`,
                         background: batchColors[batch.id] || 'var(--depa-navy)'
                       }}
-                    >
-                    </div>
+                    />
                   </div>
                   <span className="bar-value">{count}</span>
                 </div>
@@ -130,23 +127,23 @@ const CohortInsights = ({ allEntries, demographics }) => {
             <div className="coverage-ring">
               <svg viewBox="0 0 100 100">
                 <circle className="ring-bg" cx="50" cy="50" r="45" />
-                <circle 
-                  className="ring-fill" 
-                  cx="50" cy="50" r="45" 
-                  strokeDasharray={`${coveragePercentage * 2.827} 282.7`} 
+                <circle
+                  className="ring-fill"
+                  cx="50" cy="50" r="45"
+                  strokeDasharray={`${coveragePercentage * 2.827} 282.7`}
                 />
               </svg>
               <div className="ring-content">
                 <span className="ring-value">{coveragePercentage}%</span>
               </div>
             </div>
-            <p style={{ fontSize: '0.85rem', color: 'var(--text-secondary)' }}>
+            <p className="coverage-caption">
               {t('alumni.coverageDesc', '{{count}} of 77 provinces represented', { count: representedProvinces })}
             </p>
           </div>
-          
-          <div className="top-list" style={{ marginTop: '1.5rem' }}>
-            <h5 style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--text-muted)', marginBottom: '0.5rem' }}>
+
+          <div className="top-list">
+            <h5 className="top-list-heading">
               {t('alumni.topProvinces', 'Top Provinces')}
             </h5>
             {topProvinces.map(([prov, count]) => (

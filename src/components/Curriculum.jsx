@@ -1,71 +1,57 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
-import { BookOpen, Users, Lightbulb, BarChart, Globe, Zap } from 'lucide-react';
 import './Curriculum.css';
+
+const MODULE_PHOTOS = [
+  '475908551_1822641665218268_8556447180424358663_n.jpg',
+  '476008034_1822641685218266_1622267485476882936_n.jpg',
+  '476158935_1822641628551605_2862493579238828091_n.jpg',
+  '487065252_1114021147436029_6636576544050690930_n.jpg',
+  '487307445_1115778250593652_1337757409603967513_n.jpg',
+  '487674549_1115778270593650_2213552808546628717_n.jpg',
+];
 
 const Curriculum = () => {
   const { t } = useTranslation();
-  const modules = [
-    {
-      icon: <Globe size={24} />,
-      title: 'Digital Transformation & Smart City Vision',
-      desc: 'Understanding the global landscape of smart city development and the strategic role of digital infrastructure.'
-    },
-    {
-      icon: <BarChart size={24} />,
-      title: 'Data-Driven Governance',
-      desc: 'Leveraging data analytics and AI to improve urban services, traffic management, and resource allocation.'
-    },
-    {
-      icon: <Users size={24} />,
-      title: 'Leadership & Stakeholder Management',
-      desc: 'Developing executive skills to lead cross-functional teams and manage public-private partnerships.'
-    },
-    {
-      icon: <Lightbulb size={24} />,
-      title: 'Innovation & Smart Economy',
-      desc: 'Exploring new business models and economic opportunities in the digital age.'
-    },
-    {
-      icon: <Zap size={24} />,
-      title: 'Emerging Technologies (AI, IoT, 5G)',
-      desc: 'Deep dive into the technologies shaping future cities and how to implement them effectively.'
-    },
-    {
-      icon: <BookOpen size={24} />,
-      title: 'Capstone Project: City Transformation Plan',
-      desc: 'Developing a real-world transformation plan for your city or organization with expert mentorship.'
-    }
-  ];
+  const modules = [1, 2, 3, 4, 5, 6];
 
   return (
     <section className="curriculum-section">
       <div className="container">
         <div className="curriculum-header">
-          <span className="section-kicker">DETAILED CURRICULUM</span>
-          <h2 className="section-title">A Comprehensive Roadmap for Smart Leadership</h2>
-          <p className="section-desc">
-            Our 7-week intensive program is structured into specialized modules led by industry experts and academic pioneers.
-          </p>
+          <span className="section-kicker">{t('curriculum.kicker')}</span>
+          <h2 className="curriculum-title">{t('curriculum.title')}</h2>
+          <p className="curriculum-lede">{t('curriculum.subtitle')}</p>
         </div>
 
-        <div className="curriculum-grid">
-          {modules.map((module, index) => (
-            <div key={index} className="curriculum-card animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
-              <div className="curriculum-icon-box">
-                {module.icon}
+        <ol className="curriculum-outline">
+          {modules.map((n, i) => (
+            <li key={n} className="curriculum-row">
+              <span className="curriculum-num">{String(n).padStart(2, '0')}</span>
+              <div className="curriculum-body">
+                <h3 className="curriculum-row-title">
+                  {t(`curriculum.modules.${n}.title`)}
+                </h3>
+                <p className="curriculum-row-desc">
+                  {t(`curriculum.modules.${n}.desc`)}
+                </p>
               </div>
-              <h3>{module.title}</h3>
-              <p>{module.desc}</p>
-            </div>
+              <figure className="curriculum-thumb">
+                <img
+                  src={`${import.meta.env.BASE_URL}${encodeURI(`Photos additional/${MODULE_PHOTOS[i]}`)}`}
+                  alt=""
+                  loading="lazy"
+                />
+              </figure>
+            </li>
           ))}
-        </div>
+        </ol>
 
         <div className="curriculum-footer">
-          <div className="curriculum-cert-box">
-            <h4>{t('curriculumPlaceholder.certificationTitle')}</h4>
-            <p>{t('curriculumPlaceholder.certificationDesc')}</p>
-          </div>
+          <p className="curriculum-cert">
+            <span className="curriculum-cert-label">{t('curriculumPlaceholder.certificationTitle')}</span>
+            <span className="curriculum-cert-text">{t('curriculumPlaceholder.certificationDesc')}</span>
+          </p>
         </div>
       </div>
     </section>

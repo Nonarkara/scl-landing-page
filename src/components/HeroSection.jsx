@@ -1,14 +1,35 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Download, Mail, CheckCircle2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { heroPhoto, programDetails } from '../data/program';
 import IndexTeaser from './IndexTeaser';
 import './HeroSection.css';
 
+const LIVE_BADGE_KEYS = ['hero.liveBadge', 'hero.liveBadge2', 'hero.liveBadge3'];
+const LIVE_BADGE_INTERVAL = 7000;
+
 const HeroSection = () => {
   const { t } = useTranslation();
   const [waitlistEmail, setWaitlistEmail] = useState('');
   const [waitlistSubmitted, setWaitlistSubmitted] = useState(false);
+  const [badgeIndex, setBadgeIndex] = useState(0);
+  const [badgeVisible, setBadgeVisible] = useState(true);
+  const pausedRef = useRef(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return undefined;
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (mq.matches) return undefined;
+    const id = window.setInterval(() => {
+      if (pausedRef.current) return;
+      setBadgeVisible(false);
+      window.setTimeout(() => {
+        setBadgeIndex((i) => (i + 1) % LIVE_BADGE_KEYS.length);
+        setBadgeVisible(true);
+      }, 320);
+    }, LIVE_BADGE_INTERVAL);
+    return () => window.clearInterval(id);
+  }, []);
 
   const handleWaitlistSubmit = (e) => {
     e.preventDefault();
@@ -24,9 +45,16 @@ const HeroSection = () => {
       <div className="container">
         <div className="hero-shell">
           <div className="hero-copy">
-            <div className="live-data-badge">
+            <div
+              className="live-data-badge"
+              onMouseEnter={() => { pausedRef.current = true; }}
+              onMouseLeave={() => { pausedRef.current = false; }}
+              aria-live="polite"
+            >
               <span className="live-data-dot" />
-              {t('hero.liveBadge', 'Data live & updated today')}
+              <span className={`live-data-text ${badgeVisible ? 'is-visible' : 'is-hidden'}`}>
+                {t(LIVE_BADGE_KEYS[badgeIndex])}
+              </span>
             </div>
 
             <div className="hero-eyebrow">

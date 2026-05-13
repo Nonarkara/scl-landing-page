@@ -12,12 +12,12 @@ const AboutProgram = () => {
   const outcomes = ['strategy', 'delivery', 'network'];
   const participantTypes = ['public', 'local', 'utilities', 'academic', 'private'];
 
-  const highlights = [
-    { value: '42', label: t('about.highlights.hours') },
-    { value: '7', label: t('about.highlights.days') },
-    { value: '30+', label: t('about.highlights.experts') },
-    { value: `${programDetails.alumniCount}`, label: t('about.highlights.alumni') },
-  ];
+  const highlightFigures = {
+    hours: '42',
+    days: '7',
+    experts: '30+',
+    alumni: `${programDetails.alumniCount}`,
+  };
 
   return (
     <section id="about" className="section about" ref={sectionRef}>
@@ -43,14 +43,15 @@ const AboutProgram = () => {
               </div>
             </div>
 
-            <div className="highlights animate-fade-in" style={{ animationDelay: '0.18s' }}>
-              {highlights.map((highlight) => (
-                <div key={highlight.label} className="highlight-item">
-                  <span className="hl-num">{highlight.value}</span>
-                  <span className="hl-text">{highlight.label}</span>
-                </div>
-              ))}
-            </div>
+            <p className="highlights-inline animate-fade-in" style={{ animationDelay: '0.18s' }}>
+              <span className="hl-num">{highlightFigures.hours}</span> {t('about.highlights.hours')}
+              <span className="hl-sep" aria-hidden="true">·</span>
+              <span className="hl-num">{highlightFigures.days}</span> {t('about.highlights.days')}
+              <span className="hl-sep" aria-hidden="true">·</span>
+              <span className="hl-num">{highlightFigures.experts}</span> {t('about.highlights.experts')}
+              <span className="hl-sep" aria-hidden="true">·</span>
+              <span className="hl-num">{highlightFigures.alumni}</span> {t('about.highlights.alumni')}
+            </p>
           </div>
 
           <figure className="about-image animate-fade-in" style={{ animationDelay: '0.16s' }}>

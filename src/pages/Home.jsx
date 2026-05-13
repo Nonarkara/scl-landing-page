@@ -37,10 +37,10 @@ const Home = () => {
   }, []);
   
   const tabs = [
-    { id: 'about', label: 'About & History', icon: <History size={18} /> },
-    { id: 'curriculum', label: 'Curriculum', icon: <BookOpen size={18} /> },
-    { id: 'journey', label: 'The Journey', icon: <Map size={18} /> },
-    { id: 'testimonials', label: 'Alumni Voices', icon: <MessageSquare size={18} /> },
+    { id: 'about', labelKey: 'home.tabs.about', fallback: 'About & History', icon: <History size={18} /> },
+    { id: 'curriculum', labelKey: 'home.tabs.curriculum', fallback: 'Curriculum', icon: <BookOpen size={18} /> },
+    { id: 'journey', labelKey: 'home.tabs.journey', fallback: 'The Journey', icon: <Map size={18} /> },
+    { id: 'testimonials', labelKey: 'home.tabs.testimonials', fallback: 'Alumni Voices', icon: <MessageSquare size={18} /> },
   ];
 
   return (
@@ -65,7 +65,7 @@ const Home = () => {
                   onClick={() => setActiveTab(tab.id)}
                 >
                   {tab.icon}
-                  <span>{tab.label}</span>
+                  <span>{t(tab.labelKey, tab.fallback)}</span>
                 </button>
               ))}
             </div>
@@ -105,7 +105,7 @@ const Home = () => {
                         <h3>{t('history.2024_title')}</h3>
                         <p>{t('history.2024_desc')}</p>
                       </div>
-                      <img src="/Photos%20More/475150289_1065516965619781_1154610351092339627_n.jpg" alt="SCL Batch 5" className="history-image" loading="lazy" />
+                      <img src="/Photos%20More/475264919_1066072412230903_4111193098320819467_n-1.jpg" alt="SCL Batch 5" className="history-image" loading="lazy" />
                     </div>
                     <div className="history-item">
                       <div className="history-year">2026</div>
@@ -113,7 +113,7 @@ const Home = () => {
                         <h3>{t('history.2026_title')}</h3>
                         <p>{t('history.2026_desc')}</p>
                       </div>
-                      <img src="/Photos%20More/475554453_1066072178897593_3452435967247513607_n.jpg" alt="SCL Batch 6" className="history-image" loading="lazy" />
+                      <img src="/Photos%20additional/487277273_1115778313926979_1692077499802083327_n.jpg" alt="SCL Batch 6" className="history-image" loading="lazy" />
                     </div>
                   </div>
                 </div>
@@ -129,7 +129,7 @@ const Home = () => {
                   <div className="curriculum-photo-strip">
                     <img src="/Photos/2022-05-26%2010.07.12.jpg" alt="Classroom" loading="lazy" />
                     <img src="/Photos/2022-05-26%2015.06.36.jpg" alt="Site visit" loading="lazy" />
-                    <img src="/Photos%20More/475372709_1066072248897586_6192145527577200572_n.jpg" alt="Workshop" loading="lazy" />
+                    <img src="/Photos%20additional/476143149_1822641635218271_446631311518332652_n.jpg" alt="Workshop" loading="lazy" />
                   </div>
                 </div>
               </div>
