@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ArrowRight, X } from 'lucide-react';
 
@@ -20,14 +20,23 @@ const NewsSection = () => {
     }
   ];
 
+  useEffect(() => {
+    if (activeArticle) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [activeArticle]);
+
   const handleOpenArticle = (item) => {
     setActiveArticle(item);
-    document.body.style.overflow = 'hidden';
   };
 
   const handleCloseArticle = () => {
     setActiveArticle(null);
-    document.body.style.overflow = 'unset';
   };
 
   return (

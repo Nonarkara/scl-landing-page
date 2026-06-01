@@ -1,16 +1,13 @@
-import { useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useTranslation } from 'react-i18next';
+import { useSearchParams, Link } from 'react-router-dom';
+import { Mail, ArrowRight, History, BookOpen, Map, MessageSquare } from 'lucide-react';
+
 import LogoBar from '../components/LogoBar';
-import { useState, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
 import HeroSection from '../components/HeroSection';
 import AboutProgram from '../components/AboutProgram';
 import ProgramJourney from '../components/ProgramJourney';
 import Testimonials from '../components/Testimonials';
-import { useTranslation } from 'react-i18next';
-import { Mail, ArrowRight, History, BookOpen, Map, MessageSquare } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
 import NewsSection from '../components/NewsSection';
 
 const Home = () => {

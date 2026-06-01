@@ -17,7 +17,7 @@ import {
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import alumniData from '../data/alumni.json';
-import { alumniBatches, alumniHeroBanner, alumniNetworkPhotos, networkVisitSites } from '../data/program';
+import { alumniBatches } from '../data/program';
 import {
   buildAlumniEntries,
   computeDemographics,
@@ -25,7 +25,6 @@ import {
   normalizeSearchText,
   SECTOR_KEYS,
 } from '../utils/alumni';
-import { useFadeIn } from '../hooks/useFadeIn';
 import ThailandMap from './ThailandMap';
 import CohortInsights from './CohortInsights';
 import './Alumni.css';
@@ -105,20 +104,17 @@ const UpdateModal = ({ entry, onClose, t }) => {
 const Alumni = () => {
   const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState('');
-  const [expandedBatch, setExpandedBatch] = useState(alumniBatches[0]?.id ?? null);
   const [activeSector, setActiveSector] = useState('all');
   const [sortOrder, setSortOrder] = useState('relevance');
-  const [filterBatch, setFilterBatch] = useState('all');
+  const [updateEntry, setUpdateEntry] = useState(null);
+  const [showAllBrowse, setShowAllBrowse] = useState(true);
   const deferredSearchTerm = useDeferredValue(searchTerm);
   const searchInputRef = useRef(null);
   const sectionRef = useRef(null);
 
   const allEntries = useMemo(() => buildAlumniEntries(alumniData), []);
   const groupedEntries = useMemo(() => groupEntriesByBatch(allEntries), [allEntries]);
-  const demographics = useMemo(() => computeDemographics(allEntries), [allEntries]);
   const searchKey = normalizeSearchText(deferredSearchTerm);
-
-  const hasActiveFilter = searchKey || filterBatch !== 'all' || sortOrder !== 'relevance' || activeSector !== 'all';
 
   const searchResults = useMemo(() => {
     let results = [...allEntries];
@@ -133,11 +129,6 @@ const Alumni = () => {
       results = results.filter((entry) => entry.sector === activeSector);
     }
     
-    // Apply batch filter
-    if (filterBatch !== 'all') {
-      results = results.filter((entry) => entry.batch.toString() === filterBatch);
-    }
-    
     // Apply sorting
     if (sortOrder === 'asc') {
       results.sort((a, b) => a.displayName.localeCompare(b.displayName, 'th'));
@@ -145,8 +136,8 @@ const Alumni = () => {
       results.sort((a, b) => b.displayName.localeCompare(a.displayName, 'th'));
     }
     
-    return searchKey || filterBatch !== 'all' || sortOrder !== 'relevance' ? results : [];
-  }, [allEntries, searchKey, activeSector, filterBatch, sortOrder]);
+    return searchKey || sortOrder !== 'relevance' ? results : [];
+  }, [allEntries, searchKey, activeSector, sortOrder]);
 
   // Filter batch entries by sector
   const filteredGroupedEntries = useMemo(() => {
@@ -161,15 +152,6 @@ const Alumni = () => {
 
   const totalRecords = allEntries.length;
 
-  const toggleBatch = (batchId) => {
-    setExpandedBatch((currentBatch) => (currentBatch === batchId ? null : batchId));
-  };
-
-  const handleSearchForBatch = (batchId) => {
-    setSearchTerm(`SCL ${batchId}`);
-    searchInputRef.current?.focus();
-    searchInputRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  };
 
   if (!allEntries || allEntries.length === 0) {
     return (

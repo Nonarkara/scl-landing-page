@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { ArrowRight, Download, Mail, CheckCircle2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { heroPhoto, programDetails } from '../data/program';
@@ -9,29 +9,9 @@ const LIVE_BADGE_KEYS = ['hero.liveBadge', 'hero.liveBadge2', 'hero.liveBadge3']
 const LIVE_BADGE_INTERVAL = 7000;
 
 const HeroSection = () => {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [waitlistEmail, setWaitlistEmail] = useState('');
   const [waitlistSubmitted, setWaitlistSubmitted] = useState(false);
-  const currentLanguage = i18n.resolvedLanguage ?? i18n.language;
-  const officialUrl = getApplicationUrl(currentLanguage);
-  const programPhase = getProgramPhase();
-  const applicationDeadline = formatProgramDate(programDetails.applicationDeadline, currentLanguage);
-  const feeLabel = formatProgramCurrency(programDetails.feeTHB, currentLanguage);
-
-  useEffect(() => {
-    if (typeof window === 'undefined') return undefined;
-    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
-    if (mq.matches) return undefined;
-    const id = window.setInterval(() => {
-      if (pausedRef.current) return;
-      setBadgeVisible(false);
-      window.setTimeout(() => {
-        setBadgeIndex((i) => (i + 1) % LIVE_BADGE_KEYS.length);
-        setBadgeVisible(true);
-      }, 320);
-    }, LIVE_BADGE_INTERVAL);
-    return () => window.clearInterval(id);
-  }, []);
 
   const handleWaitlistSubmit = (e) => {
     e.preventDefault();
@@ -42,14 +22,7 @@ const HeroSection = () => {
     }
   };
 
-  const handleWaitlistSubmit = (e) => {
-    e.preventDefault();
-    if (waitlistEmail) {
-      setWaitlistSubmitted(true);
-      setTimeout(() => setWaitlistSubmitted(false), 5000);
-      setWaitlistEmail('');
-    }
-  };
+
 
   return (
     <section id="home" className="hero hero-v2">
@@ -107,9 +80,7 @@ const HeroSection = () => {
               
               <div className="hero-secondary-actions">
                 <a 
-                  href={officialUrl} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                  href="mailto:scp@depa.or.th?subject=Request%20SCL%20Program%20Brochure" 
                   className="btn btn-outline btn-brochure"
                 >
                   <Download size={18} /> Download Brochure
