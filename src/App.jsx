@@ -1,9 +1,15 @@
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getApplicationUrl, getProgramPhase, programDetails } from './data/program';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
+import AlumniPage from './pages/AlumniPage';
+import Faculty from './pages/Faculty';
+import FAQ from './pages/FAQ';
+import CurriculumPage from './pages/CurriculumPage';
+import GalleryPage from './pages/GalleryPage';
 import './App.css';
 
 function App() {
@@ -97,11 +103,47 @@ function App() {
       </a>
       <Navbar />
       <main id="main-content" className="app-main">
-        <Home />
+        <ErrorBoundary>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/curriculum" element={<CurriculumPage />} />
+            <Route path="/faculty" element={<Faculty />} />
+            <Route path="/alumni" element={<AlumniPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/faq" element={<FAQ />} />
+          </Routes>
+        </ErrorBoundary>
       </main>
       <Footer />
     </div>
   );
+}
+
+class ErrorBoundary extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { hasError: false, error: null };
+  }
+  static getDerivedStateFromError(error) {
+    return { hasError: true, error };
+  }
+  componentDidCatch(error, errorInfo) {
+    console.error("React Error Boundary caught:", error, errorInfo);
+  }
+  render() {
+    if (this.state.hasError) {
+      return (
+        <div style={{ padding: '100px 20px', textAlign: 'center' }}>
+          <h2>Something went wrong.</h2>
+          <p>The page encountered a runtime error. Please try refreshing.</p>
+          <pre style={{ fontSize: '12px', color: 'red', marginTop: '20px' }}>
+            {this.state.error?.toString()}
+          </pre>
+        </div>
+      );
+    }
+    return this.props.children;
+  }
 }
 
 export default App;

@@ -1,5 +1,4 @@
 import { useTranslation } from 'react-i18next';
-import { useFadeIn } from '../hooks/useFadeIn';
 import './LogoBar.css';
 
 const B = import.meta.env.BASE_URL;
@@ -24,12 +23,10 @@ const logos = [
 
 const LogoBar = ({ placement = 'top', showLabel = true }) => {
   const { t } = useTranslation();
-  const ref = useFadeIn();
 
   return (
     <div
       className={`logo-bar logo-bar--${placement}`}
-      ref={ref}
       aria-label={showLabel ? t('logoBar.label') : undefined}
     >
       <div className="container logo-bar-inner animate-fade-in">

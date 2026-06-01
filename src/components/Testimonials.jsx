@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next';
 import { useFadeIn } from '../hooks/useFadeIn';
+import { Play } from 'lucide-react';
 import './Testimonials.css';
 
 const testimonials = [
@@ -35,42 +36,73 @@ const testimonials = [
 
 const Testimonials = () => {
   const { t } = useTranslation();
-  const containerRef = useFadeIn();
   const [featured, ...voices] = testimonials;
 
   return (
-    <section className="section testimonials-section" id="testimonials" ref={containerRef}>
+    <section className="section testimonials-section" id="testimonials">
       <div className="container">
         <div className="testimonials-shell">
-          <div className="testimonials-header animate-fade-in">
+          <div className="testimonials-header">
             <span className="section-kicker">{t('testimonials.kicker')}</span>
             <h2 className="testimonials-title">{t('testimonials.title')}</h2>
             <p className="testimonials-desc">{t('testimonials.desc')}</p>
           </div>
 
-          <blockquote className="testimonial-feature animate-fade-in" style={{ animationDelay: '0.05s' }}>
+          <blockquote className="testimonial-feature">
             <p className="testimonial-feature-quote">{t(`testimonials.${featured.id}.quote`)}</p>
             <footer className="testimonial-feature-footer">
-              <cite className="testimonial-feature-name">{t(`testimonials.${featured.id}.name`)}</cite>
-              <div className="testimonial-feature-role">{t(`testimonials.${featured.id}.role`)}</div>
-              <span className="testimonial-feature-batch">SCL #{featured.batch}</span>
+              <img src={`/alumni-photos/${featured.id}.jpg`} alt={t(`testimonials.${featured.id}.name`)} className="testimonial-avatar" />
+              <div className="testimonial-feature-meta">
+                <cite className="testimonial-feature-name">{t(`testimonials.${featured.id}.name`)}</cite>
+                <div className="testimonial-feature-role">{t(`testimonials.${featured.id}.role`)}</div>
+                <span className="testimonial-feature-batch">SCL #{featured.batch}</span>
+              </div>
             </footer>
           </blockquote>
+
+          {/* Video Placeholder */}
+          <div className="video-testimonial-placeholder">
+            <div className="video-thumbnail">
+              <img src="/Photos More/117867_0.jpg" alt="Video Testimonial Thumbnail" />
+              <div className="video-play-overlay">
+                <div className="play-button">
+                  <Play fill="currentColor" size={32} />
+                </div>
+                <span>Watch Alumni Stories</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Employer Logo Ticker */}
+        <div className="employer-ticker">
+          <p className="ticker-label">ALUMNI FROM LEADING ORGANIZATIONS</p>
+          <div className="ticker-track">
+            {['depa', 'EGAT', 'PTT', 'SCG', 'AIS', 'True', 'BMA', 'MEA', 'PEA', 'CEA'].map((org) => (
+              <div key={org} className="ticker-item">{org}</div>
+            ))}
+            {/* Duplicate for infinite loop effect if needed by CSS */}
+            {['depa', 'EGAT', 'PTT', 'SCG', 'AIS', 'True', 'BMA', 'MEA', 'PEA', 'CEA'].map((org) => (
+              <div key={`${org}-dup`} className="ticker-item">{org}</div>
+            ))}
+          </div>
         </div>
 
         <div className="testimonials-list">
           {voices.map((item, i) => (
             <blockquote
               key={item.id}
-              className="testimonial-item animate-fade-in"
-              style={{ animationDelay: `${0.06 * i}s` }}
+              className="testimonial-item"
             >
               <span className="testimonial-item-index">0{i + 2}</span>
               <p className="testimonial-item-quote">{t(`testimonials.${item.id}.quote`)}</p>
               <footer className="testimonial-item-footer">
-                <cite className="testimonial-item-name">{t(`testimonials.${item.id}.name`)}</cite>
-                <div className="testimonial-item-role">{t(`testimonials.${item.id}.role`)}</div>
-                <span className="testimonial-item-batch">SCL #{item.batch}</span>
+                <img src={`/alumni-photos/${item.id}.jpg`} alt={t(`testimonials.${item.id}.name`)} className="testimonial-avatar" />
+                <div className="testimonial-item-meta">
+                  <cite className="testimonial-item-name">{t(`testimonials.${item.id}.name`)}</cite>
+                  <div className="testimonial-item-role">{t(`testimonials.${item.id}.role`)}</div>
+                  <span className="testimonial-item-batch">SCL #{item.batch}</span>
+                </div>
               </footer>
             </blockquote>
           ))}

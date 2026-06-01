@@ -299,6 +299,27 @@
     "batchesLabel": "届别",
     "officialListsLabel": "官方来源",
     "clearSearch": "清除搜索",
+    "mapTitle": "校友省份分布",
+    "mapSubtitle": "根据可用的组织数据得出",
+    "noAlumniYet": "暂无校友",
+    "legendActive": "有代表",
+    "legendInactive": "无校友",
+    "insightsTitle": "SCL 数据洞察",
+    "share": "分享",
+    "totalLeaders": "领导者总数",
+    "provincesReached": "覆盖省份",
+    "topSector": "最多领域",
+    "avgCohort": "平均每届人数",
+    "cohortGrowth": "各届增长",
+    "nationalCoverage": "全国覆盖率",
+    "coverageDesc": "77个省份中已有 {{count}} 个有代表",
+    "topProvinces": "校友最多的省份",
+    "filterByBatch": "按届筛选",
+    "allBatches": "全部届别",
+    "sortBy": "排序方式",
+    "sortRelevance": "相关性",
+    "sortAsc": "A-Z",
+    "sortDesc": "Z-A",
     "officialList": "官方公告",
     "featuredCohorts": "浏览各届",
     "latest": "最新一届",
@@ -420,6 +441,26 @@
       "name": "Ketsirin Paengsen",
       "role": "泰国电力局湄磨宜居城市项目负责人",
       "quote": "发展了智慧城市领导力，从清晰的长期规划以市民为中心，到数据驱动的执行和跨部门合作，增强了可持续城市推进的视野。"
+    }
+  },
+  "news": {
+    "kicker": "最新动态",
+    "title": "项目新闻",
+    "readMore": "阅读全文",
+    "close": "关闭",
+    "items": {
+      "closing": {
+        "title": "圆满落幕！！！depa 官方宣布 SCL#6 智慧城市领导力项目闭幕",
+        "date": "2026年5月26日",
+        "excerpt": "2026年5月26日，在The Quarter Ladprao by UHG，depa举办了第六期智慧城市领导力项目（SCL#6）的闭门结业仪式与颁发证书仪式。",
+        "content": "2026年5月26日，在The Quarter Ladprao by UHG，数字经济促进局 (depa) 在高级执行副总裁 Passakon Prathombutr 博士及数字平台与服务推广团队的带领下，迎来了“智慧城市领导力项目：SCL#6”的最后一天。在过去的7天里，课程内容涵盖了由30多位国家级专家带来的核心知识、真实的智慧城市实地考察与研讨会，并以正式的结业仪式圆满结束。\n\n最后一天的行程以国家经济和社会发展委员会 (NESDC) 城市发展战略部主任 Chanokod Chasitapon 先生关于“第14个国家经济社会发展规划下的泰国智慧城市发展”的讲座开始。随后，投资促进委员会 (BOI) 的 Thanachat Lappanich 先生就智慧城市投资促进进行了分享。depa 以 Sakseg Yosaeng 博士的“驱动泰国数字经济机制”和 depa 智慧城市推广部主任 Ornchat Liangpiboon 博士的“智慧城市提案指南”结束了上午的内容。\n\n下午，学员们从也拉市市长 Pongsak Yingchoncharoen 处了解了也拉市的智慧城市之旅，并与 Bedrock Analytics Co., Ltd. 的 Jakkrapan Jullapothi 博士探讨了“城市数字数据平台”。\n\n活动在 Passakon Prathombutr 博士主持的结业与证书颁发仪式中落下帷幕。学员们获得了纸质版和利用区块链技术的NFT版证书。\n\nSCL#6 收到了来自公共和私营部门城市领导者的极佳反馈，他们现已准备好推动城市发展以应对新的机遇和挑战，在全国范围内打造真正宜居的智慧城市。对于有兴趣参加 SCL#7 的人士，请持续关注 depa 近期发布的新闻和进一步细节。"
+      },
+      "visit": {
+        "title": "depa 带领 SCL#6 深入实地考察原型机构，促进可持续智慧城市发展",
+        "date": "2026年5月19日",
+        "excerpt": "2026年5月19日，depa 带领 SCL#6 学员进行沉浸式实地考察，向各领域的智慧城市原型机构学习并吸取经验。",
+        "content": "2026年5月19日，数字经济促进局 (depa) 继续进行为期四天的密集型第六期智慧城市领导力项目 (SCL#6)。在 depa 高级执行副总裁 Passakon Prathombutr 博士和数字平台与服务推广团队的带领下，学员们参加了实地考察，向不同维度的智慧城市发展原型机构学习。\n\n上午，学员们参观了 EGAT 学习中心，在 EGAT 专家的指导下，了解通过低碳社会实现可持续城市发展的基础。\n\n下午，团队前往新的曼谷都会区 (BMA) 指挥中心，由 BMA 交通运输部主任 Sittiporn Somkidsan 先生就曼谷系统化城市管理准则进行讲座。\n\n当天行程在 Astra Communication Services Co., Ltd. 结束，受到了总经理 Jantaporn Charoenlarpnoparat 女士的热烈欢迎，业务发展总监 Pisan Pongchaisophon 先生就“智能基础设施应用”进行了讲座，展示了智能基础设施的实际应用。\n\n在此之前，学员们已于2026年5月12日参观了智能水务运营中心 (SWOC)、PROEN 数据中心和创意经济机构 (CEA)，并计划于2026年5月25日参观 KMITL 交互式数字中心 (KIDC) 和华为技术（泰国）有限公司。\n\n这些全天活动通过真实体验为 SCL#6 学员提供了知识和灵感，形成了全面的实地考察计划，拓宽了他们的视野，增强了他们作为全面智慧城市领导者的远见。"
+      }
     }
   }
 }

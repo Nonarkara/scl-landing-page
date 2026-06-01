@@ -300,6 +300,27 @@
     "batchesLabel": "Cohorts",
     "officialListsLabel": "Official sources",
     "clearSearch": "Clear search",
+    "mapTitle": "Alumni Distribution by Province",
+    "mapSubtitle": "Based on available organization data",
+    "noAlumniYet": "No alumni yet",
+    "legendActive": "Represented",
+    "legendInactive": "No Alumni",
+    "insightsTitle": "SCL Insights",
+    "share": "Share",
+    "totalLeaders": "Total Leaders",
+    "provincesReached": "Provinces Reached",
+    "topSector": "Top Sector",
+    "avgCohort": "Avg. Cohort Size",
+    "cohortGrowth": "Cohort Growth",
+    "nationalCoverage": "National Coverage",
+    "coverageDesc": "{{count}} of 77 provinces represented",
+    "topProvinces": "Top Provinces",
+    "filterByBatch": "Filter by cohort",
+    "allBatches": "All Cohorts",
+    "sortBy": "Sort by",
+    "sortRelevance": "Relevance",
+    "sortAsc": "A-Z",
+    "sortDesc": "Z-A",
     "officialList": "Official announcement",
     "featuredCohorts": "Browse cohorts",
     "latest": "Latest cohort",
@@ -340,11 +361,11 @@
     "officialProgram": "SCL #6 official depa article",
     "officialAlumni": "Latest official alumni list",
     "sourceNote": "This landing page links to depa's official article for the current published cohort and depa announcement lists for alumni data.",
-    "rights": "© 2026 Digital Economy Promotion Agency (depa). All rights reserved.",
+    "rights": "© 2026. This is an independent information page about the depa SCL program.",
     "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Service",
+    "termsOfService": "Terms of Use",
     "dataProtection": "Data Protection",
-    "disclaimer": "This site is operated by the Digital Economy Promotion Agency (depa), Ministry of Digital Economy and Society, Kingdom of Thailand. Alumni data is sourced from official depa announcements and is shown for informational purposes."
+    "disclaimer": "Not officially affiliated with depa. All information is for reference only."
   },
   "index": {
     "kicker": "Smart City Thailand Index",
@@ -421,6 +442,26 @@
       "name": "Ketsirin Paengsen",
       "role": "Head, Mae Moh Livable City Project, EGAT",
       "quote": "Developed smart-city leadership with a sustainable vision — from clear long-term planning centered on citizens, to data-driven execution and cross-sector collaboration."
+    }
+  },
+  "news": {
+    "kicker": "Latest Updates",
+    "title": "Program News",
+    "readMore": "Read full article",
+    "close": "Close",
+    "items": {
+      "closing": {
+        "title": "Farewell!!! depa Officially Closes the SCL#6 Smart City Leadership Program",
+        "date": "May 26, 2026",
+        "excerpt": "On May 26, 2026, at The Quarter Ladprao by UHG, depa concluded the 6th Smart City Leadership Program (SCL#6) with a formal closing and certification ceremony.",
+        "content": "On May 26, 2026, at The Quarter Ladprao by UHG, the Digital Economy Promotion Agency (depa), led by Dr. Passakon Prathombutr, Senior Executive Vice President, and the Digital Platform and Service Promotion team, hosted the final day of the \"Smart City Leadership Program: SCL#6\". Over the past 7 days, the program was packed with vital content from over 30 national experts, alongside real-world smart city site visits and workshops, culminating in the official closing ceremony.\n\nThe final day began with a lecture on \"Thailand Smart City Development under the 14th National Economic and Social Development Plan\" by Mr. Chanokod Chasitapon, Director of Urban Development Strategy Division, NESDC. This was followed by a session on smart city investment promotion by Mr. Thanachat Lappanich from the Board of Investment (BOI). depa rounded off the morning with topics on \"Mechanisms Driving Thailand's Digital Economy\" by Dr. Sakseg Yosaeng, and \"Smart City Proposal Guidelines\" by Dr. Ornchat Liangpiboon, Director of Smart City Promotion Department, depa.\n\nIn the afternoon, participants learned about the smart city journey of Yala City Municipality from Mayor Pongsak Yingchoncharoen, and explored the \"City Digital Data Platform\" with Dr. Jakkrapan Jullapothi from Bedrock Analytics Co., Ltd.\n\nThe event concluded with the closing ceremony and the awarding of certificates by Dr. Passakon Prathombutr. Participants received their certificates in both physical form and as NFTs, utilizing blockchain technology.\n\nSCL#6 has received excellent feedback from both public and private sector city leaders, who are now prepared to drive their cities forward to handle new opportunities and challenges, creating truly livable smart cities nationwide. For those interested in joining SCL#7, please stay tuned for news and further details from depa soon."
+      },
+      "visit": {
+        "title": "depa Leads SCL#6 on an In-Depth Site Visit to Prototype Agencies for Sustainable Smart City Development",
+        "date": "May 19, 2026",
+        "excerpt": "On May 19, 2026, depa led the SCL#6 participants on an immersive site visit to learn and draw lessons from prototype agencies for smart city development across various dimensions.",
+        "content": "On May 19, 2026, the Digital Economy Promotion Agency (depa) continued the intensive Smart City Leadership Program Cohort 6 (SCL#6) on its 4th day. Led by Dr. Passakon Prathombutr, Senior Executive Vice President of depa, along with the Digital Platform and Service Promotion team, participants engaged in a site visit to learn and extract lessons from prototype agencies in various dimensions of smart city development.\n\nIn the morning, the cohort visited the EGAT Learning Center to understand the foundations of sustainable urban development through a low-carbon society, guided by distinguished speakers from EGAT.\n\nIn the afternoon, the group moved to the new BMA Command Center, where Mr. Sittiporn Somkidsan, Director of the Traffic and Transportation Department, BMA, lectured on systematic urban management guidelines for Bangkok.\n\nThe day concluded with a visit to Astra Communication Services Co., Ltd., warmly welcomed by Managing Director Ms. Jantaporn Charoenlarpnoparat, and a lecture on \"Smart Infrastructure in Action\" by Business Development Director Mr. Pisan Pongchaisophon, illustrating the practical application of smart infrastructure.\n\nPrior to this, the participants had already visited the Smart Water Operation Center (SWOC), PROEN Data Center, and the Creative Economy Agency (CEA) on May 12, 2026, with further visits planned for the KMITL Interactive Digital Center (KIDC) and Huawei Technologies (Thailand) Co., Ltd. on May 25, 2026.\n\nThese full-day activities provided SCL#6 participants with knowledge and inspiration through real-world experiences, forming a comprehensive site visit program that builds diverse perspectives and strengthens their vision as comprehensive smart city leaders."
+      }
     }
   }
 }

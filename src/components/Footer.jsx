@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { alumniBatches, getApplicationUrl } from '../data/program';
 import LogoBar from './LogoBar';
@@ -48,11 +49,11 @@ const Footer = () => {
         <div className="footer-legal-content">
           <p className="footer-rights">{t('footer.rights')}</p>
           <div className="footer-legal-links">
-            <span>{t('footer.privacyPolicy')}</span>
+            <Link to="/faq">{t('footer.privacyPolicy')}</Link>
             <span className="footer-legal-sep" aria-hidden="true" />
-            <span>{t('footer.termsOfService')}</span>
+            <Link to="/faq">{t('footer.termsOfService')}</Link>
             <span className="footer-legal-sep" aria-hidden="true" />
-            <span>{t('footer.dataProtection')}</span>
+            <Link to="/faq">{t('footer.dataProtection')}</Link>
           </div>
           <p className="footer-disclaimer">{t('footer.disclaimer')}</p>
         </div>

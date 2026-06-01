@@ -1,4 +1,5 @@
-import { ArrowRight } from 'lucide-react';
+import { useState } from 'react';
+import { ArrowRight, Download, Mail, CheckCircle2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import {
   formatProgramCurrency,
@@ -13,6 +14,8 @@ import './HeroSection.css';
 
 const HeroSection = () => {
   const { t, i18n } = useTranslation();
+  const [waitlistEmail, setWaitlistEmail] = useState('');
+  const [waitlistSubmitted, setWaitlistSubmitted] = useState(false);
   const currentLanguage = i18n.resolvedLanguage ?? i18n.language;
   const officialUrl = getApplicationUrl(currentLanguage);
   const programPhase = getProgramPhase();
@@ -65,78 +68,113 @@ const HeroSection = () => {
     },
   ];
 
+  const handleWaitlistSubmit = (e) => {
+    e.preventDefault();
+    if (waitlistEmail) {
+      setWaitlistSubmitted(true);
+      setTimeout(() => setWaitlistSubmitted(false), 5000);
+      setWaitlistEmail('');
+    }
+  };
+
   return (
-    <section id="home" className="hero">
+    <section id="home" className="hero hero-v2">
+      <div className="hero-background">
+        <div className="hero-blob hero-blob-1"></div>
+        <div className="hero-blob hero-blob-2"></div>
+        <div className="hero-pattern"></div>
+      </div>
+      
       <div className="container">
         <div className="hero-shell">
-          <div className="hero-copy animate-fade-in is-visible">
+          <div className="hero-copy is-visible">
+            <div className="live-data-badge">
+              <span className="live-data-dot"></span>
+              Data live & updated today
+            </div>
+            
             <div className="hero-eyebrow">
               {t('hero.eyebrow', { cohort: programDetails.cohortNumber })}
             </div>
-            <h1 className="hero-title">{t('hero.title')}</h1>
+            
+            <h1 className="hero-title-v2">
+              Leading the <span className="text-highlight">Future</span> of <br />
+              Smart Thailand
+            </h1>
+            
             <p className="hero-value-statement">{t('hero.valueStatement')}</p>
-            <p className="hero-subtitle">{t('hero.subtitle')}</p>
+            
+            <p className="hero-subtitle">
+              SCL #6 is currently underway. Register your interest to be notified when applications open for SCL #7.
+            </p>
 
-            <div className="hero-actions">
-              <a
-                href={officialUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-primary"
-              >
-                {t('hero.ctaPrimary')}
-              </a>
-              <a href="#about" className="inline-link hero-inline-link">
-                {t('hero.ctaSecondary')} <ArrowRight size={17} />
-              </a>
-            </div>
-
-            <div className="hero-status">
-              {t(`hero.status.${programPhase}`, { deadline: applicationDeadline })}
+            <div className="hero-actions hero-actions-waitlist">
+              <form onSubmit={handleWaitlistSubmit} className="waitlist-form">
+                <div className="waitlist-input-wrapper">
+                  <Mail className="waitlist-icon" size={18} />
+                  <input 
+                    type="email" 
+                    required
+                    placeholder="Enter your email address" 
+                    value={waitlistEmail}
+                    onChange={(e) => setWaitlistEmail(e.target.value)}
+                    className="waitlist-input"
+                  />
+                </div>
+                <button type="submit" className="btn btn-primary waitlist-submit">
+                  Join SCL #7 Waitlist
+                </button>
+              </form>
+              {waitlistSubmitted && (
+                <div className="waitlist-success">
+                  <CheckCircle2 size={16} /> Thank you! We'll notify you when SCL #7 opens.
+                </div>
+              )}
+              
+              <div className="hero-secondary-actions">
+                <a 
+                  href={officialUrl} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="btn btn-outline btn-brochure"
+                >
+                  <Download size={18} /> Download Brochure
+                </a>
+              </div>
             </div>
           </div>
 
-          <div className="hero-rail animate-fade-in is-visible" style={{ animationDelay: '0.08s' }}>
-            <figure className="hero-media">
-              <img
-                src={encodeURI(heroPhoto)}
-                alt={t('hero.imageAlt')}
-                fetchPriority="high"
-                decoding="async"
-              />
-              <figcaption>{t('hero.imageCaption')}</figcaption>
-            </figure>
-
-            <aside className="hero-brief" aria-label={t('journey.schedule.title')}>
-              <div className="hero-brief-head">
-                <span className="hero-brief-kicker">{t('journey.schedule.title')}</span>
-                <p>{t('journey.schedule.description')}</p>
-              </div>
-
-              <div className="hero-brief-list">
-                {heroBrief.map((item) => (
-                  <div key={item.label} className="hero-brief-item">
-                    <span>{item.label}</span>
-                    <strong>{item.value}</strong>
+          <div className="hero-visual-v2">
+            <div className="hero-image-stack">
+              <div className="hero-image-card">
+                <img
+                  src={heroPhoto}
+                  alt="SCL Program Atmosphere"
+                  className="hero-main-img"
+                />
+                <div className="hero-stats-overlay">
+                  <div className="stat-pill">
+                    <span className="stat-num">400+</span>
+                    <span className="stat-label">Alumni</span>
                   </div>
-                ))}
+                  <div className="stat-pill">
+                    <span className="stat-num">77</span>
+                    <span className="stat-label">Provinces</span>
+                  </div>
+                </div>
               </div>
-            </aside>
+            </div>
           </div>
+            {/* Floating Info Cards */}
+            <div className="hero-floating-card hero-floating-card-1">
+              <div className="card-icon"><ArrowRight size={14} /></div>
+              <div className="card-text">7 Weeks Intensive</div>
+            </div>
         </div>
 
-        <div className="hero-summary animate-fade-in is-visible" style={{ animationDelay: '0.12s' }}>
-          <div className="hero-facts">
-            {heroFacts.map((fact) => (
-              <div key={fact.label} className="hero-fact">
-                <span>{fact.label}</span>
-                <strong>{fact.value}</strong>
-              </div>
-            ))}
-          </div>
+        <div className="hero-index-v2">
+          <IndexTeaser />
         </div>
-
-        <IndexTeaser />
       </div>
     </section>
   );
