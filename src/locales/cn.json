@@ -16,7 +16,10 @@
     "changeLanguage": "切换语言",
     "openMenu": "打开菜单",
     "closeMenu": "关闭菜单",
-    "testimonials": "校友心声"
+    "testimonials": "校友之声",
+    "faculty": "师资",
+    "faq": "常见问题",
+    "methodology": "方法论"
   },
   "announcement": {
     "badge": {
@@ -36,6 +39,9 @@
   },
   "hero": {
     "eyebrow": "depa 高管课程 • SCL #{{cohort}}",
+    "liveBadge": "数据实时 · 今日更新",
+    "liveBadge2": "400+ 校友 · 覆盖 77 府",
+    "liveBadge3": "6 期 · 2020–2026 · depa 旗舰课程",
     "title": "Smart City Leadership",
     "valueStatement": "一门真正面向管理层的短期课程，帮助领导者更清楚地判断智慧城市工作应当如何被认真地推进。",
     "subtitle": "SCL 的价值不在于把页面做得像招生广告，而在于让读者迅速把握可信智慧城市项目背后的战略逻辑、制度逻辑与实施逻辑，尤其是在泰国语境下。",
@@ -79,7 +85,15 @@
         "title": "它要求的投入是有分量的。",
         "description": "无论时间还是费用，这都更像一项高管层面的正式投入，而不是一次轻量化讲座，这会直接影响 cohort 内部的讨论质量。"
       }
-    }
+    },
+    "highlight": "未来",
+    "title2": "智慧泰国",
+    "emailPlaceholder": "请输入您的电子邮箱",
+    "waitlistCta": "加入 SCL #7 候补名单",
+    "waitlistSuccess": "感谢！SCL #7 开放申请时我们会通知您。",
+    "brochure": "下载课程手册",
+    "statAlumni": "校友",
+    "statProvinces": "府"
   },
   "about": {
     "eyebrow": "课程设计",
@@ -121,10 +135,20 @@
     "pillarsTitle": "核心主题",
     "learningSites": {
       "site1": "EGAT Learning Center",
+      "site1Desc": "泰国国家电力公司培训中心，提供智能电网管理、可再生能源整合与工业运营的实地展示。",
+      "site1Domain": "能源与基础设施",
       "site2": "Smart Water Operation Center (SWOC)",
+      "site2Desc": "省级自来水指挥中心，实时展示水质监测、预测性维护与公民服务仪表板的集成应用。",
+      "site2Domain": "智慧环境",
       "site3": "PROEN Data Center",
-      "site4": "Creative Economy Agency 生态",
-      "site5": "KMITL Interactive Digital Center (KIDC)"
+      "site3Desc": "商业级数据中心，支撑云服务、数字政府平台与企业级网络连接。",
+      "site3Domain": "数字基础设施",
+      "site4": "泰国创意与设计中心（TCDC）生态",
+      "site4Desc": "锚定曼谷设计街区的创意经济园区，是政策、文化创业与数字工具的交汇点。",
+      "site4Domain": "智慧经济",
+      "site5": "KMITL Interactive Digital Center (KIDC)",
+      "site5Desc": "大学级沉浸式技术实验室，配备 VR/AR 模拟环境、数字孪生原型与智慧系统应用研究设施。",
+      "site5Domain": "教育与创新"
     },
     "pillars": {
       "environment": "智慧环境",
@@ -184,8 +208,8 @@
   },
   "journey": {
     "eyebrow": "形式与时间线",
-    "title": "像高管冲刺项目一样组织",
-    "subtitle": "SCL 将课堂教学、现场学习与 cohort 交流结合起来，帮助参与者把政策与技术议题转换为实施视角。",
+    "title": "引领",
+    "subtitle": "SCL #6 正在进行中。注册您的兴趣，以便在 SCL #7 开放申请时收到通知。",
     "trackKicker": "学习路径",
     "trackTitle": "整体体验如何组织",
     "modes": {
@@ -258,7 +282,18 @@
       "sitesLabel": "延伸网络中的学习场景示例",
       "imageAlt": "SCL 实地参访照片 {{number}}"
     },
-    "sourceNote": "申请时间、费用、地点和课程安排均依据 depa 官方 SCL #6 文章。"
+    "sourceNote": "申请时间、费用、地点和课程安排均依据 depa 官方 SCL #6 文章。",
+    "liveBadge": "数据实时 · 今日更新",
+    "liveBadge2": "400+ 校友 · 覆盖 77 府",
+    "liveBadge3": "6 期 · 2020–2026 · depa 旗舰课程",
+    "highlight": "未来",
+    "title2": "智慧泰国",
+    "emailPlaceholder": "输入您的电子邮件地址",
+    "waitlistCta": "加入 SCL #7 候补名单",
+    "waitlistSuccess": "谢谢！SCL #7 开放时我们会通知您。",
+    "brochure": "下载手册",
+    "statAlumni": "校友",
+    "statProvinces": "省份"
   },
   "alumni": {
     "badge": "官方校友目录",
@@ -289,6 +324,7 @@
     },
     "batch": "第",
     "viewList": "打开官方名单",
+    "suggestions": "搜索建议",
     "searchPlaceholder": "按姓名、职务、机构或届别搜索...",
     "searchHint": "搜索会对官方公告文本做规范化处理，因此 OCR 空格问题不会影响匹配。",
     "positionDisclaimer": "所列职务和隶属机构反映的是学员参加课程时的信息，职务和机构可能已发生变更。",
@@ -332,6 +368,18 @@
       "academic": "学术机构",
       "stateEnterprise": "国有企业",
       "other": "其他"
+    },
+    "alumniPerBatch": "每期校友",
+    "publicLabel": "公共 / 国有",
+    "privateLabel": "私营 / 其他",
+    "thaiNamesNote": "本名录中所有姓名均为泰语，依据 depa 各届学员的官方公告。",
+    "tag": {
+      "municipality": "市政府",
+      "provincial": "省级行政",
+      "mayor": "市长",
+      "governor": "府尹",
+      "director": "主任",
+      "company": "公司"
     }
   },
   "gallery": {
@@ -356,6 +404,7 @@
     "kicker": "高管课程",
     "navHeading": "快速链接",
     "sourcesHeading": "官方来源",
+    "contactHeading": "联系我们",
     "description": "depa Smart City Leadership 的多语言落地页，整合当前课程信息、校友搜索与影像档案。",
     "officialProgram": "depa 官方 SCL #6 文章",
     "officialAlumni": "最新官方校友名单",
@@ -393,7 +442,16 @@
       }
     },
     "cta": "探索完整指数",
-    "meta": "{{cities}} 座城市 · {{pillars}} 个维度 · α/β/γ 分级"
+    "meta": "{{cities}} 座城市 · {{pillars}} 个维度 · α/β/γ 分级",
+    "externalTool": "外部工具",
+    "stats": {
+      "citiesLabel": "已核验城市",
+      "citiesSub": "总共 118 个申报",
+      "pillarsLabel": "宜居支柱",
+      "pillarsSub": "加权评分",
+      "tierLabel": "分级体系",
+      "tierSub": "基于实证"
+    }
   },
   "countdown": {
     "until": "SCL #6 倒计时",

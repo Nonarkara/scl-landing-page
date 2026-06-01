@@ -25,6 +25,7 @@
   align-items: center;
   gap: 12px;
   text-decoration: none;
+  flex: 0 0 auto;
 }
 
 .nav-brand-mark {
@@ -62,23 +63,75 @@
   display: flex;
   align-items: center;
   gap: 14px;
+  min-width: 0;
 }
 
 .nav-link {
   color: var(--text-secondary);
   text-decoration: none;
-  font-size: 0.92rem;
+  font-size: 0.88rem;
   font-weight: 600;
-  transition: color var(--transition-fast);
+  transition: color 0.15s ease;
+  padding: 4px 0;
+  margin: 0 10px;
+  border-bottom: 2px solid transparent;
+  white-space: nowrap;
 }
 
-.nav-link:hover,
+.nav-link:hover {
+  color: var(--text-main);
+}
+
 .nav-link--active {
   color: var(--text-main);
+  border-bottom-color: var(--depa-navy);
+}
+
+.nav-link:active {
+  transform: scale(0.98);
 }
 
 .nav-apply {
   margin-left: 4px;
+  flex: 0 0 auto;
+}
+
+.lang-switcher-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.lang-icon {
+  color: var(--text-secondary);
+  flex: 0 0 auto;
+}
+
+.lang-inline-btn {
+  min-width: 28px;
+  padding: 4px 6px;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+  cursor: pointer;
+  transition: color 0.15s ease;
+  border-bottom: 1px solid transparent;
+}
+
+.lang-inline-btn:hover {
+  color: var(--text-main);
+}
+
+.lang-inline-btn.active {
+  color: var(--text-main);
+  border-bottom-color: var(--depa-navy);
+}
+
+.lang-inline-btn:active {
+  transform: scale(0.95);
 }
 
 .lang-switcher {
@@ -89,13 +142,20 @@
   display: inline-flex;
   align-items: center;
   gap: 7px;
-  padding: 0;
+  padding: 6px 8px;
+  border-radius: 6px;
   color: var(--text-secondary);
   cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
 }
 
 .lang-btn:hover {
   color: var(--text-main);
+  background: var(--bg-surface);
+}
+
+.lang-btn:active {
+  transform: scale(0.96);
 }
 
 .current-lang {
@@ -124,6 +184,7 @@
   color: var(--text-secondary);
   text-align: left;
   cursor: pointer;
+  transition: color 0.15s ease, background 0.15s ease;
 }
 
 .lang-dropdown button:hover,
@@ -180,6 +241,16 @@
   justify-content: center;
   color: var(--text-main);
   cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.15s ease, transform 0.12s ease;
+}
+
+.mobile-toggle:hover {
+  background: var(--bg-surface);
+}
+
+.mobile-toggle:active {
+  transform: scale(0.94);
 }
 
 .mobile-menu {
@@ -227,11 +298,21 @@
     font-size: 0.84rem;
     cursor: pointer;
     text-align: center;
+    transition: transform 0.12s ease, border-color 0.15s ease, color 0.15s ease, background 0.15s ease;
+  }
+
+  .lang-chip:hover {
+    background: var(--bg-surface);
+  }
+
+  .lang-chip:active {
+    transform: scale(0.95);
   }
 
   .lang-chip.active {
     color: var(--text-main);
     border-color: var(--border-strong);
+    background: var(--bg-surface);
   }
 }
 

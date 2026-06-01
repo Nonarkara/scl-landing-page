@@ -1,16 +1,12 @@
 import { useState } from 'react';
 import { ArrowRight, Download, Mail, CheckCircle2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import {
-  formatProgramCurrency,
-  formatProgramDate,
-  getApplicationUrl,
-  getProgramPhase,
-  heroPhoto,
-  programDetails,
-} from '../data/program';
+import { heroPhoto, programDetails } from '../data/program';
 import IndexTeaser from './IndexTeaser';
 import './HeroSection.css';
+
+const LIVE_BADGE_KEYS = ['hero.liveBadge', 'hero.liveBadge2', 'hero.liveBadge3'];
+const LIVE_BADGE_INTERVAL = 7000;
 
 const HeroSection = () => {
   const { t, i18n } = useTranslation();
@@ -22,51 +18,29 @@ const HeroSection = () => {
   const applicationDeadline = formatProgramDate(programDetails.applicationDeadline, currentLanguage);
   const feeLabel = formatProgramCurrency(programDetails.feeTHB, currentLanguage);
 
-  const heroFacts = [
-    {
-      label: t('hero.facts.durationLabel'),
-      value: t('hero.facts.durationValue', {
-        days: programDetails.programDays,
-        hours: programDetails.learningHours,
-      }),
-    },
-    {
-      label: t('hero.facts.audienceLabel'),
-      value: t('hero.facts.audienceValue'),
-    },
-    {
-      label: t('hero.facts.modelLabel'),
-      value: t('hero.facts.modelValue', {
-        speakers: programDetails.speakerCount,
-      }),
-    },
-    {
-      label: t('hero.facts.archiveLabel'),
-      value: t('hero.facts.archiveValue', {
-        alumni: programDetails.alumniCount,
-        cohorts: programDetails.cohortCount,
-      }),
-    },
-  ];
+  useEffect(() => {
+    if (typeof window === 'undefined') return undefined;
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (mq.matches) return undefined;
+    const id = window.setInterval(() => {
+      if (pausedRef.current) return;
+      setBadgeVisible(false);
+      window.setTimeout(() => {
+        setBadgeIndex((i) => (i + 1) % LIVE_BADGE_KEYS.length);
+        setBadgeVisible(true);
+      }, 320);
+    }, LIVE_BADGE_INTERVAL);
+    return () => window.clearInterval(id);
+  }, []);
 
-  const heroBrief = [
-    {
-      label: t('hero.facts.deadlineLabel'),
-      value: t(`hero.status.${programPhase}`, { deadline: applicationDeadline }),
-    },
-    {
-      label: t('journey.schedule.datesLabel'),
-      value: t('journey.schedule.datesValue'),
-    },
-    {
-      label: t('journey.schedule.venueLabel'),
-      value: t('journey.schedule.venueValue'),
-    },
-    {
-      label: t('journey.schedule.feeLabel'),
-      value: feeLabel,
-    },
-  ];
+  const handleWaitlistSubmit = (e) => {
+    e.preventDefault();
+    if (waitlistEmail) {
+      setWaitlistSubmitted(true);
+      setTimeout(() => setWaitlistSubmitted(false), 5000);
+      setWaitlistEmail('');
+    }
+  };
 
   const handleWaitlistSubmit = (e) => {
     e.preventDefault();

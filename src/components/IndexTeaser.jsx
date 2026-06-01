@@ -85,12 +85,12 @@ const MapGraphic = () => (
       stroke="#111"
       strokeWidth="0.8"
     />
-    <circle cx="78" cy="30" r="4" fill={PILLAR_COLORS.livability} opacity="0.8" />
-    <circle cx="85" cy="42" r="3.5" fill={PILLAR_COLORS.economy} opacity="0.8" />
-    <circle cx="72" cy="50" r="3" fill={PILLAR_COLORS.safety} opacity="0.8" />
-    <circle cx="90" cy="55" r="3.5" fill={PILLAR_COLORS.wellbeing} opacity="0.8" />
-    <circle cx="76" cy="65" r="4" fill={PILLAR_COLORS.environment} opacity="0.8" />
-    <circle cx="68" cy="38" r="3" fill={PILLAR_COLORS.digital} opacity="0.8" />
+    <circle className="map-pulse-dot" cx="78" cy="30" r="4" fill={PILLAR_COLORS.livability} style={{ '--pulse-delay': '0s' }} />
+    <circle className="map-pulse-dot" cx="85" cy="42" r="3.5" fill={PILLAR_COLORS.economy} style={{ '--pulse-delay': '2.5s' }} />
+    <circle className="map-pulse-dot" cx="72" cy="50" r="3" fill={PILLAR_COLORS.safety} style={{ '--pulse-delay': '5s' }} />
+    <circle className="map-pulse-dot" cx="90" cy="55" r="3.5" fill={PILLAR_COLORS.wellbeing} style={{ '--pulse-delay': '7.5s' }} />
+    <circle className="map-pulse-dot" cx="76" cy="65" r="4" fill={PILLAR_COLORS.environment} style={{ '--pulse-delay': '10s' }} />
+    <circle className="map-pulse-dot" cx="68" cy="38" r="3" fill={PILLAR_COLORS.digital} style={{ '--pulse-delay': '12.5s' }} />
   </svg>
 );
 
@@ -132,12 +132,28 @@ const CARD_KEYS = ['rankings', 'allocator', 'map', 'reality'];
 const IndexTeaser = () => {
   const { t } = useTranslation();
 
+  const stats = [
+    { value: '37', label: t('index.stats.citiesLabel'), sub: t('index.stats.citiesSub') },
+    { value: '7', label: t('index.stats.pillarsLabel'), sub: t('index.stats.pillarsSub') },
+    { value: 'αβγ', label: t('index.stats.tierLabel'), sub: t('index.stats.tierSub') },
+  ];
+
   return (
     <div className="index-teaser animate-fade-in is-visible" style={{ animationDelay: '0.16s' }}>
       <div className="index-teaser-header">
         <span className="section-kicker">{t('index.kicker')}</span>
         <h2 className="index-teaser-title">{t('index.title')}</h2>
         <p className="index-teaser-desc">{t('index.description')}</p>
+      </div>
+
+      <div className="index-teaser-stats">
+        {stats.map((stat) => (
+          <div key={stat.label} className="index-stat-item">
+            <span className="index-stat-value">{stat.value}</span>
+            <span className="index-stat-label">{stat.label}</span>
+            <span className="index-stat-sub">{stat.sub}</span>
+          </div>
+        ))}
       </div>
 
       <div className="index-teaser-grid">

@@ -74,6 +74,12 @@
 .journey-fact {
   padding-top: 12px;
   border-top: 1px solid var(--border-glass);
+  transition: transform 0.12s ease;
+}
+
+.journey-card:active,
+.journey-process-item:active {
+  transform: scale(0.998);
 }
 
 .journey-item-count {

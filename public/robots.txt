@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://scl.nonarkara.org/sitemap.xml

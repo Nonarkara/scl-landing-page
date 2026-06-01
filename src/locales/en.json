@@ -16,7 +16,10 @@
     "changeLanguage": "Change language",
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
-    "testimonials": "Testimonials"
+    "testimonials": "Voices",
+    "faculty": "Faculty",
+    "faq": "FAQ",
+    "methodology": "Methodology"
   },
   "announcement": {
     "badge": {
@@ -36,6 +39,9 @@
   },
   "hero": {
     "eyebrow": "depa executive program • SCL #{{cohort}}",
+    "liveBadge": "Data live · Updated today",
+    "liveBadge2": "400+ alumni · 77 provinces represented",
+    "liveBadge3": "Six cohorts · 2020–2026 · depa flagship",
     "title": "Smart City Leadership",
     "valueStatement": "A serious short-format program for leaders who need sharper judgment about how smart-city work actually gets delivered.",
     "subtitle": "SCL is most useful when read not as a promotional course page, but as a compact operating brief: it helps public and private leaders understand the strategic, institutional, and implementation logic behind credible smart-city projects in Thailand.",
@@ -79,7 +85,15 @@
         "title": "It signals a meaningful commitment.",
         "description": "The time and fee structure place the program closer to an executive commitment than a casual seminar, which changes the level of discussion inside the cohort."
       }
-    }
+    },
+    "highlight": "Future",
+    "title2": "of Smart Thailand",
+    "emailPlaceholder": "Enter your email address",
+    "waitlistCta": "Join SCL #7 Waitlist",
+    "waitlistSuccess": "Thank you! We'll notify you when SCL #7 opens.",
+    "brochure": "Download Brochure",
+    "statAlumni": "Alumni",
+    "statProvinces": "Provinces"
   },
   "about": {
     "eyebrow": "Program design",
@@ -121,10 +135,20 @@
     "pillarsTitle": "Core domains",
     "learningSites": {
       "site1": "EGAT Learning Center",
+      "site1Desc": "National power utility training facility — a live demonstration site for smart grid management, renewable integration, and industrial operations.",
+      "site1Domain": "Energy & Infrastructure",
       "site2": "Smart Water Operation Center (SWOC)",
+      "site2Desc": "Provincial waterworks command center with real-time water quality monitoring, predictive maintenance, and citizen service dashboards.",
+      "site2Domain": "Smart Environment",
       "site3": "PROEN Data Center",
-      "site4": "Creative Economy Agency ecosystem",
-      "site5": "KMITL Interactive Digital Center (KIDC)"
+      "site3Desc": "Commercial-grade data center supporting cloud services, digital government platforms, and enterprise connectivity.",
+      "site3Domain": "Digital Infrastructure",
+      "site4": "Thailand Creative & Design Center ecosystem",
+      "site4Desc": "Creative economy campus anchoring Bangkok's design district — where policy, cultural entrepreneurship, and digital tools intersect.",
+      "site4Domain": "Smart Economy",
+      "site5": "KMITL Interactive Digital Center (KIDC)",
+      "site5Desc": "University-level immersive technology lab with VR/AR simulation, digital twin prototypes, and applied smart-systems research.",
+      "site5Domain": "Education & Innovation"
     },
     "pillars": {
       "environment": "Smart Environment",
@@ -184,8 +208,8 @@
   },
   "journey": {
     "eyebrow": "Format and timeline",
-    "title": "Structured like an executive sprint",
-    "subtitle": "SCL combines classroom instruction, curated site references, and a cohort format that helps participants translate policy and technology themes into an implementation lens.",
+    "title": "Leading the",
+    "subtitle": "SCL #6 is currently underway. Register your interest to be notified when applications open for SCL #7.",
     "trackKicker": "Learning flow",
     "trackTitle": "How the experience is shaped",
     "modes": {
@@ -258,7 +282,18 @@
       "sitesLabel": "Examples from the extended network",
       "imageAlt": "SCL field visit photo {{number}}"
     },
-    "sourceNote": "Application timing, fee, venue, and schedule are based on depa's official SCL #6 article."
+    "sourceNote": "Application timing, fee, venue, and schedule are based on depa's official SCL #6 article.",
+    "liveBadge": "Data live · Updated today",
+    "liveBadge2": "400+ alumni · 77 provinces represented",
+    "liveBadge3": "Six cohorts · 2020–2026 · depa flagship",
+    "highlight": "Future",
+    "title2": "of Smart Thailand",
+    "emailPlaceholder": "Enter your email address",
+    "waitlistCta": "Join SCL #7 Waitlist",
+    "waitlistSuccess": "Thank you! We'll notify you when SCL #7 opens.",
+    "brochure": "Download Brochure",
+    "statAlumni": "Alumni",
+    "statProvinces": "Provinces"
   },
   "alumni": {
     "badge": "Official alumni directory",
@@ -333,6 +368,18 @@
       "academic": "Academic",
       "stateEnterprise": "State enterprise",
       "other": "Other"
+    },
+    "alumniPerBatch": "Alumni per batch",
+    "publicLabel": "Public / State",
+    "privateLabel": "Private / Other",
+    "thaiNamesNote": "All names in this directory are in Thai only, per the official depa announcement for each cohort.",
+    "tag": {
+      "municipality": "Municipality",
+      "provincial": "Provincial Admin.",
+      "mayor": "Mayor",
+      "governor": "Governor",
+      "director": "Director",
+      "company": "Company"
     }
   },
   "gallery": {
@@ -357,6 +404,7 @@
     "kicker": "Executive program",
     "navHeading": "Quick links",
     "sourcesHeading": "Official sources",
+    "contactHeading": "Contact",
     "description": "A multilingual landing page for depa Smart City Leadership, combining verified cohort details, alumni search, and a visual archive in one place.",
     "officialProgram": "SCL #6 official depa article",
     "officialAlumni": "Latest official alumni list",
@@ -394,7 +442,16 @@
       }
     },
     "cta": "Explore the full Index",
-    "meta": "{{cities}} cities · {{pillars}} pillars · \u03b1/\u03b2/\u03b3 tiers"
+    "meta": "{{cities}} cities · {{pillars}} pillars · α/β/γ tiers",
+    "externalTool": "External tool",
+    "stats": {
+      "citiesLabel": "Cities verified",
+      "citiesSub": "out of 118 declared",
+      "pillarsLabel": "Livability pillars",
+      "pillarsSub": "weighted & scored",
+      "tierLabel": "Tier system",
+      "tierSub": "based on evidence"
+    }
   },
   "countdown": {
     "until": "Until SCL #6",

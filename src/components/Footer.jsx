@@ -22,11 +22,11 @@ const Footer = () => {
         <div className="footer-nav-group">
           <h4 className="footer-heading">{t('footer.navHeading')}</h4>
           <div className="footer-links">
-            <a href="#home">{t('nav.home')}</a>
-            <a href="#about">{t('nav.about')}</a>
-            <a href="#journey">{t('nav.journey')}</a>
-            <a href="#alumni">{t('nav.alumni')}</a>
-            <a href="#gallery">{t('nav.gallery')}</a>
+            <Link to="/">{t('nav.home')}</Link>
+            <Link to="/curriculum">{t('nav.about')}</Link>
+            <Link to="/?tab=journey">{t('nav.journey')}</Link>
+            <Link to="/alumni">{t('nav.alumni')}</Link>
+            <Link to="/gallery">{t('nav.gallery')}</Link>
           </div>
         </div>
 
@@ -39,6 +39,14 @@ const Footer = () => {
             <a href={alumniBatches[0].link} target="_blank" rel="noopener noreferrer">
               {t('footer.officialAlumni')}
             </a>
+          </div>
+        </div>
+
+        <div className="footer-contact-group">
+          <h4 className="footer-heading">{t('footer.contactHeading', 'Contact')}</h4>
+          <div className="footer-links">
+            <a href="mailto:scp@depa.or.th">scp@depa.or.th</a>
+            <a href="https://www.depa.or.th" target="_blank" rel="noopener noreferrer">depa.or.th</a>
           </div>
         </div>
       </div>

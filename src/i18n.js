@@ -2,9 +2,9 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import enTranslation from './locales/en.json';
 import thTranslation from './locales/th.json';
-import zhTranslation from './locales/zh.json';
+import cnTranslation from './locales/cn.json';
 
-const supportedLanguages = ['th', 'en', 'zh'];
+const supportedLanguages = ['th', 'en', 'cn'];
 const languageStorageKey = 'scl-language';
 
 function getInitialLanguage() {
@@ -13,13 +13,20 @@ function getInitialLanguage() {
   }
 
   const savedLanguage = window.localStorage.getItem(languageStorageKey);
+  // Migrate old 'zh' storage to 'cn'
+  if (savedLanguage === 'zh') {
+    window.localStorage.setItem(languageStorageKey, 'cn');
+    return 'cn';
+  }
   if (savedLanguage && supportedLanguages.includes(savedLanguage)) {
     return savedLanguage;
   }
 
   const browserLanguage = window.navigator.language?.toLowerCase().split('-')[0];
-  if (browserLanguage && supportedLanguages.includes(browserLanguage)) {
-    return browserLanguage;
+  // Map browser 'zh' to our internal 'cn' code
+  const mappedLanguage = browserLanguage === 'zh' ? 'cn' : browserLanguage;
+  if (mappedLanguage && supportedLanguages.includes(mappedLanguage)) {
+    return mappedLanguage;
   }
 
   return 'th';
@@ -31,7 +38,7 @@ i18n
     resources: {
       en: { translation: enTranslation },
       th: { translation: thTranslation },
-      zh: { translation: zhTranslation },
+      cn: { translation: cnTranslation },
     },
     lng: getInitialLanguage(),
     fallbackLng: 'en',
@@ -41,7 +48,7 @@ i18n
   });
 
 if (typeof document !== 'undefined') {
-  document.documentElement.lang = i18n.language;
+  document.documentElement.lang = i18n.language === 'cn' ? 'zh-CN' : i18n.language;
 }
 
 i18n.on('languageChanged', (language) => {
@@ -50,7 +57,7 @@ i18n.on('languageChanged', (language) => {
   }
 
   if (typeof document !== 'undefined') {
-    document.documentElement.lang = language;
+    document.documentElement.lang = language === 'cn' ? 'zh-CN' : language;
   }
 });
 

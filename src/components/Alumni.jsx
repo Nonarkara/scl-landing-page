@@ -9,7 +9,9 @@ import {
   FileText,
   GraduationCap,
   Landmark,
+  Mail,
   Search,
+  Send,
   Users,
   X,
 } from 'lucide-react';
@@ -37,6 +39,69 @@ const SECTOR_ICONS = {
   other: <FileText size={15} />,
 };
 
+const UpdateModal = ({ entry, onClose, t }) => {
+  const [newTitle, setNewTitle] = useState('');
+  const [newLocation, setNewLocation] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const subject = encodeURIComponent(`SCL Alumni Update: ${entry.displayName}`);
+    const body = encodeURIComponent(
+      `Name: ${entry.displayName}\nCurrent Record: ${entry.detail}\n\nUpdated Title/Position: ${newTitle || '(no change)'}\nUpdated Location/Organization: ${newLocation || '(no change)'}\n\nSubmitted via SCL Alumni Directory`
+    );
+    window.location.href = `mailto:scp@depa.or.th?subject=${subject}&body=${body}`;
+    onClose();
+  };
+
+  if (!entry) return null;
+
+  return (
+    <div className="update-modal-backdrop" onClick={onClose}>
+      <div className="update-modal" onClick={(e) => e.stopPropagation()}>
+        <div className="update-modal-header">
+          <h3>{t('alumni.updateTitle', 'Update Your Information')}</h3>
+          <button type="button" className="update-modal-close" onClick={onClose} aria-label="Close">
+            <X size={18} />
+          </button>
+        </div>
+        <div className="update-modal-body">
+          <p className="update-modal-intro">
+            {t('alumni.updateIntro', 'If your position or location has changed, please let us know.')}
+          </p>
+          <div className="update-modal-current">
+            <strong>{entry.displayName}</strong>
+            <span>{entry.detail}</span>
+          </div>
+          <form onSubmit={handleSubmit} className="update-modal-form">
+            <label>
+              <span>{t('alumni.newTitle', 'New Title / Position')}</span>
+              <input
+                type="text"
+                value={newTitle}
+                onChange={(e) => setNewTitle(e.target.value)}
+                placeholder={t('alumni.titlePlaceholder', 'e.g. Mayor of ...')}
+              />
+            </label>
+            <label>
+              <span>{t('alumni.newLocation', 'New Organization / Location')}</span>
+              <input
+                type="text"
+                value={newLocation}
+                onChange={(e) => setNewLocation(e.target.value)}
+                placeholder={t('alumni.locationPlaceholder', 'e.g. Bangkok Metropolitan ...')}
+              />
+            </label>
+            <button type="submit" className="btn btn-primary update-modal-submit">
+              <Send size={16} />
+              {t('alumni.sendUpdate', 'Send Update to scp@depa.or.th')}
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const Alumni = () => {
   const { t } = useTranslation();
   const [searchTerm, setSearchTerm] = useState('');
@@ -52,6 +117,8 @@ const Alumni = () => {
   const groupedEntries = useMemo(() => groupEntriesByBatch(allEntries), [allEntries]);
   const demographics = useMemo(() => computeDemographics(allEntries), [allEntries]);
   const searchKey = normalizeSearchText(deferredSearchTerm);
+
+  const hasActiveFilter = searchKey || filterBatch !== 'all' || sortOrder !== 'relevance' || activeSector !== 'all';
 
   const searchResults = useMemo(() => {
     let results = [...allEntries];
@@ -134,7 +201,10 @@ const Alumni = () => {
                 className="alumni-search-input"
                 placeholder="Search by name, organization, or province..."
                 value={searchTerm}
-                onChange={(event) => setSearchTerm(event.target.value)}
+                onChange={(event) => {
+                  setSearchTerm(event.target.value);
+                  if (event.target.value) setShowAllBrowse(false);
+                }}
               />
             </div>
             
@@ -184,6 +254,14 @@ const Alumni = () => {
           ))}
         </div>
       </div>
+
+      {updateEntry && (
+        <UpdateModal
+          entry={updateEntry}
+          onClose={() => setUpdateEntry(null)}
+          t={t}
+        />
+      )}
     </section>
   );
 };

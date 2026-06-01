@@ -1,3 +1,5 @@
+import { useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import LogoBar from '../components/LogoBar';
 import { useState, useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';

@@ -62,6 +62,22 @@ input {
 button {
   border: 0;
   background: none;
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+button:active:not(:disabled) {
+  transform: scale(0.98);
+}
+
+a.btn:active,
+button.btn:active,
+.btn:active {
+  transform: scale(0.97);
+}
+
+select:active {
+  transform: none;
 }
 
 img {
@@ -102,11 +118,12 @@ a {
 }
 
 .section {
-  padding: 56px 0;
+  padding: 80px 0;
   position: relative;
   scroll-margin-top: var(--navbar-height);
 }
 
+/* Grid background — subtler */
 .grid-bg {
   position: fixed; /* Fixed to avoid pushing content */
   inset: 0;
@@ -161,53 +178,32 @@ a {
   border-color: var(--depa-yellow-muted);
 }
 
+/* Editorial kicker — no yellow line, just refined typography */
 .section-kicker {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
+  display: block;
   color: var(--text-muted);
-  letter-spacing: 0.14em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
-  font-size: 0.78rem;
+  font-size: 0.72rem;
   font-weight: 700;
+  margin-bottom: 12px;
 }
 
-.section-kicker::before {
-  content: '';
-  display: inline-block;
-  width: 20px;
-  height: 3px;
-  background: var(--depa-yellow);
-  border-radius: 2px;
-}
-
-.badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 0;
-  color: var(--text-main);
-  font-size: 0.78rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.badge-glow {
-  box-shadow: none;
-}
-
+/* Buttons: rectangular, not pills. More editorial */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 13px 20px;
-  border-radius: var(--radius-pill);
+  gap: 8px;
+  padding: 14px 24px;
+  border-radius: var(--radius-sm);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   cursor: pointer;
-  transition: var(--transition-fast);
+  transition: transform 0.1s ease, background 0.15s ease, border-color 0.15s ease;
   text-decoration: none;
+  user-select: none;
+  letter-spacing: 0.01em;
 }
 
 .btn-primary {
@@ -221,19 +217,20 @@ a {
   border-color: #082440;
 }
 
-.btn-ghost {
+.btn-outline {
   background: transparent;
   color: var(--text-main);
   border: 1px solid var(--border-strong);
 }
 
-.btn-ghost:hover {
+.btn-outline:hover {
   border-color: var(--text-main);
+  background: var(--bg-surface);
 }
 
 .btn-sm {
   padding: 10px 16px;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .inline-link {
@@ -247,6 +244,21 @@ a {
 
 .inline-link:hover {
   text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Glass panel — use sparingly, only when needed */
+.glass-panel {
+  background: var(--surface-strong);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+}
+
+/* Accent rule — used intentionally, not everywhere */
+.depa-rule {
+  height: 2px;
+  background: var(--depa-yellow);
+  border: 0;
 }
 
 .flex-center {
@@ -255,56 +267,25 @@ a {
   justify-content: center;
 }
 
-.mb-4 {
-  margin-bottom: 16px;
-}
-
-.mb-6 {
-  margin-bottom: 24px;
-}
-
-.mb-12 {
-  margin-bottom: 48px;
-}
-
-.mr-2 {
-  margin-right: 8px;
-}
-
-.ml-1 {
-  margin-left: 4px;
-}
-
-.ml-2 {
-  margin-left: 8px;
-}
-
-.mt-4 {
-  margin-top: 16px;
-}
-
-.w-full {
-  width: 100%;
-}
-
-.text-center {
-  text-align: center;
-}
+.mb-4 { margin-bottom: 16px; }
+.mb-6 { margin-bottom: 24px; }
+.mb-12 { margin-bottom: 48px; }
+.mr-2 { margin-right: 8px; }
+.ml-1 { margin-left: 4px; }
+.ml-2 { margin-left: 8px; }
+.mt-4 { margin-top: 16px; }
+.w-full { width: 100%; }
+.text-center { text-align: center; }
 
 .section-title {
-  font-size: clamp(2.6rem, 5vw, 4.3rem);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  line-height: 1.05;
+  letter-spacing: -0.04em;
 }
 
 @keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .animate-fade-in {
@@ -312,7 +293,7 @@ a {
 }
 
 .animate-fade-in.is-visible {
-  animation: fadeIn 0.7s ease forwards;
+  animation: fadeIn 0.6s ease forwards;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -326,14 +307,10 @@ a {
   .container {
     padding: 0 24px;
   }
-
   .section {
-    padding: 44px 0;
+    padding: 56px 0;
   }
-
-  .mb-12 {
-    margin-bottom: 36px;
-  }
+  .mb-12 { margin-bottom: 32px; }
 }
 
 @media (max-width: 640px) {
@@ -345,7 +322,7 @@ a {
 :focus-visible {
   outline: 2px solid var(--depa-gold);
   outline-offset: 3px;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 .skip-link {

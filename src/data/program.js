@@ -1,13 +1,13 @@
 const OFFICIAL_PROGRAM_URLS = {
   th: 'https://www.depa.or.th/th/article-view/smart-city-leadership-program-6-scl-6',
   en: 'https://www.depa.or.th/en/article-view/smart-city-leadership-program-6-scl-6',
-  zh: 'https://www.depa.or.th/en/article-view/smart-city-leadership-program-6-scl-6',
+  cn: 'https://www.depa.or.th/en/article-view/smart-city-leadership-program-6-scl-6',
 };
 
 const LANGUAGE_TO_LOCALE = {
   th: 'th-TH',
   en: 'en-US',
-  zh: 'zh-CN',
+  cn: 'zh-CN',
 };
 
 export const programDetails = {
@@ -16,7 +16,7 @@ export const programDetails = {
   programDays: 7,
   speakerCount: 30,
   feeTHB: 62000,
-  alumniCount: 273,
+  alumniCount: 306,
   cohortCount: 6,
   pillarCount: 7,
   applicationDeadline: '2026-04-06T23:59:59+07:00',
@@ -37,7 +37,7 @@ export const programLearningSites = [
 
 const B = import.meta.env.BASE_URL;
 const fromBase = (path) => B + path;
-const fromMore = (name) => fromBase(`Photos More/${name}`);
+const fromMore = (name) => fromBase(`Photos/${name}`);
 
 const photosMoreNames = [
   '474976513_1065517048953106_1932510330371171192_n.jpg',

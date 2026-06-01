@@ -18,7 +18,7 @@ function App() {
 
   useEffect(() => {
     const siteUrl = 'https://nonarkara.github.io/scl-landing-page/';
-    const ogImage = `${siteUrl}Photos%20More/475554453_1066072178897593_3452435967247513607_n.jpg`;
+    const ogImage = `${siteUrl}Photos/475554453_1066072178897593_3452435967247513607_n.jpg`;
     const officialUrl = getApplicationUrl(currentLanguage);
     const programPhase = getProgramPhase();
     const metadata = [
@@ -46,7 +46,7 @@ function App() {
       canonicalTag.setAttribute('href', siteUrl);
     }
 
-    document.documentElement.lang = currentLanguage;
+    document.documentElement.lang = currentLanguage === 'cn' ? 'zh-CN' : currentLanguage;
 
     const schema = {
       '@context': 'https://schema.org',
@@ -60,7 +60,7 @@ function App() {
       },
       url: siteUrl,
       sameAs: officialUrl,
-      inLanguage: currentLanguage,
+      inLanguage: currentLanguage === 'cn' ? 'zh-CN' : currentLanguage,
       startDate: programDetails.programStart,
       endDate: programDetails.programEnd,
       courseMode: 'onsite',

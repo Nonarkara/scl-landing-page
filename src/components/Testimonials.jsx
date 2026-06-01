@@ -4,34 +4,13 @@ import { Play } from 'lucide-react';
 import './Testimonials.css';
 
 const testimonials = [
-  {
-    id: 'jumpot',
-    batch: 4,
-  },
-  {
-    id: 'chatchawal',
-    batch: 4,
-  },
-  {
-    id: 'samrit',
-    batch: 5,
-  },
-  {
-    id: 'trisupong',
-    batch: 1,
-  },
-  {
-    id: 'wipawan',
-    batch: 1,
-  },
-  {
-    id: 'wisal',
-    batch: 2,
-  },
-  {
-    id: 'ketsirin',
-    batch: 1,
-  },
+  { id: 'jumpot', batch: 4 },
+  { id: 'chatchawal', batch: 4 },
+  { id: 'samrit', batch: 5 },
+  { id: 'trisupong', batch: 1 },
+  { id: 'wipawan', batch: 1 },
+  { id: 'wisal', batch: 2 },
+  { id: 'ketsirin', batch: 1 },
 ];
 
 const Testimonials = () => {
