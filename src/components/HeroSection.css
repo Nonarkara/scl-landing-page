@@ -51,9 +51,9 @@
 
 /* Title: massive, tight leading, editorial */
 .hero-title-v2 {
-  font-size: clamp(3.2rem, 9vw, 7rem);
-  line-height: 0.92;
-  letter-spacing: -0.055em;
+  font-size: clamp(3.2rem, 9vw, 7.5rem);
+  line-height: 0.95;
+  letter-spacing: -0.04em;
   margin: 0 0 24px;
   font-weight: 800;
   color: var(--text-main);
@@ -82,9 +82,9 @@
 .hero-value-statement {
   max-width: 32ch;
   margin: 0 0 20px;
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
-  line-height: 1.4;
-  letter-spacing: -0.02em;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  line-height: 1.5;
+  letter-spacing: -0.01em;
   color: var(--text-secondary);
   font-weight: 500;
 }
@@ -480,13 +480,15 @@
 }
 
 .stat-pill {
-  background: rgba(255, 255, 255, 0.9);
-  backdrop-filter: blur(10px);
-  padding: 8px 16px;
-  border-radius: 12px;
+  background: var(--surface-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid var(--border-glass);
 }
 
 .stat-num {

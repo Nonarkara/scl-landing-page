@@ -1,12 +1,12 @@
 :root {
   color-scheme: light;
-  --bg-primary: #f5f3ee;
-  --bg-secondary: #faf9f6;
-  --bg-ink: #0C2F53;
-  --surface-card: rgba(255, 255, 255, 0.88);
+  --bg-primary: #F8F9FA;
+  --bg-secondary: #ffffff;
+  --bg-ink: #0A192F;
+  --surface-card: rgba(255, 255, 255, 0.75);
   --surface-strong: #ffffff;
-  --border-glass: rgba(12, 47, 83, 0.06);
-  --border-strong: rgba(12, 47, 83, 0.12);
+  --border-glass: rgba(10, 25, 47, 0.08);
+  --border-strong: rgba(10, 25, 47, 0.15);
   --text-main: #0C2F53;
   --text-primary: #0C2F53;
   --text-secondary: #3d5a78;
@@ -18,12 +18,13 @@
   --depa-yellow-soft: rgba(255, 242, 0, 0.06);
   --depa-yellow-mid: rgba(255, 198, 0, 0.22);
   --depa-yellow-muted: rgba(255, 198, 0, 0.50);
-  --shadow-soft: 0 2px 12px rgba(12, 47, 83, 0.06);
+  --shadow-soft: 0 4px 20px rgba(10, 25, 47, 0.08);
+  --shadow-hover: 0 8px 30px rgba(10, 25, 47, 0.12);
   --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
   --radius-pill: 999px;
-  --transition-smooth: all 0.3s ease;
+  --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-fast: all 0.18s ease;
   --navbar-height: 76px;
 }
@@ -167,15 +168,19 @@ a {
 }
 
 .glass-panel {
-  background: transparent;
+  background: var(--surface-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-md);
-  box-shadow: none;
-  transition: border-color 0.25s ease;
+  box-shadow: var(--shadow-soft);
+  transition: var(--transition-smooth);
 }
 
 .glass-panel:hover {
   border-color: var(--depa-yellow-muted);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
 }
 
 /* Editorial kicker — no yellow line, just refined typography */
@@ -207,14 +212,16 @@ a {
 }
 
 .btn-primary {
-  background: var(--depa-navy);
+  background: linear-gradient(135deg, var(--depa-navy), #082440);
   color: #ffffff;
-  border: 1px solid var(--depa-navy);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 4px 12px rgba(12, 47, 83, 0.15);
 }
 
 .btn-primary:hover {
-  background: #082440;
-  border-color: #082440;
+  background: linear-gradient(135deg, #082440, #041424);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(12, 47, 83, 0.25);
 }
 
 .btn-outline {
