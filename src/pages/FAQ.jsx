@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { ChevronDown, ChevronUp, Search, X } from 'lucide-react';
+import PageReturn from '../components/PageReturn';
 import faqData from '../data/faqData';
 import './FAQ.css';
 
@@ -67,6 +68,7 @@ export default function FAQ() {
 
   return (
     <div className="faq-page container">
+      <PageReturn />
       <div className="faq-header">
         <span className="section-kicker">{t('faq.kicker', 'Get answers')}</span>
         <h1 className="faq-title">{t('faq.title', 'Frequently Asked Questions')}</h1>

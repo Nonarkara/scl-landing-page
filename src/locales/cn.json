@@ -17,6 +17,7 @@
     "openMenu": "打开菜单",
     "closeMenu": "关闭菜单",
     "testimonials": "校友之声",
+    "sources": "来源档案",
     "faculty": "师资",
     "faq": "常见问题",
     "methodology": "方法论"
@@ -89,9 +90,9 @@
     "highlight": "未来",
     "title2": "智慧泰国",
     "emailPlaceholder": "请输入您的电子邮箱",
-    "waitlistCta": "加入 SCL #7 候补名单",
-    "waitlistSuccess": "感谢！SCL #7 开放申请时我们会通知您。",
-    "brochure": "下载课程手册",
+    "waitlistCta": "邮件登记 SCL #7 兴趣",
+    "waitlistSuccess": "正在打开邮件应用，以便向 depa 发送您对 SCL #7 的兴趣登记。",
+    "brochure": "索取课程手册",
     "statAlumni": "校友",
     "statProvinces": "府"
   },
@@ -201,7 +202,7 @@
       "economy": "智慧城市项目总投资超 119 亿泰铢",
       "mobility": "泰国市政当局最关注的领域",
       "energy": "EGAT + SWOC 为 SCL 考察合作伙伴",
-      "people": "5 届共培训 223 位领导者",
+      "people": "6 届共 306 条已核验校友记录",
       "living": "远程医疗已覆盖 18 个府",
       "governance": "目标：2027 年建成 105 座智慧城市"
     }
@@ -289,9 +290,9 @@
     "highlight": "未来",
     "title2": "智慧泰国",
     "emailPlaceholder": "输入您的电子邮件地址",
-    "waitlistCta": "加入 SCL #7 候补名单",
-    "waitlistSuccess": "谢谢！SCL #7 开放时我们会通知您。",
-    "brochure": "下载手册",
+    "waitlistCta": "邮件登记 SCL #7 兴趣",
+    "waitlistSuccess": "正在打开邮件应用，以便向 depa 发送您对 SCL #7 的兴趣登记。",
+    "brochure": "索取课程手册",
     "statAlumni": "校友",
     "statProvinces": "省份"
   },
@@ -352,8 +353,9 @@
     "sendUpdate": "发送更新至 scp@depa.or.th",
     "updateBtn": "职位或所在地有变化？点击这里",
     "insightsTitle": "SCL 数据洞察",
-    "insightsEditorialLead": "每年两期，每期约八十位领导者，至今已运行五年——这张网络如今几乎覆盖全国大部分地区。",
+    "insightsEditorialLead": "已发布六期课程，共 306 条经核验校友记录。网络覆盖政府机构、地方政府、国有企业、学界与私营运营方。",
     "share": "分享",
+    "shareCopied": "链接已复制",
     "totalLeaders": "领导者总数",
     "provincesReached": "覆盖省份",
     "topSector": "最多领域",
@@ -423,8 +425,8 @@
     "sourceNote": "本页链接到 depa 当前发布 cohort 的官方文章，以及 depa 发布的校友公告名单。",
     "rights": "© 2026 泰国数字经济促进局（depa）版权所有。",
     "privacyPolicy": "隐私政策",
-    "termsOfService": "使用条款",
-    "dataProtection": "数据保护",
+    "termsOfService": "来源方法",
+    "dataProtection": "数据更正",
     "disclaimer": "本网站由泰国数字经济促进局（depa）运营，隶属于泰国数字经济与社会部。校友数据来自 depa 官方公告，仅供信息参考。"
   },
   "index": {

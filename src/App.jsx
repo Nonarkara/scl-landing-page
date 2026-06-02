@@ -11,6 +11,7 @@ import FAQ from './pages/FAQ';
 import CurriculumPage from './pages/CurriculumPage';
 import GalleryPage from './pages/GalleryPage';
 import MethodologyPage from './pages/MethodologyPage';
+import SourceArchivePage from './pages/SourceArchivePage';
 import './App.css';
 
 function App() {
@@ -111,6 +112,7 @@ function App() {
           <Route path="/faculty" element={<Faculty />} />
           <Route path="/alumni" element={<AlumniPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/sources" element={<SourceArchivePage />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="*" element={<Home />} />
         </Routes>

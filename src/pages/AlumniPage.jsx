@@ -1,10 +1,14 @@
 import React from 'react';
 import Alumni from '../components/Alumni';
+import PageReturn from '../components/PageReturn';
 
 export default function AlumniPage() {
   return (
     <div style={{ paddingTop: '80px' }}>
-      <Alumni />
+      <div className="container">
+        <PageReturn />
+      </div>
+      <div className="sub-page-wrap"><Alumni /></div>
     </div>
   );
 }

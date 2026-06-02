@@ -117,6 +117,16 @@ a {
   scroll-margin-top: var(--navbar-height);
 }
 
+/* Sub-page layout: PageReturn sits above the main section, so the section's
+   own top padding would create a double-gap. Collapse it to breathing room only. */
+.sub-page-wrap > section {
+  padding-top: 8px;
+}
+
+.curriculum-page .curriculum-section {
+  padding-top: 8px;
+}
+
 /* Grid background — subtler */
 .grid-bg {
   position: fixed;

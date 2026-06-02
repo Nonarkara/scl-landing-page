@@ -17,6 +17,7 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu",
     "testimonials": "Voices",
+    "sources": "Sources",
     "faculty": "Faculty",
     "faq": "FAQ",
     "methodology": "Methodology"
@@ -89,9 +90,9 @@
     "highlight": "Future",
     "title2": "of Smart Thailand",
     "emailPlaceholder": "Enter your email address",
-    "waitlistCta": "Join SCL #7 Waitlist",
-    "waitlistSuccess": "Thank you! We'll notify you when SCL #7 opens.",
-    "brochure": "Download Brochure",
+    "waitlistCta": "Email SCL #7 Interest",
+    "waitlistSuccess": "Your email app is opening so depa can receive your SCL #7 interest.",
+    "brochure": "Request Brochure",
     "statAlumni": "Alumni",
     "statProvinces": "Provinces"
   },
@@ -201,7 +202,7 @@
       "economy": "THB 11.9B+ invested through smart city programs",
       "mobility": "Most-requested pillar by Thai municipalities",
       "energy": "EGAT + SWOC among SCL study-visit partners",
-      "people": "223 leaders trained across 5 cohorts",
+      "people": "306 verified alumni records across 6 cohorts",
       "living": "Telemedicine deployed in 18 provinces",
       "governance": "Target: 105 smart cities by 2027"
     }
@@ -289,9 +290,9 @@
     "highlight": "Future",
     "title2": "of Smart Thailand",
     "emailPlaceholder": "Enter your email address",
-    "waitlistCta": "Join SCL #7 Waitlist",
-    "waitlistSuccess": "Thank you! We'll notify you when SCL #7 opens.",
-    "brochure": "Download Brochure",
+    "waitlistCta": "Email SCL #7 Interest",
+    "waitlistSuccess": "Your email app is opening so depa can receive your SCL #7 interest.",
+    "brochure": "Request Brochure",
     "statAlumni": "Alumni",
     "statProvinces": "Provinces"
   },
@@ -352,8 +353,9 @@
     "sendUpdate": "Send Update to scp@depa.or.th",
     "updateBtn": "Position or location changed? Click here",
     "insightsTitle": "SCL Insights",
-    "insightsEditorialLead": "Two cohorts a year. About eighty leaders per cohort. Five years in — and the network now reaches across most of the country.",
+    "insightsEditorialLead": "Six published cohorts. 306 verified alumni records. The network now spans public agencies, local governments, state enterprises, academia, and private operators.",
     "share": "Share",
+    "shareCopied": "Link copied",
     "totalLeaders": "Total Leaders",
     "provincesReached": "Provinces Reached",
     "topSector": "Top Sector",
@@ -423,8 +425,8 @@
     "sourceNote": "This landing page links to depa's official article for the current published cohort and depa announcement lists for alumni data.",
     "rights": "© 2026. This is an independent information page about the depa SCL program.",
     "privacyPolicy": "Privacy Policy",
-    "termsOfService": "Terms of Use",
-    "dataProtection": "Data Protection",
+    "termsOfService": "Source Methodology",
+    "dataProtection": "Data Correction",
     "disclaimer": "Not officially affiliated with depa. All information is for reference only."
   },
   "index": {

@@ -201,9 +201,100 @@
   margin-bottom: 6px;
 }
 
+/* ---- Verified external watch ---- */
+.scl-news-external {
+  margin-top: 48px;
+  padding-top: 30px;
+  border-top: 1px solid var(--border-strong);
+}
+
+.scl-news-external-head {
+  max-width: 720px;
+  margin-bottom: 22px;
+}
+
+.scl-news-external-title {
+  font-size: clamp(1.2rem, 4vw, 1.55rem);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  margin-bottom: 10px;
+}
+
+.scl-news-external-desc {
+  color: var(--text-secondary);
+  font-size: 0.94rem;
+  line-height: 1.6;
+}
+
+.scl-news-external-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.scl-news-external-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 18px;
+  background: var(--surface-strong);
+  border: 1px solid var(--border-strong);
+}
+
+.scl-news-external-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 12px;
+  margin-bottom: 12px;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.scl-news-external-card h4 {
+  font-size: 1rem;
+  line-height: 1.22;
+  letter-spacing: -0.02em;
+  margin-bottom: 9px;
+}
+
+.scl-news-external-card p {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin-bottom: 18px;
+}
+
+.scl-news-external-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: auto;
+  color: var(--depa-navy);
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.scl-news-external-link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--depa-yellow);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
 /* ---- Tablet ---- */
 @media (min-width: 560px) {
   .scl-news-visits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .scl-news-external-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -231,6 +322,11 @@
 
   .scl-news-visits-grid {
     grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  .scl-news-external-grid {
+    grid-template-columns: repeat(3, 1fr);
     gap: 18px;
   }
 }

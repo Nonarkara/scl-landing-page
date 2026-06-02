@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Share2 } from 'lucide-react';
 import './CohortInsights.css';
@@ -6,6 +6,7 @@ import { alumniBatches } from '../data/program';
 
 const CohortInsights = ({ allEntries, demographics }) => {
   const { t } = useTranslation();
+  const [shareCopied, setShareCopied] = useState(false);
 
   const totalProvinces = 77;
   const representedProvinces = demographics.provinces ? Object.keys(demographics.provinces).length : 0;
@@ -77,18 +78,49 @@ const CohortInsights = ({ allEntries, demographics }) => {
     6: '#67e8f9'
   };
 
+  const handleShare = async () => {
+    const basePath = import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL.replace(/\/$/, '');
+    const shareUrl = `${window.location.origin}${basePath}/alumni`;
+    const shareData = {
+      title: t('alumni.title', 'Executive Alumni'),
+      text: t('alumni.subtitle', {
+        count: allEntries.length,
+        cohorts: alumniBatches.length
+      }),
+      url: shareUrl
+    };
+
+    try {
+      if (navigator.share) {
+        await navigator.share(shareData);
+        return;
+      }
+
+      if (navigator.clipboard) {
+        await navigator.clipboard.writeText(shareUrl);
+        setShareCopied(true);
+        window.setTimeout(() => setShareCopied(false), 2200);
+        return;
+      }
+    } catch (error) {
+      if (error?.name === 'AbortError') return;
+    }
+
+    window.location.href = `mailto:?subject=${encodeURIComponent(shareData.title)}&body=${encodeURIComponent(`${shareData.text}\n\n${shareUrl}`)}`;
+  };
+
   return (
     <div className="cohort-insights-wrapper animate-fade-in">
       <div className="insights-header">
         <h3 className="insights-title">{t('alumni.insightsTitle', 'SCL Insights')}</h3>
-        <button className="btn btn-ghost btn-sm">
+        <button type="button" className="btn btn-ghost btn-sm" onClick={handleShare}>
           <Share2 size={16} className="mr-2" />
-          {t('alumni.share', 'Share')}
+          {shareCopied ? t('alumni.shareCopied', 'Link copied') : t('alumni.share', 'Share')}
         </button>
       </div>
 
       <p className="insights-editorial-lead">
-        {t('alumni.insightsEditorialLead', 'Two cohorts a year. About eighty leaders per cohort. Five years in — and the network reaches across most of the country.')}
+        {t('alumni.insightsEditorialLead', 'Six published cohorts. 306 verified alumni records. The network now spans public agencies, local governments, state enterprises, academia, and private operators.')}
       </p>
 
       <div className="insights-grid-top">

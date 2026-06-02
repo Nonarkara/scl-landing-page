@@ -10,7 +10,7 @@ const NAV_LINKS = [
   { path: '/methodology', key: 'methodology', label: 'Methodology' },
   { path: '/?tab=journey', key: 'journey', label: 'The Journey' },
   { path: '/alumni', key: 'alumni', label: 'Alumni' },
-  { path: '/?tab=testimonials', key: 'testimonials', label: 'Voices' },
+  { path: '/sources', key: 'sources', label: 'Sources' },
   { path: '/faculty', key: 'faculty', label: 'Faculty' },
   { path: '/faq', key: 'faq', label: 'FAQ' }
 ];

@@ -37,6 +37,9 @@ const HeroSection = () => {
   const handleWaitlistSubmit = (e) => {
     e.preventDefault();
     if (waitlistEmail) {
+      const subject = encodeURIComponent('SCL #7 Interest');
+      const body = encodeURIComponent(`Please notify me when SCL #7 opens.\n\nEmail: ${waitlistEmail}`);
+      window.location.href = `mailto:scp@depa.or.th?subject=${subject}&body=${body}`;
       setWaitlistSubmitted(true);
       setTimeout(() => setWaitlistSubmitted(false), 5000);
       setWaitlistEmail('');
@@ -88,13 +91,13 @@ const HeroSection = () => {
                   />
                 </div>
                 <button type="submit" className="btn btn-primary waitlist-submit">
-                  {t('hero.waitlistCta', 'Join SCL #7 Waitlist')}
+                  {t('hero.waitlistCta', 'Email SCL #7 Interest')}
                 </button>
               </form>
               {waitlistSubmitted && (
                 <div className="waitlist-success">
                   <CheckCircle2 size={16} />
-                  {t('hero.waitlistSuccess', "Thank you! We'll notify you when SCL #7 opens.")}
+                  {t('hero.waitlistSuccess', 'Your email app is opening so depa can receive your SCL #7 interest.')}
                 </div>
               )}
 
@@ -104,7 +107,7 @@ const HeroSection = () => {
                   className="btn btn-outline btn-brochure"
                 >
                   <Download size={16} />
-                  {t('hero.brochure', 'Download Brochure')}
+                  {t('hero.brochure', 'Request Brochure')}
                 </a>
               </div>
             </div>

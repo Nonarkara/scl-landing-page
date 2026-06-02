@@ -2,6 +2,7 @@ import { ArrowUpRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import {
   newsLabels,
+  latestSmartCityUpdates,
   pickNewsText,
   sclDispatch,
   siteVisits,
@@ -75,6 +76,35 @@ export default function SmartCityNews() {
             <span className="scl-news-also-label">{pick(newsLabels.alsoLabel)}</span>
             {pick(newsLabels.alsoVisited)}
           </p>
+        </div>
+
+        <div className="scl-news-external">
+          <div className="scl-news-external-head">
+            <h3 className="scl-news-external-title">{pick(newsLabels.externalTitle)}</h3>
+            <p className="scl-news-external-desc">{pick(newsLabels.externalDesc)}</p>
+          </div>
+
+          <ul className="scl-news-external-grid">
+            {latestSmartCityUpdates.map((item) => (
+              <li key={item.id} className="scl-news-external-card">
+                <div className="scl-news-external-meta">
+                  <span>{item.source}</span>
+                  <span>{pick(item.date)}</span>
+                </div>
+                <h4>{pick(item.headline)}</h4>
+                <p>{pick(item.summary)}</p>
+                <a
+                  href={item.sourceUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="scl-news-external-link"
+                >
+                  {pick(newsLabels.externalSourceLabel)}
+                  <ArrowUpRight size={15} />
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

@@ -26,6 +26,7 @@ const Footer = () => {
             <Link to="/curriculum">{t('nav.about')}</Link>
             <Link to="/?tab=journey">{t('nav.journey')}</Link>
             <Link to="/alumni">{t('nav.alumni')}</Link>
+            <Link to="/sources">{t('nav.sources')}</Link>
             <Link to="/gallery">{t('nav.gallery')}</Link>
           </div>
         </div>
@@ -57,11 +58,15 @@ const Footer = () => {
         <div className="footer-legal-content">
           <p className="footer-rights">{t('footer.rights')}</p>
           <div className="footer-legal-links">
-            <Link to="/faq">{t('footer.privacyPolicy')}</Link>
+            <a href="https://www.depa.or.th/en/privacy-policy/governance" target="_blank" rel="noopener noreferrer">
+              {t('footer.privacyPolicy')}
+            </a>
             <span className="footer-legal-sep" aria-hidden="true" />
-            <Link to="/faq">{t('footer.termsOfService')}</Link>
+            <Link to="/methodology">{t('footer.termsOfService')}</Link>
             <span className="footer-legal-sep" aria-hidden="true" />
-            <Link to="/faq">{t('footer.dataProtection')}</Link>
+            <a href="mailto:scp@depa.or.th?subject=SCL%20Data%20Correction">
+              {t('footer.dataProtection')}
+            </a>
           </div>
           <p className="footer-disclaimer">{t('footer.disclaimer')}</p>
         </div>

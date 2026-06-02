@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Linkedin, Mail, ChevronDown, ChevronUp } from 'lucide-react';
+import PageReturn from '../components/PageReturn';
 import './Faculty.css';
 
 const facultyData = [
@@ -152,6 +153,7 @@ export default function Faculty() {
 
   return (
     <div className="faculty-page container">
+      <PageReturn />
       <div className="faculty-header">
         <span className="section-kicker">{t('faculty.kicker', 'World-class expertise')}</span>
         <h1 className="faculty-title">{t('faculty.title', 'Faculty & Speakers')}</h1>

@@ -5,14 +5,14 @@
 const B = import.meta.env.BASE_URL || '/';
 const scl6 = (name) => `${B}scl6/${name}`;
 
-// Distinct hero image — the assembled SCL #6 cohort. Kept separate from the news
-// lead photo (the graduation/certificate shot) so no single image repeats large
-// on the home page (§ photo-reuse).
-export const heroFeaturePhoto = scl6('S__1335315_0.jpg');
+// Distinct hero image — an active site-visit scene, not a ceremonial photo.
+// Kept separate from the news lead photo so the first viewport feels current
+// and field-based rather than staged.
+export const heroFeaturePhoto = scl6('S__1335313_0.jpg');
 export const heroFeaturePhotoAlt = {
-  en: 'The SCL #6 cohort assembled for the program',
-  th: 'ผู้เข้าร่วมหลักสูตร SCL รุ่นที่ 6 พร้อมหน้ากัน',
-  cn: 'SCL 第六期全体学员合影',
+  en: 'SCL #6 participants exploring an immersive digital center during a site visit',
+  th: 'ผู้เข้าร่วม SCL รุ่นที่ 6 ระหว่างศึกษาดูงานในศูนย์นวัตกรรมดิจิทัลแบบเสมือนจริง',
+  cn: 'SCL 第六期学员在沉浸式数字中心实地考察',
 };
 
 export const newsLabels = {
@@ -56,6 +56,21 @@ export const newsLabels = {
     en: 'Smart Water Operation Center (SWOC) · PROEN Data Center, CAT Tower · Creative Economy Agency (CEA) · Huawei Technologies (Thailand)',
     th: 'ศูนย์ปฏิบัติการน้ำอัจฉริยะ (SWOC) · PROEN Data Center อาคาร CAT Tower · สำนักงานส่งเสริมเศรษฐกิจสร้างสรรค์ (CEA) · หัวเว่ย เทคโนโลยี (ประเทศไทย)',
     cn: '智慧水务运营中心（SWOC）· CAT Tower 内的 PROEN 数据中心 · 创意经济促进局（CEA）· 华为技术（泰国）',
+  },
+  externalTitle: {
+    en: 'Latest verified Thailand smart-city watch',
+    th: 'ข่าวเมืองอัจฉริยะไทยที่ตรวจสอบลิงก์แล้ว',
+    cn: '已核验链接的泰国智慧城市最新动态',
+  },
+  externalDesc: {
+    en: 'A small source-checked feed. Every item below links to a live source; items without a published day are labeled by program round instead of inventing a date.',
+    th: 'ฟีดสั้น ๆ ที่ตรวจสอบแหล่งที่มาแล้ว ทุกชิ้นด้านล่างมีลิงก์จริง หากต้นทางไม่ระบุวันที่เผยแพร่ จะใช้รอบโครงการแทนการเดาวันที่',
+    cn: '这是经过来源核验的小型动态栏。每一项都链接到真实来源；若来源未公布具体日期，则以项目轮次标注而不臆造日期。',
+  },
+  externalSourceLabel: {
+    en: 'Open source',
+    th: 'เปิดต้นทาง',
+    cn: '打开来源',
   },
 };
 
@@ -145,6 +160,89 @@ export const siteVisits = [
       th: '“Smart Infrastructure in Action” โครงสร้างพื้นฐานอัจฉริยะที่นำไปใช้จริงในระดับเมือง',
       cn: '“Smart Infrastructure in Action”——城市级智能基础设施的实际应用。',
     },
+  },
+];
+
+export const latestSmartCityUpdates = [
+  {
+    id: 'eeciti-mou-2026-05-18',
+    source: 'SAP News',
+    date: {
+      en: '18 May 2026',
+      th: '18 พ.ค. 2569',
+      cn: '2026 年 5 月 18 日',
+    },
+    headline: {
+      en: 'EECO signs MOU to study investment in the EECiti smart-city project',
+      th: 'EECO ลงนาม MOU ศึกษาการลงทุนโครงการเมืองอัจฉริยะ EECiti',
+      cn: 'EECO 签署 MOU，研究 EECiti 智慧城市项目投资',
+    },
+    summary: {
+      en: 'The agreement covers feasibility study work for the EEC Business Center and Livable Smart City, including infrastructure, utilities, comprehensive smart-city development, and smart-city management.',
+      th: 'ข้อตกลงครอบคลุมการศึกษาความเป็นไปได้ของ EEC Business Center and Livable Smart City ทั้งโครงสร้างพื้นฐาน สาธารณูปโภค การพัฒนาเมืองอัจฉริยะ และการบริหารจัดการเมือง',
+      cn: '该协议将研究 EEC Business Center and Livable Smart City 的投资可行性，涵盖基础设施、公用事业、综合智慧城市开发与智慧城市管理。',
+    },
+    sourceUrl: 'https://www.sapgw.com/en/politics/20260518-14.html',
+  },
+  {
+    id: 'depa-cloud-local-smart-city-2569-round3',
+    source: 'depa',
+    date: {
+      en: 'FY 2026 · Round 3',
+      th: 'ปีงบประมาณ 2569 · ครั้งที่ 3',
+      cn: '2026 财年 · 第三轮',
+    },
+    headline: {
+      en: 'depa opens Round 3 for local smart-city cloud infrastructure applicants',
+      th: 'depa เปิดรับสมัครครั้งที่ 3 โครงการคลาวด์เพื่อเมืองอัจฉริยะท้องถิ่น',
+      cn: 'depa 开放地方智慧城市云基础设施项目第三轮申请',
+    },
+    summary: {
+      en: 'The official depa notice invites local government agencies to join the FY 2026 project for upgrading cloud infrastructure for local smart cities.',
+      th: 'ประกาศทางการของ depa เชิญหน่วยงานภาครัฐท้องถิ่นเข้าร่วมโครงการยกระดับโครงสร้างพื้นฐานคลาวด์เพื่อเมืองอัจฉริยะท้องถิ่น ประจำปีงบประมาณ 2569',
+      cn: 'depa 官方公告邀请地方政府机构参与 2026 财年地方智慧城市云基础设施升级项目。',
+    },
+    sourceUrl: 'https://www.depa.or.th/en/article-view/IN-01807-2569',
+  },
+  {
+    id: 'smart-living-better-living-2026-03-20',
+    source: 'Thairath',
+    date: {
+      en: '20 Mar 2026',
+      th: '20 มี.ค. 2569',
+      cn: '2026 年 3 月 20 日',
+    },
+    headline: {
+      en: 'depa expands Smart Living, Better Living for community-level smart-city foundations',
+      th: 'depa ขยาย Smart Living, Better Living วางฐานเมืองอัจฉริยะระดับชุมชน',
+      cn: 'depa 扩大 Smart Living, Better Living 项目，夯实社区级智慧城市基础',
+    },
+    summary: {
+      en: 'The report says the 2026 program targets community quality of life and safety through solar CCTV, smart lighting, IoT agriculture, and digital skills.',
+      th: 'รายงานระบุว่าโครงการปี 2569 มุ่งยกระดับคุณภาพชีวิตและความปลอดภัยระดับชุมชนผ่านกล้อง CCTV พลังงานแสงอาทิตย์ ไฟส่องสว่างอัจฉริยะ IoT เกษตร และทักษะดิจิทัล',
+      cn: '报道指出，2026 年项目将通过太阳能 CCTV、智慧照明、农业 IoT 与数字技能提升社区生活质量与安全。',
+    },
+    sourceUrl: 'https://en.thairath.co.th/money/business_marketing/marketing_trends/2921636',
+  },
+  {
+    id: 'pattaya-digital-twin-2026-01-17',
+    source: 'Nation Thailand',
+    date: {
+      en: '17 Jan 2026',
+      th: '17 ม.ค. 2569',
+      cn: '2026 年 1 月 17 日',
+    },
+    headline: {
+      en: 'GISTDA proposes basemap, 3D digital twin, and real-time data for Pattaya Smart City',
+      th: 'GISTDA เสนอแผนที่ฐาน Digital Twin 3D และข้อมูลเรียลไทม์สำหรับ Pattaya Smart City',
+      cn: 'GISTDA 为 Pattaya Smart City 提出底图、3D 数字孪生与实时数据方案',
+    },
+    summary: {
+      en: 'The proposal would support Pattaya with high-resolution basemaps, scenario simulation, and real-time monitoring for tourism, safety, flood, air, and traffic management.',
+      th: 'ข้อเสนอช่วยยกระดับพัทยาด้วยแผนที่ความละเอียดสูง การจำลองสถานการณ์ และการติดตามแบบเรียลไทม์ ครอบคลุมท่องเที่ยว ความปลอดภัย น้ำท่วม อากาศ และจราจร',
+      cn: '该方案以高分辨率底图、场景模拟与实时监测支撑芭堤雅在旅游、安全、防洪、空气与交通管理方面的智慧城市建设。',
+    },
+    sourceUrl: 'https://www.nationthailand.com/news/general/40061345',
   },
 ];
 
