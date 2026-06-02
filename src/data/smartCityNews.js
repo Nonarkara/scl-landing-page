@@ -59,11 +59,15 @@ export const newsLabels = {
   },
 };
 
+// Separate photo for the hero teaser thumbnail — must differ from the news lead (§11 photo rule).
+export const heroTeaserPhoto = scl6('S__1335307_0.jpg'); // Dr. Passakon at the SCL#6 podium
+
 // Lead story — the official closing of SCL #6.
 export const sclDispatch = {
   id: 'scl6-graduation-2026-05-26',
   date: '2026-05-26',
-  photo: scl6('S__1392656_0.jpg'),
+  // Graduation ceremony: full cohort holding certificates — correct lead image for "SCL #6 has graduated"
+  photo: scl6('S__1335317.jpg'),
   photoAlt: {
     en: 'SCL #6 graduates with their certificates at the closing ceremony',
     th: 'ผู้สำเร็จหลักสูตร SCL รุ่นที่ 6 พร้อมสัมฤทธิบัตรในพิธีปิด',
@@ -130,7 +134,7 @@ export const siteVisits = [
   },
   {
     id: 'astra',
-    photo: scl6('S__1335317.jpg'),
+    photo: scl6('S__1392656_0.jpg'),  // Astra group photo — correct for this site-visit card
     org: {
       en: 'Astra Communication Service',
       th: 'บริษัท แอสตรา คอมมิวนิเคชั่น เซอร์วิส',

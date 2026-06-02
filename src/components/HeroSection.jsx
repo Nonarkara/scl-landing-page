@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { ArrowRight, Download, Mail, CheckCircle2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { programDetails } from '../data/program';
-import { heroFeaturePhoto, heroFeaturePhotoAlt, newsLabels, pickNewsText, sclDispatch } from '../data/smartCityNews';
+import { heroFeaturePhoto, heroFeaturePhotoAlt, heroTeaserPhoto, newsLabels, pickNewsText, sclDispatch } from '../data/smartCityNews';
 import IndexTeaser from './IndexTeaser';
 import './HeroSection.css';
 
@@ -121,7 +121,7 @@ const HeroSection = () => {
               }}
             >
               <span className="hero-latest-thumb">
-                <img src={sclDispatch.photo} alt="" loading="eager" />
+                <img src={heroTeaserPhoto} alt="" loading="eager" />
               </span>
               <span className="hero-latest-body">
                 <span className="hero-latest-label">{pickNews(newsLabels.updatedLabel)}</span>

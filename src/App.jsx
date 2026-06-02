@@ -112,6 +112,7 @@ function App() {
           <Route path="/alumni" element={<AlumniPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </main>
       <Footer />
