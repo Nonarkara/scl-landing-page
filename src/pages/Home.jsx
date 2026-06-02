@@ -14,23 +14,26 @@ const Home = () => {
   const { t } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
   const activeTab = searchParams.get('tab') || 'about';
-  const tabContentRef = useRef(null);
-  
+  const tabsRef = useRef(null);
+
+  // Land the tab strip just below the fixed navbar (its bottom is ~76px), never under it.
+  const NAV_OFFSET = 90;
+
   const setActiveTab = (tabId) => {
     setSearchParams({ tab: tabId });
   };
 
   useEffect(() => {
-    if (tabContentRef.current) {
-      const y = tabContentRef.current.getBoundingClientRect().top + window.scrollY - 100;
+    if (tabsRef.current) {
+      const y = tabsRef.current.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
       window.scrollTo({ top: y, behavior: 'smooth' });
     }
   }, [activeTab]);
 
   useEffect(() => {
-    // On initial load with a tab param, scroll to tabs without animation
-    if (searchParams.get('tab') && tabContentRef.current) {
-      const y = tabContentRef.current.getBoundingClientRect().top + window.scrollY - 100;
+    // On initial load with a tab param, bring the tab strip into view (below the navbar)
+    if (searchParams.get('tab') && tabsRef.current) {
+      const y = tabsRef.current.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
       window.scrollTo({ top: y, behavior: 'instant' });
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -59,7 +62,7 @@ const Home = () => {
       {/* Tab System Section */}
       <section className="tabs-container section">
         <div className="container">
-          <div className="tabs-navigation-wrapper">
+          <div className="tabs-navigation-wrapper" ref={tabsRef}>
             <div className="tabs-navigation">
               {tabs.map((tab) => (
                 <button
@@ -74,7 +77,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="tab-content-area" ref={tabContentRef}>
+          <div className="tab-content-area">
             {activeTab === 'about' && (
               <div className="tab-pane animate-fade-in">
                 <AboutProgram />

@@ -231,8 +231,8 @@ export const alumniBatches = [
   {
     id: 3,
     year: '2023',
-    link: 'https://www.depa.or.th/storage/app/media/file-announce/Announcement%20of%20the%20list%20of%20people%20who%20are%20eligible%20to%20attend%20the%20training%20Smart%20City%20Leadership%20Program%20_3_20230426.pdf',
-    kind: 'pdf',
+    link: 'https://www.depa.or.th/th/article-view/smart-city-leadership-program-3-scl-3',
+    kind: 'page',
   },
   {
     id: 2,

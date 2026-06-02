@@ -17,7 +17,7 @@ export const spotlightLabels = {
   description: {
     en: 'A snapshot of recent public mentions — governors, mayors, and executives from the SCL network making news in their cities and companies. Each links to its original source.',
     th: 'ภาพรวมการปรากฏในสื่อล่าสุด ทั้งผู้ว่าราชการจังหวัด นายกเทศมนตรี และผู้บริหารจากเครือข่าย SCL ที่กำลังสร้างความเคลื่อนไหวในเมืองและองค์กรของตน แต่ละรายการเชื่อมไปยังแหล่งข่าวต้นทาง',
-    cn: '近期公开报道的缩影——来自 SCL 网络的省长、市长与企业高管，正在各自的城市与企业中成为新闻。每条均链接至原始来源。',
+    cn: '近期公开报道的缩影——来自 SCL 网络的府尹、市长与企业高管，正在各自的城市与企业中成为新闻。每条均链接至原始来源。',
   },
   readLabel: { en: 'Read the source', th: 'อ่านแหล่งข่าว', cn: '阅读来源' },
   publicTag: { en: 'Public sector', th: 'ภาครัฐ', cn: '公共部门' },
@@ -41,12 +41,12 @@ export const alumniSpotlight = [
       cn: '巴吞他尼府兰实市市长',
     },
     news: {
-      en: 'Drove the “Rangsit Smart City Showcases” — held up as a national model for applying digital innovation to city services.',
-      th: 'ขับเคลื่อนงาน “Rangsit Smart City Showcases” ที่ถูกยกเป็นต้นแบบระดับประเทศในการนำนวัตกรรมดิจิทัลมาพัฒนาบริการเมือง',
-      cn: '主导“兰实智慧城市展示”，被视为以数字创新提升城市服务的全国样板。',
+      en: 'Set out a four-point agenda to drive Rangsit toward a people-first smart city.',
+      th: 'แถลงนโยบาย 4 ด้าน มุ่งพัฒนานครรังสิตสู่การเป็นเมืองอัจฉริยะที่ยึดประชาชนเป็นศูนย์กลาง',
+      cn: '公布四大施政方针，推动兰实迈向以人为本的智慧城市。',
     },
-    source: 'Royal Thai Government',
-    url: 'https://www.thaigov.go.th/news/contents/ministry_details/89912',
+    source: 'Banmuang',
+    url: 'https://www.banmuang.co.th/news/region/434200',
   },
   {
     id: 'khonkaen',
@@ -115,7 +115,7 @@ export const alumniSpotlight = [
     news: {
       en: 'Full circle: royally appointed Governor of Nakhon Sawan — the province where she joined SCL as deputy governor, now leading it herself.',
       th: 'ครบวงจร: ได้รับโปรดเกล้าฯ แต่งตั้งเป็นผู้ว่าราชการจังหวัดนครสวรรค์ — จังหวัดที่เธอเข้าร่วม SCL ในฐานะรองผู้ว่าฯ และวันนี้กลับมานั่งเก้าอี้ผู้ว่าราชการจังหวัดเต็มตัว',
-      cn: '画下圆满一笔：获皇家任命为那空沙旺府府尹——正是她参加 SCL 时担任副府尹的那个府，如今由她亲自执掌。',
+      cn: '故事画上圆满的句号：经皇家任命出任那空沙旺府府尹——正是她当年参加 SCL 时担任副府尹的那个府，如今由她亲自执掌。',
     },
     source: 'Thai PBS',
     url: 'https://www.thaipbs.or.th/news/content/358484',

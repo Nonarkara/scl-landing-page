@@ -11,7 +11,7 @@ export const sourceTypes = {
   },
   partner: {
     en: 'Partner / host',
-    th: 'หน่วยงานร่วม / เจ้าภาพพื้นที่',
+    th: 'หน่วยงานร่วม / เจ้าภาพสถานที่ดูงาน',
     cn: '合作方 / 接待单位',
   },
   government: {

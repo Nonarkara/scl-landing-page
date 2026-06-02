@@ -5,26 +5,27 @@
 const B = import.meta.env.BASE_URL || '/';
 const scl6 = (name) => `${B}scl6/${name}`;
 
-// Distinct hero image — an active site-visit scene, not a ceremonial photo.
-// Kept separate from the news lead photo so the first viewport feels current
-// and field-based rather than staged.
+// Hero image — the full SCL #6 cohort of city leaders assembled at the program
+// opening. It conveys the network's scale (the "meaningful networking" of the page)
+// and is distinct from every news/site-visit photo so nothing repeats on the home
+// page (§ photo-reuse). The stat overlay (alumni · provinces) reinforces the scale.
 export const heroFeaturePhoto = scl6('S__1335315_0.jpg');
 export const heroFeaturePhotoAlt = {
-  en: 'SCL #6 participants exploring an immersive digital center during a site visit',
-  th: 'ผู้เข้าร่วม SCL รุ่นที่ 6 ระหว่างศึกษาดูงานในศูนย์นวัตกรรมดิจิทัลแบบเสมือนจริง',
-  cn: 'SCL 第六期学员在沉浸式数字中心实地考察',
+  en: 'The SCL #6 cohort of city leaders assembled at the program opening',
+  th: 'ผู้นำเมืองรุ่นที่ 6 ของ SCL มารวมตัวกันในพิธีเปิดหลักสูตร',
+  cn: 'SCL 第六期的城市领导者在开班仪式上齐聚一堂',
 };
 
 export const newsLabels = {
   kicker: { en: 'Latest dispatch', th: 'ข่าวสารล่าสุด', cn: '最新动态' },
   title: {
     en: 'SCL #6 has graduated',
-    th: 'SCL รุ่นที่ 6 สำเร็จหลักสูตรอย่างเป็นทางการ',
+    th: 'SCL รุ่นที่ 6 สำเร็จหลักสูตรอย่างเป็นทางการแล้ว',
     cn: 'SCL 第六期正式结业',
   },
   description: {
     en: 'Seven intensive days, more than 30 national experts, and study visits across Thailand’s most advanced operating environments — the sixth cohort of depa’s Smart City Leadership Program closed on 26 May 2026.',
-    th: 'ตลอด 7 วันเต็ม วิทยากรผู้เชี่ยวชาญระดับประเทศกว่า 30 ท่าน และการศึกษาดูงานในพื้นที่ปฏิบัติการจริงที่ก้าวหน้าที่สุดของไทย หลักสูตรผู้นำการส่งเสริมเมืองอัจฉริยะ รุ่นที่ 6 ของ depa ปิดหลักสูตรเมื่อวันที่ 26 พฤษภาคม 2569',
+    th: 'ตลอด 7 วันเต็ม กับวิทยากรผู้เชี่ยวชาญระดับประเทศกว่า 30 ท่าน และการศึกษาดูงานในพื้นที่ปฏิบัติการจริงที่ก้าวหน้าที่สุดของไทย หลักสูตรผู้นำการส่งเสริมเมืองอัจฉริยะ รุ่นที่ 6 ของ depa ปิดหลักสูตรอย่างเป็นทางการเมื่อวันที่ 26 พฤษภาคม 2569',
     cn: '历时七天、逾 30 位国家级专家授课，并赴泰国最先进的实操现场考察——depa 智慧城市领导力课程第六期已于 2026 年 5 月 26 日圆满结业。',
   },
   updatedLabel: {
@@ -106,7 +107,7 @@ export const sclDispatch = {
   body: {
     en: 'On 26 May 2026, depa — led by Dr. Passakon Prathombutr — closed the sixth Smart City Leadership Program. The final day moved from national strategy to the front line: urban development under Thailand’s 14th National Plan (NESDC), investment promotion for smart cities (BOI), depa’s digital-economy mechanisms and Smart City Proposal guidance, the Mayor of Yala on building a people-centred smart city, and Bedrock Analytics on the City Digital Data Platform. Graduates received their certificates both on paper and as blockchain-verified NFTs.',
     th: 'เมื่อวันที่ 26 พฤษภาคม 2569 depa นำโดย ดร.ภาสกร ประถมบุตร ปิดหลักสูตรผู้นำการส่งเสริมเมืองอัจฉริยะ รุ่นที่ 6 อย่างเป็นทางการ วันสุดท้ายไล่เรียงตั้งแต่ยุทธศาสตร์ระดับชาติสู่การปฏิบัติจริง ทั้งการพัฒนาเมืองภายใต้แผนพัฒนาฯ ฉบับที่ 14 (สศช.) การส่งเสริมการลงทุนเมืองอัจฉริยะ (BOI) กลไกขับเคลื่อนเศรษฐกิจดิจิทัลและแนวทางเขียนข้อเสนอเมืองอัจฉริยะของ depa เส้นทางการสร้างเมืองอัจฉริยะโดยนายกเทศมนตรีนครยะลา และ City Digital Data Platform โดย Bedrock Analytics ผู้สำเร็จหลักสูตรได้รับสัมฤทธิบัตรทั้งรูปแบบกระดาษและรูปแบบ NFT บนเทคโนโลยีบล็อกเชน',
-    cn: '2026 年 5 月 26 日，depa 在 Dr. Passakon Prathombutr 的带领下为第六期智慧城市领导力课程举行结业典礼。最后一天的课程从国家战略延伸至一线实践：第十四个国家发展计划下的城市发展（NESDC）、智慧城市投资促进（BOI）、depa 的数字经济驱动机制与智慧城市提案撰写指引、也拉市市长分享以人为本的智慧城市建设之路，以及 Bedrock Analytics 讲解城市数字数据平台。结业学员同时获得纸质与区块链 NFT 两种形式的结业证书。',
+    cn: '2026 年 5 月 26 日，depa 在 Dr. Passakon Prathombutr 的带领下为第六期智慧城市领导力课程举行结业典礼。最后一天的课程从国家战略延伸至一线实践：第十四个国家发展计划下的城市发展（NESDC）、智慧城市投资促进（BOI）、depa 的数字经济驱动机制与智慧城市提案撰写指引、也拉市市长讲述以人为本的智慧城市建设之路，以及 Bedrock Analytics 对城市数字数据平台的讲解。结业学员同时获颁纸质与区块链 NFT 两种形式的结业证书。',
   },
   sourceUrl: 'https://www.depa.or.th/th/article-view/smart-city-leadership-program-6-scl-6',
 };
@@ -179,30 +180,10 @@ export const latestSmartCityUpdates = [
     },
     summary: {
       en: 'The agreement covers feasibility study work for the EEC Business Center and Livable Smart City, including infrastructure, utilities, comprehensive smart-city development, and smart-city management.',
-      th: 'ข้อตกลงครอบคลุมการศึกษาความเป็นไปได้ของ EEC Business Center and Livable Smart City ทั้งโครงสร้างพื้นฐาน สาธารณูปโภค การพัฒนาเมืองอัจฉริยะ และการบริหารจัดการเมือง',
-      cn: '该协议将研究 EEC Business Center and Livable Smart City 的投资可行性，涵盖基础设施、公用事业、综合智慧城市开发与智慧城市管理。',
+      th: 'ข้อตกลงครอบคลุมการศึกษาความเป็นไปได้ของโครงการ EEC Business Center and Livable Smart City ทั้งด้านโครงสร้างพื้นฐาน สาธารณูปโภค การพัฒนาเมืองอัจฉริยะแบบครบวงจร และการบริหารจัดการเมือง',
+      cn: '该协议将就 EEC Business Center and Livable Smart City 开展投资可行性研究，涵盖基础设施、公用事业、综合智慧城市开发与智慧城市管理。',
     },
     sourceUrl: 'https://www.sapgw.com/en/politics/20260518-14.html',
-  },
-  {
-    id: 'depa-cloud-local-smart-city-2569-round3',
-    source: 'depa',
-    date: {
-      en: 'FY 2026 · Round 3',
-      th: 'ปีงบประมาณ 2569 · ครั้งที่ 3',
-      cn: '2026 财年 · 第三轮',
-    },
-    headline: {
-      en: 'depa opens Round 3 for local smart-city cloud infrastructure applicants',
-      th: 'depa เปิดรับสมัครครั้งที่ 3 โครงการคลาวด์เพื่อเมืองอัจฉริยะท้องถิ่น',
-      cn: 'depa 开放地方智慧城市云基础设施项目第三轮申请',
-    },
-    summary: {
-      en: 'The official depa notice invites local government agencies to join the FY 2026 project for upgrading cloud infrastructure for local smart cities.',
-      th: 'ประกาศทางการของ depa เชิญหน่วยงานภาครัฐท้องถิ่นเข้าร่วมโครงการยกระดับโครงสร้างพื้นฐานคลาวด์เพื่อเมืองอัจฉริยะท้องถิ่น ประจำปีงบประมาณ 2569',
-      cn: 'depa 官方公告邀请地方政府机构参与 2026 财年地方智慧城市云基础设施升级项目。',
-    },
-    sourceUrl: 'https://www.depa.or.th/en/article-view/IN-01807-2569',
   },
   {
     id: 'smart-living-better-living-2026-03-20',
