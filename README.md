@@ -1,6 +1,6 @@
 # depa Smart City Leadership — scl.nonarkara.org
 
-**Six cohorts. 400+ alumni. 77 provinces. One website, built in a day.**
+**Six cohorts. 306 verified alumni records. 77 provinces. One website, built in a day.**
 
 ---
 
@@ -8,7 +8,7 @@
 
 [scl.nonarkara.org](https://scl.nonarkara.org) is the multilingual information site for the **Smart City Leadership (SCL)** programme — Thailand's flagship executive programme for city and provincial leaders, organised by the Digital Economy Promotion Agency (depa) under the Ministry of Digital Economy and Society.
 
-SCL has run six cohorts since 2022. Governors, mayors, CEOs, and provincial administrators come for seven days to learn how smart city projects actually get delivered — not in theory, but in practice. The programme has produced 400+ alumni across all 77 Thai provinces.
+SCL has run six cohorts since 2022. Governors, mayors, CEOs, and provincial administrators come for seven days to learn how smart city projects actually get delivered — not in theory, but in practice. The public directory currently contains 306 verified alumni records from depa's official cohort announcements.
 
 This site is not the official depa communications channel. It was built as an independent informational landing page to give the programme a cleaner, more honest public presence — something that reads as a working brief for senior leaders, not a promotional brochure.
 
@@ -47,7 +47,7 @@ For anyone building institutional websites for programmes they run or know deepl
 | `/` | Home — hero, programme overview, history timeline (Batches 1–6), curriculum, testimonials |
 | `/methodology` | Six academic frameworks + four applied tools |
 | `/faculty` | Eight faculty profiles with photos, tags, bios, and expandable research-verified background |
-| `/alumni` | 400+ alumni directory with search, sector filter, province map, and cohort insights |
+| `/alumni` | 306-record alumni directory with search, sector filter, province map, and cohort insights |
 | `/curriculum` | Programme structure and learning outcomes |
 | `/gallery` | Photo archive from all six cohorts |
 | `/faq` | 30+ questions covering eligibility, curriculum, logistics, certification |
@@ -62,7 +62,7 @@ Specific choices:
 
 - **No gradients, no rounded corners, no drop shadows.** The visual language is geometric and restrained. Hairline borders. Mono-accent (depa yellow). Hard edges.
 - **Anti-promotional copy.** "A serious short-format programme for leaders who need sharper judgment about how smart-city work actually gets delivered." Not a tagline. A description.
-- **Real data only.** 400+ alumni, 77 provinces, 6 cohorts, 42 hours, 7 days, 30+ speakers — all verifiable against depa's official announcements.
+- **Real data only.** 306 verified alumni records, 77 provinces, 6 cohorts, 42 hours, 7 days, 30+ speakers — all verifiable against depa's official announcements.
 - **Mobile-first.** The site gets shared as a link in LINE and WhatsApp. The first impression is always a phone screen.
 - **Trilingual (EN / TH / CN).** Complete coverage across all three languages. Not partial translation — every section, every label, every piece of content.
 
@@ -95,7 +95,7 @@ The expanded bios draw on verified sources: World Smart City Expo awards, Harvar
 
 ## Alumni directory
 
-400+ alumni from all six cohorts, sourced from depa's official Thai-language announcements. The directory includes full-text search, sector filter, province-level map, cohort growth chart with public/private split, and a smart insights panel. All names remain in Thai — as published in depa's official announcements.
+306 verified alumni records from all six cohorts, sourced from depa's official Thai-language announcements. The directory includes full-text search, sector filter, province-level map, cohort growth chart with public/private split, and a smart insights panel. All names remain in Thai — as published in depa's official announcements.
 
 ---
 

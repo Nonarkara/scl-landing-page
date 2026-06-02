@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import LogoBar from '../components/LogoBar';
 import { useSearchParams } from 'react-router-dom';
 import HeroSection from '../components/HeroSection';
+import SmartCityNews from '../components/SmartCityNews';
 import AboutProgram from '../components/AboutProgram';
 import ProgramJourney from '../components/ProgramJourney';
 import Testimonials from '../components/Testimonials';
@@ -51,6 +52,9 @@ const Home = () => {
       <div className="hero-v2-wrapper">
         <HeroSection />
       </div>
+
+      {/* SCL #6 conclusion dispatch */}
+      <SmartCityNews />
 
       {/* Tab System Section */}
       <section className="tabs-container section">

@@ -40,7 +40,7 @@
   "hero": {
     "eyebrow": "depa 高管课程 • SCL #{{cohort}}",
     "liveBadge": "数据实时 · 今日更新",
-    "liveBadge2": "400+ 校友 · 覆盖 77 府",
+    "liveBadge2": "306 条已核验校友记录 · 覆盖 77 府",
     "liveBadge3": "6 期 · 2020–2026 · depa 旗舰课程",
     "title": "Smart City Leadership",
     "valueStatement": "一门真正面向管理层的短期课程，帮助领导者更清楚地判断智慧城市工作应当如何被认真地推进。",
@@ -209,7 +209,7 @@
   "journey": {
     "eyebrow": "形式与时间线",
     "title": "引领",
-    "subtitle": "SCL #6 正在进行中。注册您的兴趣，以便在 SCL #7 开放申请时收到通知。",
+    "subtitle": "SCL 第六期已于 2026 年 5 月 26 日结业。以下是该课程公布的结构——学习节奏、实地考察，以及每一期背后的组织安排。",
     "trackKicker": "学习路径",
     "trackTitle": "整体体验如何组织",
     "modes": {
@@ -284,7 +284,7 @@
     },
     "sourceNote": "申请时间、费用、地点和课程安排均依据 depa 官方 SCL #6 文章。",
     "liveBadge": "数据实时 · 今日更新",
-    "liveBadge2": "400+ 校友 · 覆盖 77 府",
+    "liveBadge2": "306 条已核验校友记录 · 覆盖 77 府",
     "liveBadge3": "6 期 · 2020–2026 · depa 旗舰课程",
     "highlight": "未来",
     "title2": "智慧泰国",

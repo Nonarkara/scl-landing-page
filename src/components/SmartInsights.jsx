@@ -13,7 +13,6 @@ const SmartInsights = ({ demographics }) => {
     roleGroupCounts,
     topProvinces,
     topOrganizations,
-    genderEstimate,
     coverageRate,
     publicPrivateRatio,
     leadershipDensity,

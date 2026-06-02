@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
-import { Download, Mail, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Download, Mail, CheckCircle2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import { heroPhoto, programDetails } from '../data/program';
+import { programDetails } from '../data/program';
+import { heroFeaturePhoto, heroFeaturePhotoAlt, newsLabels, pickNewsText, sclDispatch } from '../data/smartCityNews';
 import IndexTeaser from './IndexTeaser';
 import './HeroSection.css';
 
@@ -9,12 +10,14 @@ const LIVE_BADGE_KEYS = ['hero.liveBadge', 'hero.liveBadge2', 'hero.liveBadge3']
 const LIVE_BADGE_INTERVAL = 7000;
 
 const HeroSection = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [waitlistEmail, setWaitlistEmail] = useState('');
   const [waitlistSubmitted, setWaitlistSubmitted] = useState(false);
   const [badgeIndex, setBadgeIndex] = useState(0);
   const [badgeVisible, setBadgeVisible] = useState(true);
   const pausedRef = useRef(false);
+  const language = i18n.resolvedLanguage || i18n.language || 'en';
+  const pickNews = (obj) => pickNewsText(obj, language);
 
   useEffect(() => {
     if (typeof window === 'undefined') return undefined;
@@ -68,7 +71,7 @@ const HeroSection = () => {
             <p className="hero-value-statement">{t('hero.valueStatement')}</p>
 
             <p className="hero-subtitle">
-              {t('hero.subtitle', 'SCL #6 is currently underway. Register your interest to be notified when applications open for SCL #7.')}
+              {t('hero.subtitle', 'SCL #6 has concluded. Register your interest to be notified when applications open for SCL #7.')}
             </p>
 
             <div className="hero-actions-waitlist">
@@ -105,18 +108,40 @@ const HeroSection = () => {
                 </a>
               </div>
             </div>
+
+            <a
+              href="#news"
+              className="hero-latest-update"
+              onClick={(e) => {
+                const target = document.getElementById('news');
+                if (target) {
+                  e.preventDefault();
+                  target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+              }}
+            >
+              <span className="hero-latest-thumb">
+                <img src={sclDispatch.photo} alt="" loading="eager" />
+              </span>
+              <span className="hero-latest-body">
+                <span className="hero-latest-label">{pickNews(newsLabels.updatedLabel)}</span>
+                <strong>{pickNews(sclDispatch.headline)}</strong>
+                <span>{pickNews(sclDispatch.signal)}</span>
+              </span>
+              <ArrowRight size={16} className="hero-latest-arrow" />
+            </a>
           </div>
 
           <div className="hero-visual-v2">
             <div className="hero-image-card">
               <img
-                src={heroPhoto}
-                alt={t('hero.imageAlt', 'SCL Program Atmosphere')}
+                src={heroFeaturePhoto}
+                alt={pickNews(heroFeaturePhotoAlt)}
                 className="hero-main-img"
               />
               <div className="hero-stats-overlay">
                 <div className="stat-pill">
-                  <span className="stat-num">400+</span>
+                  <span className="stat-num">{programDetails.alumniCount}</span>
                   <span className="stat-label">{t('hero.statAlumni', 'Alumni')}</span>
                 </div>
                 <div className="stat-pill">

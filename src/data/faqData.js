@@ -335,9 +335,9 @@ const faqData = [
       cn: "SCL 校友网络规模有多大？",
     },
     answer: {
-      en: "The SCL alumni community now exceeds 400 senior leaders from across Thailand's 77 provinces and multiple sectors. This creates one of the most concentrated networks of smart city and digital transformation executives in the country.",
-      th: "ปัจจุบันชุมชนศิษย์เก่า SCL มีผู้นำระดับสูงเกินกว่า 400 ท่าน กระจายอยู่ทั่วประเทศใน 77 จังหวัดและหลากหลายภาคส่วน ทำให้กลายเป็นเครือข่ายผู้บริหารด้านเมืองอัจฉริยะและการเปลี่ยนผ่านดิจิทัลที่หนาแน่นที่สุดเครือข่ายหนึ่งของประเทศ",
-      cn: "SCL 校友群体目前已超过 400 位高级领导者，分布于泰国 77 个府与多个行业，构成全国最密集的智慧城市与数字化转型高管网络之一。",
+      en: "The public directory currently contains 306 verified alumni records from depa's official cohort announcements. It covers all six published cohorts and preserves names as they appear in the official Thai-language source lists.",
+      th: "ทำเนียบสาธารณะปัจจุบันมีระเบียนศิษย์เก่าที่ตรวจสอบแล้ว 306 คน จากประกาศรายชื่อรุ่นอย่างเป็นทางการของ depa ครอบคลุม SCL ทั้ง 6 รุ่นที่เผยแพร่ และคงชื่อไว้ตามเอกสารต้นทางภาษาไทย",
+      cn: "公开目录目前包含 306 条经核验的校友记录，来源为 depa 官方公布的各期名单。目录覆盖已发布的六期课程，并保留官方泰文来源中的姓名写法。",
     },
   },
   {

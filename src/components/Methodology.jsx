@@ -117,7 +117,7 @@ export default function Methodology() {
 
       {/* ── Methodology photo strip ─────────────────────── */}
       <div className="methodology-photo-strip">
-        {methodologyPhotos.slice(1).map((photo, i) => (
+        {methodologyPhotos.slice(1).map((photo) => (
           <figure key={photo} className="methodology-strip-photo">
             <img
               src={encodeURI(PHOTO_BASE + photo)}

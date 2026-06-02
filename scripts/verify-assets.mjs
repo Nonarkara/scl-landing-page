@@ -44,9 +44,9 @@ if (galleryOverlap.length > 0) {
 }
 
 for (const name of new Set([...photosMoreNames, ...narrativeNames])) {
-  const photoPath = path.join(repoRoot, 'public', 'Photos More', name);
+  const photoPath = path.join(repoRoot, 'public', 'Photos', name);
   if (!existsSync(photoPath)) {
-    fail(`Missing photo asset: public/Photos More/${name}`);
+    fail(`Missing photo asset: public/Photos/${name}`);
   }
 }
 
@@ -61,7 +61,7 @@ if (process.exitCode) {
   process.exit(process.exitCode);
 }
 
-console.log(`Verified ${new Set(photosMoreNames).size} Photos More assets.`);
+console.log(`Verified ${new Set(photosMoreNames).size} Photos assets.`);
 console.log(`Narrative photo set: ${narrativeSet.size} unique files.`);
 console.log(`Gallery photo set: ${galleryNames.length} unique files, with no narrative overlap.`);
 console.log(`Verified ${logoPaths.length} logo assets.`);

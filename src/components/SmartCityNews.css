@@ -1,0 +1,236 @@
+/* SCL #6 dispatch — editorial, cream/navy/yellow, hairline, mobile-first */
+
+.scl-news {
+  border-top: 1px solid var(--border-strong);
+  background: var(--bg-secondary);
+}
+
+.scl-news-header {
+  max-width: 640px;
+  margin-bottom: 36px;
+}
+
+.scl-news-title {
+  font-size: clamp(1.9rem, 6vw, 2.6rem);
+  line-height: 1.04;
+  letter-spacing: -0.04em;
+  margin-bottom: 14px;
+}
+
+.scl-news-desc {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ---- Lead story ---- */
+.scl-news-lead {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border-strong);
+  background: var(--surface-strong);
+  margin-bottom: 56px;
+}
+
+.scl-news-lead-media {
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--bg-primary);
+}
+
+.scl-news-lead-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.scl-news-lead-body {
+  padding: 28px 24px 30px;
+  border-top: 3px solid var(--depa-yellow);
+}
+
+.scl-news-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 16px;
+  margin-bottom: 16px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.scl-news-date {
+  color: var(--depa-navy);
+}
+
+.scl-news-signal {
+  color: var(--text-secondary);
+}
+
+.scl-news-headline {
+  font-size: clamp(1.3rem, 4.5vw, 1.7rem);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+
+.scl-news-venue {
+  color: var(--text-secondary);
+  font-size: 0.86rem;
+  margin-bottom: 16px;
+}
+
+.scl-news-text {
+  color: var(--text-secondary);
+  font-size: 0.98rem;
+  line-height: 1.68;
+  margin-bottom: 22px;
+}
+
+.scl-news-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 44px;
+  color: var(--depa-navy);
+  font-weight: 700;
+  font-size: 0.92rem;
+  text-decoration: none;
+  border-bottom: 2px solid var(--depa-yellow);
+  padding-bottom: 2px;
+  transition: var(--transition-fast);
+}
+
+.scl-news-source:hover {
+  gap: 10px;
+  border-bottom-color: var(--depa-navy);
+}
+
+/* ---- Site-visit journey ---- */
+.scl-news-visits-head {
+  max-width: 640px;
+  margin-bottom: 24px;
+}
+
+.scl-news-visits-title {
+  font-size: clamp(1.3rem, 4.5vw, 1.6rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 10px;
+}
+
+.scl-news-visits-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.scl-news-visits-grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin: 0 0 28px;
+  padding: 0;
+}
+
+.scl-news-visit {
+  border: 1px solid var(--border-strong);
+  background: var(--surface-strong);
+  display: flex;
+  flex-direction: column;
+}
+
+.scl-news-visit-media {
+  margin: 0;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: var(--bg-primary);
+}
+
+.scl-news-visit-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.scl-news-visit:hover .scl-news-visit-media img {
+  transform: scale(1.03);
+}
+
+.scl-news-visit-body {
+  padding: 18px 18px 20px;
+  border-top: 1px solid var(--border-strong);
+  flex: 1;
+}
+
+.scl-news-visit-org {
+  font-size: 1rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.scl-news-visit-summary {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.scl-news-also {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  padding-top: 20px;
+  border-top: 1px solid var(--border-strong);
+}
+
+.scl-news-also-label {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+/* ---- Tablet ---- */
+@media (min-width: 560px) {
+  .scl-news-visits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ---- Desktop ---- */
+@media (min-width: 860px) {
+  .scl-news-lead {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .scl-news-lead-media {
+    flex: 1 1 52%;
+    aspect-ratio: auto;
+    min-height: 420px;
+  }
+
+  .scl-news-lead-body {
+    flex: 1 1 48%;
+    padding: 40px 40px 42px;
+    border-top: 0;
+    border-left: 3px solid var(--depa-yellow);
+    align-self: center;
+  }
+
+  .scl-news-visits-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+}
