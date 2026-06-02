@@ -112,7 +112,7 @@ const Home = () => {
               </div>
             )}
 
-            {activeTab === 'voices' && (
+            {activeTab === 'testimonials' && (
               <div className="tab-pane">
                 <Testimonials />
               </div>

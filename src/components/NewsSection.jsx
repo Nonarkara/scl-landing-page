@@ -41,7 +41,7 @@ const NewsSection = () => {
 
   return (
     <div className="hero-news-floating">
-      {newsItems.map((item) => (
+      {newsItems.slice(0, 1).map((item) => (
         <div 
           key={item.id}
           className="hero-news-card glass-panel"
