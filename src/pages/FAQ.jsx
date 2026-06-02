@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import './FAQ.css';
 
@@ -27,7 +27,6 @@ const faqData = [
 ];
 
 export default function FAQ() {
-  const { t } = useTranslation();
   const [activeIndex, setActiveIndex] = useState(null);
 
   const toggleFAQ = (index) => {

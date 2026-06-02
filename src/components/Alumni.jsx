@@ -20,7 +20,6 @@ import alumniData from '../data/alumni.json';
 import { alumniBatches } from '../data/program';
 import {
   buildAlumniEntries,
-  computeDemographics,
   groupEntriesByBatch,
   normalizeSearchText,
   SECTOR_KEYS,
@@ -107,7 +106,6 @@ const Alumni = () => {
   const [activeSector, setActiveSector] = useState('all');
   const [sortOrder, setSortOrder] = useState('relevance');
   const [updateEntry, setUpdateEntry] = useState(null);
-  const [showAllBrowse, setShowAllBrowse] = useState(true);
   const deferredSearchTerm = useDeferredValue(searchTerm);
   const searchInputRef = useRef(null);
   const sectionRef = useRef(null);
@@ -185,7 +183,6 @@ const Alumni = () => {
                 value={searchTerm}
                 onChange={(event) => {
                   setSearchTerm(event.target.value);
-                  if (event.target.value) setShowAllBrowse(false);
                 }}
               />
             </div>

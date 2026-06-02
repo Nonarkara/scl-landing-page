@@ -1,11 +1,8 @@
 import React from 'react';
-import { useTranslation } from 'react-i18next';
 import { BookOpen, Users, Lightbulb, BarChart, Globe, Zap } from 'lucide-react';
 import './AboutProgram.css'; // Reusing some shared styles
 
 const Curriculum = () => {
-  const { t } = useTranslation();
-
   const modules = [
     {
       icon: <Globe size={24} />,

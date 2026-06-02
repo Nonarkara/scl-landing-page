@@ -1,5 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
-import { useTranslation } from 'react-i18next';
+
 import { useSearchParams, Link } from 'react-router-dom';
 import { Mail, ArrowRight, History, BookOpen, Map, MessageSquare } from 'lucide-react';
 
@@ -11,7 +10,6 @@ import Testimonials from '../components/Testimonials';
 import NewsSection from '../components/NewsSection';
 
 const Home = () => {
-  const { t } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
   const activeTab = searchParams.get('tab') || 'about';
   
