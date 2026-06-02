@@ -1,4 +1,3 @@
-
 import { useSearchParams, Link } from 'react-router-dom';
 import { Mail, ArrowRight, History, BookOpen, Map, MessageSquare } from 'lucide-react';
 
@@ -7,6 +6,7 @@ import HeroSection from '../components/HeroSection';
 import AboutProgram from '../components/AboutProgram';
 import ProgramJourney from '../components/ProgramJourney';
 import Testimonials from '../components/Testimonials';
+import NewsSection from '../components/NewsSection';
 
 const Home = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -121,6 +121,8 @@ const Home = () => {
         </div>
       </section>
       
+      <NewsSection />
+
       {/* Bottom CTA Section */}
       <section className="bottom-cta section">
         <div className="container">
