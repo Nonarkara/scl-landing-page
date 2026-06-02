@@ -42,3 +42,33 @@
   never-delivered news section + stale post-conclusion copy. Fix the real thing.
 - **How to recognise:** `git status` clean, pages render with no console errors, source
   is feature-rich → the "breakage" is elsewhere (missing deliverable, stale copy).
+
+## 2026-06-03 · JSON-escaped quotes break raw find/replace
+- **What went wrong:** A Python string-replace on a locale value containing a straight `"`
+  (e.g. index.title `"อัจฉริยะ"`) matched 0 times — because in the raw .json file a straight
+  quote inside a value is stored ESCAPED as `\"`, while curly “ ” / corner 「 」 are stored literally.
+- **Correct behaviour:** When raw-replacing JSON values, match the escaped form (`\"`) for
+  ASCII double-quotes; curly/full-width quotes need no escaping. Always re-validate with
+  json.load and confirm the rendered value after.
+
+## 2026-06-03 · Translation audits miss inline strings — do a final grep sweep across ALL files
+- **What went wrong:** Native CN/TH audit subagents (locales + Faculty) were thorough but
+  missed leaked-English "cohort" tokens in several locale keys AND a 省长 in alumniSpotlight.js
+  (an inline data-file string outside their scan focus).
+- **Correct behaviour:** After applying audit fixes, grep EVERY source file (locales + all
+  data/*.js + components) for the offending patterns (leaked English tokens, inconsistent
+  terms like 省/省份/省长). Don't trust the audit's coverage to be exhaustive.
+
+## 2026-06-03 · Vite dev server caches JSON/data modules — restart to verify, build is fresh
+- **What went wrong:** Repeatedly saw stale locale/photo values in the preview after editing
+  (journey.title, swapped photos) even after location.reload().
+- **Correct behaviour:** For locale/data edits, `rm -rf node_modules/.vite` + restart the
+  preview to verify visually. The production `vite build` always reads fresh files, so a
+  clean build + grep-of-disk is the source of truth; don't trust a stale dev render.
+
+## 2026-06-03 · The photo swap recurred — read public/ files, not filenames (again)
+- **What went wrong:** public/scl6/S__1335317.jpg is actually the ASTRA photo and
+  S__1392656_0.jpg is the graduation photo — the reverse of the labels. The "graduated"
+  news lead showed Astra for multiple sessions.
+- **Correct behaviour:** Before shipping any photo→caption pairing, Read the exact file in
+  public/ and confirm the rendered <img src> in-browser. Filenames lie; pixels don't.
