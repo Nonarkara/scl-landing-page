@@ -2,13 +2,16 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './Curriculum.css';
 
+// Dynamic "people doing things" — site visits, labs, working sessions — matched to
+// each module's topic. No ceremonial/certificate shots. Spans SCL#1 (2022, masked
+// pandemic era) to SCL#6, showing the program's real working history. None reused elsewhere.
 const MODULE_PHOTOS = [
-  '475908551_1822641665218268_8556447180424358663_n.jpg',
-  '476008034_1822641685218266_1622267485476882936_n.jpg',
-  '476158935_1822641628551605_2862493579238828091_n.jpg',
-  '487065252_1114021147436029_6636576544050690930_n.jpg',
-  '487307445_1115778250593652_1337757409603967513_n.jpg',
-  '487674549_1115778270593650_2213552808546628717_n.jpg',
+  '539580663_1239502041554605_1819865055960942430_n.jpg', // 01 Vision — immersive 3D experience room
+  '539257668_1239501764887966_6428707906801544206_n.jpg', // 02 Data-Driven Governance — city operations control room
+  'S__4866085_0.jpg',                                      // 03 Leadership & Stakeholders — breakout working session
+  '487431321_1115778220593655_9007873649863785294_n.jpg', // 04 Innovation & Smart Economy — robotics / automation lab tour
+  '2022-05-26 09.58.28.jpg',                               // 05 Emerging Tech — hands-on AR/VR headset trial (pandemic era)
+  'S__4866084_0.jpg',                                      // 06 Capstone — "Urban Blueprint" working group
 ];
 
 const Curriculum = () => {

@@ -31,10 +31,10 @@
 
 .curriculum-row {
   display: grid;
-  grid-template-columns: 80px minmax(0, 1fr) 220px;
-  gap: 32px;
-  align-items: start;
-  padding: 28px 0;
+  grid-template-columns: 64px minmax(0, 1fr) 340px;
+  gap: 36px;
+  align-items: center;
+  padding: 32px 0;
   border-top: 1px solid var(--border-glass);
 }
 
@@ -50,6 +50,7 @@
   letter-spacing: 0.04em;
   padding-top: 4px;
   font-variant-numeric: tabular-nums;
+  align-self: start;
 }
 
 .curriculum-body {
