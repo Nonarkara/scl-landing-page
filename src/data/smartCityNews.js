@@ -82,8 +82,9 @@ export const heroTeaserPhoto = scl6('S__1335307_0.jpg'); // Dr. Passakon at the 
 export const sclDispatch = {
   id: 'scl6-graduation-2026-05-26',
   date: '2026-05-26',
-  // Graduation ceremony: full cohort holding certificates — correct lead image for "SCL #6 has graduated"
-  photo: scl6('S__1335317.jpg'),
+  // Graduation: the full cohort holding certificates beneath the "SCL #6" sign — the
+  // lead image for "SCL #6 has graduated". (Verified by reading the file, not by name.)
+  photo: scl6('S__1392656_0.jpg'),
   photoAlt: {
     en: 'SCL #6 graduates with their certificates at the closing ceremony',
     th: 'ผู้สำเร็จหลักสูตร SCL รุ่นที่ 6 พร้อมสัมฤทธิบัตรในพิธีปิด',
@@ -150,7 +151,7 @@ export const siteVisits = [
   },
   {
     id: 'astra',
-    photo: scl6('S__1392656_0.jpg'),  // Astra group photo — correct for this site-visit card
+    photo: scl6('S__1335317.jpg'),  // Astra Communication group photo (verified by reading the file)
     org: {
       en: 'Astra Communication Service',
       th: 'บริษัท แอสตรา คอมมิวนิเคชั่น เซอร์วิส',
