@@ -85,6 +85,42 @@ export const alumniSpotlight = [
     url: 'https://siamrath.co.th/n/590089',
   },
   {
+    id: 'sisaket',
+    name: 'อนุรัตน์ ธรรมประจำจิต',
+    batch: 1,
+    sector: 'public',
+    role: {
+      en: 'Governor of Sisaket Province',
+      th: 'ผู้ว่าราชการจังหวัดศรีสะเกษ',
+      cn: '四色菊府府尹',
+    },
+    news: {
+      en: 'Now Governor of Sisaket — he joined SCL as a deputy governor — leading a province-wide “healthy, sustainably livable city” drive.',
+      th: 'ก้าวขึ้นเป็นผู้ว่าราชการจังหวัดศรีสะเกษ จากที่เข้าร่วม SCL ในตำแหน่งรองผู้ว่าฯ ปัจจุบันขับเคลื่อนทั้งจังหวัดสู่ “เมืองสุขภาพดี น่าอยู่อย่างยั่งยืน”',
+      cn: '从参加 SCL 时的副府尹晋升为四色菊府府尹，如今正全府推动“健康宜居、可持续之城”。',
+    },
+    source: 'Siam Rath',
+    url: 'https://siamrath.co.th/regional/news/148610',
+  },
+  {
+    id: 'chutiporn',
+    name: 'ชุติพร เสชัง',
+    batch: 1,
+    sector: 'public',
+    role: {
+      en: 'Governor of Nakhon Sawan Province',
+      th: 'ผู้ว่าราชการจังหวัดนครสวรรค์',
+      cn: '那空沙旺府府尹',
+    },
+    news: {
+      en: 'Full circle: royally appointed Governor of Nakhon Sawan — the province where she joined SCL as deputy governor, now leading it herself.',
+      th: 'ครบวงจร: ได้รับโปรดเกล้าฯ แต่งตั้งเป็นผู้ว่าราชการจังหวัดนครสวรรค์ — จังหวัดที่เธอเข้าร่วม SCL ในฐานะรองผู้ว่าฯ และวันนี้กลับมานั่งเก้าอี้ผู้ว่าราชการจังหวัดเต็มตัว',
+      cn: '画下圆满一笔：获皇家任命为那空沙旺府府尹——正是她参加 SCL 时担任副府尹的那个府，如今由她亲自执掌。',
+    },
+    source: 'Thai PBS',
+    url: 'https://www.thaipbs.or.th/news/content/358484',
+  },
+  {
     id: 'lamphun',
     name: 'ประภัสร์ ภู่เจริญ',
     batch: 1,

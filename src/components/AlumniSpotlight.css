@@ -149,3 +149,11 @@
     flex: 0 1 calc(33.333% - 12px);
   }
 }
+
+/* 4-up on typical desktops so the set wraps cleanly (e.g. 7 -> 4+3, centered)
+   instead of leaving a lone orphan card on a 3-col row. */
+@media (min-width: 1200px) {
+  .alumni-spotlight-card {
+    flex: 0 1 calc(25% - 14px);
+  }
+}
