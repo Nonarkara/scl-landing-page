@@ -1,0 +1,151 @@
+/* Alumni in the news — editorial cards, geometric, hairline, mobile-first.
+   Flex with centered wrapping so any count (incl. 5) reads as intentional rows. */
+
+.alumni-spotlight {
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border-strong);
+}
+
+.alumni-spotlight-head {
+  max-width: 680px;
+  margin-bottom: 28px;
+}
+
+.alumni-spotlight-title {
+  font-size: clamp(1.4rem, 4.5vw, 1.9rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin: 8px 0 12px;
+}
+
+.alumni-spotlight-desc {
+  color: var(--text-secondary);
+  font-size: 0.96rem;
+  line-height: 1.6;
+}
+
+.alumni-spotlight-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+.alumni-spotlight-card {
+  flex: 1 1 280px;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  background: var(--surface-strong);
+  border: 1px solid var(--border-strong);
+  border-top: 3px solid var(--depa-navy);
+}
+
+.alumni-spotlight-card.has-private {
+  border-top-color: var(--depa-gold);
+}
+
+.alumni-spotlight-tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 14px;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.alumni-spotlight-batch {
+  color: var(--depa-navy);
+  padding: 3px 7px;
+  border: 1px solid var(--border-strong);
+}
+
+.alumni-spotlight-sector {
+  color: var(--text-muted);
+}
+
+.alumni-spotlight-sector.sector-private {
+  color: var(--depa-yellow-dark);
+}
+
+.alumni-spotlight-name {
+  font-size: 1.06rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+}
+
+.alumni-spotlight-role {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  line-height: 1.4;
+  margin-bottom: 14px;
+}
+
+.alumni-spotlight-news {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  margin-bottom: 18px;
+  flex: 1;
+}
+
+.alumni-spotlight-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-strong);
+  text-decoration: none;
+}
+
+.alumni-spotlight-source {
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.alumni-spotlight-read {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--depa-navy);
+  font-size: 0.84rem;
+  font-weight: 700;
+  white-space: nowrap;
+  border-bottom: 2px solid var(--depa-yellow);
+  padding-bottom: 1px;
+  transition: var(--transition-fast);
+}
+
+.alumni-spotlight-link:hover .alumni-spotlight-read {
+  gap: 8px;
+  border-bottom-color: var(--depa-navy);
+}
+
+.alumni-spotlight-note {
+  margin-top: 22px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+@media (min-width: 1024px) {
+  .alumni-spotlight-grid {
+    gap: 18px;
+  }
+
+  .alumni-spotlight-card {
+    flex: 0 1 calc(33.333% - 12px);
+  }
+}

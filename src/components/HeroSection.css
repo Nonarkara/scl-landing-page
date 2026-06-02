@@ -18,24 +18,35 @@
 @media (min-width: 1024px) {
   .hero-shell {
     grid-template-columns: 1.05fr 0.95fr;
-    gap: 40px;
-    align-items: center;
+    gap: 48px;
+    align-items: start;
   }
 
   .hero-copy {
     max-width: none;
-    padding-bottom: 80px;
+    padding-bottom: 64px;
   }
 
   .hero-visual-v2 {
     margin: 0;
     width: 100%;
-    position: sticky;
-    top: 100px;
   }
 
-  .hero-main-img {
-    height: 580px;
+  /* Higher specificity so it actually wins over the base .hero-main-img (480px) */
+  .hero-visual-v2 .hero-main-img {
+    height: 620px;
+  }
+
+  /* Desktop title: contained so it reads as a headline, not a wall.
+     The mobile clamp (up to 7rem) is right for phones, far too big on web.
+     Extra specificity (.hero-copy ...) so it beats the base rule that follows
+     it in source order at equal specificity. */
+  .hero-copy .hero-title-v2 {
+    font-size: clamp(3.2rem, 5vw, 4.4rem);
+  }
+
+  html[lang="th"] .hero-copy .hero-title-v2 {
+    font-size: clamp(2.6rem, 4vw, 3.6rem);
   }
 }
 

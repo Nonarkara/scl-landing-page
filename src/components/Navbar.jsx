@@ -6,7 +6,7 @@ import { getApplicationUrl } from '../data/program';
 import './Navbar.css';
 
 const NAV_LINKS = [
-  { path: '/?tab=about', key: 'about', label: 'About & History' },
+  { path: '/curriculum', key: 'about', label: 'Program Design' },
   { path: '/methodology', key: 'methodology', label: 'Methodology' },
   { path: '/?tab=journey', key: 'journey', label: 'The Journey' },
   { path: '/alumni', key: 'alumni', label: 'Alumni' },

@@ -47,6 +47,18 @@ const CohortInsights = ({ allEntries, demographics }) => {
 
   const avgCohortSize = Math.round(allEntries.length / alumniBatches.length);
 
+  const leadershipRoles = useMemo(() => {
+    const groups = demographics.roleGroupCounts || {};
+    return [
+      { key: 'Governors', label: t('alumni.roleGov', 'Governors') },
+      { key: 'Mayors & Local Leaders', label: t('alumni.roleMayor', 'Mayors & local leaders') },
+      { key: 'CEOs & MDs', label: t('alumni.roleCeo', 'CEOs & MDs') },
+      { key: 'Directors & Executives', label: t('alumni.roleDirector', 'Directors & executives') },
+    ]
+      .map((role) => ({ ...role, count: groups[role.key] || 0 }))
+      .filter((role) => role.count > 0);
+  }, [demographics.roleGroupCounts, t]);
+
   const batchPublicCounts = useMemo(() => {
     const counts = {};
     alumniBatches.forEach(b => { counts[b.id] = 0; });
@@ -143,6 +155,22 @@ const CohortInsights = ({ allEntries, demographics }) => {
           <span className="insight-label">{t('alumni.avgCohort', 'Avg. Cohort Size')}</span>
         </div>
       </div>
+
+      {leadershipRoles.length > 0 && (
+        <div className="insights-leadership">
+          <h4 className="insights-leadership-title">
+            {t('alumni.leadershipTitle', 'Leadership in the network')}
+          </h4>
+          <div className="insights-leadership-row">
+            {leadershipRoles.map((role) => (
+              <div key={role.key} className="leadership-item">
+                <span className="leadership-count">{role.count}</span>
+                <span className="leadership-label">{role.label}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       <div className="insights-grid-main">
         <div className="insight-panel">

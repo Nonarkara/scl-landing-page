@@ -2,7 +2,7 @@ import { ArrowRight, ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import './IndexTeaser.css';
 
-const INDEX_URL = 'https://nonarkara.github.io/smart-city-thailand-index';
+const INDEX_URL = 'https://sciti.nonarkara.org';
 
 const PILLAR_COLORS = {
   livability: '#2BA89C',
@@ -120,11 +120,13 @@ const CARD_GRAPHICS = {
   reality: RealityGraphic,
 };
 
+// sciti.nonarkara.org currently serves a single entry point (deep routes 404),
+// so every card opens the live Index root. Update here if sub-routes return.
 const CARD_ROUTES = {
   rankings: '',
-  allocator: '/allocator',
-  map: '/map',
-  reality: '/comparison',
+  allocator: '',
+  map: '',
+  reality: '',
 };
 
 const CARD_KEYS = ['rankings', 'allocator', 'map', 'reality'];

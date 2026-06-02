@@ -148,7 +148,7 @@ const HeroSection = () => {
                   <span className="stat-label">{t('hero.statAlumni', 'Alumni')}</span>
                 </div>
                 <div className="stat-pill">
-                  <span className="stat-num">77</span>
+                  <span className="stat-num">50</span>
                   <span className="stat-label">{t('hero.statProvinces', 'Provinces')}</span>
                 </div>
               </div>

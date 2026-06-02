@@ -8,7 +8,7 @@ const scl6 = (name) => `${B}scl6/${name}`;
 // Distinct hero image — an active site-visit scene, not a ceremonial photo.
 // Kept separate from the news lead photo so the first viewport feels current
 // and field-based rather than staged.
-export const heroFeaturePhoto = scl6('S__1335313_0.jpg');
+export const heroFeaturePhoto = scl6('S__1335315_0.jpg');
 export const heroFeaturePhotoAlt = {
   en: 'SCL #6 participants exploring an immersive digital center during a site visit',
   th: 'ผู้เข้าร่วม SCL รุ่นที่ 6 ระหว่างศึกษาดูงานในศูนย์นวัตกรรมดิจิทัลแบบเสมือนจริง',

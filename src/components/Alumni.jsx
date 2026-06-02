@@ -29,6 +29,7 @@ import {
 import ThailandMap from './ThailandMap';
 import CohortInsights from './CohortInsights';
 import SmartInsights from './SmartInsights';
+import AlumniSpotlight from './AlumniSpotlight';
 import './Alumni.css';
 
 const SECTOR_ICONS = {
@@ -394,6 +395,8 @@ const Alumni = () => {
         <SmartInsights demographics={demographics} />
 
         <CohortInsights allEntries={allEntries} demographics={demographics} />
+
+        <AlumniSpotlight />
 
         {(hasActiveFilter || showAllBrowse) ? (
           <div className="search-results-container is-visible">
