@@ -7,7 +7,6 @@ import HeroSection from '../components/HeroSection';
 import AboutProgram from '../components/AboutProgram';
 import ProgramJourney from '../components/ProgramJourney';
 import Testimonials from '../components/Testimonials';
-import NewsSection from '../components/NewsSection';
 
 const Home = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -33,8 +32,6 @@ const Home = () => {
       <div className="hero-v2-wrapper">
         <HeroSection />
       </div>
-
-      <NewsSection />
 
       {/* Tab System Section */}
       <section className="tabs-container section" id="tabs-section">

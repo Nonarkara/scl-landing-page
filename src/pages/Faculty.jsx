@@ -7,41 +7,49 @@ const facultyData = [
     name: "Dr. Passakon Prathombutr",
     role: "Special Expert, depa",
     bio: "Special Expert at depa and the agency's former Senior Executive Vice President. With more than 30 years of experience, he has led Thailand's national smart city policy planning from the start.",
+    image: "/photos faculty/Passakon.jpg",
   },
   {
     name: "Dr. Supakorn Siddhichai",
     role: "Acting President & CEO, depa",
     bio: "Acting President and CEO at depa. He drives SCL programs (e.g., SCL#1, #2) and Thailand's smart city initiatives, including updates on CAV and smart city frameworks.",
+    image: "/photos faculty/Supakorn.avif",
   },
   {
     name: "Dr. Non Arkaraprasertkul",
     role: "Smart City Leadership Expert & Program Co-designer",
     bio: "A leading expert in smart city leadership, having taught in SCL for five batches and co-designing the program since 2022. With a PhD from Harvard in Anthropology and expertise in urban design and technology, he emphasizes public-private alignment, AI deployment, and site visits in SCL#6 (May 2026).",
+    image: "/photos faculty/Non.jpg",
   },
   {
     name: "Dr. Rutchanee Gullayanon",
     role: "Executive Vice President, KMITL",
     bio: "Executive Vice President for Innovation and Global Partnership at King Mongkut's Institute of Technology Ladkrabang (KMITL). She engages in smart city technology incubation and partnerships, including with DOST ISU for regional smart city development.",
+    image: "/photos faculty/Rutchnee.jpg",
   },
   {
     name: "Dr. Kanop Ketchart",
     role: "Mayor of Nakhon Si Thammarat City",
     bio: "Mayor of Nakhon Si Thammarat City, advocating smart city planning, muslim-friendly tourism, and AI-based education. He exemplifies practical smart city leadership through urban examples shared in regional forums.",
+    image: "/photos faculty/Kanop.jpg",
   },
   {
     name: "Dr. Niramon Serisakul",
     role: "Assoc. Prof., Chulalongkorn University",
     bio: "Assoc. Prof. Dr. Niramon Serisakul (also Niramon Kulsrisombat) is at Chulalongkorn University's Department of Urban and Regional Planning and Director of the Urban Design and Development Center (UddC). She specializes in urban strategies, design, and stakeholder engagement for city development.",
+    image: "/photos faculty/Niramon.jpg",
   },
   {
     name: "Dr. Sanphawat Jatupatwarangkul",
     role: "Digital Twin Expert & University Lecturer",
     bio: "Digital twin expert and university lecturer with two decades of experience in building systems and design internationally.",
+    image: "/photos faculty/Sanphawat.jpg",
   },
   {
     name: "Pongsak Yingchoncharoen",
     role: "Mayor of Yala Municipality",
     bio: 'Mayor of Yala Municipality ("Mayor A"), leads a people-centric Smart City model with initiatives like Yala Free WiFi, mobile apps, Big Data dashboards, and dimensions including Smart Governance, Living, Environment, and Energy. His work transformed Yala into a sustainable smart city model.',
+    image: "/photos faculty/Pongsak.jpg",
   },
 ];
 
@@ -59,6 +67,9 @@ export default function Faculty() {
       <div className="faculty-grid">
         {facultyData.map((member, index) => (
           <div key={index} className="faculty-card glass-panel">
+            <div className="faculty-image">
+              <img src={member.image} alt={member.name} />
+            </div>
             <div className="faculty-info">
               <h3 className="faculty-name">{member.name}</h3>
               <p className="faculty-role">{member.role}</p>

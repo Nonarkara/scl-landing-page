@@ -3,6 +3,7 @@ import { ArrowRight, Download, Mail, CheckCircle2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { heroPhoto, programDetails } from '../data/program';
 import IndexTeaser from './IndexTeaser';
+import NewsSection from './NewsSection';
 import './HeroSection.css';
 
 const LIVE_BADGE_KEYS = ['hero.liveBadge', 'hero.liveBadge2', 'hero.liveBadge3'];
@@ -115,6 +116,8 @@ const HeroSection = () => {
               <div className="card-icon"><ArrowRight size={14} /></div>
               <div className="card-text">7 Weeks Intensive</div>
             </div>
+            
+            <NewsSection />
         </div>
 
         <div className="hero-index-v2">

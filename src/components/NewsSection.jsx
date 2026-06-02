@@ -40,51 +40,23 @@ const NewsSection = () => {
   };
 
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="mb-12">
-          <p className="text-sm font-semibold tracking-wider text-depa-primary uppercase mb-3">
-            {t('news.kicker')}
-          </p>
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            {t('news.title')}
-          </h2>
+    <div className="hero-news-floating">
+      {newsItems.map((item) => (
+        <div 
+          key={item.id}
+          className="hero-news-card glass-panel"
+          onClick={() => handleOpenArticle(item)}
+          role="button"
+          tabIndex={0}
+        >
+          <div className="news-pulse-dot"></div>
+          <div className="news-card-content">
+            <span className="news-card-label">{t('news.kicker')}</span>
+            <span className="news-card-title">{item.data.title}</span>
+          </div>
+          <ArrowRight size={14} className="news-card-icon" />
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {newsItems.map((item) => (
-            <div 
-              key={item.id}
-              className="group cursor-pointer flex flex-col h-full bg-white rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-all duration-300 overflow-hidden"
-              onClick={() => handleOpenArticle(item)}
-            >
-              <div className="aspect-[16/9] w-full overflow-hidden bg-gray-100 relative">
-                <img 
-                  src={item.image} 
-                  alt={item.data.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  onError={(e) => {
-                    e.target.src = 'https://placehold.co/600x400/eeeeee/999999?text=News+Image';
-                  }}
-                />
-              </div>
-              <div className="p-6 flex flex-col flex-grow">
-                <time className="text-sm text-gray-500 mb-3">{item.data.date}</time>
-                <h3 className="text-xl font-bold text-gray-900 mb-4 group-hover:text-depa-primary transition-colors line-clamp-2">
-                  {item.data.title}
-                </h3>
-                <p className="text-gray-600 mb-6 line-clamp-3 flex-grow">
-                  {item.data.excerpt}
-                </p>
-                <div className="flex items-center text-depa-primary font-medium mt-auto">
-                  {t('news.readMore')}
-                  <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+      ))}
 
       {/* Modal Overlay */}
       {activeArticle && (
@@ -131,7 +103,7 @@ const NewsSection = () => {
           </div>
         </div>
       )}
-    </section>
+    </div>
   );
 };
 
