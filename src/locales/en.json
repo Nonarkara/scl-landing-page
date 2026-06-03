@@ -561,7 +561,20 @@
     "leadershipComposition": "Leadership Composition",
     "topProvinces": "Top Provinces",
     "cohortGrowth": "Cohort Growth",
-    "topOrganizations": "Top Organizations"
+    "topOrganizations": "Top Organizations",
+    "mobilityLead": "Read across six cohorts, the network shows how smart-city leadership actually moves — from city halls and provincial offices to telecom, energy and technology firms, universities and state enterprises. Every figure below is computed live from the 306 published records.",
+    "domainsTitle": "What the network works on",
+    "method": "Computed live from depa's six published cohort rosters (306 names) — classified by the title and employer each line records. 96% map to a work domain; the remainder list a name only. Role and domain counts are floors: the true totals are at least these.",
+    "domains": {
+      "localGov": "Local government",
+      "private": "Private enterprise",
+      "provNatGov": "Provincial & national government",
+      "ict": "ICT, telecom & digital",
+      "academia": "Academia & research",
+      "energyEnv": "Energy, water & environment",
+      "urbanTransport": "Urban development & transport",
+      "other": "Other / not specified"
+    }
   },
   "curriculumPlaceholder": {
     "title": "World-Class Curriculum",

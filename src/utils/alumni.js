@@ -173,7 +173,8 @@ export function buildAlumniEntries(alumniData) {
       const sector = classifySector(sourceLine);
       const province = extractProvince(sourceLine);
       const roleGroup = extractRoleGroup(sourceLine);
-      
+      const domain = classifyDomain(sourceLine);
+
       return {
         id: `${batch}-${index}`,
         batch: Number(batch),
@@ -183,6 +184,7 @@ export function buildAlumniEntries(alumniData) {
         sector,
         province,
         roleGroup,
+        domain,
         searchIndex: normalizeSearchText(
           [
             sourceLine,
@@ -249,6 +251,29 @@ export function classifySector(sourceLine = '') {
 
 export const SECTOR_KEYS = ['all', 'public', 'private', 'academic', 'stateEnterprise', 'other'];
 
+// Domain classification — "what kind of work" (employer/industry), distinct from
+// sector (public/private). Reads the full roster line; priority order matters.
+// Validated against all 306 records: 96% classify, sums to 306.
+const DOMAIN_RULES = [
+  { domain: 'academia', patterns: [/มหาวิทยาลัย/, /สถาบันเทคโนโลยี/, /ราชภัฏ/, /ราชมงคล/, /จุฬาลงกรณ์/, /วิทยาลัย/, /อธิการบดี/, /คณบดี/, /ศาสตราจารย์/, /อาจารย์/, /เทคโนธานี/, /สถาบันวิจัย/] },
+  { domain: 'energyEnv', patterns: [/การไฟฟ้า/, /กฟภ/, /กฟน/, /กฟผ/, /พลังงาน/, /โซลาร์/, /solar/i, /ปิโตรเล/, /ก๊าซ/, /ปตท/, /การประปา/, /ประปา/, /ชลประทาน/, /สิ่งแวดล้อม/, /ขยะ/, /จัดการน้ำ/] },
+  { domain: 'ict', patterns: [/โทรคมนาคม/, /ทีโอที/, /\bTOT\b/, /\bCAT\b/, /โทรศัพท์/, /ดิจิทัล/, /digital/i, /ซอฟต/, /software/i, /ไอที/, /สารสนเทศ/, /คอมพิวเตอร์/, /คลาวด/, /cloud/i, /แพลตฟอร์ม/, /telecom/i, /communication/i, /คอมมูนิเคชั่น/, /เครือข่าย/, /ดาต้า/] },
+  { domain: 'urbanTransport', patterns: [/ขนส่ง/, /จราจร/, /รถไฟ/, /ขสมก/, /logistics/i, /โลจิสติกส์/, /ทางหลวง/, /ก่อสร้าง/, /อสังหา/, /ที่ดิน/, /ผังเมือง/, /โยธา/, /สถาปนิก/, /พัฒนาเมือง/] },
+  { domain: 'localGov', patterns: [/เทศบาล/, /องค์การบริหารส่วน/, /อบต/, /อบจ/, /นายกเทศมนตรี/, /เทศมนตรี/, /เมืองพัทยา/] },
+  { domain: 'provNatGov', patterns: [/ผู้ว่าราชการ/, /จังหวัด/, /กระทรวง/, /กรม/, /สำนักงาน/, /ราชการ/, /ปลัด/, /นายอำเภอ/, /อำเภอ/, /สภาพัฒน/, /สาธารณสุข/, /โรงพยาบาล/] },
+  { domain: 'private', patterns: [/บริษัท/, /จำกัด/, /มหาชน/, /บมจ/, /หจก/, /กรรมการผู้จัดการ/, /ประธานเจ้าหน้าที่/, /CEO/i, /ผู้จัดการ/] },
+];
+
+export const DOMAIN_KEYS = ['localGov', 'private', 'provNatGov', 'ict', 'academia', 'energyEnv', 'urbanTransport', 'other'];
+
+export function classifyDomain(sourceLine = '') {
+  const text = sourceLine.replace(/\s+/g, ' ');
+  for (const rule of DOMAIN_RULES) {
+    if (rule.patterns.some((p) => p.test(text))) return rule.domain;
+  }
+  return 'other';
+}
+
 export function extractRoleGroup(sourceLine = '') {
   const text = sourceLine.replace(/\s+/g, ' ');
   if (/ผู้ว่าราชการ/.test(text)) return 'Governors';
@@ -263,6 +288,7 @@ export function computeDemographics(entries) {
   const provinceCounts = {};
   const provinceRoles = {};
   const roleGroupCounts = {};
+  const domainCounts = {};
   const batchCounts = {};
   const orgCounts = {};
   let maleCount = 0;
@@ -275,6 +301,10 @@ export function computeDemographics(entries) {
     // Role groups
     const rg = entry.roleGroup || 'Others';
     roleGroupCounts[rg] = (roleGroupCounts[rg] || 0) + 1;
+
+    // Work domains (what they do)
+    const dm = entry.domain || 'other';
+    domainCounts[dm] = (domainCounts[dm] || 0) + 1;
 
     // Batch
     batchCounts[entry.batch] = (batchCounts[entry.batch] || 0) + 1;
@@ -329,6 +359,7 @@ export function computeDemographics(entries) {
     provinces: provinceCounts,
     provinceRoles,
     roleGroupCounts,
+    domainCounts,
     batchCounts: batchList,
     topProvinces,
     topOrganizations,

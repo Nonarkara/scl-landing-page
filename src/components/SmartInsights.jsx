@@ -11,6 +11,7 @@ const SmartInsights = ({ demographics }) => {
     total,
     sectorPercentages,
     roleGroupCounts,
+    domainCounts = {},
     topProvinces,
     topOrganizations,
     coverageRate,
@@ -20,6 +21,12 @@ const SmartInsights = ({ demographics }) => {
   } = demographics;
 
   const maxBatch = Math.max(...batchCounts.map(([, c]) => c), 1);
+
+  const DOMAIN_ORDER = ['localGov', 'private', 'provNatGov', 'ict', 'academia', 'energyEnv', 'urbanTransport', 'other'];
+  const domainList = DOMAIN_ORDER
+    .map((key) => [key, domainCounts[key] || 0])
+    .filter(([, c]) => c > 0);
+  const maxDomain = Math.max(...domainList.map(([, c]) => c), 1);
 
   const statCards = [
     {
@@ -53,6 +60,7 @@ const SmartInsights = ({ demographics }) => {
       <div className="smart-insights-header">
         <span className="section-kicker">{t('smartInsights.kicker')}</span>
         <h3 className="smart-insights-title">{t('smartInsights.title')}</h3>
+        <p className="smart-insights-lead">{t('smartInsights.mobilityLead')}</p>
       </div>
 
       <div className="smart-stats-grid">
@@ -153,6 +161,31 @@ const SmartInsights = ({ demographics }) => {
           </div>
         </div>
       </div>
+
+      <div className="smart-insights-row">
+        <div className="smart-panel smart-panel-wide">
+          <h4 className="smart-panel-title">
+            <Briefcase size={16} /> {t('smartInsights.domainsTitle')}
+          </h4>
+          <div className="smart-bars">
+            {domainList.map(([key, count]) => {
+              const pct = Math.round((count / total) * 100);
+              return (
+                <div key={key} className="smart-bar-row">
+                  <span className="smart-bar-label">{t(`smartInsights.domains.${key}`)}</span>
+                  <div className="smart-bar-track">
+                    <div className="smart-bar-fill" style={{ width: `${(count / maxDomain) * 100}%` }} />
+                  </div>
+                  <span className="smart-bar-count">{count}</span>
+                  <span className="smart-bar-pct">{pct}%</span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+
+      <p className="smart-insights-method">{t('smartInsights.method')}</p>
     </div>
   );
 };

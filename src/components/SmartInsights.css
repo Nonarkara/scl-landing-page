@@ -19,6 +19,24 @@
   letter-spacing: -0.03em;
 }
 
+.smart-insights-lead {
+  margin-top: 12px;
+  max-width: 62ch;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.smart-insights-method {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-glass);
+  max-width: 78ch;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  line-height: 1.6;
+}
+
 .smart-stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -365,7 +383,14 @@
   }
 
   .smart-bar-row {
-    grid-template-columns: 100px 1fr 32px 36px;
+    grid-template-columns: 124px 1fr 30px 34px;
+  }
+
+  .smart-bar-label {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+    line-height: 1.25;
   }
 }
 

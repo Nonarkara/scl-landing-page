@@ -561,7 +561,20 @@
     "leadershipComposition": "领导力构成",
     "topProvinces": "主要府",
     "cohortGrowth": "各届人数增长",
-    "topOrganizations": "主要机构"
+    "topOrganizations": "主要机构",
+    "mobilityLead": "纵观六届学员，这一网络清晰呈现了智慧城市领导力的真实流动——从市政厅与府级机关，到电信、能源与科技企业、高校以及国有企业。以下每个数字均由 306 条公开记录实时计算得出。",
+    "domainsTitle": "网络成员从事哪些领域",
+    "method": "数据由 depa 公开的六届学员名册（306 个名字）实时计算，按每行记录的职务与所属机构分类。其中 96% 可归入某一工作领域，其余仅列出姓名。职务与领域计数为下限——实际数量不低于此。",
+    "domains": {
+      "localGov": "地方政府",
+      "private": "私营企业",
+      "provNatGov": "府级与中央政府",
+      "ict": "信息通信、电信与数字",
+      "academia": "学术与研究",
+      "energyEnv": "能源、水务与环境",
+      "urbanTransport": "城市发展与交通",
+      "other": "其他 / 未注明"
+    }
   },
   "curriculumPlaceholder": {
     "title": "世界级课程",

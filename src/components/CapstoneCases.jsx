@@ -54,6 +54,32 @@ const PROJECTS = [
     batch: 1,
     url: 'https://yalacity.go.th/news/detail/11937',
   },
+  {
+    id: 'korat-smartcity',
+    city: { en: 'Nakhon Ratchasima (Korat)', th: 'จังหวัดนครราชสีมา (โคราช)', cn: '呵叻府（那空叻差是玛）' },
+    title: { en: 'Korat Smart City', th: 'โคราช เมืองอัจฉริยะ', cn: '呵叻智慧城市' },
+    pillar: { en: 'Livable City', th: 'เมืองน่าอยู่', cn: '宜居城市' },
+    summary: {
+      en: 'Nakhon Ratchasima’s area-based proposal earned depa’s Smart City Thailand designation — the exact proposal-to-mark pathway SCL trains leaders to write and defend.',
+      th: 'ข้อเสนอเชิงพื้นที่ของจังหวัดนครราชสีมาได้รับการประกาศเป็นเขตส่งเสริมเมืองอัจฉริยะจาก depa — เป็นเส้นทางการเขียนและนำเสนอข้อเสนอเพื่อรับตราสัญลักษณ์ที่ SCL ฝึกผู้นำโดยตรง',
+      cn: '那空叻差是玛（呵叻）的区域提案获得 depa 智慧城市认证——正是 SCL 训练领导者撰写并答辩的“提案换认证”路径。',
+    },
+    tag: { en: 'depa Smart City', th: 'เมืองอัจฉริยะ depa', cn: 'depa 智慧城市' },
+    url: 'https://www.posttoday.com/smart-city/722100',
+  },
+  {
+    id: 'cmu-smartcity',
+    city: { en: 'Chiang Mai University', th: 'มหาวิทยาลัยเชียงใหม่', cn: '清迈大学' },
+    title: { en: 'CMU Smart City Operations', th: 'ศูนย์ปฏิบัติการเมืองอัจฉริยะ มช.', cn: 'CMU 智慧城市运营中心' },
+    pillar: { en: 'Smart Energy / Environment', th: 'Smart Energy / Environment', cn: 'Smart Energy / Environment' },
+    summary: {
+      en: 'A solar-and-IoT smart campus run from a central operations centre — one of 15 areas to carry depa’s Smart City Thailand mark, and a living lab for the program’s Chiang Mai faculty.',
+      th: 'สมาร์ทแคมปัสที่ขับเคลื่อนด้วยโซลาร์และ IoT บริหารผ่านศูนย์ปฏิบัติการกลาง — หนึ่งใน 15 พื้นที่ที่ได้รับตราสัญลักษณ์เมืองอัจฉริยะจาก depa และเป็นห้องทดลองจริงของคณาจารย์เชียงใหม่ในหลักสูตร',
+      cn: '由中央运营中心统一管理的太阳能与 IoT 智慧校园——获得 depa 智慧城市认证标识的 15 个区域之一，也是本课程清迈师资的真实试验场。',
+    },
+    tag: { en: 'depa Smart City', th: 'เมืองอัจฉริยะ depa', cn: 'depa 智慧城市' },
+    url: 'https://www.cmu.ac.th/en/article/278e6bb1-5a60-4725-ad9a-22994693aa70',
+  },
 ];
 
 function pick(obj, lang) {
@@ -78,10 +104,10 @@ export default function CapstoneCases({ lang = 'en' }) {
         </h3>
         <p className="capstone-cases-desc">
           {lang === 'th'
-            ? 'ตัวอย่างโครงการที่ผู้เรียน SCL นำแผน Capstone ไปลงมือทำจริงในเมืองของตนเอง'
+            ? 'ตัวอย่างโครงการที่ผู้เรียน SCL นำแผน Capstone ไปลงมือทำจริงในเมืองของตน — เส้นทางเดียวกับการเขียนข้อเสนอเพื่อรับตราสัญลักษณ์เมืองอัจฉริยะจาก depa'
             : lang === 'cn'
-            ? 'SCL 学员将结业提案付诸实践的典型项目'
-            : 'A sample of projects where SCL participants turned their capstone proposals into live city systems.'}
+            ? 'SCL 学员将结业提案付诸实践、并为所在地区赢得 depa 智慧城市认证标识的典型项目。'
+            : 'A sample of projects where SCL participants turned their capstone proposals into live city systems — the same path that earns a city depa’s Smart City Thailand mark.'}
         </p>
       </div>
 
@@ -90,7 +116,7 @@ export default function CapstoneCases({ lang = 'en' }) {
           <li key={p.id} className="capstone-case">
             <div className="capstone-case-top">
               <span className="capstone-case-pillar">{pick(p.pillar, lang)}</span>
-              <span className="capstone-case-batch">SCL #{p.batch}</span>
+              <span className="capstone-case-batch">{p.tag ? pick(p.tag, lang) : `SCL #${p.batch}`}</span>
             </div>
             <h4 className="capstone-case-title">{pick(p.title, lang)}</h4>
             <p className="capstone-case-city">{pick(p.city, lang)}</p>
