@@ -1,8 +1,9 @@
 import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Globe, Menu, X } from 'lucide-react';
+import { Globe, Menu, Moon, Sun, X } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { getApplicationUrl } from '../data/program';
+import { useTheme } from '../hooks/useTheme';
 import './Navbar.css';
 
 const NAV_LINKS = [
@@ -17,6 +18,7 @@ const NAV_LINKS = [
 
 const Navbar = () => {
   const { t, i18n } = useTranslation();
+  const { theme, toggle: toggleTheme } = useTheme();
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -141,6 +143,14 @@ const Navbar = () => {
                 {language.label}
               </button>
             ))}
+            <button
+              type="button"
+              className="theme-toggle"
+              onClick={toggleTheme}
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              {theme === 'dark' ? <Sun size={16} /> : <Moon size={16} />}
+            </button>
           </div>
         </div>
 
@@ -187,6 +197,14 @@ const Navbar = () => {
                 {language.label}
               </button>
             ))}
+            <button
+              type="button"
+              className="lang-chip theme-chip"
+              onClick={toggleTheme}
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+            >
+              {theme === 'dark' ? <Sun size={15} /> : <Moon size={15} />}
+            </button>
           </div>
 
           <a

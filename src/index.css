@@ -27,6 +27,31 @@
   --navbar-height: 76px;
 }
 
+/* ── Dark mode palette — §14 Visual DNA: AKIRA/ops console aesthetic ─────── */
+.dark {
+  color-scheme: dark;
+  --bg-primary:    #0a0e14;
+  --bg-secondary:  #0d1219;
+  --bg-surface:    #0d1219;
+  --bg-ink:        #0C2F53;
+  --surface-strong: #131e2d;
+  --border-glass:  rgba(255, 255, 255, 0.05);
+  --border-strong: rgba(255, 255, 255, 0.10);
+  --text-main:     #e6edf3;
+  --text-secondary: #8b9eb5;
+  --text-muted:    #4d6880;
+  --text-tertiary: #4d6880;
+  /* navy accent becomes amber on dark surfaces — Braun ET66 equals-key rule */
+  --depa-navy:     #FFC600;
+  --depa-yellow:   #FFC600;
+  --depa-gold:     #FFC600;
+  --depa-yellow-soft: rgba(255, 198, 0, 0.08);
+  --depa-yellow-mid:  rgba(255, 198, 0, 0.15);
+  --depa-yellow-muted: rgba(255, 198, 0, 0.35);
+  --depa-yellow-dark: #d4a017;
+  --shadow-soft:   0 2px 16px rgba(0, 0, 0, 0.4);
+}
+
 * {
   margin: 0;
   padding: 0;

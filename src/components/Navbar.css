@@ -319,3 +319,37 @@
     display: none;
   }
 }
+
+/* ── Theme toggle ─────────────────────────────────────────────────────────── */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--border-strong);
+  background: transparent;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition-fast);
+  border-radius: 0;
+  padding: 0;
+  margin-left: 4px;
+  flex-shrink: 0;
+}
+
+.theme-toggle:hover {
+  color: var(--text-main);
+  border-color: var(--text-muted);
+}
+
+/* mobile chip variant */
+.theme-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 0;
+  width: 36px;
+  min-height: 36px;
+}
