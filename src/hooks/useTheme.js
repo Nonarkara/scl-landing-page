@@ -6,7 +6,7 @@ function getInitial() {
   try {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored === 'dark' || stored === 'light') return stored;
-  } catch (_) { /* storage unavailable */ }
+  } catch { /* storage unavailable */ }
   return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
 
@@ -20,7 +20,7 @@ export function useTheme() {
     } else {
       root.classList.remove('dark');
     }
-    try { localStorage.setItem(STORAGE_KEY, theme); } catch (_) { /* storage unavailable */ }
+    try { localStorage.setItem(STORAGE_KEY, theme); } catch { /* storage unavailable */ }
   }, [theme]);
 
   const toggle = () => setTheme((t) => (t === 'dark' ? 'light' : 'dark'));
