@@ -296,12 +296,6 @@ export const alumniSpotlight = [
     url: 'https://www.matichon.co.th/region/news_5178475',
   },
 
-  {
-    id: 'tak-mayor-b2',
-    name: 'นายณพล ชยานนท์ภักดี',
-    batch: 2,
-    sector: 'public',
-    role: { en: 'Mayor of Tak City Municipality', th: 'นายกเทศมนตรีเมืองตาก', cn: '达府达市市长' },
     news: {
       en: 'Featured in Thailand Learning City 2025 — leading Tak as a "City of Identity", weaving the Loy Kratong Sai festival into school curricula and training youth as community heritage guides.',
       th: 'ได้รับการนำเสนอในโครงการ Thailand Learning City 2025 ขับเคลื่อน "เมืองตากเมืองอัตลักษณ์" บูรณาการประเพณีลอยกระทงสายเข้าหลักสูตรและพัฒนาเยาวชนเป็นมัคคุเทศก์ท้องถิ่น',

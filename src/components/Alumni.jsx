@@ -29,7 +29,6 @@ import {
 import ThailandMap from './ThailandMap';
 import CohortInsights from './CohortInsights';
 import SmartInsights from './SmartInsights';
-import AlumniSpotlight from './AlumniSpotlight';
 import BatchNewsStrip from './BatchNewsStrip';
 import './Alumni.css';
 
@@ -397,8 +396,6 @@ const Alumni = ({ headingLevel = 'h2' }) => {
         <SmartInsights demographics={demographics} />
 
         <CohortInsights allEntries={allEntries} demographics={demographics} />
-
-        <AlumniSpotlight />
 
         {(hasActiveFilter || showAllBrowse) ? (
           <div className="search-results-container is-visible">
