@@ -124,6 +124,8 @@ export default function SourceArchivePage() {
             </div>
           </div>
 
+          <p className="source-record-note">{pick(sourceArchiveLabels.recordNote, lang)}</p>
+
           {filteredArchive.length > 0 ? (
             <div className="source-cohort-stack">
               {filteredArchive.map((cohort) => (

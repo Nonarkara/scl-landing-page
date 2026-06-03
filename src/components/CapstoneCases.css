@@ -1,0 +1,130 @@
+.capstone-cases {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border-strong);
+}
+
+.capstone-cases-head {
+  max-width: 680px;
+  margin-bottom: 28px;
+}
+
+.capstone-cases-kicker {
+  display: block;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.capstone-cases-title {
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+}
+
+.capstone-cases-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.capstone-cases-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.capstone-case {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface-strong);
+  border-top: 3px solid var(--depa-yellow);
+}
+
+.capstone-case-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.capstone-case-pillar {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--depa-navy);
+}
+
+.capstone-case-batch {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 2px 6px;
+  border: 1px solid var(--border-strong);
+}
+
+.capstone-case-title {
+  font-size: 1.05rem;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 4px;
+}
+
+.capstone-case-city {
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  margin-bottom: 14px;
+}
+
+.capstone-case-summary {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex: 1;
+}
+
+.capstone-case-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--depa-navy);
+  font-size: 0.86rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 2px solid var(--depa-yellow);
+  padding-bottom: 1px;
+  margin-top: auto;
+  width: fit-content;
+  transition: var(--transition-fast);
+}
+
+.capstone-case-link:hover {
+  gap: 8px;
+  border-bottom-color: var(--depa-navy);
+}
+
+@media (min-width: 560px) {
+  .capstone-cases-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .capstone-cases-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+}

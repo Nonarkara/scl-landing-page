@@ -104,8 +104,9 @@ const UpdateModal = ({ entry, onClose, t }) => {
   );
 };
 
-const Alumni = () => {
+const Alumni = ({ headingLevel = 'h2' }) => {
   const { t } = useTranslation();
+  const HeadingTag = headingLevel;
   const [searchTerm, setSearchTerm] = useState('');
   const [expandedBatch, setExpandedBatch] = useState(alumniBatches[0]?.id ?? null);
   const [activeSector, setActiveSector] = useState('all');
@@ -198,7 +199,7 @@ const Alumni = () => {
       <div className="container">
         <div className="alumni-header">
           <span className="section-kicker">{t('alumni.badge')}</span>
-          <h2 className="alumni-title">{t('alumni.title')}</h2>
+          <HeadingTag className="alumni-title">{t('alumni.title')}</HeadingTag>
           <p className="alumni-subtitle">
             {t('alumni.subtitle', {
               count: totalRecords,

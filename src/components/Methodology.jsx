@@ -51,8 +51,9 @@ const methodologyPhotos = [
   '539462584_1239502018221274_4785186678856189554_n.jpg',
 ];
 
-export default function Methodology() {
+export default function Methodology({ headingLevel = 'h2' }) {
   const { t } = useTranslation();
+  const HeadingTag = headingLevel;
 
   return (
     <section className="methodology-section">
@@ -60,7 +61,7 @@ export default function Methodology() {
       {/* ── Header ─────────────────────────────────────── */}
       <div className="methodology-header">
         <span className="section-kicker">{t('methodology.kicker')}</span>
-        <h2 className="methodology-title">{t('methodology.title')}</h2>
+        <HeadingTag className="methodology-title">{t('methodology.title')}</HeadingTag>
         <p className="methodology-subtitle">{t('methodology.subtitle')}</p>
       </div>
 

@@ -9,7 +9,7 @@ export default function CurriculumPage() {
       <div className="container">
         <PageReturn />
       </div>
-      <Curriculum />
+      <Curriculum headingLevel="h1" />
     </div>
   );
 }

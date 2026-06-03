@@ -382,8 +382,10 @@ html[lang="th"] .hero-title-v2 {
   }
 
   .hero-visual-v2 {
-    margin: 0 -24px;
-    width: calc(100% + 48px);
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    width: auto;
+    max-width: 100vw;
   }
 
   .hero-main-img {

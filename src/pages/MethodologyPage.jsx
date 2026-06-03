@@ -7,7 +7,7 @@ export default function MethodologyPage() {
     <div style={{ paddingTop: '80px' }}>
       <div className="container">
         <PageReturn />
-        <Methodology />
+        <Methodology headingLevel="h1" />
       </div>
     </div>
   );

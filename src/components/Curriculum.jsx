@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import './Curriculum.css';
+import CapstoneCases from './CapstoneCases';
 
 // Dynamic "people doing things" — site visits, labs, working sessions — matched to
 // each module's topic. No ceremonial/certificate shots. Spans SCL#1 (2022, masked
@@ -14,16 +15,18 @@ const MODULE_PHOTOS = [
   'S__4866084_0.jpg',                                      // 06 Capstone — "Urban Blueprint" working group
 ];
 
-const Curriculum = () => {
-  const { t } = useTranslation();
+const Curriculum = ({ headingLevel = 'h2' }) => {
+  const { t, i18n } = useTranslation();
+  const lang = (i18n.resolvedLanguage || i18n.language || 'en').split('-')[0];
   const modules = [1, 2, 3, 4, 5, 6];
+  const HeadingTag = headingLevel;
 
   return (
     <section className="curriculum-section">
       <div className="container">
         <div className="curriculum-header">
           <span className="section-kicker">{t('curriculum.kicker')}</span>
-          <h2 className="curriculum-title">{t('curriculum.title')}</h2>
+          <HeadingTag className="curriculum-title">{t('curriculum.title')}</HeadingTag>
           <p className="curriculum-lede">{t('curriculum.subtitle')}</p>
         </div>
 
@@ -37,6 +40,9 @@ const Curriculum = () => {
                 </h3>
                 <p className="curriculum-row-desc">
                   {t(`curriculum.modules.${n}.desc`)}
+                </p>
+                <p className="curriculum-row-why">
+                  {t(`curriculum.modules.${n}.why`)}
                 </p>
               </div>
               <figure className="curriculum-thumb">
@@ -56,6 +62,8 @@ const Curriculum = () => {
             <span className="curriculum-cert-text">{t('curriculumPlaceholder.certificationDesc')}</span>
           </p>
         </div>
+
+        <CapstoneCases lang={lang} />
       </div>
     </section>
   );

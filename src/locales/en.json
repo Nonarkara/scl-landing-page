@@ -534,7 +534,7 @@
     "2024_title2": "The AI Era (Batch #5)",
     "2024_desc2": "Overhauled the curriculum to focus on AI governance and sustainable urban tech.",
     "2026_title": "Now (Batch #6)",
-    "2026_desc": "Our largest cohort ever, with 120+ participants representing 50+ provinces."
+    "2026_desc": "SCL #6 closed in May 2026 and brought the published archive to six cohorts and 306 verified alumni records."
   },
   "cta": {
     "kicker": "Next Cohort",
@@ -577,27 +577,33 @@
     "modules": {
       "1": {
         "title": "Digital Transformation & Smart City Vision",
-        "desc": "The global landscape of smart-city work, the strategic role of digital infrastructure, and where Thailand sits inside that picture."
+        "desc": "The global landscape of smart-city work, the strategic role of digital infrastructure, and where Thailand sits inside that picture.",
+        "why": "Most smart-city initiatives stall not from lack of technology but from leaders who can't distinguish a credible digital strategy from a vendor pitch. This module builds the vocabulary and the judgment to know what you're actually buying — and what a real national framework requires."
       },
       "2": {
         "title": "Data-Driven Governance",
-        "desc": "Using analytics and AI to improve urban services, traffic management, and resource allocation — and what to demand from a vendor pitch."
+        "desc": "Using analytics and AI to improve urban services, traffic management, and resource allocation — and what to demand from a vendor pitch.",
+        "why": "Cities that can't read their own data will always be reactive — responding to crises instead of anticipating them. This module moves leaders from dashboards-as-decoration to dashboards-as-decisions, with enough technical literacy to interrogate what a system actually does."
       },
       "3": {
         "title": "Leadership & Stakeholder Management",
-        "desc": "Executive skills for leading cross-functional teams, working public-private boundaries, and aligning incentives across agencies."
+        "desc": "Executive skills for leading cross-functional teams, working public-private boundaries, and aligning incentives across agencies.",
+        "why": "A smart city touches every department, every level of government, and every type of resident — and most projects fail at the coordination layer, not the technology layer. This module is the political science of smart city delivery: how to build coalitions, survive budget cycles, and keep multi-agency projects on track."
       },
       "4": {
         "title": "Innovation & Smart Economy",
-        "desc": "New business models and economic opportunities in the digital era, with case work from Thai and regional cities."
+        "desc": "New business models and economic opportunities in the digital era, with case work from Thai and regional cities.",
+        "why": "The question isn't whether your city will face digital disruption — it's whether your city will lead it or absorb it. This module looks at smart-economy models that are actually working in Thai and ASEAN cities, and the conditions that made them work."
       },
       "5": {
         "title": "Emerging Technologies (AI, IoT, 5G)",
-        "desc": "A working understanding of the technologies shaping next-generation cities and the procurement and integration patterns that matter."
+        "desc": "A working understanding of the technologies shaping next-generation cities and the procurement and integration patterns that matter.",
+        "why": "Every vendor will tell you AI will solve your problem. This module gives you enough working knowledge to know when that's true, when it's not, and what the integration, data, and governance requirements actually look like before you sign anything."
       },
       "6": {
         "title": "Capstone: City Transformation Plan",
-        "desc": "A real transformation plan for your city or organization, developed with faculty mentorship and presented at the closing session."
+        "desc": "A real transformation plan for your city or organization, developed with faculty mentorship and presented at the closing session.",
+        "why": "All the prior learning converges into one real deliverable: a transformation proposal for your own city or organization, mentored by faculty and stress-tested by the cohort. The presentations at the closing session are what the program actually produces."
       }
     }
   },

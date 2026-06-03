@@ -73,6 +73,15 @@
   max-width: 60ch;
 }
 
+.curriculum-row-why {
+  margin-top: 12px;
+  color: var(--depa-navy);
+  font-size: 0.9rem;
+  line-height: 1.65;
+  border-left: 3px solid var(--depa-yellow);
+  padding-left: 12px;
+}
+
 .curriculum-thumb {
   margin: 0;
   width: 100%;

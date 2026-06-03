@@ -7,11 +7,12 @@ import './Gallery.css';
 
 const featuredCount = 6;
 
-const Gallery = () => {
+const Gallery = ({ headingLevel = 'h2' }) => {
   const { t } = useTranslation();
   const [showAll, setShowAll] = useState(false);
   const [activePhoto, setActivePhoto] = useState(null);
   const sectionRef = useFadeIn();
+  const HeadingTag = headingLevel;
 
   const visiblePhotos = useMemo(
     () => (showAll ? galleryPhotos : galleryPhotos.slice(0, featuredCount)),
@@ -53,7 +54,7 @@ const Gallery = () => {
           <div className="gallery-top animate-fade-in">
             <div className="gallery-heading">
               <span className="section-kicker">{t('gallery.badge')}</span>
-              <h2 className="text-gradient section-title">{t('gallery.title')}</h2>
+              <HeadingTag className="text-gradient section-title">{t('gallery.title')}</HeadingTag>
               <p className="gallery-subtitle">{t('gallery.subtitle')}</p>
             </div>
 

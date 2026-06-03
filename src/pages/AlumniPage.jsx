@@ -8,7 +8,7 @@ export default function AlumniPage() {
       <div className="container">
         <PageReturn />
       </div>
-      <div className="sub-page-wrap"><Alumni /></div>
+      <div className="sub-page-wrap"><Alumni headingLevel="h1" /></div>
     </div>
   );
 }

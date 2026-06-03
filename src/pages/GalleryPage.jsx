@@ -8,7 +8,7 @@ export default function GalleryPage() {
       <div className="container">
         <PageReturn />
       </div>
-      <div className="sub-page-wrap"><Gallery /></div>
+      <div className="sub-page-wrap"><Gallery headingLevel="h1" /></div>
     </div>
   );
 }

@@ -42,6 +42,11 @@ export const sourceArchiveLabels = {
     th: 'แสดงเฉพาะ URL ต้นทางที่เปิดตรวจสอบได้ ไม่ใช้โพสต์โซเชียลเป็นแหล่งอ้างอิงหลัก เว้นแต่หน้าเผยแพร่สาธารณะจะเปิดได้อย่างเสถียร',
     cn: '仅收录可打开核验的来源 URL。社交媒体帖子不作为正式来源，除非公开页面可以稳定访问。',
   },
+  recordNote: {
+    en: 'Titles are preserved from source records; summaries are editorial notes for orientation.',
+    th: 'ชื่อรายการคงถ้อยคำจากแหล่งต้นทาง ส่วนสรุปเป็นบันทึกประกอบเพื่อช่วยอ่านภาพรวม',
+    cn: '标题保留来源记录的原文；摘要为便于理解而撰写的编辑说明。',
+  },
   search: {
     en: 'Search title, source, cohort, or URL',
     th: 'ค้นหาชื่อข่าว แหล่งข่าว รุ่น หรือ URL',
@@ -281,6 +286,30 @@ export const sclSourceArchive = [
         title: 'depa opens SCL #6 to build smart-city leaders across Thailand',
         summary: 'Official activity article on the SCL #6 opening day, orientation, AI-era smart-city framing, and workshop content.',
         url: 'https://www.depa.or.th/en/article-view/20260511_01',
+      },
+      {
+        type: 'official',
+        date: '19 May 2026',
+        source: 'depa',
+        title: 'depa นำทัพ SCL#6 ดูงานเจาะลึกจากหน่วยงานต้นแบบ',
+        summary: 'Official depa activity article on SCL #6 site visits to EGAT Learning Center, the BMA Command Center, and Astra Communication Service.',
+        url: 'https://www.depa.or.th/th/article-view/depa-scl6',
+      },
+      {
+        type: 'official',
+        date: '26 May 2026',
+        source: 'depa',
+        title: 'depa joins SCL #6 as speaker on Smart City Promotion & Incentive',
+        summary: 'Official depa activity article on the SCL #6 Smart City Promotion & Incentive session covering investment promotion for smart-city development.',
+        url: 'https://www.depa.or.th/th/article-view/20260526_01',
+      },
+      {
+        type: 'official',
+        date: '26 May 2026',
+        source: 'depa',
+        title: 'ส่งท้าย ! depa ปิดหลักสูตรผู้นำการส่งเสริมเมืองอัจฉริยะ SCL รุ่นที่ 6',
+        summary: 'Official closing article for SCL #6, including final-day lectures, smart-city proposal guidance, certificates, and NFT certificate format.',
+        url: 'https://www.depa.or.th/th/article-view/20260526_02',
       },
       {
         type: 'press',
