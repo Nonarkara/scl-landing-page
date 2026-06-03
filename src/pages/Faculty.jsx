@@ -144,7 +144,7 @@ const facultyData = [
   {
     // NOTE: Thai given-name spelling kept as the verified English form pending Dr Non's
     // confirmation of the exact Thai (ปุ่น/พูน/…) — do not guess on a faculty name.
-    name: { en: "Assoc. Prof. Dr. Poon Thiengburanathum", th: "รศ. ดร. Poon Thiengburanathum", cn: "Poon Thiengburanathum 博士" },
+    name: { en: "Assoc. Prof. Dr. Poon Thiengburanathum", th: "รศ. ดร. ปุ่น เที่ยงบูรณะธรรม", cn: "Poon Thiengburanathum 博士" },
     role: {
       en: "Office for Accelerating Research & Innovation for Competitiveness and Area Development, Chiang Mai University",
       th: "สำนักงานเร่งรัดการวิจัยและนวัตกรรมเพื่อเพิ่มความสามารถการแข่งขันและการพัฒนาพื้นที่ มหาวิทยาลัยเชียงใหม่",
