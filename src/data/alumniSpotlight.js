@@ -296,15 +296,6 @@ export const alumniSpotlight = [
     url: 'https://www.matichon.co.th/region/news_5178475',
   },
 
-    news: {
-      en: 'Featured in Thailand Learning City 2025 — leading Tak as a "City of Identity", weaving the Loy Kratong Sai festival into school curricula and training youth as community heritage guides.',
-      th: 'ได้รับการนำเสนอในโครงการ Thailand Learning City 2025 ขับเคลื่อน "เมืองตากเมืองอัตลักษณ์" บูรณาการประเพณีลอยกระทงสายเข้าหลักสูตรและพัฒนาเยาวชนเป็นมัคคุเทศก์ท้องถิ่น',
-      cn: '入选"泰国学习城市 2025"，以"达城文化特色城市"为题，将水灯节传统融入课程，培训青少年担任社区文化导览员。',
-    },
-    source: 'The City Leaders',
-    url: 'https://thecityleaders.com/thailand-learning-city-2025-%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%95%E0%B8%B2%E0%B8%81-%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87%E0%B8%AD%E0%B8%B1%E0%B8%95%E0%B8%A5%E0%B8%B1/',
-  },
-
   // ──── BATCH 3 additions (4 total; strip unlocked) ────
 
   {
