@@ -245,7 +245,7 @@ export const alumniSpotlight = [
     },
     source: 'depa',
     url: 'https://www.thaipr.net/general/3666970',
-  },,
+  },
 
   // ──── BATCH 1 additions ────
 

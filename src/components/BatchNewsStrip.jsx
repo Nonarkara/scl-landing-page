@@ -13,7 +13,7 @@ function pick(obj, lg) {
 }
 
 export default function BatchNewsStrip({ batchId }) {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const lg = lang3(i18n);
 
   // Get entries for this batch, capped at 4 or 8 (never 5,6,7)
