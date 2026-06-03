@@ -141,6 +141,50 @@ const facultyData = [
     },
     linkedin: "https://www.linkedin.com/in/pongsak-yingchoncharoen-05106a26b/",
   },
+  {
+    // NOTE: Thai given-name spelling kept as the verified English form pending Dr Non's
+    // confirmation of the exact Thai (ปุ่น/พูน/…) — do not guess on a faculty name.
+    name: { en: "Assoc. Prof. Dr. Poon Thiengburanathum", th: "รศ. ดร. Poon Thiengburanathum", cn: "Poon Thiengburanathum 博士" },
+    role: {
+      en: "Office for Accelerating Research & Innovation for Competitiveness and Area Development, Chiang Mai University",
+      th: "สำนักงานเร่งรัดการวิจัยและนวัตกรรมเพื่อเพิ่มความสามารถการแข่งขันและการพัฒนาพื้นที่ มหาวิทยาลัยเชียงใหม่",
+      cn: "清迈大学 竞争力与区域发展研究及创新加速办公室",
+    },
+    tag: { en: "Research-to-Region Bridge", th: "สะพานวิจัยสู่การพัฒนาพื้นที่", cn: "科研落地区域的桥梁" },
+    photo: "/photos%20faculty/Poon.jpg",
+    bio: {
+      en: "A Chiang Mai University scholar bridging engineering research and area-based development — turning research and innovation into regional competitiveness under Thailand's Ministry of Higher Education, Science, Research and Innovation (MHESI).",
+      th: "นักวิชาการมหาวิทยาลัยเชียงใหม่ผู้เชื่อมงานวิจัยวิศวกรรมเข้ากับการพัฒนาเชิงพื้นที่ เร่งรัดการวิจัยและนวัตกรรมให้กลายเป็นขีดความสามารถในการแข่งขันของภูมิภาค ภายใต้กระทรวงการอุดมศึกษา วิทยาศาสตร์ วิจัยและนวัตกรรม (อว.)",
+      cn: "清迈大学学者，致力于把工程研究与区域发展连接起来，在泰国高等教育、科学、研究与创新部（MHESI / อว.）的框架下，将研究与创新转化为区域竞争力。",
+    },
+    expanded: {
+      en: "Holding a PhD with deep expertise in construction management, sustainable infrastructure, logistics, and climate-and-disaster resilience, Poon works where research funding actually meets the ground — accelerating university research and innovation into measurable regional competitiveness and area-based development. That makes him the rare faculty member who can explain both the money and the mechanism: how national research-and-innovation policy and area-development funding reach a secondary city, and what a credible, fundable proposal actually looks like. In SCL, he gives city leaders the bridge between a smart-city ambition and the research, partners, and funding instruments that can make it real beyond the capital.",
+      th: "ด้วยปริญญาเอกและความเชี่ยวชาญลึกด้านการบริหารงานก่อสร้าง โครงสร้างพื้นฐานที่ยั่งยืน โลจิสติกส์ และการรับมือภัยพิบัติและการเปลี่ยนแปลงสภาพภูมิอากาศ ท่านทำงานในจุดที่ทุนวิจัยมาบรรจบกับพื้นที่จริง คือการเร่งรัดงานวิจัยและนวัตกรรมของมหาวิทยาลัยให้กลายเป็นขีดความสามารถในการแข่งขันของภูมิภาคและการพัฒนาเชิงพื้นที่ที่วัดผลได้ ท่านจึงเป็นคณาจารย์ไม่กี่ท่านที่อธิบายได้ทั้งเรื่อง “เงิน” และ “กลไก” — ว่านโยบายวิจัยและนวัตกรรมระดับชาติและทุนพัฒนาพื้นที่เดินทางไปถึงเมืองรองได้อย่างไร และข้อเสนอที่น่าเชื่อถือและขอทุนได้จริงหน้าตาเป็นอย่างไร ใน SCL ท่านมอบสะพานเชื่อมระหว่างความมุ่งหวังเรื่องเมืองอัจฉริยะกับงานวิจัย พันธมิตร และเครื่องมือทางการเงินที่ทำให้มันเกิดขึ้นจริงได้นอกเมืองหลวง",
+      cn: "Poon 拥有博士学位，在施工管理、可持续基础设施、物流以及气候与灾害韧性方面造诣深厚。他工作的位置，正是研究经费与真实地方的交汇处——把高校的研究与创新加速转化为可衡量的区域竞争力与区域发展。因此他是少数能同时讲清“钱”与“机制”的教师：国家级研究创新政策与区域发展资金如何抵达一座次级城市，一个可信、能真正申请到经费的提案又应当是什么样子。在 SCL 中，他为城市领导者搭起一座桥——把智慧城市的愿景，与能让它在首都之外真正落地的研究、伙伴和资金工具连接起来。",
+    },
+    linkedin: "https://www.linkedin.com/in/poon-thiengburanathum-67b9a910",
+  },
+  {
+    name: { en: "Asst. Prof. Dr. Supitcha Tovivich", th: "ผศ. ดร. สุพิชชา โตวิวิชญ์", cn: "Supitcha Tovivich 博士" },
+    role: {
+      en: "Faculty of Architecture, Silpakorn University",
+      th: "คณะสถาปัตยกรรมศาสตร์ มหาวิทยาลัยศิลปากร",
+      cn: "Silpakorn 大学建筑学院",
+    },
+    tag: { en: "Community Architect", th: "สถาปนิกชุมชน", cn: "社区建筑师" },
+    photo: "/photos%20faculty/Supitcha.jpg",
+    bio: {
+      en: "An architect and Silpakorn University scholar who puts residents at the centre of city-making — a leader in community-engaged architecture, participatory design, and creative placemaking across Thailand.",
+      th: "สถาปนิกและนักวิชาการมหาวิทยาลัยศิลปากรผู้วางประชาชนไว้ที่ศูนย์กลางของการสร้างเมือง ผู้นำด้านสถาปัตยกรรมเพื่อชุมชน การออกแบบอย่างมีส่วนร่วม และการสร้างพื้นที่เชิงสร้างสรรค์ทั่วประเทศไทย",
+      cn: "建筑师、Silpakorn 大学学者，把居民置于造城的中心——泰国社区参与式建筑、参与式设计与创意场所营造领域的引领者。",
+    },
+    expanded: {
+      en: "A Bartlett (UCL) PhD with a master's in humanitarian and development practice, Supitcha has taught at Silpakorn's Faculty of Architecture since 2003 and chaired the Association of Siamese Architects' Community Act Network (ASA-CAN). Her practice treats residents as co-designers rather than recipients, weaving culture, vernacular space, and grassroots participation into how neighbourhoods actually get made — work recognised with the 2022 UK Alumni Culture & Creativity Award. In SCL, she supplies the human layer that smart-city programmes most often skip: the participatory, community-first methods that decide whether technology gets adopted or ignored — a direct complement to the program's infrastructure, data, and policy faculty.",
+      th: "ด้วยปริญญาเอกจาก Bartlett (UCL) และปริญญาโทด้านการพัฒนาและงานมนุษยธรรม ผศ. ดร. สุพิชชา สอนที่คณะสถาปัตยกรรมศาสตร์ มหาวิทยาลัยศิลปากร มาตั้งแต่ปี 2546 และเคยเป็นประธานเครือข่ายสถาปนิกชุมชน (ASA-CAN) ของสมาคมสถาปนิกสยามฯ การทำงานของท่านมองประชาชนเป็นผู้ร่วมออกแบบ ไม่ใช่ผู้รับ ผสานวัฒนธรรม พื้นที่พื้นถิ่น และการมีส่วนร่วมระดับรากหญ้าเข้ากับวิธีที่ย่านเมืองถูกสร้างขึ้นจริง ผลงานนี้ได้รับรางวัล UK Alumni Culture & Creativity Award ปี 2565 ใน SCL ท่านเติมชั้น “มนุษย์” ที่หลักสูตรเมืองอัจฉริยะมักมองข้าม นั่นคือวิธีการแบบมีส่วนร่วมและยึดชุมชนเป็นที่ตั้ง ซึ่งเป็นตัวชี้ขาดว่าเทคโนโลยีจะถูกใช้หรือถูกเมิน — เป็นส่วนเติมเต็มโดยตรงให้กับคณาจารย์ด้านโครงสร้างพื้นฐาน ข้อมูล และนโยบายของหลักสูตร",
+      cn: "Supitcha 拥有伦敦大学学院巴特利特学院（Bartlett, UCL）博士学位，以及人道与发展实践硕士学位。她自 2003 年起任教于 Silpakorn 大学建筑学院，并曾担任泰国暹罗建筑师协会社区行动网络（ASA-CAN）主席。她的实践把居民视为共同设计者，而非被动的受益者，将文化、在地空间与基层参与，编织进社区真正被营造出来的方式之中——这项工作获得 2022 年英国校友文化与创意奖。在 SCL 中，她补上了智慧城市课程最常忽略的“人”的一层：以社区为先的参与式方法，正是决定技术被采用还是被弃用的关键，与课程中基础设施、数据与政策方向的师资形成直接互补。",
+    },
+    linkedin: "https://www.linkedin.com/in/supitcha-tovivich",
+  },
 ];
 
 export default function Faculty() {

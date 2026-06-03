@@ -67,6 +67,24 @@ export const alumniSpotlight = [
     url: 'https://www.posttoday.com/smart-city/709704',
   },
   {
+    id: 'roiet',
+    name: 'ชัชวาลย์ เบญจสิริวงศ์',
+    batch: 4,
+    sector: 'public',
+    role: {
+      en: 'Governor of Roi Et Province',
+      th: 'ผู้ว่าราชการจังหวัดร้อยเอ็ด',
+      cn: '黎逸府府尹',
+    },
+    news: {
+      en: 'As Governor of Roi Et he went viral nationwide for personally fronting the province’s heritage-festival promotion — turning culture into city marketing.',
+      th: 'ในฐานะผู้ว่าราชการจังหวัดร้อยเอ็ด ท่านลงมือโปรโมตงานบุญประเพณีของจังหวัดด้วยตนเองจนเป็นไวรัลทั่วประเทศ เปลี่ยนทุนวัฒนธรรมให้กลายเป็นการตลาดเมือง',
+      cn: '作为黎逸府府尹，他亲自为全府的传统节庆站台造势、在泰国全网刷屏，把文化转化为城市营销。',
+    },
+    source: 'Naewna',
+    url: 'https://www.naewna.com/likesara/949514',
+  },
+  {
     id: 'nakhonpathom',
     name: 'อโรชา นันทมนตรี',
     batch: 5,
@@ -85,6 +103,24 @@ export const alumniSpotlight = [
     url: 'https://siamrath.co.th/n/590089',
   },
   {
+    id: 'mahasarakham',
+    name: 'ภาคิน ติระพงศ์ไพบูลย์',
+    batch: 3,
+    sector: 'public',
+    role: {
+      en: 'Mayor of Mahasarakham City',
+      th: 'นายกเทศมนตรีเมืองมหาสารคาม',
+      cn: '玛哈沙拉堪市市长',
+    },
+    news: {
+      en: 'Re-elected to a second term as Mayor of Mahasarakham on a “learning and happiness city” platform.',
+      th: 'ได้รับเลือกตั้งเป็นนายกเทศมนตรีเมืองมหาสารคามสมัยที่สอง ด้วยวิสัยทัศน์ “เมืองแห่งการเรียนรู้และความสุข”',
+      cn: '以“学习与幸福之城”的施政愿景，连任玛哈沙拉堪市市长第二届。',
+    },
+    source: 'LINE Today',
+    url: 'https://today.line.me/th/v3/article/vXV71vo',
+  },
+  {
     id: 'sisaket',
     name: 'อนุรัตน์ ธรรมประจำจิต',
     batch: 1,
@@ -101,6 +137,24 @@ export const alumniSpotlight = [
     },
     source: 'Siam Rath',
     url: 'https://siamrath.co.th/regional/news/148610',
+  },
+  {
+    id: 'jumpot-moi',
+    name: 'จุมพฏ วรรณฉัตรสิริ',
+    batch: 4,
+    sector: 'public',
+    role: {
+      en: 'Deputy Permanent Secretary, Ministry of the Interior',
+      th: 'รองปลัดกระทรวงมหาดไทย',
+      cn: '内政部副常务次长',
+    },
+    news: {
+      en: 'Rose from Governor of Bueng Kan to Deputy Permanent Secretary of the Interior in the 2025 senior-leadership reshuffle.',
+      th: 'ก้าวจากผู้ว่าราชการจังหวัดบึงกาฬ สู่ตำแหน่งรองปลัดกระทรวงมหาดไทย ในการแต่งตั้งโยกย้ายระดับสูงปี 2568',
+      cn: '在 2025 年高层人事调整中，由汶干府府尹晋升为内政部副常务次长。',
+    },
+    source: 'Thai PBS',
+    url: 'https://www.thaipbs.or.th/news/content/355534',
   },
   {
     id: 'chutiporn',
@@ -139,6 +193,24 @@ export const alumniSpotlight = [
     url: 'https://wecitizensthailand.com/the-mayor-ประภัสร์-ภู่เจริญ-นาย/',
   },
   {
+    id: 'netka',
+    name: 'ชาญชัย เจียมโชติพัฒนกุล',
+    batch: 5,
+    sector: 'private',
+    role: {
+      en: 'Founder & CEO, Netka System',
+      th: 'ผู้ก่อตั้งและซีอีโอ บริษัท เน็ตก้า ซิสเต็ม',
+      cn: 'Netka System 创始人兼首席执行官',
+    },
+    news: {
+      en: 'Leads Netka System’s push to bring AI-enhanced network-management software to Thai enterprises and SMEs.',
+      th: 'นำ บริษัท เน็ตก้า ซิสเต็ม ผลักดันซอฟต์แวร์บริหารจัดการเครือข่ายที่เสริมด้วย AI สู่องค์กรและ SME ของไทย',
+      cn: '带领 Netka System 把 AI 增强的网络管理软件推向泰国企业与中小企业。',
+    },
+    source: 'MGR Online',
+    url: 'https://mgronline.com/cyberbiz/detail/9660000097396',
+  },
+  {
     id: 'symphony',
     name: 'กรัณย์พล อัศวสุวรรณ',
     batch: 1,
@@ -155,6 +227,24 @@ export const alumniSpotlight = [
     },
     source: 'MGR Online',
     url: 'https://mgronline.com/cyberbiz/detail/9650000094176',
+  },
+  {
+    id: 'astra-md',
+    name: 'จันทพร เจริญลาภนพรัตน์',
+    batch: 5,
+    sector: 'private',
+    role: {
+      en: 'Managing Director, Astra Communication Service',
+      th: 'กรรมการผู้จัดการ บริษัท แอสตรา คอมมิวนิเคชั่น เซอร์วิส',
+      cn: 'Astra 通信服务公司董事总经理',
+    },
+    news: {
+      en: 'Graduated in SCL #5 leading Astra Communication — her firm went on to host the next cohort, welcoming SCL #6 for a “Smart Infrastructure in Action” site visit.',
+      th: 'สำเร็จหลักสูตร SCL รุ่นที่ 5 ในฐานะผู้นำบริษัท แอสตรา คอมมิวนิเคชั่น — ต่อมาองค์กรของเธอกลับมาเป็นเจ้าภาพต้อนรับ SCL รุ่นที่ 6 ในหัวข้อ “Smart Infrastructure in Action”',
+      cn: '她在 SCL 第五期结业，领导 Astra 通信服务公司——其公司随后反过来成为课程的接待方，接待 SCL 第六期前来开展“Smart Infrastructure in Action”参访。',
+    },
+    source: 'depa',
+    url: 'https://www.thaipr.net/general/3666970',
   },
 ];
 
