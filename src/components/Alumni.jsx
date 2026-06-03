@@ -30,6 +30,7 @@ import ThailandMap from './ThailandMap';
 import CohortInsights from './CohortInsights';
 import SmartInsights from './SmartInsights';
 import AlumniSpotlight from './AlumniSpotlight';
+import BatchNewsStrip from './BatchNewsStrip';
 import './Alumni.css';
 
 const SECTOR_ICONS = {
@@ -499,8 +500,9 @@ const Alumni = ({ headingLevel = 'h2' }) => {
                 if (activeSector !== 'all' && batchEntries.length === 0) return null;
 
                 return (
+                  <div key={batch.id}>
+                    <BatchNewsStrip batchId={batch.id} />
                   <div
-                    key={batch.id}
                     data-batch={batch.id}
                     className="alumni-batch-wrapper"
                   >
@@ -575,6 +577,7 @@ const Alumni = ({ headingLevel = 'h2' }) => {
                         </button>
                       </div>
                     )}
+                  </div>
                   </div>
                 );
               })}
