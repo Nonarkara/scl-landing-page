@@ -103,8 +103,8 @@
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--depa-yellow);
-  background: rgba(245, 200, 0, 0.1);
+  color: var(--depa-navy);
+  background: rgba(245, 158, 11, 0.18);
   padding: 2px 7px;
   margin-bottom: 8px;
   align-self: flex-start;
