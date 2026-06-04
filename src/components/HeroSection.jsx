@@ -112,6 +112,23 @@ const HeroSection = () => {
               </div>
             </div>
 
+            <div className="hero-project-stats">
+              <div className="hps-item">
+                <span className="hps-num">118</span>
+                <span className="hps-label">{t('hero.statAreas', 'Smart city areas')}</span>
+              </div>
+              <div className="hps-sep" />
+              <div className="hps-item">
+                <span className="hps-num">80+</span>
+                <span className="hps-label">{t('hero.statInitiatives', 'Alumni-led initiatives')}</span>
+              </div>
+              <div className="hps-sep" />
+              <div className="hps-item">
+                <span className="hps-num">37+</span>
+                <span className="hps-label">{t('hero.statCertified', 'Certified zones')}</span>
+              </div>
+            </div>
+
             <a
               href="#news"
               className="hero-latest-update"

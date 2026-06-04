@@ -94,7 +94,10 @@
     "waitlistSuccess": "Your email app is opening so depa can receive your SCL #7 interest.",
     "brochure": "Request Brochure",
     "statAlumni": "Alumni",
-    "statProvinces": "Provinces"
+    "statProvinces": "Provinces",
+    "statAreas": "Smart city areas nationally",
+    "statInitiatives": "Alumni-led initiatives",
+    "statCertified": "Certified zones"
   },
   "about": {
     "eyebrow": "Program design",
@@ -436,40 +439,48 @@
   },
   "index": {
     "kicker": "Smart City Thailand Index",
-    "title": "A data tool for measuring what's actually smart",
-    "description": "An independent scoring framework ranking 37+ Thai smart cities across 7 livability pillars — with interactive exploration tools open to the public.",
+    "title": "We don't just train leaders — we measure what they build",
+    "description": "SCITI is an independent evidence framework scoring 118 Thai cities across 7 livability pillars using 15+ government and satellite sources. Built alongside the SCL network — so the training and the accountability layer grow together.",
+    "findingsKicker": "What the data shows",
+    "findings": {
+      "phuket": "Phuket 72.8α — 25% congestion cut, 20+ marine buoys, fully operational.",
+      "eec": "EEC water deficit: 897 MCM by 2037. Smart city as survival, not amenity.",
+      "gap": "37 certified cities. 190+ zones registered. The gap is the accountability story."
+    },
     "cards": {
       "rankings": {
-        "kicker": "Rankings",
-        "title": "37 cities scored and ranked",
-        "description": "Composite scores across 7 livability pillars with alpha, beta, and gamma tier classification"
+        "kicker": "National Rankings",
+        "title": "118 cities. Evidence over proposals.",
+        "description": "Composite scores across 7 livability pillars with α/β/γ tier classification — based on what actually works, not what's planned."
       },
-      "allocator": {
-        "kicker": "Priority allocator",
-        "title": "Drag to re-rank in real time",
-        "description": "Adjust pillar weights on a radar chart and watch cities re-sort instantly"
+      "climate": {
+        "kicker": "Climate Integration",
+        "title": "World Bank climate risk, built in.",
+        "description": "Flood frequency (GISTDA), PM2.5, road fatalities, and World Bank CCDR 2025 projections woven into every city score from day one."
       },
       "map": {
-        "kicker": "Interactive map",
-        "title": "See where smart cities actually are",
-        "description": "Regional clusters with stacked pillar breakdowns and multiple layer views"
+        "kicker": "National Map",
+        "title": "See where smart cities actually are.",
+        "description": "Regional clusters with live certification status, tier overlays, and province-level coverage across all 77 provinces."
       },
       "reality": {
-        "kicker": "Reality check",
-        "title": "Official status vs. actual scores",
-        "description": "Government certification compared against evidence-based outcome ratings"
+        "kicker": "Reality Check",
+        "title": "Badge vs. evidence score.",
+        "description": "37 cities hold the Smart City Thailand mark. This index measures whether the reality behind the badge is α, β, or γ."
       }
     },
     "cta": "Explore the full Index",
-    "meta": "{{cities}} cities · {{pillars}} pillars · α/β/γ tiers",
+    "meta": "{{cities}} cities · {{pillars}} pillars · {{sources}}+ data sources",
     "externalTool": "External tool",
     "stats": {
-      "citiesLabel": "Cities verified",
-      "citiesSub": "out of 118 declared",
+      "citiesLabel": "Cities scored",
+      "citiesSub": "37 certified + 81 tracked",
       "pillarsLabel": "Livability pillars",
-      "pillarsSub": "weighted & scored",
+      "pillarsSub": "evidence-weighted",
+      "sourcesLabel": "Data sources",
+      "sourcesSub": "gov · satellite · field",
       "tierLabel": "Tier system",
-      "tierSub": "based on evidence"
+      "tierSub": "α/β/γ by evidence"
     }
   },
   "countdown": {

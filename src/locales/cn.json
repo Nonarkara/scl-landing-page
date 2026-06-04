@@ -94,7 +94,10 @@
     "waitlistSuccess": "正在打开邮件应用，以便向 depa 发送您对 SCL #7 的兴趣登记。",
     "brochure": "索取课程手册",
     "statAlumni": "校友",
-    "statProvinces": "府"
+    "statProvinces": "府",
+    "statAreas": "全国智慧城市区域",
+    "statInitiatives": "校友主导项目",
+    "statCertified": "认证区域"
   },
   "about": {
     "eyebrow": "课程设计",
@@ -436,40 +439,48 @@
   },
   "index": {
     "kicker": "Smart City Thailand Index",
-    "title": "一个用来衡量城市是否真正“智慧”的数据工具",
-    "description": "一个独立的评分框架，对泰国 37+ 座智慧城市在 7 个宜居维度进行排名，配有公开的交互式探索工具。",
+    "title": "我们不只是培训领导者——我们还衡量他们所建设的成果",
+    "description": "SCITI 是一套独立的证据评分框架，利用 15+ 个政府与卫星数据源，对 118 座泰国城市在 7 大宜居支柱上进行评分。与 SCL 网络并行构建——让培训与问责层同步生长。",
+    "findingsKicker": "数据揭示了什么",
+    "findings": {
+      "phuket": "普吉岛 72.8α — 拥堵降低 25%，20+ 个海洋浮标，已实际运营。",
+      "eec": "东部经济走廊水资源缺口：2037 年达 8.97 亿立方米。智慧城市是生存基础设施。",
+      "gap": "37 个认证城市。190+ 个注册区域。这一差距正是问责的核心叙事。"
+    },
     "cards": {
       "rankings": {
-        "kicker": "城市排名",
-        "title": "37 座城市评分与排名",
-        "description": "基于 7 个宜居维度的综合评分，按 alpha、beta、gamma 三级分类"
+        "kicker": "全国排名",
+        "title": "118 座城市。证据说话，而非方案。",
+        "description": "横跨 7 大支柱的综合评分，基于真实存在与运转的系统进行 α/β/γ 分级，而非停留于规划层面。"
       },
-      "allocator": {
-        "kicker": "权重调节器",
-        "title": "拖动即可实时重排",
-        "description": "在雷达图上调整维度权重，城市排名即刻重新排列"
+      "climate": {
+        "kicker": "气候数据整合",
+        "title": "世界银行气候风险，内置于评分。",
+        "description": "洪涝频率（GISTDA）、PM2.5（PCD）、道路死亡率与世界银行 CCDR 2025 预测——从一开始就融入城市评分。"
       },
       "map": {
         "kicker": "交互式地图",
-        "title": "看看智慧城市到底在哪里",
-        "description": "按区域聚类，附带维度分布图和多图层视图"
+        "title": "看看智慧城市究竟在哪里。",
+        "description": "按区域划分的城市群，配以实时认证状态、分级叠加与全国 77 府的覆盖视图。"
       },
       "reality": {
-        "kicker": "现实检验",
-        "title": "官方认证 vs. 实际得分",
-        "description": "将政府认证状态与基于实证的结果评级进行对比"
+        "kicker": "现实核查",
+        "title": "认证标志 vs. 证据评分。",
+        "description": "37 个城市持有泰国智慧城市标志。本指数衡量标志背后的现实究竟是 α、β 还是 γ。"
       }
     },
     "cta": "探索完整指数",
-    "meta": "{{cities}} 座城市 · {{pillars}} 个维度 · α/β/γ 分级",
+    "meta": "{{cities}} 座城市 · {{pillars}} 大支柱 · {{sources}}+ 个数据源",
     "externalTool": "外部工具",
     "stats": {
-      "citiesLabel": "已核验城市",
-      "citiesSub": "总共 118 个申报",
+      "citiesLabel": "已评分城市",
+      "citiesSub": "37 认证 + 81 跟踪",
       "pillarsLabel": "宜居支柱",
-      "pillarsSub": "加权评分",
+      "pillarsSub": "证据加权",
+      "sourcesLabel": "数据来源",
+      "sourcesSub": "政府 · 卫星 · 实地",
       "tierLabel": "分级体系",
-      "tierSub": "基于实证"
+      "tierSub": "α/β/γ 基于实证"
     }
   },
   "countdown": {

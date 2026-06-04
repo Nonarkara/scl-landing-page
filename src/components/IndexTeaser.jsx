@@ -16,61 +16,43 @@ const PILLAR_COLORS = {
 
 const RankingsGraphic = () => (
   <svg viewBox="0 0 160 88" fill="none" aria-hidden="true">
-    <rect x="8" y="8" width="108" height="8" rx="4" fill={PILLAR_COLORS.livability} opacity="0.85" />
-    <rect x="8" y="22" width="92" height="8" rx="4" fill={PILLAR_COLORS.economy} opacity="0.85" />
-    <rect x="8" y="36" width="78" height="8" rx="4" fill={PILLAR_COLORS.safety} opacity="0.85" />
-    <rect x="8" y="50" width="64" height="8" rx="4" fill={PILLAR_COLORS.wellbeing} opacity="0.85" />
-    <rect x="8" y="64" width="50" height="8" rx="4" fill={PILLAR_COLORS.environment} opacity="0.85" />
-    <text x="130" y="16" fontSize="11" fontWeight="700" fill="#111" opacity="0.6">α</text>
-    <text x="130" y="44" fontSize="11" fontWeight="700" fill="#111" opacity="0.4">β</text>
-    <text x="130" y="72" fontSize="11" fontWeight="700" fill="#111" opacity="0.25">γ</text>
+    <rect x="8" y="8" width="118" height="8" rx="0" fill={PILLAR_COLORS.livability} opacity="0.85" />
+    <rect x="8" y="22" width="101" height="8" rx="0" fill={PILLAR_COLORS.economy} opacity="0.85" />
+    <rect x="8" y="36" width="88" height="8" rx="0" fill={PILLAR_COLORS.safety} opacity="0.85" />
+    <rect x="8" y="50" width="72" height="8" rx="0" fill={PILLAR_COLORS.wellbeing} opacity="0.85" />
+    <rect x="8" y="64" width="58" height="8" rx="0" fill={PILLAR_COLORS.environment} opacity="0.85" />
+    <text x="134" y="16" fontSize="9" fontWeight="700" fill="#111" opacity="0.5">α</text>
+    <text x="134" y="44" fontSize="9" fontWeight="700" fill="#111" opacity="0.35">β</text>
+    <text x="134" y="72" fontSize="9" fontWeight="700" fill="#111" opacity="0.2">γ</text>
+    <text x="8" y="82" fontSize="6" fill="#111" opacity="0.3">118 cities scored</text>
   </svg>
 );
 
-const AllocatorGraphic = () => {
-  const cx = 80, cy = 44, r = 32;
-  const axes = 7;
-  const points = Array.from({ length: axes }, (_, i) => {
-    const angle = (Math.PI * 2 * i) / axes - Math.PI / 2;
-    return { x: cx + r * Math.cos(angle), y: cy + r * Math.sin(angle) };
-  });
-  const weights = [0.9, 0.6, 0.75, 0.5, 0.85, 0.65, 0.7];
-  const polygon = weights
-    .map((w, i) => {
-      const angle = (Math.PI * 2 * i) / axes - Math.PI / 2;
-      return `${cx + r * w * Math.cos(angle)},${cy + r * w * Math.sin(angle)}`;
-    })
-    .join(' ');
-  return (
-    <svg viewBox="0 0 160 88" fill="none" aria-hidden="true">
-      <polygon
-        points={points.map((p) => `${p.x},${p.y}`).join(' ')}
-        stroke="#111"
-        strokeWidth="0.5"
-        opacity="0.15"
-        fill="none"
-      />
-      {points.map((p, i) => (
-        <line key={i} x1={cx} y1={cy} x2={p.x} y2={p.y} stroke="#111" strokeWidth="0.5" opacity="0.1" />
-      ))}
-      <polygon points={polygon} fill="#ffd100" opacity="0.25" stroke="#ffd100" strokeWidth="1.5" />
-      {weights.map((w, i) => {
-        const angle = (Math.PI * 2 * i) / axes - Math.PI / 2;
-        return (
-          <circle
-            key={i}
-            cx={cx + r * w * Math.cos(angle)}
-            cy={cy + r * w * Math.sin(angle)}
-            r="3"
-            fill="#ffd100"
-            stroke="#fff"
-            strokeWidth="1"
-          />
-        );
-      })}
-    </svg>
-  );
-};
+const ClimateGraphic = () => (
+  <svg viewBox="0 0 160 88" fill="none" aria-hidden="true">
+    {/* Flood risk */}
+    <text x="8" y="18" fontSize="6.5" fontWeight="700" fill="#111" opacity="0.45">FLOOD</text>
+    <rect x="42" y="10" width="108" height="9" rx="0" fill={PILLAR_COLORS.safety} opacity="0.12" />
+    <rect x="42" y="10" width="66" height="9" rx="0" fill={PILLAR_COLORS.safety} opacity="0.65" />
+
+    {/* Heat risk */}
+    <text x="8" y="36" fontSize="6.5" fontWeight="700" fill="#111" opacity="0.45">HEAT</text>
+    <rect x="42" y="28" width="108" height="9" rx="0" fill={PILLAR_COLORS.economy} opacity="0.12" />
+    <rect x="42" y="28" width="84" height="9" rx="0" fill={PILLAR_COLORS.economy} opacity="0.65" />
+
+    {/* Water */}
+    <text x="8" y="54" fontSize="6.5" fontWeight="700" fill="#111" opacity="0.45">WATER</text>
+    <rect x="42" y="46" width="108" height="9" rx="0" fill={PILLAR_COLORS.livability} opacity="0.12" />
+    <rect x="42" y="46" width="50" height="9" rx="0" fill={PILLAR_COLORS.livability} opacity="0.65" />
+
+    {/* 2050 projection line */}
+    <line x1="122" y1="5" x2="122" y2="62" stroke="#111" strokeWidth="0.75" strokeDasharray="2,2" opacity="0.25" />
+    <text x="124" y="9" fontSize="5.5" fill="#111" opacity="0.3">2050</text>
+
+    <text x="8" y="76" fontSize="5.5" fill="#111" opacity="0.35">World Bank CCDR 2025 · GISTDA</text>
+    <line x1="8" y1="80" x2="150" y2="80" stroke="#111" strokeWidth="0.5" opacity="0.12" />
+  </svg>
+);
 
 const MapGraphic = () => (
   <svg viewBox="0 0 160 88" fill="none" aria-hidden="true">
@@ -96,47 +78,53 @@ const MapGraphic = () => (
 
 const RealityGraphic = () => (
   <svg viewBox="0 0 160 88" fill="none" aria-hidden="true">
-    <rect x="12" y="18" width="56" height="6" rx="3" fill={PILLAR_COLORS.livability} opacity="0.3" />
-    <rect x="12" y="18" width="48" height="6" rx="3" fill={PILLAR_COLORS.livability} opacity="0.8" />
-    <rect x="80" y="16" width="44" height="10" rx="5" fill="#111" opacity="0.08" />
-    <text x="102" y="24" fontSize="7" fontWeight="600" fill="#111" opacity="0.45" textAnchor="middle">Certified</text>
+    {/* Certified badge line */}
+    <rect x="12" y="14" width="62" height="7" rx="0" fill={PILLAR_COLORS.livability} opacity="0.3" />
+    <rect x="12" y="14" width="56" height="7" rx="0" fill={PILLAR_COLORS.livability} opacity="0.85" />
+    <rect x="82" y="11" width="48" height="13" rx="0" fill="#111" opacity="0.06" />
+    <text x="106" y="20" fontSize="7" fontWeight="700" fill="#111" opacity="0.5" textAnchor="middle">α Certified</text>
 
-    <rect x="12" y="40" width="56" height="6" rx="3" fill={PILLAR_COLORS.economy} opacity="0.3" />
-    <rect x="12" y="40" width="32" height="6" rx="3" fill={PILLAR_COLORS.economy} opacity="0.8" />
-    <rect x="80" y="38" width="44" height="10" rx="5" fill="#111" opacity="0.08" />
-    <text x="102" y="46" fontSize="7" fontWeight="600" fill="#111" opacity="0.45" textAnchor="middle">Partial</text>
+    {/* Partial */}
+    <rect x="12" y="37" width="62" height="7" rx="0" fill={PILLAR_COLORS.economy} opacity="0.3" />
+    <rect x="12" y="37" width="36" height="7" rx="0" fill={PILLAR_COLORS.economy} opacity="0.85" />
+    <rect x="82" y="34" width="48" height="13" rx="0" fill="#111" opacity="0.06" />
+    <text x="106" y="43" fontSize="7" fontWeight="700" fill="#111" opacity="0.5" textAnchor="middle">β Partial</text>
 
-    <rect x="12" y="62" width="56" height="6" rx="3" fill={PILLAR_COLORS.environment} opacity="0.3" />
-    <rect x="12" y="62" width="52" height="6" rx="3" fill={PILLAR_COLORS.environment} opacity="0.8" />
-    <rect x="80" y="60" width="44" height="10" rx="5" fill="#111" opacity="0.08" />
-    <text x="102" y="68" fontSize="7" fontWeight="600" fill="#111" opacity="0.45" textAnchor="middle">Operational</text>
+    {/* Planned */}
+    <rect x="12" y="60" width="62" height="7" rx="0" fill={PILLAR_COLORS.safety} opacity="0.3" />
+    <rect x="12" y="60" width="18" height="7" rx="0" fill={PILLAR_COLORS.safety} opacity="0.85" />
+    <rect x="82" y="57" width="48" height="13" rx="0" fill="#111" opacity="0.06" />
+    <text x="106" y="66" fontSize="7" fontWeight="700" fill="#111" opacity="0.5" textAnchor="middle">γ Planned</text>
+
+    <text x="12" y="82" fontSize="5.5" fill="#111" opacity="0.3">37 certified · 190+ zones registered</text>
   </svg>
 );
 
 const CARD_GRAPHICS = {
   rankings: RankingsGraphic,
-  allocator: AllocatorGraphic,
+  climate: ClimateGraphic,
   map: MapGraphic,
   reality: RealityGraphic,
 };
 
-// sciti.nonarkara.org currently serves a single entry point (deep routes 404),
-// so every card opens the live Index root. Update here if sub-routes return.
+// All cards open the live Index root (deep routes 404 on this deployment).
 const CARD_ROUTES = {
   rankings: '',
-  allocator: '',
+  climate: '',
   map: '',
   reality: '',
 };
 
-const CARD_KEYS = ['rankings', 'allocator', 'map', 'reality'];
+const CARD_KEYS = ['rankings', 'climate', 'map', 'reality'];
+const FINDING_KEYS = ['phuket', 'eec', 'gap'];
 
 const IndexTeaser = () => {
   const { t } = useTranslation();
 
   const stats = [
-    { value: '37', label: t('index.stats.citiesLabel'), sub: t('index.stats.citiesSub') },
+    { value: '118', label: t('index.stats.citiesLabel'), sub: t('index.stats.citiesSub') },
     { value: '7', label: t('index.stats.pillarsLabel'), sub: t('index.stats.pillarsSub') },
+    { value: '15+', label: t('index.stats.sourcesLabel'), sub: t('index.stats.sourcesSub') },
     { value: 'αβγ', label: t('index.stats.tierLabel'), sub: t('index.stats.tierSub') },
   ];
 
@@ -156,6 +144,18 @@ const IndexTeaser = () => {
             <span className="index-stat-sub">{stat.sub}</span>
           </div>
         ))}
+      </div>
+
+      <div className="index-findings">
+        <span className="index-findings-kicker">{t('index.findingsKicker')}</span>
+        <div className="index-findings-list">
+          {FINDING_KEYS.map((key) => (
+            <div key={key} className="index-finding-item">
+              <span className="index-finding-dot" />
+              <span className="index-finding-text">{t(`index.findings.${key}`)}</span>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="index-teaser-grid">
@@ -202,7 +202,7 @@ const IndexTeaser = () => {
           {t('index.cta')} <ExternalLink size={17} />
         </a>
         <span className="index-teaser-meta">
-          {t('index.meta', { cities: 37, pillars: 7 })}
+          {t('index.meta', { cities: 118, pillars: 7, sources: 15 })}
         </span>
       </div>
     </div>

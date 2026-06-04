@@ -642,6 +642,32 @@ const faqData = [
   {
     category: "partnerships",
     question: {
+      en: "What is the Smart City Thailand mark and how do cities earn it?",
+      th: "เครื่องหมาย Smart City Thailand คืออะไร และเมืองจะได้รับมาอย่างไร?",
+      cn: "泰国智慧城市标志是什么？城市如何获得它？",
+    },
+    answer: {
+      en: "The Smart City Thailand mark is the official government certification logo issued by depa to areas that have successfully completed the national smart city designation process. Cities and zones must submit a Smart City Masterplan to depa demonstrating readiness across at least one of the seven smart city domains — environment, economy, mobility, energy, people, living, and governance. Once evaluated and approved, the area receives the official Smart City Thailand mark, which it may display on official communications and use to access depa's smart city support programs, including preferential pathways to national digital infrastructure budgets. As of 2026, 37 areas hold the certified Smart City Thailand mark out of 118 that have declared intent, making the certification a meaningful signal of genuine progress rather than aspiration.",
+      th: "เครื่องหมาย Smart City Thailand คือโลโก้รับรองอย่างเป็นทางการจากรัฐบาล ออกโดย depa สำหรับพื้นที่ที่ผ่านกระบวนการรับรองเมืองอัจฉริยะระดับชาติเรียบร้อยแล้ว เมืองและพื้นที่ต้องยื่นแผนแม่บทเมืองอัจฉริยะต่อ depa โดยแสดงความพร้อมในอย่างน้อยหนึ่งในเจ็ดด้านของเมืองอัจฉริยะ ได้แก่ สิ่งแวดล้อม เศรษฐกิจ การเดินทาง พลังงาน คน ความน่าอยู่ และธรรมาภิบาล เมื่อผ่านการประเมินและได้รับอนุมัติ พื้นที่นั้นจะได้รับเครื่องหมาย Smart City Thailand อย่างเป็นทางการ สามารถใช้ในการสื่อสารทางการและเข้าถึงโปรแกรมสนับสนุนเมืองอัจฉริยะของ depa รวมถึงช่องทางพิเศษสู่งบประมาณโครงสร้างพื้นฐานดิจิทัลแห่งชาติ ณ ปี 2569 มี 37 พื้นที่ที่ได้รับการรับรองเครื่องหมาย Smart City Thailand จากทั้งหมด 118 พื้นที่ที่ประกาศความตั้งใจ ทำให้การรับรองนี้เป็นสัญญาณที่มีความหมายว่าเกิดความคืบหน้าจริง ไม่ใช่แค่เจตนารมณ์",
+      cn: "泰国智慧城市标志是由 depa 颁发的官方政府认证标志，授予已成功完成国家智慧城市认定流程的地区。城市与区域须向 depa 提交智慧城市总体规划，证明其在七大智慧城市领域——环境、经济、交通、能源、人才、宜居与治理——中至少一个领域的准备情况。经评估与批准后，该地区将获得官方泰国智慧城市标志，可在官方传播中展示，并获得 depa 智慧城市支持项目的优先资格，包括进入国家数字基础设施预算的绿色通道。截至 2026 年，在 118 个已声明意向的地区中，37 个地区持有经认证的泰国智慧城市标志，这一认证已成为真实进展的有意义信号，而非仅停留于愿景层面。",
+    },
+  },
+  {
+    category: "partnerships",
+    question: {
+      en: "What is the Thailand Digital Catalog and how does it connect to SCL?",
+      th: "Thailand Digital Catalog คืออะไร และเชื่อมต่อกับ SCL อย่างไร?",
+      cn: "泰国数字目录（TDC）是什么？它与 SCL 有何关联？",
+    },
+    answer: {
+      en: "The Thailand Digital Catalog (TDC) is depa's official platform for pre-qualified digital solutions — a curated procurement resource where public sector leaders, including SCL alumni, can identify certified products and services for smart city implementation. Vendors must pass depa's evaluation process to be listed, covering categories from IoT platforms and data dashboards to citizen service applications and e-government tools. For SCL graduates, the TDC is a practical shortcut: instead of navigating the full vendor market from scratch, leaders can access a list of solutions already reviewed against national digital standards. This shortens procurement timelines, reduces risk in smart city project delivery, and ensures investments align with depa's certification pathways. The catalog is available at digitalcatalog.depa.or.th.",
+      th: "Thailand Digital Catalog (TDC) คือแพลตฟอร์มอย่างเป็นทางการของ depa สำหรับโซลูชันดิจิทัลที่ผ่านการคัดกรองล่วงหน้า เป็นแหล่งข้อมูลการจัดซื้อที่ได้รับการคัดสรร ซึ่งผู้นำภาครัฐ รวมถึงศิษย์เก่า SCL สามารถค้นหาผลิตภัณฑ์และบริการที่ได้รับการรับรองสำหรับการพัฒนาเมืองอัจฉริยะ ผู้ขายต้องผ่านกระบวนการประเมินของ depa จึงจะเข้าสู่รายการได้ ครอบคลุมหมวดหมู่ตั้งแต่แพลตฟอร์ม IoT และแดชบอร์ดข้อมูล ไปจนถึงแอปพลิเคชันบริการประชาชนและเครื่องมือรัฐบาลอิเล็กทรอนิกส์ สำหรับผู้สำเร็จการศึกษาจาก SCL TDC คือทางลัดที่ใช้งานได้จริง แทนที่จะต้องสำรวจตลาดผู้ขายตั้งแต่ต้น ผู้นำสามารถเข้าถึงรายการโซลูชันที่ผ่านการพิจารณาตามมาตรฐานดิจิทัลแห่งชาติแล้ว ช่วยลดระยะเวลาการจัดซื้อ ลดความเสี่ยงในการดำเนินโครงการเมืองอัจฉริยะ และมั่นใจว่าการลงทุนสอดคล้องกับเส้นทางการรับรองของ depa แค็ตตาล็อกนี้เข้าถึงได้ที่ digitalcatalog.depa.or.th",
+      cn: "泰国数字目录（TDC）是 depa 面向经过预审数字解决方案的官方平台——一个精心整理的采购资源库，公共部门领导者（包括 SCL 校友）可在其中找到经认证的智慧城市实施产品和服务。供应商须通过 depa 的评估流程方可入列，覆盖从 IoT 平台、数据仪表板到公民服务应用与电子政务工具等各类别。对于 SCL 毕业生而言，TDC 是实用的捷径：无需从零开始摸索供应商市场，领导者可直接获取一份已按国家数字标准审核的解决方案清单，缩短采购周期、降低智慧城市项目交付风险，并确保投资与 depa 的认证路径保持一致。该目录可访问 digitalcatalog.depa.or.th。",
+    },
+  },
+  {
+    category: "partnerships",
+    question: {
       en: "Can private sector companies partner with or sponsor SCL batches?",
       th: "บริษัทเอกชนเป็นพันธมิตรหรือสนับสนุนรุ่นของ SCL ได้ไหม?",
       cn: "私营企业可以成为 SCL 期次的合作方或赞助方吗？",

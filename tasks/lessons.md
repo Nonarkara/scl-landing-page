@@ -72,3 +72,55 @@
   news lead showed Astra for multiple sessions.
 - **Correct behaviour:** Before shipping any photo→caption pairing, Read the exact file in
   public/ and confirm the rendered <img src> in-browser. Filenames lie; pixels don't.
+
+## 2026-06-03 · Vite serves stale CSS after edit (needs full restart)
+- **What went wrong:** Edited SmartInsights.css (grid-template-columns + white-space). Disk was
+  correct and `npm run build` reflected it, but the running Vite dev server kept serving the OLD
+  CSS even after `location.reload()` — computed style showed the pre-edit values.
+- **Correct behaviour:** For CSS/data edits that don't HMR-apply, do a FULL dev-server restart
+  (`preview_stop` + `rm -rf node_modules/.vite` + `preview_start`), not just a browser reload or
+  cache clear. The production build always reads disk, so verify the prod CSS bundle (grep the
+  dist/assets/*.css) as the source of truth when the dev server looks stale.
+- **How to recognise:** getComputedStyle shows old values after an edit you KNOW is on disk;
+  `grep` confirms the change in the .css file but the browser disagrees. = Vite dev cache. Restart.
+
+## 2026-06-03 · Classify alumni from `original_line`, not `name`
+- **What went wrong:** First pass at alumni analytics read the `name` field and concluded 66% of
+  records were "name only" (sparse) — nearly shipped a misleadingly thin sector view.
+- **Correct behaviour:** The real records carry full "title + employer" in `original_line`
+  (the existing utils/alumni.js classifier uses it). Reading that field gives 96% domain coverage.
+  Always check which field the existing code trusts before computing fresh stats.
+- **How to recognise:** Aggregate looks far sparser than the live page already shows. Diff your
+  field against what computeDemographics/buildAlumniEntries read.
+
+## 2026-06-04 · CSS text-transform:uppercase silently uppercases "depa" in rendered text
+- **What went wrong:** The hero eyebrow and live-data badge had `text-transform: uppercase` in CSS,
+  which converted the locale string "depa executive program" → "DEPA EXECUTIVE PROGRAM" at render
+  time despite the source string being lowercase. The fix in locale files alone would have done nothing.
+- **Correct behaviour:** When "depa" must stay lowercase anywhere on a surface, check if any ancestor
+  CSS rule has `text-transform: uppercase`. Remove it from that specific selector (the typography
+  still looks intentional via font-weight + letter-spacing alone).
+- **How to recognise:** The locale string is lowercase "depa" but the browser renders "DEPA" — the
+  mismatch points to a CSS text-transform rule on the element or an ancestor.
+
+## 2026-06-04 · Logo height mismatches create visual "bugginess" even at correct gap widths
+- **What went wrong:** depa logo was 44px, Smart City Thailand was 68px — a 24px height difference
+  on a 3-logo bar that made the row look uneven and the gaps feel inconsistent.
+- **Correct behaviour:** Normalize logo heights across a logo bar so the visual weight is coherent:
+  depa 40px, Smart City Thailand 50px, MDES 44px. Also reduce gap from clamp(24px,4vw,46px) to
+  clamp(14px,2vw,28px) for a tight, rational layout.
+- **How to recognise:** Users describe "bug" in logo spacing — first check height inconsistency
+  across logos before assuming the gap is the only issue.
+
+## 2026-06-04 · Edit tool introduces curly quotes (U+201C/U+201D) in locale JSON files
+- **What went wrong:** When using the Edit tool to replace large blocks in th.json and cn.json,
+  the tool silently converted straight ASCII double-quotes (U+0022) to curly smart-quotes
+  (U+201C " and U+201D ") in the replacement text. This produced JSON parse errors (Vite
+  [plugin:vite:json]) because JSON only accepts U+0022 as a string/key delimiter.
+- **Correct behaviour:** After any Edit that replaces a large content block in a JSON locale
+  file, immediately run `python3 -c "import json; json.load(open('path'))"` to validate.
+  If curly quotes snuck in, surgically replace them only in the affected section using Python:
+  `section = section.replace('“', '"').replace('”', '"')` — never globally, since
+  Chinese and Thai content may legitimately contain curly quotes as typographic content.
+- **How to recognise:** Vite overlay shows `[plugin:vite:json] Failed to parse JSON file` at
+  exactly the line where the Edit replacement started. The error char is U+201C or U+201D.

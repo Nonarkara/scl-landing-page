@@ -26,10 +26,57 @@
 
 .index-teaser-stats {
   display: flex;
-  gap: 40px;
-  margin-bottom: 32px;
-  padding-bottom: 24px;
+  gap: 28px;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
   border-bottom: 1px solid var(--border-glass);
+  flex-wrap: wrap;
+}
+
+/* Findings strip — 3 editorial data points from the index */
+.index-findings {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 28px;
+  padding: 16px 0;
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.index-findings-kicker {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.index-findings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.index-finding-item {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.index-finding-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--depa-gold);
+  flex-shrink: 0;
+  position: relative;
+  top: -1px;
+}
+
+.index-finding-text {
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
 }
 
 .index-stat-item {
