@@ -112,8 +112,8 @@
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--depa-yellow);
-  background: rgba(245, 200, 0, 0.1);
+  color: var(--depa-yellow-dark);
+  background: var(--depa-yellow-soft);
   padding: 3px 8px;
 }
 
@@ -138,8 +138,8 @@
   font-size: 0.88rem;
   font-style: italic;
   line-height: 1.65;
-  color: var(--text-muted);
-  border-left: 2px solid var(--depa-yellow);
+  color: var(--text-secondary);
+  border-left: 2px solid var(--depa-gold);
   margin: 0;
   padding-left: 14px;
 }
@@ -172,9 +172,9 @@
   align-items: center;
   gap: 5px;
   font-size: 0.72rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   text-decoration: none;
-  border-bottom: 1px solid var(--border-glass);
+  border-bottom: 1px solid var(--border-strong);
   padding-bottom: 1px;
   transition: color 0.15s;
   align-self: flex-start;
@@ -319,7 +319,7 @@
 
 .tool-url {
   font-size: 0.7rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   letter-spacing: 0.02em;
   font-family: var(--font-mono, monospace);
 }
@@ -349,17 +349,17 @@
 
 .sources-list li {
   font-size: 0.8rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   line-height: 1.5;
 }
 
 .sources-list a {
-  color: var(--text-muted);
+  color: var(--text-secondary);
   text-decoration: none;
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  border-bottom: 1px solid var(--border-glass);
+  border-bottom: 1px solid var(--border-strong);
   transition: color 0.15s;
 }
 
