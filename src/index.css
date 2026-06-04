@@ -25,6 +25,7 @@
   --transition-smooth: all 0.3s ease;
   --transition-fast: all 0.18s ease;
   --navbar-height: 76px;
+  --navbar-bg: rgba(243, 242, 238, 0.96);
 }
 
 /* ── Dark mode palette — §14 Visual DNA: AKIRA/ops console aesthetic ─────── */
@@ -50,6 +51,7 @@
   --depa-yellow-muted: rgba(255, 198, 0, 0.35);
   --depa-yellow-dark: #d4a017;
   --shadow-soft:   0 2px 16px rgba(0, 0, 0, 0.4);
+  --navbar-bg: rgba(10, 14, 20, 0.95);
 }
 
 * {

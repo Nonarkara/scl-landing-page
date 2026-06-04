@@ -9,7 +9,7 @@
 }
 
 .navbar.glass-nav {
-  background: rgba(243, 242, 238, 0.96);
+  background: var(--navbar-bg);
   border-bottom: 1px solid var(--border-glass);
 }
 

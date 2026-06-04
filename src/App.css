@@ -296,3 +296,13 @@
     font-size: 0.84rem;
   }
 }
+
+.page-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50vh;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}

@@ -1,17 +1,18 @@
-import { useEffect } from 'react';
+import { useEffect, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getApplicationUrl, getProgramPhase, programDetails } from './data/program';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import AlumniPage from './pages/AlumniPage';
-import Faculty from './pages/Faculty';
-import FAQ from './pages/FAQ';
-import CurriculumPage from './pages/CurriculumPage';
-import GalleryPage from './pages/GalleryPage';
-import MethodologyPage from './pages/MethodologyPage';
-import SourceArchivePage from './pages/SourceArchivePage';
+
+const Home = lazy(() => import('./pages/Home'));
+const AlumniPage = lazy(() => import('./pages/AlumniPage'));
+const Faculty = lazy(() => import('./pages/Faculty'));
+const FAQ = lazy(() => import('./pages/FAQ'));
+const CurriculumPage = lazy(() => import('./pages/CurriculumPage'));
+const GalleryPage = lazy(() => import('./pages/GalleryPage'));
+const MethodologyPage = lazy(() => import('./pages/MethodologyPage'));
+const SourceArchivePage = lazy(() => import('./pages/SourceArchivePage'));
 import './App.css';
 
 function App() {
@@ -105,17 +106,19 @@ function App() {
       </a>
       <Navbar />
       <main id="main-content" className="app-main">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/curriculum" element={<CurriculumPage />} />
-          <Route path="/methodology" element={<MethodologyPage />} />
-          <Route path="/faculty" element={<Faculty />} />
-          <Route path="/alumni" element={<AlumniPage />} />
-          <Route path="/gallery" element={<GalleryPage />} />
-          <Route path="/sources" element={<SourceArchivePage />} />
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="*" element={<Home />} />
-        </Routes>
+        <Suspense fallback={<div className="page-loading">Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/curriculum" element={<CurriculumPage />} />
+            <Route path="/methodology" element={<MethodologyPage />} />
+            <Route path="/faculty" element={<Faculty />} />
+            <Route path="/alumni" element={<AlumniPage />} />
+            <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/sources" element={<SourceArchivePage />} />
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="*" element={<Home />} />
+          </Routes>
+        </Suspense>
       </main>
       <Footer />
     </div>
