@@ -145,7 +145,7 @@ export const sclSourceArchive = [
         type: 'official',
         date: '2023',
         source: 'Smart City Thailand / City Data',
-        title: 'DEPA launches Smart City Leadership Program #3',
+        title: 'depa launches Smart City Leadership Program #3',
         summary: 'Smart City Thailand article reporting that SCL #3 gathered over 42 executives from 21 provinces.',
         url: 'https://www.citydata.in.th/en/news/depa-launches-smart-city-leadership-program-3-scl3-with-a-mission-to-encourage-smart-city-leaders-through-knowledge-promotion/',
       },
