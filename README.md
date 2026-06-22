@@ -1,6 +1,6 @@
 # depa Smart City Leadership — scl.nonarkara.org
 
-**Six cohorts. 306 verified alumni records. 77 provinces. One website, built in a day.**
+**Six cohorts. 306 verified alumni records. 50 provinces represented in the parsed directory. One website, built in a day.**
 
 ---
 
@@ -35,6 +35,7 @@ For anyone building institutional websites for programmes they run or know deepl
 | Internationalisation | i18next (EN / TH / CN) |
 | Styling | Custom CSS, CSS variables — no Tailwind |
 | Map | Leaflet + React-Leaflet |
+| Analytics | Plausible Analytics (`scl.nonarkara.org`) |
 | Deployment | GitHub Pages via GitHub Actions |
 | Domain | `scl.nonarkara.org` (CNAME) |
 
@@ -62,7 +63,7 @@ Specific choices:
 
 - **No gradients, no rounded corners, no drop shadows.** The visual language is geometric and restrained. Hairline borders. Mono-accent (depa yellow). Hard edges.
 - **Anti-promotional copy.** "A serious short-format programme for leaders who need sharper judgment about how smart-city work actually gets delivered." Not a tagline. A description.
-- **Real data only.** 306 verified alumni records, 77 provinces, 6 cohorts, 42 hours, 7 days, 30+ speakers — all verifiable against depa's official announcements.
+- **Real data only.** 306 verified alumni records, 50 provinces represented in the parsed directory, 6 cohorts, 42 hours, 7 days, 30+ speakers — all verifiable against depa's official announcements.
 - **Mobile-first.** The site gets shared as a link in LINE and WhatsApp. The first impression is always a phone screen.
 - **Trilingual (EN / TH / CN).** Complete coverage across all three languages. Not partial translation — every section, every label, every piece of content.
 

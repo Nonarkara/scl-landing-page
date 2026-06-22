@@ -15,12 +15,13 @@ const MethodologyPage = lazy(() => import('./pages/MethodologyPage'));
 const SourceArchivePage = lazy(() => import('./pages/SourceArchivePage'));
 import './App.css';
 
+const siteUrl = 'https://scl.nonarkara.org/';
+
 function App() {
   const { t, i18n } = useTranslation();
   const currentLanguage = i18n.resolvedLanguage ?? i18n.language;
 
   useEffect(() => {
-    const siteUrl = 'https://nonarkara.github.io/scl-landing-page/';
     const ogImage = `${siteUrl}Photos/475554453_1066072178897593_3452435967247513607_n.jpg`;
     const officialUrl = getApplicationUrl(currentLanguage);
     const programPhase = getProgramPhase();

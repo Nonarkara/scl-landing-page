@@ -12,7 +12,7 @@ function fail(message) {
 }
 
 function extractStringArray(source, variableName) {
-  const pattern = new RegExp(`const\s+${variableName}\s*=\s*\[(.*?)\];`, 's');
+  const pattern = new RegExp(String.raw`const\s+${variableName}\s*=\s*\[(.*?)\];`, 's');
   const match = source.match(pattern);
   if (!match) return [];
   return [...match[1].matchAll(/'([^']+)'/g)].map((item) => item[1]);
@@ -33,7 +33,7 @@ if (duplicateNarrative.length > 0) {
 }
 
 const narrativeSet = new Set(narrativeNames);
-const excludedSet = new Set(galleryExcludedNames);
+const excludedSet = new Set([...narrativeNames, ...galleryExcludedNames]);
 const galleryNames = [
   ...galleryFeaturedNames,
   ...photosMoreNames.filter((name) => !galleryFeaturedNames.includes(name) && !excludedSet.has(name)),
