@@ -23,9 +23,9 @@ export const spotlightLabels = {
   publicTag: { en: 'Public sector', th: 'ภาครัฐ', cn: '公共部门' },
   privateTag: { en: 'Private sector', th: 'ภาคเอกชน', cn: '私营部门' },
   note: {
-    en: 'Public mentions are illustrative, not exhaustive — the directory below holds all 299 verified records.',
-    th: 'ตัวอย่างการปรากฏในสื่อนี้เป็นเพียงส่วนหนึ่ง ทำเนียบด้านล่างรวมระเบียนที่ตรวจสอบแล้วทั้ง 299 รายชื่อ',
-    cn: '以上公开报道仅为示例，并非全部；下方目录收录全部 299 条已核验记录。',
+    en: 'Public mentions are illustrative, not exhaustive — the directory below holds all 306 verified records.',
+    th: 'ตัวอย่างการปรากฏในสื่อนี้เป็นเพียงส่วนหนึ่ง ทำเนียบด้านล่างรวมระเบียนที่ตรวจสอบแล้วทั้ง 306 รายชื่อ',
+    cn: '以上公开报道仅为示例，并非全部；下方目录收录全部 306 条已核验记录。',
   },
 };
 

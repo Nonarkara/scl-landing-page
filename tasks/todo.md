@@ -7,7 +7,7 @@ Dr Non asked (3 things):
 3. Alumni page: analytics on "what kinds of things our alums are working on" — show the mobility/breadth across smart cities, ICT, government and beyond. A destination worth revisiting.
 
 ## Findings (validated)
-- alumni.json = 6 cohorts, 306 records. Real classifier reads `original_line` (full title+employer) → 96% classifiable.
+- alumni.json = 6 cohorts, 306 records. Real classifier reads `original_line` (full title+employer) → 95% classifiable.
 - Existing analytics (SmartInsights + CohortInsights) already accurate (sector/role/province/cohort). NOT broken.
 - Genuine gap = a DOMAIN view ("what they work on"). Validated 8-domain classifier (sums to 306):
   Local Gov 113 · Private 113 · Provincial/National Govt 22 · ICT/Telecom/Digital 16 · Academia 10 · Energy/Env 9 · Urban/Transport 8 · Other 15.

@@ -253,7 +253,7 @@ export const SECTOR_KEYS = ['all', 'public', 'private', 'academic', 'stateEnterp
 
 // Domain classification — "what kind of work" (employer/industry), distinct from
 // sector (public/private). Reads the full roster line; priority order matters.
-// Validated against all 299 records: 95% classify.
+// Validated against all 306 records: 95% classify.
 const DOMAIN_RULES = [
   { domain: 'academia', patterns: [/มหาวิทยาลัย/, /สถาบันเทคโนโลยี/, /ราชภัฏ/, /ราชมงคล/, /จุฬาลงกรณ์/, /วิทยาลัย/, /อธิการบดี/, /คณบดี/, /ศาสตราจารย์/, /อาจารย์/, /เทคโนธานี/, /สถาบันวิจัย/] },
   { domain: 'energyEnv', patterns: [/การไฟฟ้า/, /กฟภ/, /กฟน/, /กฟผ/, /พลังงาน/, /โซลาร์/, /solar/i, /ปิโตรเล/, /ก๊าซ/, /ปตท/, /การประปา/, /ประปา/, /ชลประทาน/, /สิ่งแวดล้อม/, /ขยะ/, /จัดการน้ำ/] },

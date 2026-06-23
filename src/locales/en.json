@@ -41,7 +41,7 @@
   "hero": {
     "eyebrow": "depa executive program • SCL #{{cohort}}",
     "liveBadge": "Data live · Updated today",
-    "liveBadge2": "299 verified alumni records · 52 provinces reached",
+    "liveBadge2": "306 verified alumni records · 53 provinces reached",
     "liveBadge3": "Six cohorts · 2020–2026 · depa flagship",
     "title": "Smart City Leadership",
     "valueStatement": "A serious short-format program for leaders who need sharper judgment about how smart-city work actually gets delivered.",
@@ -205,7 +205,7 @@
       "economy": "THB 11.9B+ invested through smart city programs",
       "mobility": "Most-requested pillar by Thai municipalities",
       "energy": "EGAT + SWOC among SCL study-visit partners",
-      "people": "299 verified alumni records across 6 cohorts",
+      "people": "306 verified alumni records across 6 cohorts",
       "living": "Telemedicine deployed in 18 provinces",
       "governance": "Target: 105 smart cities by 2027"
     }
@@ -288,7 +288,7 @@
     },
     "sourceNote": "Application timing, fee, venue, and schedule are based on depa's official SCL #6 article.",
     "liveBadge": "Data live · Updated today",
-    "liveBadge2": "299 verified alumni records · 52 provinces reached",
+    "liveBadge2": "306 verified alumni records · 53 provinces reached",
     "liveBadge3": "Six cohorts · 2020–2026 · depa flagship",
     "highlight": "Future",
     "title2": "of Smart Thailand",
@@ -356,7 +356,7 @@
     "sendUpdate": "Send Update to scp@depa.or.th / dsp@depa.or.th",
     "updateBtn": "Position or location changed? Click here",
     "insightsTitle": "SCL Insights",
-    "insightsEditorialLead": "Six published cohorts. 299 verified alumni records. The network now spans public agencies, local governments, state enterprises, academia, and private operators.",
+    "insightsEditorialLead": "Six published cohorts. 306 verified alumni records. The network now spans public agencies, local governments, state enterprises, academia, and private operators.",
     "share": "Share",
     "shareCopied": "Link copied",
     "leadershipTitle": "Leadership in the network",
@@ -545,7 +545,7 @@
     "2024_title2": "The AI Era (Batch #5)",
     "2024_desc2": "Overhauled the curriculum to focus on AI governance and sustainable urban tech.",
     "2026_title": "Now (Batch #6)",
-    "2026_desc": "SCL #6 closed in May 2026 and brought the published archive to six cohorts and 299 verified alumni records."
+    "2026_desc": "SCL #6 closed in May 2026 and brought the published archive to six cohorts and 306 verified alumni records."
   },
   "cta": {
     "kicker": "Next Cohort",
@@ -573,9 +573,9 @@
     "topProvinces": "Top Provinces",
     "cohortGrowth": "Cohort Growth",
     "topOrganizations": "Top Organizations",
-    "mobilityLead": "Read across six cohorts, the network shows how smart-city leadership actually moves — from city halls and provincial offices to telecom, energy and technology firms, universities and state enterprises. Every figure below is computed live from the 299 published records.",
+    "mobilityLead": "Read across six cohorts, the network shows how smart-city leadership actually moves — from city halls and provincial offices to telecom, energy and technology firms, universities and state enterprises. Every figure below is computed live from the 306 published records.",
     "domainsTitle": "What the network works on",
-    "method": "Computed live from depa's six published cohort rosters (299 names) — classified by the title and employer each line records. 95% map to a work domain; the remainder list a name only. Role and domain counts are floors: the true totals are at least these.",
+    "method": "Computed live from depa's six published cohort rosters (306 names) — classified by the title and employer each line records. 95% map to a work domain; the remainder list a name only. Role and domain counts are floors: the true totals are at least these.",
     "domains": {
       "localGov": "Local government",
       "private": "Private enterprise",

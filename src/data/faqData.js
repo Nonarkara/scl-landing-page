@@ -335,9 +335,9 @@ const faqData = [
       cn: "SCL 校友网络规模有多大？",
     },
     answer: {
-      en: "The public directory currently contains 299 verified alumni records from depa's official cohort announcements. It covers all six published cohorts and preserves names as they appear in the official Thai-language source lists.",
-      th: "ทำเนียบสาธารณะปัจจุบันมีระเบียนศิษย์เก่าที่ตรวจสอบแล้ว 299 คน จากประกาศรายชื่อรุ่นอย่างเป็นทางการของ depa ครอบคลุม SCL ทั้ง 6 รุ่นที่เผยแพร่ และคงชื่อไว้ตามเอกสารต้นทางภาษาไทย",
-      cn: "公开目录目前包含 299 条经核验的校友记录，来源为 depa 官方公布的各期名单。目录覆盖已发布的六期课程，并保留官方泰文来源中的姓名写法。",
+      en: "The public directory currently contains 306 verified alumni records from depa's official cohort announcements and the confirmed SCL #6 roster. It covers all six published cohorts and preserves names as they appear in the official Thai-language source lists.",
+      th: "ทำเนียบสาธารณะปัจจุบันมีระเบียนศิษย์เก่าที่ตรวจสอบแล้ว 306 คน จากประกาศรายชื่อรุ่นอย่างเป็นทางการของ depa และรายชื่อ SCL รุ่นที่ 6 ที่ยืนยันแล้ว ครอบคลุม SCL ทั้ง 6 รุ่นที่เผยแพร่ และคงชื่อไว้ตามเอกสารต้นทางภาษาไทย",
+      cn: "公开目录目前包含 306 条经核验的校友记录，来源为 depa 官方公布的各期名单及已确认的 SCL 第六期名册。目录覆盖已发布的六期课程，并保留官方泰文来源中的姓名写法。",
     },
   },
   {

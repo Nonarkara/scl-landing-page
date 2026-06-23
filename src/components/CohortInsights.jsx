@@ -132,7 +132,7 @@ const CohortInsights = ({ allEntries, demographics }) => {
       </div>
 
       <p className="insights-editorial-lead">
-        {t('alumni.insightsEditorialLead', 'Six published cohorts. 299 verified alumni records. The network now spans public agencies, local governments, state enterprises, academia, and private operators.')}
+        {t('alumni.insightsEditorialLead', 'Six published cohorts. 306 verified alumni records. The network now spans public agencies, local governments, state enterprises, academia, and private operators.')}
       </p>
 
       <div className="insights-grid-top">

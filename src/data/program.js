@@ -16,7 +16,7 @@ export const programDetails = {
   programDays: 7,
   speakerCount: 30,
   feeTHB: 62000,
-  alumniCount: 299,
+  alumniCount: 306,
   cohortCount: 6,
   pillarCount: 7,
   applicationDeadline: '2026-04-06T23:59:59+07:00',
