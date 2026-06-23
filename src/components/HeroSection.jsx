@@ -39,7 +39,7 @@ const HeroSection = () => {
     if (waitlistEmail) {
       const subject = encodeURIComponent('SCL #7 Interest');
       const body = encodeURIComponent(`Please notify me when SCL #7 opens.\n\nEmail: ${waitlistEmail}`);
-      window.location.href = `mailto:scp@depa.or.th?subject=${subject}&body=${body}`;
+      window.location.href = `mailto:scp@depa.or.th?cc=dsp@depa.or.th&subject=${subject}&body=${body}`;
       setWaitlistSubmitted(true);
       setTimeout(() => setWaitlistSubmitted(false), 5000);
       setWaitlistEmail('');
@@ -103,7 +103,7 @@ const HeroSection = () => {
 
               <div className="hero-secondary-actions">
                 <a
-                  href="mailto:scp@depa.or.th?subject=Request%20SCL%20Program%20Brochure"
+                  href="mailto:scp@depa.or.th?cc=dsp@depa.or.th&subject=Request%20SCL%20Program%20Brochure"
                   className="btn btn-outline btn-brochure"
                 >
                   <Download size={16} />

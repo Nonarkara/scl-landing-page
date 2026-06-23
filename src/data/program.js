@@ -16,7 +16,7 @@ export const programDetails = {
   programDays: 7,
   speakerCount: 30,
   feeTHB: 62000,
-  alumniCount: 306,
+  alumniCount: 299,
   cohortCount: 6,
   pillarCount: 7,
   applicationDeadline: '2026-04-06T23:59:59+07:00',
@@ -209,13 +209,13 @@ export function getProgramPhase(now = new Date()) {
 export const alumniBatches = [
   {
     id: 6,
-    year: '2025',
+    year: '2026',
     link: 'https://www.depa.or.th/th/article-view/IN-01916-2569',
     kind: 'page',
   },
   {
     id: 5,
-    year: '2024',
+    year: '2025',
     link: 'https://www.depa.or.th/th/article-view/AN_list-scl5',
     kind: 'page',
   },

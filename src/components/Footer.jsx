@@ -46,7 +46,8 @@ const Footer = () => {
         <div className="footer-contact-group">
           <h4 className="footer-heading">{t('footer.contactHeading', 'Contact')}</h4>
           <div className="footer-links">
-            <a href="mailto:scp@depa.or.th">scp@depa.or.th</a>
+            <a href="mailto:scp@depa.or.th?cc=dsp@depa.or.th">scp@depa.or.th</a>
+            <a href="mailto:dsp@depa.or.th?cc=scp@depa.or.th">dsp@depa.or.th</a>
             <a href="https://www.depa.or.th" target="_blank" rel="noopener noreferrer">depa.or.th</a>
           </div>
         </div>
@@ -64,7 +65,7 @@ const Footer = () => {
             <span className="footer-legal-sep" aria-hidden="true" />
             <Link to="/methodology">{t('footer.termsOfService')}</Link>
             <span className="footer-legal-sep" aria-hidden="true" />
-            <a href="mailto:scp@depa.or.th?subject=SCL%20Data%20Correction">
+            <a href="mailto:scp@depa.or.th?cc=dsp@depa.or.th&subject=SCL%20Data%20Correction">
               {t('footer.dataProtection')}
             </a>
           </div>

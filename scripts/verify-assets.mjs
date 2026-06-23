@@ -1,10 +1,11 @@
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import process from 'node:process';
 
 const repoRoot = process.cwd();
 const programPath = path.join(repoRoot, 'src/data/program.js');
 const logoBarPath = path.join(repoRoot, 'src/components/LogoBar.jsx');
+const mediaExtensions = new Set(['.avif', '.gif', '.jpg', '.jpeg', '.png', '.svg', '.webp']);
 
 function fail(message) {
   console.error(`ERROR: ${message}`);
@@ -16,6 +17,15 @@ function extractStringArray(source, variableName) {
   const match = source.match(pattern);
   if (!match) return [];
   return [...match[1].matchAll(/'([^']+)'/g)].map((item) => item[1]);
+}
+
+function walkFiles(dir) {
+  return readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    if (['.git', 'dist', 'node_modules'].includes(entry.name)) return [];
+    const fullPath = path.join(dir, entry.name);
+    if (entry.isDirectory()) return walkFiles(fullPath);
+    return fullPath;
+  });
 }
 
 const programSource = readFileSync(programPath, 'utf8');
@@ -55,6 +65,32 @@ for (const relativePath of logoPaths) {
   if (!existsSync(logoPath)) {
     fail(`Missing logo asset: public/${relativePath}`);
   }
+}
+
+const sourceText = walkFiles(repoRoot)
+  .filter((filePath) => !filePath.includes(`${path.sep}public${path.sep}`))
+  .map((filePath) => readFileSync(filePath, 'utf8'))
+  .join('\n');
+
+const unusedMedia = walkFiles(path.join(repoRoot, 'public'))
+  .filter((filePath) => mediaExtensions.has(path.extname(filePath).toLowerCase()))
+  .map((filePath) => path.relative(path.join(repoRoot, 'public'), filePath).replaceAll(path.sep, '/'))
+  .filter((relativePath) => {
+    const baseName = path.basename(relativePath);
+    const encodedRelativePath = relativePath.split('/').map(encodeURIComponent).join('/');
+    const encodedBaseName = encodeURIComponent(baseName);
+    const stem = baseName.replace(/\.[^.]+$/, '');
+    const candidates = [relativePath, encodedRelativePath, baseName, encodedBaseName];
+
+    if (relativePath.startsWith('alumni/')) {
+      candidates.push(stem);
+    }
+
+    return !candidates.some((candidate) => sourceText.includes(candidate));
+  });
+
+if (unusedMedia.length > 0) {
+  fail(`Unused public media assets: ${unusedMedia.join(', ')}`);
 }
 
 if (process.exitCode) {

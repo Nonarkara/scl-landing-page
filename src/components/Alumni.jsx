@@ -51,7 +51,7 @@ const UpdateModal = ({ entry, onClose, t }) => {
     const body = encodeURIComponent(
       `Name: ${entry.displayName}\nCurrent Record: ${entry.detail}\n\nUpdated Title/Position: ${newTitle || '(no change)'}\nUpdated Location/Organization: ${newLocation || '(no change)'}\n\nSubmitted via SCL Alumni Directory`
     );
-    window.location.href = `mailto:scp@depa.or.th?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:scp@depa.or.th?cc=dsp@depa.or.th&subject=${subject}&body=${body}`;
     onClose();
   };
 
@@ -95,7 +95,7 @@ const UpdateModal = ({ entry, onClose, t }) => {
             </label>
             <button type="submit" className="btn btn-primary update-modal-submit">
               <Send size={16} />
-              {t('alumni.sendUpdate', 'Send Update to scp@depa.or.th')}
+              {t('alumni.sendUpdate', 'Send Update to scp@depa.or.th / dsp@depa.or.th')}
             </button>
           </form>
         </div>

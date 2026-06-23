@@ -11,6 +11,10 @@ node_modules
 dist
 dist-ssr
 *.local
+.claude/
+scripts/venv/
+scripts/page_*.png
+scripts/raw_alumni.json
 
 # Editor directories and files
 .vscode/*

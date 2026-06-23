@@ -178,7 +178,7 @@ export default function FAQ() {
       <div className="faq-contact">
         <h3>{t('faq.contactTitle')}</h3>
         <p>{t('faq.contactDesc')}</p>
-        <a href="mailto:scp@depa.or.th?subject=SCL%20Program%20Inquiry" className="btn btn-primary">
+        <a href="mailto:scp@depa.or.th?cc=dsp@depa.or.th&subject=SCL%20Program%20Inquiry" className="btn btn-primary">
           {t('faq.contactCta')}
         </a>
       </div>

@@ -260,7 +260,7 @@ export default function Faculty() {
                       <Linkedin size={16} />
                     </a>
                     <a
-                      href="mailto:scp@depa.or.th"
+                      href="mailto:scp@depa.or.th?cc=dsp@depa.or.th"
                       className="social-link"
                       aria-label={`${t('nav.contact', 'Contact')} ${pick(member.name)}`}
                     >
