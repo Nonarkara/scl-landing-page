@@ -27,4 +27,13 @@ Dr Non asked (3 things):
 - [ ] REPORT: flag Korat "first" claim for Dr Non's confirmation
 
 ## Review
-(filled on completion)
+- DONE + deployed (commit 984ef8d). All 3 asks shipped:
+  1. Alumni domain analytics ("What the network works on") — live-computed from 306 records,
+     8 domains, methodology+limitation note, 3 languages. Bar labels wrap (legible on phone).
+  2. Korat Smart City + CMU Smart City Operations capstone cards (6 total, 3-col desktop),
+     verified links, proposal->depa-mark framing.
+- Honesty calls: leadership/domain counts framed as floors; Korat "first" claim NOT asserted
+  (unverifiable vs documented Phuket-first) — flagged to Dr Non for confirmation.
+- Existing SmartInsights/CohortInsights were already accurate — extended, not rebuilt.
+- Vite CSS HMR served stale CSS after edit; needed full server restart (cache clear alone
+  insufficient). Logged to lessons.md.

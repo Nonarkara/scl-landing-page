@@ -16,6 +16,16 @@ scripts/venv/
 scripts/page_*.png
 scripts/raw_alumni.json
 
+# Local agent/tooling worktrees and generated artifacts
+.claude/worktrees/
+scl6/
+scripts/venv/
+scripts/*.traineddata
+scripts/batch*.pdf
+scripts/page_*.png
+scripts/*_ocr.txt
+scripts/raw_alumni.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
