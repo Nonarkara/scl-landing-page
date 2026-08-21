@@ -36,3 +36,8 @@ scripts/raw_alumni.json
 *.njsproj
 *.sln
 *.sw?
+
+# env files
+.env
+.env.*
+!.env.example
