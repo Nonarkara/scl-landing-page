@@ -1,132 +1,170 @@
-# depa Smart City Leadership — scl.nonarkara.org
+![Mentor and city leaders at one Mac over a hand-inked map of Thailand — Chao Phraya rain, Wat Arun, a small studio cat. Illustration only; no interface and no title card.](docs/hero-banner.png)
 
-**Six cohorts. 306 verified alumni records. 53 provinces represented in the parsed directory. One website, built in a day.**
+A mentor and a student, one Mac, a city outside the window. The banner is illustration only — no live UI, no HUD, no title overlay.
+
+# SCL Landing Page
+
+**An independent multilingual archive for depa's Smart City Leadership programme — roster, sources, and method, not a brochure.**
+
+[![License: MIT](https://img.shields.io/badge/license-MIT-1A1A1A)](LICENSE)
+
+**Author.** [Non Arkaraprasertkul](https://github.com/Nonarkara) (Nonarkara) — architect, urban anthropologist, civic-studio practice at **Axiom X Co., Ltd.**, Bangkok.
+
+Independent. Written for a **Thai–English** audience (this tree also ships a Chinese locale). **Not** an official depa, Ministry, or municipal product.
+
+หน้าแลนดิ้งอิสระของหลักสูตร Smart City Leadership — คลังรายชื่อ แหล่งอ้างอิง และวิธีคิด ไม่ใช่โบรชัวร์ ผู้อ่านเป้าหมายคือคนไทยและคนอังกฤษด้วยกัน
+
+Public host configured in this repo: [scl.nonarkara.org](https://scl.nonarkara.org/). Official programme pages stay on [depa.or.th](https://www.depa.or.th/en/article-view/smart-city-leadership-program-6-scl-6).
 
 ---
 
 ## What this is
 
-[scl.nonarkara.org](https://scl.nonarkara.org) is the multilingual information site for the **Smart City Leadership (SCL)** programme — Thailand's flagship executive programme for city and provincial leaders, organised by the Digital Economy Promotion Agency (depa) under the Ministry of Digital Economy and Society.
+A static **React 19 + Vite** site for people who want to *read* SCL instead of being sold it: six published cohorts, a source-linked alumni directory, faculty notes, a methodology page with citations, a public-link archive, a photo gallery, and a FAQ.
 
-SCL has run six cohorts since 2022. Governors, mayors, CEOs, and provincial administrators come for seven days to learn how smart city projects actually get delivered — not in theory, but in practice. The public directory currently contains 306 verified alumni records from depa's official cohort announcements and the confirmed SCL #6 roster.
+Counts below are from **this tree**, not from a live API.
 
-This site is not the official depa communications channel. It was built as an independent informational landing page to give the programme a cleaner, more honest public presence — something that reads as a working brief for senior leaders, not a promotional brochure.
+| In this repo | Count | Where |
+|---|---|---|
+| Alumni roster records | 306 across 6 cohorts | [`src/data/alumni.json`](src/data/alumni.json) |
+| Provinces parsed from those lines | 53 of 77 | [`src/utils/alumni.js`](src/utils/alumni.js) |
+| Faculty profiles | 10 | [`src/pages/Faculty.jsx`](src/pages/Faculty.jsx) |
+| FAQ entries | 52 | [`src/data/faqData.js`](src/data/faqData.js) |
+| Source-archive URLs | 31 | [`src/data/sclSourceArchive.js`](src/data/sclSourceArchive.js) |
+| Locales | Thai, English, Chinese | [`src/locales/`](src/locales/) |
 
----
+Programme constants the site uses (from depa's published SCL #6 outline, encoded in [`src/data/program.js`](src/data/program.js)): 7 days, 42 hours, 30+ speakers, fee THB 62,000. Application and session dates in that file are for cohort 6 — they are not a promise that a new intake is open.
 
-## How it was built
+Routes in [`src/App.jsx`](src/App.jsx):
 
-The site was designed and built by **Dr. Non Arkaraprasertkul** (SCL co-designer, Harvard PhD, Batches 1–6) using **[Claude Code](https://claude.ai/code)** — Anthropic's AI coding assistant — across a single working session on 13 May 2026.
-
-The process was direct: content direction and editorial judgment from Dr. Non; technical execution from Claude Code. No design agency. No developer handoff. No weeks of iteration. The first commit to deployment took under three hours.
-
-What made this possible was not the AI alone — it was having a domain expert in the loop at every decision. The content is accurate because it comes from someone who has taught in the programme for five batches and co-designed its curriculum since 2022. The AI handled the code. The judgment about what mattered came from the person who actually knows.
-
-For anyone building institutional websites for programmes they run or know deeply: the bottleneck is usually not technical. It is having the right content at the right level of specificity. If you have that, the tooling is fast.
-
----
-
-## Stack
-
-| Layer | Technology |
+| Path | What it is |
 |---|---|
-| Framework | React 19 + Vite |
-| Routing | React Router v6 |
-| Internationalisation | i18next (EN / TH / CN) |
-| Styling | Custom CSS, CSS variables — no Tailwind |
-| Map | Leaflet + React-Leaflet |
-| Analytics | Plausible Analytics (`scl.nonarkara.org`) |
-| Deployment | GitHub Pages via GitHub Actions |
-| Domain | `scl.nonarkara.org` (CNAME) |
+| `/` | Home — hero, overview, journey, voices |
+| `/curriculum` | Six-module outline |
+| `/methodology` | Six cited frameworks + four sibling tools |
+| `/faculty` | Ten profiles with source-linked bios |
+| `/alumni` | Searchable directory, sector/domain filters, Thailand map |
+| `/gallery` | Cohort photo archive |
+| `/sources` | Verified public URLs for cohorts 1–6 |
+| `/faq` | Eligibility, logistics, certification, partnerships |
+
+**This repo is not**
+
+- The official depa communications channel, application form, or certificate issuer.
+- A city ranking, score, or black-box index. (Sibling studio work lives in [SLIC-Index](https://github.com/Nonarkara/SLIC-Index) and [sciti](https://github.com/Nonarkara/sciti).)
+- A dump of API keys, analytics tokens, or private rosters.
+
+Related studio tools linked from the methodology page: [SCITI](https://sciti.nonarkara.org/), [SLIC](https://slic.nonarkara.org/), [ASCN workbench](https://ascn.nonarkara.org/), [Solomon Islands write-up](https://solomon.nonarkara.org/).
 
 ---
 
-## Pages
+## Philosophy
 
-| Route | Content |
-|---|---|
-| `/` | Home — hero, programme overview, history timeline (Batches 1–6), curriculum, testimonials |
-| `/methodology` | Six academic frameworks + four applied tools |
-| `/faculty` | Eight faculty profiles with photos, tags, bios, and expandable research-verified background |
-| `/alumni` | 306-record alumni directory with search, sector filter, province map, and cohort insights |
-| `/curriculum` | Programme structure and learning outcomes |
-| `/gallery` | Photo archive from all six cohorts |
-| `/faq` | 30+ questions covering eligibility, curriculum, logistics, certification |
+**Fork the method, not the secrets.**
 
----
+The portable part is already in the files: a static Vite app, locale JSON, a roster you can grep, classifiers that show their rules, and a source archive that prefers a working public URL over a social post. Copy that shape for another executive programme. Do not copy anyone else's deploy token, Plausible domain if it is not yours, or a private spreadsheet of names. If a contribution only works by pasting a secret, it does not belong here.
 
-## Design principles
+**One Mac.** `npm install` and `npm run dev` are the whole studio. There is no database server, no ranking farm, and no vendor CMS. GitHub Actions builds `dist/` and pushes the `gh-pages` branch. If you cannot run it on the computer in front of you, you are overcomplicating it.
 
-The aesthetic is deliberately non-promotional. Government leaders in Thailand are suspicious of glossy marketing — and rightly so. The site positions itself as an **operating brief**, not a sales page.
+**No black-box rankings.** This site is a directory and an archive. Alumni rows come from depa's published cohort lists. Province and sector counts are derived in [`src/utils/alumni.js`](src/utils/alumni.js) from the Thai source line — you can read the patterns. Names stay in Thai, as published. Do not add a "top city" or "best alumnus" score the reader cannot inspect.
 
-Specific choices:
+**Thai–English as the audience.** Write so a Bangkok operator and an English-speaking learner can use the same surface. The default language is Thai; English is the fallback; Chinese is a third locale in this tree. Toggle language; do not hide a gap.
 
-- **No gradients, no rounded corners, no drop shadows.** The visual language is geometric and restrained. Hairline borders. Mono-accent (depa yellow). Hard edges.
-- **Anti-promotional copy.** "A serious short-format programme for leaders who need sharper judgment about how smart-city work actually gets delivered." Not a tagline. A description.
-- **Real data only.** 306 verified alumni records, 53 provinces represented in the parsed directory, 6 cohorts, 42 hours, 7 days, 30+ speakers — all verifiable against depa's official announcements and the confirmed SCL #6 roster.
-- **Mobile-first.** The site gets shared as a link in LINE and WhatsApp. The first impression is always a phone screen.
-- **Trilingual (EN / TH / CN).** Complete coverage across all three languages. Not partial translation — every section, every label, every piece of content.
+Company: **Axiom X Co., Ltd.** Author: **Non Arkaraprasertkul** ([@Nonarkara](https://github.com/Nonarkara)).
 
 ---
 
-## Methodology page
+## Ethical use
 
-The [Methodology page](/methodology) was written to address a gap: most executive programmes describe *what* they teach, not *why* the specific frameworks were chosen or what failure modes each one is designed to prevent.
+This page exists so learners and city leaders can check a public record. It is not a kit for harvesting names, impersonating depa, or ranking people.
 
-Six frameworks are cited with full source references:
+**Do**
 
-1. **Business Model Canvas (adapted for cities)** — Manetti et al., *Energies*, MDPI (2019)
-2. **Design Thinking** — UNDP Asia-Pacific video series
-3. **depa Smart City Primer** — official depa publication
-4. **Urban Design Method (UddC)** — Chulalongkorn University
-5. **ASEAN Smart Cities Framework** — ASEAN Smart Cities Network + Toolkit
-6. **Agile Project Management** — APM Body of Knowledge
+- Keep the official depa article as the source of record for applications, fees, and dates.
+- Attribute alumni lines to the published cohort announcements linked in [`src/data/program.js`](src/data/program.js).
+- Leave names in Thai unless you are quoting a source that already romanises them.
+- Label derived analytics (sector, domain, province) as parsed from the roster, not as a certified census.
+- Store any future token as an environment variable. Never commit `.env`.
 
-Four applied tools built from the programme methodology are featured: [SCITI](https://sciti.nonarkara.org), [SLIC](https://slic.nonarkara.org), [ASCN Portal](https://ascn.nonarkara.org), [Solomon Islands](https://solomon.nonarkara.org).
+**Do not**
 
----
+- Imply depa, the Ministry of Digital Economy and Society, or a municipality publishes this repository.
+- Scrape the directory for marketing, lobbying, or surveillance.
+- Ship mock alumni as live, or hide an empty roster behind a success state.
+- Invent awards, placement rates, or a live URL that is not in `public/CNAME` or a depa page.
+- Turn this archive into a black-box ranking of cities, cohorts, or people.
+- Commit API keys, analytics tokens, or private contact lists.
 
-## Faculty
-
-Eight faculty members with individual headshot photos, professional tags, brief bios, and expandable research-verified background panels. LinkedIn profiles linked for each.
-
-The expanded bios draw on verified sources: World Smart City Expo awards, Harvard-Yenching scholarship records, GoodWalk Thailand data, UNICEF case studies, peer-reviewed publications (IJCM 2025), and GSMA speaker profiles.
-
----
-
-## Alumni directory
-
-306 verified alumni records from all six cohorts, sourced from depa's official Thai-language announcements and the confirmed SCL #6 roster. The directory includes full-text search, sector filter, province-level map, cohort growth chart with public/private split, and a smart insights panel. All names remain in Thai — as published in depa's official announcements.
+If you are unsure whether a string is a secret, it is — leave it out.
 
 ---
 
-## Running locally
+## How to use / learn
 
 ```bash
+git clone https://github.com/Nonarkara/scl-landing-page.git
+cd scl-landing-page
 npm install
-npm run dev
+npm run dev          # Vite → http://localhost:5173
+npm run lint
+npm run verify:assets
+npm run build        # production bundle in dist/
 ```
 
+A learner path that matches the code:
+
+1. Read [`src/data/program.js`](src/data/program.js) — cohort constants and official depa URLs.
+2. Open `/alumni` and follow a name back to [`src/data/alumni.json`](src/data/alumni.json), then to the batch announcement.
+3. Read [`src/utils/alumni.js`](src/utils/alumni.js) to see how province, sector, and domain are classified (rules in the file, not a model).
+4. Walk `/methodology` and click a citation. The six frameworks and four sibling tools are in [`src/components/Methodology.jsx`](src/components/Methodology.jsx).
+5. Open `/sources` and confirm a URL from [`src/data/sclSourceArchive.js`](src/data/sclSourceArchive.js).
+6. Switch TH / EN / CN in the navbar. Copy lives in [`src/locales/`](src/locales/).
+
+| If you want… | Open |
+|---|---|
+| Routes and metadata | [`src/App.jsx`](src/App.jsx) |
+| Home composition | [`src/pages/Home.jsx`](src/pages/Home.jsx) |
+| Curriculum modules | [`src/components/Curriculum.jsx`](src/components/Curriculum.jsx) |
+| Faculty bios | [`src/pages/Faculty.jsx`](src/pages/Faculty.jsx) |
+| Deploy | [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) |
+
+Stack in this tree: React 19, Vite, React Router 7, i18next, Leaflet, custom CSS (no Tailwind). Pages deploy from `main` via GitHub Actions. `public/CNAME` is `scl.nonarkara.org`.
+
 ---
 
-## Data sources
+## System diagram
 
-- Alumni lists: depa official announcements (PDFs + web pages), Batches 1–6
-- Programme details: [depa SCL #6 official article](https://www.depa.or.th/en/article-view/smart-city-leadership-program-6-scl-6)
-- Faculty profiles: LinkedIn, institutional pages, published research, conference records
-- Methodology citations: see the Methodology page for full source list with links
+Short labels so GitHub Mermaid does not clip.
+
+```mermaid
+flowchart TB
+  J["alumni.json"] --> U["alumni utils"]
+  L["locales"] --> A["React app"]
+  P["program.js"] --> A
+  S["sources"] --> A
+  F["faculty"] --> A
+  U --> A
+  A --> R["routes"]
+  R --> B["Vite build"]
+  B --> G["gh-pages"]
+  G --> H["CNAME host"]
+```
+
+JSON and locales are the source of truth. The map and insights only show what the roster parser can defend. depa remains the record for who was admitted.
 
 ---
 
-## Credits
+## License / contributing
 
-**Programme:** depa Smart City Leadership (SCL)
-**Site concept and editorial direction:** Dr. Non Arkaraprasertkul
-**Code:** [Claude Code](https://claude.ai/code) by Anthropic
-**Deployed:** GitHub Pages
+This repository is licensed under the [MIT License](LICENSE). Copyright © 2026 **Non Arkaraprasertkul / Axiom X Co., Ltd.**
 
-This is an independent information page. Not officially affiliated with depa. All programme information references depa's published sources.
+Reuse the site, the classifiers, and the prose with attribution. MIT here does not relicense depa programme content, alumni names, faculty likenesses, press articles, or the sibling tools named above.
 
----
+**Contributing.** Open a pull request against `main`.
 
-*Six years of inspiring leaders. Building smart cities. Together.*
+- Keep every public number traceable to a file in this tree or a working official URL.
+- Do not add secrets, invented metrics, awards, or a fake live host.
+- Preserve Thai names on the roster unless a published source already romanises them.
+- Fixes to ethics, broken source links, and stale cohort constants are as welcome as new pages.
+
+If you fork this method for another public programme, the studio would like to see it.
