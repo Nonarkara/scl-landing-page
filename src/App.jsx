@@ -14,6 +14,7 @@ const GalleryPage = lazy(() => import('./pages/GalleryPage'));
 const MethodologyPage = lazy(() => import('./pages/MethodologyPage'));
 const SourceArchivePage = lazy(() => import('./pages/SourceArchivePage'));
 import './App.css';
+import './prospectus.css';
 
 const siteUrl = 'https://scl.nonarkara.org/';
 
