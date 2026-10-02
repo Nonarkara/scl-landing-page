@@ -1,5 +1,5 @@
 .faculty-page {
-  padding-top: 120px;
+  padding-top: 24px;
   padding-bottom: 80px;
 }
 
@@ -9,15 +9,15 @@
 }
 
 .faculty-title {
-  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-size: var(--type-title);
   margin: 12px 0 16px;
-  letter-spacing: -0.04em;
+  letter-spacing: 0;
   line-height: 1.05;
 }
 
 .faculty-subtitle {
   color: var(--text-secondary);
-  font-size: 1rem;
+  font-size: var(--type-body);
   line-height: 1.75;
   max-width: 56ch;
 }
@@ -39,7 +39,7 @@
 
 .faculty-photo-strip figcaption {
   color: var(--text-muted);
-  font-size: 0.82rem;
+  font-size: var(--type-label);
   line-height: 1.6;
   max-width: 52ch;
 }
@@ -99,35 +99,35 @@
 
 .faculty-tag {
   display: inline-block;
-  font-size: 0.66rem;
+  font-size: var(--type-label);
   font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--depa-navy);
-  background: rgba(245, 158, 11, 0.18);
+  background: var(--depa-yellow-soft);
   padding: 2px 7px;
   margin-bottom: 8px;
   align-self: flex-start;
 }
 
 .faculty-name {
-  font-size: 1rem;
+  font-size: var(--type-body);
   margin: 0 0 4px;
   line-height: 1.25;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
 }
 
 .faculty-role {
-  font-size: 0.72rem;
+  font-size: var(--type-label);
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.07em;
+  text-transform: none;
+  letter-spacing: 0;
   color: var(--text-muted);
   margin-bottom: 10px;
 }
 
 .faculty-bio {
-  font-size: 0.87rem;
+  font-size: var(--type-label);
   color: var(--text-secondary);
   line-height: 1.7;
   flex: 1;
@@ -145,23 +145,23 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-size: 0.75rem;
+  font-size: var(--type-label);
   font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--depa-navy);
   background: transparent;
   border: 1px solid var(--border-strong);
   padding: 6px 12px;
   cursor: pointer;
   transition: background 0.12s, color 0.12s;
-  min-height: 32px;
+  min-height: 44px;
 }
 
 .faculty-expand-btn:hover {
-  background: var(--depa-navy);
-  color: #fff;
-  border-color: var(--depa-navy);
+  background: var(--depa-yellow);
+  color: var(--bg-ink);
+  border-color: var(--text-main);
 }
 
 .faculty-social-row {
@@ -171,8 +171,8 @@
 }
 
 .social-link {
-  width: 32px;
-  height: 32px;
+  width: 44px;
+  height: 44px;
   background: transparent;
   color: var(--text-muted);
   display: inline-flex;
@@ -195,7 +195,7 @@
 }
 
 .faculty-expanded-text {
-  font-size: 0.86rem;
+  font-size: var(--type-label);
   line-height: 1.8;
   color: var(--text-secondary);
   margin: 0;
@@ -207,7 +207,7 @@
   padding-top: 24px;
   border-top: 1px solid var(--border-glass);
   color: var(--text-secondary);
-  font-size: 0.94rem;
+  font-size: var(--type-body);
   line-height: 1.75;
   max-width: 64ch;
 }
@@ -246,7 +246,7 @@
   }
 
   .faculty-page {
-    padding-top: 100px;
+    padding-top: 24px;
   }
 
   .faculty-actions {

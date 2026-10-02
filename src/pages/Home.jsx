@@ -7,38 +7,29 @@ import SmartCityNews from '../components/SmartCityNews';
 import AboutProgram from '../components/AboutProgram';
 import ProgramJourney from '../components/ProgramJourney';
 import Testimonials from '../components/Testimonials';
-import { ArrowRight, History, BookOpen, Map, MessageSquare, Mail } from 'lucide-react';
+import { ArrowRight, History, BookOpen, Map, MessageSquare } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home = () => {
   const { t } = useTranslation();
   const [searchParams, setSearchParams] = useSearchParams();
-  const activeTab = searchParams.get('tab') || 'about';
+  const tabParam = searchParams.get('tab');
+  const activeTab = ['about', 'curriculum', 'journey', 'testimonials'].includes(tabParam) ? tabParam : 'about';
   const tabsRef = useRef(null);
-
-  // Land the tab strip just below the fixed navbar (its bottom is ~76px), never under it.
-  const NAV_OFFSET = 90;
 
   const setActiveTab = (tabId) => {
     setSearchParams({ tab: tabId });
   };
 
   useEffect(() => {
-    if (tabsRef.current) {
-      const y = tabsRef.current.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
-      window.scrollTo({ top: y, behavior: 'smooth' });
+    if (tabParam && tabsRef.current) {
+      const offset = (document.querySelector('.navbar')?.getBoundingClientRect().height || 72) + 16;
+      const y = tabsRef.current.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: y, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth' });
+      document.getElementById(`tab-${activeTab}`)?.focus({ preventScroll: true });
     }
-  }, [activeTab]);
+  }, [tabParam, activeTab]);
 
-  useEffect(() => {
-    // On initial load with a tab param, bring the tab strip into view (below the navbar)
-    if (searchParams.get('tab') && tabsRef.current) {
-      const y = tabsRef.current.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
-      window.scrollTo({ top: y, behavior: 'instant' });
-    }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-  
   const tabs = [
     { id: 'about', labelKey: 'home.tabs.about', fallback: 'About & History', icon: <History size={18} /> },
     { id: 'curriculum', labelKey: 'home.tabs.curriculum', fallback: 'Curriculum', icon: <BookOpen size={18} /> },
@@ -48,7 +39,6 @@ const Home = () => {
 
   return (
     <div className="home-page-v2">
-      <div className="grid-bg" />
       <LogoBar placement="top" />
       
       {/* Enhanced Hero Section */}
@@ -63,12 +53,25 @@ const Home = () => {
       <section className="tabs-container section">
         <div className="container">
           <div className="tabs-navigation-wrapper" ref={tabsRef}>
-            <div className="tabs-navigation">
-              {tabs.map((tab) => (
+            <div className="tabs-navigation" role="tablist" aria-label={t('nav.about')}>
+              {tabs.map((tab, index) => (
                 <button
                   key={tab.id}
+                  id={`tab-${tab.id}`}
+                  role="tab"
+                  aria-selected={activeTab === tab.id}
+                  aria-controls="program-tab-panel"
+                  tabIndex={activeTab === tab.id ? 0 : -1}
                   className={`tab-btn ${activeTab === tab.id ? 'active' : ''}`}
                   onClick={() => setActiveTab(tab.id)}
+                  onKeyDown={(event) => {
+                    const keys = ['ArrowLeft', 'ArrowRight', 'Home', 'End'];
+                    if (!keys.includes(event.key)) return;
+                    event.preventDefault();
+                    const next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 : (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+                    setActiveTab(tabs[next].id);
+                    document.getElementById(`tab-${tabs[next].id}`)?.focus();
+                  }}
                 >
                   {tab.icon}
                   <span>{t(tab.labelKey, tab.fallback)}</span>
@@ -77,7 +80,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="tab-content-area">
+          <div id="program-tab-panel" className="tab-content-area" role="tabpanel" aria-labelledby={`tab-${activeTab}`} tabIndex={0}>
             {activeTab === 'about' && (
               <div className="tab-pane animate-fade-in">
                 <AboutProgram />
@@ -161,7 +164,7 @@ const Home = () => {
       {/* Bottom CTA Section */}
       <section className="bottom-cta section">
         <div className="container">
-          <div className="cta-card glass-panel">
+          <div className="cta-layout">
             <div className="cta-content">
               <span className="section-kicker">{t('cta.kicker')}</span>
               <h2 className="cta-title">{t('cta.title')}</h2>
@@ -172,14 +175,14 @@ const Home = () => {
                 <Link to="/faq" className="btn btn-outline">
                   {t('cta.learnMore')} <ArrowRight size={18} />
                 </Link>
-                <a href="#home" className="btn btn-primary">
+                <a href="mailto:scp@depa.or.th?cc=dsp@depa.or.th&subject=SCL%20Future%20Cohort%20Inquiry" className="btn btn-primary">
                   {t('cta.waitlist')}
                 </a>
               </div>
             </div>
-            <div className="cta-icon-bg">
-              <Mail size={120} strokeWidth={0.5} />
-            </div>
+            <figure className="cta-photo">
+              <img src="/Photos/486609734_1113399177498226_6992550716968754928_n.jpg" alt={t('about.imageAlt')} loading="lazy" />
+            </figure>
           </div>
         </div>
       </section>

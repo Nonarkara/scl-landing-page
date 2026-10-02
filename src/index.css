@@ -1,34 +1,50 @@
 :root {
   color-scheme: light;
-  --bg-primary: #f5f3ee;
-  --bg-secondary: #faf9f6;
+  --bg-primary: #ffffff;
+  --bg-secondary: #f3f5f7;
   --bg-ink: #0C2F53;
   --surface-strong: #ffffff;
-  --border-glass: rgba(12, 47, 83, 0.06);
-  --border-strong: rgba(12, 47, 83, 0.12);
+  --border-glass: #d5dce3;
+  --border-strong: #65788b;
   --text-main: #0C2F53;
   --text-secondary: #3d5a78;
-  --text-muted: #7a8da0;
+  --text-muted: #516579;
   --depa-navy: #0C2F53;
   --depa-yellow: #FFF200;
-  --depa-gold: #FFC600;
+  --depa-gold: #FFF200;
   --depa-yellow-soft: rgba(255, 242, 0, 0.06);
   --depa-yellow-mid: rgba(255, 198, 0, 0.22);
   --depa-yellow-muted: rgba(255, 198, 0, 0.50);
-  --bg-surface: #faf9f6;
-  --text-tertiary: #7a8da0;
-  --depa-yellow-dark: #8a6d3b;
-  --shadow-soft: 0 2px 12px rgba(12, 47, 83, 0.06);
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --transition-smooth: all 0.3s ease;
-  --transition-fast: all 0.18s ease;
-  --navbar-height: 76px;
-  --navbar-bg: rgba(243, 242, 238, 0.96);
+  --bg-surface: #f3f5f7;
+  --text-tertiary: #516579;
+  --depa-yellow-dark: #0C2F53;
+  --text-accent: var(--text-main);
+  --surface-card: var(--surface-strong);
+  --chart-public: #0C2F53;
+  --chart-private: #FFF200;
+  --shadow-soft: none;
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-pill: 0;
+  --transition-smooth: color 180ms ease-out, background-color 180ms ease-out, border-color 180ms ease-out;
+  --transition-fast: color 160ms ease-out, background-color 160ms ease-out, border-color 160ms ease-out;
+  --navbar-height: 72px;
+  --navbar-bg: #ffffff;
+  --type-label: 0.875rem;
+  --type-body: 1rem;
+  --type-title: 2.25rem;
+  --type-display: 3.5rem;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-section: 48px;
 }
 
-/* ── Dark mode palette — §14 Visual DNA: AKIRA/ops console aesthetic ─────── */
+/* Dark reading surfaces retain the depa action colour. */
 .dark {
   color-scheme: dark;
   --bg-primary:    #0a0e14;
@@ -36,22 +52,22 @@
   --bg-surface:    #0d1219;
   --bg-ink:        #0C2F53;
   --surface-strong: #131e2d;
-  --border-glass:  rgba(255, 255, 255, 0.05);
-  --border-strong: rgba(255, 255, 255, 0.10);
   --text-main:     #e6edf3;
-  --text-secondary: #8b9eb5;
-  --text-muted:    #4d6880;
-  --text-tertiary: #4d6880;
-  /* navy accent becomes amber on dark surfaces — Braun ET66 equals-key rule */
-  --depa-navy:     #FFC600;
-  --depa-yellow:   #FFC600;
-  --depa-gold:     #FFC600;
+  --text-secondary: #b7c6d6;
+  --text-muted:    #a6b8ca;
+  --text-tertiary: #a6b8ca;
+  /* The legacy navy alias follows readable heading text on dark surfaces. */
+  --depa-navy:     #e6edf3;
+  --depa-yellow:   #FFF200;
+  --depa-gold:     #FFF200;
   --depa-yellow-soft: rgba(255, 198, 0, 0.08);
   --depa-yellow-mid:  rgba(255, 198, 0, 0.15);
   --depa-yellow-muted: rgba(255, 198, 0, 0.35);
-  --depa-yellow-dark: #d4a017;
-  --shadow-soft:   0 2px 16px rgba(0, 0, 0, 0.4);
-  --navbar-bg: rgba(10, 14, 20, 0.95);
+  --depa-yellow-dark: #FFF200;
+  --border-glass: #34475b;
+  --border-strong: #8c9fb3;
+  --chart-public: #b7c6d6;
+  --navbar-bg: #0a0e14;
 }
 
 * {
@@ -62,6 +78,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--navbar-height) + 16px);
 }
 
 body {
@@ -71,8 +88,8 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
   min-width: 320px;
+  overflow-wrap: anywhere;
 }
 
 #root {
@@ -81,7 +98,9 @@ body {
 
 a,
 button,
-input {
+input,
+select,
+textarea {
   font: inherit;
 }
 
@@ -110,6 +129,20 @@ img {
   max-width: 100%;
 }
 
+svg { flex-shrink: 0; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
 h1,
 h2,
 h3,
@@ -118,8 +151,8 @@ h5,
 h6 {
   font-family: "IBM Plex Sans Thai", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 700;
-  line-height: 1.05;
-  letter-spacing: -0.035em;
+  line-height: 1.2;
+  letter-spacing: 0;
   color: var(--depa-navy);
 }
 
@@ -129,17 +162,17 @@ a {
 
 ::selection {
   background: var(--depa-gold);
-  color: var(--depa-navy);
+  color: var(--bg-ink);
 }
 
 .container {
-  max-width: 1120px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 36px;
+  padding: 0 var(--space-6);
 }
 
 .section {
-  padding: 80px 0;
+  padding: var(--space-section) 0;
   position: relative;
   scroll-margin-top: var(--navbar-height);
 }
@@ -158,23 +191,23 @@ a {
 .grid-bg {
   position: fixed;
   inset: 0;
-  background-image: radial-gradient(var(--border-glass) 1px, transparent 1px);
+  background-image: none;
   background-size: 48px 48px;
   z-index: -2;
   pointer-events: none;
   opacity: 0.2;
-  display: block;
+  display: none;
 }
 
 /* Editorial kicker — no yellow line, just refined typography */
 .section-kicker {
   display: block;
   color: var(--text-muted);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  font-size: 0.72rem;
+  letter-spacing: 0;
+  text-transform: none;
+  font-size: var(--type-label);
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: var(--space-2);
 }
 
 /* Buttons: rectangular, not pills. More editorial */
@@ -183,26 +216,29 @@ a {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 14px 24px;
-  border-radius: var(--radius-sm);
+  padding: 10px 18px;
+  min-height: 44px;
+  max-width: 100%;
+  border-radius: 0;
   font-weight: 600;
-  font-size: 0.92rem;
+  font-size: var(--type-body);
   cursor: pointer;
-  transition: transform 0.1s ease, background 0.15s ease, border-color 0.15s ease;
+  transition: transform 120ms ease-out, background-color 160ms ease-out, border-color 160ms ease-out;
   text-decoration: none;
   user-select: none;
-  letter-spacing: 0.01em;
+  letter-spacing: 0;
 }
 
 .btn-primary {
-  background: var(--depa-navy);
-  color: #ffffff;
-  border: 1px solid var(--depa-navy);
+  background: var(--depa-yellow);
+  color: var(--bg-ink);
+  border: 1px solid var(--bg-ink);
 }
 
 .btn-primary:hover {
-  background: #0a2240;
-  border-color: #0a2240;
+  background: var(--bg-ink);
+  color: #ffffff;
+  border-color: var(--bg-ink);
 }
 
 .btn-outline {
@@ -218,7 +254,7 @@ a {
 
 .btn-sm {
   padding: 10px 16px;
-  font-size: 0.85rem;
+  font-size: var(--type-label);
 }
 
 .inline-link {
@@ -239,7 +275,7 @@ a {
 .glass-panel {
   background: var(--surface-strong);
   border: 1px solid var(--border-glass);
-  border-radius: var(--radius-md);
+  border-radius: 0;
 }
 
 /* Accent rule — used intentionally, not everywhere */
@@ -266,9 +302,9 @@ a {
 .text-center { text-align: center; }
 
 .section-title {
-  font-size: clamp(2.2rem, 5vw, 3.8rem);
-  line-height: 1.05;
-  letter-spacing: -0.04em;
+  font-size: var(--type-title);
+  line-height: 1.2;
+  letter-spacing: 0;
 }
 
 @keyframes fadeIn {
@@ -281,10 +317,16 @@ a {
 }
 
 .animate-fade-in.is-visible {
-  animation: fadeIn 0.6s ease forwards;
+  animation: fadeIn 180ms ease-out both;
 }
 
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
   .animate-fade-in {
     opacity: 1;
     animation: none;
@@ -296,19 +338,32 @@ a {
     padding: 0 24px;
   }
   .section {
-    padding: 56px 0;
+    padding: var(--space-section) 0;
   }
   .mb-12 { margin-bottom: 32px; }
 }
 
 @media (max-width: 640px) {
+  :root {
+    --type-title: 1.75rem;
+    --type-display: 2.25rem;
+    --space-section: 32px;
+  }
   .container {
     padding: 0 20px;
   }
 }
 
 :focus-visible {
-  outline: 2px solid var(--depa-gold);
+  outline: 3px solid var(--text-main) !important;
   outline-offset: 3px;
-  border-radius: 2px;
+  border-radius: 0;
+}
+
+button, input, select { min-height: 44px; }
+input, select { min-width: 0; max-width: 100%; }
+:where(section, article, div, li, figure) { min-width: 0; }
+
+.btn-primary:focus-visible {
+  outline-color: var(--text-main) !important;
 }

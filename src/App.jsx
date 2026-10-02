@@ -1,7 +1,7 @@
-import { useEffect, lazy, Suspense } from 'react';
+import { useEffect, useRef, lazy, Suspense } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getApplicationUrl, getProgramPhase, programDetails } from './data/program';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 
@@ -19,7 +19,18 @@ const siteUrl = 'https://scl.nonarkara.org/';
 
 function App() {
   const { t, i18n } = useTranslation();
+  const { pathname, search } = useLocation();
+  const previousPath = useRef(pathname);
   const currentLanguage = i18n.resolvedLanguage ?? i18n.language;
+
+  useEffect(() => {
+    if (previousPath.current === pathname) return;
+    previousPath.current = pathname;
+    const tab = new URLSearchParams(search).get('tab');
+    const hasTabTarget = pathname === '/' && ['about', 'curriculum', 'journey', 'testimonials'].includes(tab);
+    if (!hasTabTarget) window.scrollTo({ top: 0, behavior: 'instant' });
+    if (!hasTabTarget) document.getElementById('main-content')?.focus({ preventScroll: true });
+  }, [pathname, search]);
 
   useEffect(() => {
     const ogImage = `${siteUrl}Photos/475554453_1066072178897593_3452435967247513607_n.jpg`;
@@ -106,8 +117,8 @@ function App() {
         {t('meta.skipToContent')}
       </a>
       <Navbar />
-      <main id="main-content" className="app-main">
-        <Suspense fallback={<div className="page-loading">Loading...</div>}>
+      <main id="main-content" className="app-main" tabIndex={-1}>
+        <Suspense fallback={<div className="page-loading" role="status">{t('common.loading')}</div>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/curriculum" element={<CurriculumPage />} />

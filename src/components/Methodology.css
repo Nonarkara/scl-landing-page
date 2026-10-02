@@ -8,10 +8,10 @@
 }
 
 .methodology-title {
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: var(--type-title);
   font-weight: 800;
   line-height: 1.05;
-  letter-spacing: -0.04em;
+  letter-spacing: 0;
   margin: 12px 0 16px;
   color: var(--text-main);
 }
@@ -19,7 +19,7 @@
 .methodology-subtitle {
   max-width: 640px;
   color: var(--text-secondary);
-  font-size: 1.05rem;
+  font-size: var(--type-body);
   line-height: 1.85;
 }
 
@@ -34,16 +34,16 @@
 }
 
 .methodology-why-text h3 {
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-size: var(--type-body);
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
   margin: 0 0 16px;
   color: var(--text-main);
 }
 
 .methodology-why-text p {
   color: var(--text-secondary);
-  font-size: 1rem;
+  font-size: var(--type-body);
   line-height: 1.9;
   max-width: 560px;
 }
@@ -67,10 +67,10 @@
 }
 
 .methodology-frameworks-header h3 {
-  font-size: 0.78rem;
+  font-size: var(--type-label);
   font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--text-muted);
   margin: 0;
 }
@@ -100,34 +100,34 @@
 }
 
 .framework-number {
-  font-size: 0.68rem;
+  font-size: var(--type-label);
   font-weight: 700;
-  letter-spacing: 0.1em;
+  letter-spacing: 0;
   color: var(--text-muted);
   font-variant-numeric: tabular-nums;
 }
 
 .framework-tag {
-  font-size: 0.7rem;
+  font-size: var(--type-label);
   font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--depa-yellow-dark);
   background: var(--depa-yellow-soft);
   padding: 3px 8px;
 }
 
 .framework-name {
-  font-size: 1.05rem;
+  font-size: var(--type-body);
   font-weight: 700;
   line-height: 1.25;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   color: var(--text-main);
   margin: 0;
 }
 
 .framework-insight {
-  font-size: 0.9rem;
+  font-size: var(--type-body);
   line-height: 1.75;
   color: var(--text-secondary);
   margin: 0;
@@ -135,7 +135,7 @@
 }
 
 .framework-quote {
-  font-size: 0.88rem;
+  font-size: var(--type-label);
   font-style: italic;
   line-height: 1.65;
   color: var(--text-secondary);
@@ -153,15 +153,15 @@
 }
 
 .in-scl-label {
-  font-size: 0.68rem;
+  font-size: var(--type-label);
   font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--depa-navy);
 }
 
 .framework-in-scl p {
-  font-size: 0.85rem;
+  font-size: var(--type-label);
   line-height: 1.65;
   color: var(--text-main);
   margin: 0;
@@ -171,7 +171,7 @@
   display: inline-flex;
   align-items: center;
   gap: 5px;
-  font-size: 0.72rem;
+  font-size: var(--type-label);
   color: var(--text-secondary);
   text-decoration: none;
   border-bottom: 1px solid var(--border-strong);
@@ -219,15 +219,15 @@
 }
 
 .methodology-weaving h3 {
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-size: var(--type-body);
   font-weight: 700;
-  letter-spacing: -0.025em;
+  letter-spacing: 0;
   margin: 0 0 16px;
   color: var(--text-main);
 }
 
 .methodology-weaving p {
-  font-size: 1rem;
+  font-size: var(--type-body);
   line-height: 1.9;
   color: var(--text-secondary);
   margin: 0;
@@ -239,15 +239,15 @@
 }
 
 .methodology-tools-header h3 {
-  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-size: var(--type-body);
   font-weight: 700;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
   margin: 0 0 10px;
   color: var(--text-main);
 }
 
 .methodology-tools-header p {
-  font-size: 0.9rem;
+  font-size: var(--type-body);
   color: var(--text-muted);
   line-height: 1.7;
   max-width: 520px;
@@ -284,10 +284,10 @@
 }
 
 .tool-tag {
-  font-size: 0.68rem;
+  font-size: var(--type-label);
   font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--text-muted);
 }
 
@@ -301,16 +301,16 @@
 }
 
 .tool-name {
-  font-size: 1rem;
+  font-size: var(--type-body);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   color: var(--text-main);
   margin: 0;
   line-height: 1.2;
 }
 
 .tool-desc {
-  font-size: 0.87rem;
+  font-size: var(--type-label);
   line-height: 1.7;
   color: var(--text-secondary);
   margin: 0;
@@ -318,9 +318,9 @@
 }
 
 .tool-url {
-  font-size: 0.7rem;
+  font-size: var(--type-label);
   color: var(--text-secondary);
-  letter-spacing: 0.02em;
+  letter-spacing: 0;
   font-family: var(--font-mono, monospace);
 }
 
@@ -331,10 +331,10 @@
 }
 
 .methodology-sources h4 {
-  font-size: 0.72rem;
+  font-size: var(--type-label);
   font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
   color: var(--text-muted);
   margin: 0 0 16px;
 }
@@ -348,7 +348,7 @@
 }
 
 .sources-list li {
-  font-size: 0.8rem;
+  font-size: var(--type-label);
   color: var(--text-secondary);
   line-height: 1.5;
 }

@@ -1,25 +1,25 @@
 .thailand-map-wrapper {
-  margin: 3rem 0;
-  background: white;
-  padding: 2rem;
-  border: 1px solid var(--border-strong);
+  margin: 32px 0;
+  background: transparent;
+  padding: 24px 0 0;
+  border-top: 3px solid var(--text-main);
 }
 
 .map-header {
   margin-bottom: 1.5rem;
-  text-align: center;
+  text-align: left;
 }
 
 .map-title {
-  font-size: 1.5rem;
+  font-size: var(--type-body);
   font-weight: 700;
-  color: var(--color-foreground);
+  color: var(--text-main);
   margin: 0 0 0.5rem 0;
 }
 
 .map-subtitle {
-  color: var(--color-foreground-muted);
-  font-size: 0.95rem;
+  color: var(--text-secondary);
+  font-size: var(--type-body);
   margin: 0;
 }
 
@@ -32,9 +32,9 @@
 .leaflet-tooltip {
   background-color: white !important;
   border: none !important;
-  border-radius: 8px !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
-  color: var(--color-foreground) !important;
+  border-radius: 0;
+  box-shadow: none;
+  color: #0C2F53 !important;
   font-family: inherit !important;
 }
 
@@ -44,8 +44,8 @@
 
 @media (max-width: 768px) {
   .thailand-map-wrapper {
-    padding: 1.25rem;
-    margin: 2rem 0;
+    padding: 16px 0 0;
+    margin: 24px 0;
   }
 }
 
@@ -57,7 +57,7 @@
   margin-top: 16px;
   padding: 12px;
   background: var(--surface-card);
-  border-radius: 8px;
+  border-radius: 0;
   border: 1px solid var(--border-glass);
 }
 
@@ -65,7 +65,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.85rem;
+  font-size: var(--type-label);
   color: var(--text-secondary);
   font-weight: 500;
 }
@@ -73,7 +73,7 @@
 .legend-dot {
   width: 12px;
   height: 12px;
-  border-radius: 50%;
+  border-radius: 0;
   display: inline-block;
 }
 
@@ -86,3 +86,12 @@
   background: #e2e8f0;
   border: 1px solid #cbd5e1;
 }
+
+.leaflet-container .leaflet-control-zoom a { width: 44px; height: 44px; line-height: 44px; }
+.province-data { margin-top: 16px; border-top: 1px solid var(--border-glass); }
+.province-data summary { padding: 12px 0; min-height: 44px; cursor: pointer; font-weight: 600; }
+.province-table-scroll { max-height: 360px; overflow-y: auto; padding: 4px; }
+.province-data table { width: 100%; border-collapse: collapse; font-size: var(--type-label); }
+.province-data caption { text-align: left; padding: 8px 0; color: var(--text-secondary); }
+.province-data th, .province-data td { text-align: left; padding: 8px; border-bottom: 1px solid var(--border-glass); }
+.province-data td:last-child { text-align: right; font-variant-numeric: tabular-nums; }

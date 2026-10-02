@@ -39,15 +39,15 @@ const ThailandMap = ({ demographics }) => {
         <p className="map-subtitle">{t('alumni.mapSubtitle', 'Based on available organization data')}</p>
       </div>
       <div className="map-container-inner">
-        <MapContainer center={center} zoom={zoom} scrollWheelZoom={false} style={{ height: '450px', width: '100%', borderRadius: '16px', zIndex: 1 }}>
+        <MapContainer center={center} zoom={zoom} scrollWheelZoom={false} style={{ height: '450px', width: '100%', borderRadius: 0, zIndex: 1 }}>
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
+            url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           {markers.map((marker, idx) => {
             const isActive = marker.count > 0;
             const radius = isActive ? 6 + (marker.count / maxCount) * 18 : 4;
-            const fillColor = isActive ? '#FFC600' : '#e2e8f0';
+            const fillColor = isActive ? '#FFF200' : '#e2e8f0';
             const strokeColor = isActive ? '#0C2F53' : '#cbd5e1';
             const weight = isActive ? 2 : 1;
             const fillOpacity = isActive ? 0.75 : 0.4;
@@ -87,7 +87,7 @@ const ThailandMap = ({ demographics }) => {
                         )}
                       </>
                     ) : (
-                      <span style={{ fontSize: '12px', color: '#94a3b8', fontStyle: 'italic' }}>{t('alumni.noAlumniYet', 'No alumni yet')}</span>
+                      <span style={{ fontSize: '14px', color: '#516579' }}>{t('alumni.noAlumniYet', 'No alumni yet')}</span>
                     )}
                   </div>
                 </Tooltip>
@@ -107,6 +107,18 @@ const ThailandMap = ({ demographics }) => {
           </div>
         </div>
       </div>
+      <details className="province-data">
+        <summary>{t('alumni.mapData')}</summary>
+        <div className="province-table-scroll" tabIndex={0}>
+          <table>
+            <caption>{t('alumni.mapSubtitle')}</caption>
+            <thead><tr><th scope="col">{t('hero.statProvinces')}</th><th scope="col">{t('alumni.people')}</th></tr></thead>
+            <tbody>{markers.slice().sort((a, b) => b.count - a.count || a.province.localeCompare(b.province, 'th')).map((marker) => (
+              <tr key={marker.province}><th scope="row">{marker.province}</th><td>{marker.count}</td></tr>
+            ))}</tbody>
+          </table>
+        </div>
+      </details>
     </div>
   );
 };

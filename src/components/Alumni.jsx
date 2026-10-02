@@ -30,6 +30,7 @@ import ThailandMap from './ThailandMap';
 import CohortInsights from './CohortInsights';
 import SmartInsights from './SmartInsights';
 import BatchNewsStrip from './BatchNewsStrip';
+import Modal from './Modal';
 import './Alumni.css';
 
 const SECTOR_ICONS = {
@@ -58,11 +59,11 @@ const UpdateModal = ({ entry, onClose, t }) => {
   if (!entry) return null;
 
   return (
-    <div className="update-modal-backdrop" onClick={onClose}>
+    <Modal className="update-modal-backdrop" onClose={onClose} aria-labelledby="update-modal-title">
       <div className="update-modal" onClick={(e) => e.stopPropagation()}>
         <div className="update-modal-header">
-          <h3>{t('alumni.updateTitle', 'Update Your Information')}</h3>
-          <button type="button" className="update-modal-close" onClick={onClose} aria-label="Close">
+          <h3 id="update-modal-title">{t('alumni.updateTitle', 'Update Your Information')}</h3>
+          <button type="button" className="update-modal-close" onClick={onClose} aria-label={t('common.close')}>
             <X size={18} />
           </button>
         </div>
@@ -100,7 +101,7 @@ const UpdateModal = ({ entry, onClose, t }) => {
           </form>
         </div>
       </div>
-    </div>
+    </Modal>
   );
 };
 
@@ -208,58 +209,6 @@ const Alumni = ({ headingLevel = 'h2' }) => {
           </p>
         </div>
 
-        <figure className="alumni-hero-banner">
-          <img
-            src={encodeURI(alumniHeroBanner)}
-            alt={t('alumni.heroBannerAlt')}
-            loading="lazy"
-          />
-        </figure>
-
-        <div className="alumni-network">
-          <div className="alumni-network-visuals">
-            <figure className="alumni-network-lead">
-              <img
-                src={encodeURI(alumniNetworkPhotos[0])}
-                alt={t('alumni.network.imageAlt', { number: 1 })}
-                loading="lazy"
-              />
-            </figure>
-
-            <div className="alumni-network-strip">
-              {alumniNetworkPhotos.slice(1).map((photo, index) => (
-                <figure key={photo} className="alumni-network-strip-photo">
-                  <img
-                    src={encodeURI(photo)}
-                    alt={t('alumni.network.imageAlt', { number: index + 2 })}
-                    loading="lazy"
-                  />
-                </figure>
-              ))}
-            </div>
-          </div>
-
-          <div className="alumni-network-copy">
-            <span className="section-kicker">{t('alumni.network.eyebrow')}</span>
-            <h3>{t('alumni.network.title')}</h3>
-            <p>{t('alumni.network.description')}</p>
-            <p className="alumni-network-caption">{t('alumni.network.caption')}</p>
-
-            <div className="alumni-network-perks">
-              {['visits', 'access', 'peers'].map((perk) => (
-                <article key={perk} className="alumni-network-perk">
-                  <h4>{t(`alumni.network.perks.${perk}.title`)}</h4>
-                  <p>{t(`alumni.network.perks.${perk}.description`)}</p>
-                </article>
-              ))}
-            </div>
-
-            <p className="alumni-network-sites-line">
-              <strong>{t('alumni.network.sitesLabel')}</strong> {networkVisitSites.join(' · ')}
-            </p>
-          </div>
-        </div>
-
         <div className="alumni-tools">
           <div className="demographics-panel">
             <div className="demo-stats-row">
@@ -287,6 +236,7 @@ const Alumni = ({ headingLevel = 'h2' }) => {
                   key={key}
                   type="button"
                   className={`sector-tab ${activeSector === key ? 'sector-tab-active' : ''}`}
+                  aria-pressed={activeSector === key}
                   onClick={() => setActiveSector(key)}
                 >
                   <span>{t(`alumni.sector.${key}`)}</span>
@@ -384,22 +334,9 @@ const Alumni = ({ headingLevel = 'h2' }) => {
           </div>
         </div>
 
-        {demographics.provinces && Object.keys(demographics.provinces).length > 0 && (
-          <div className="map-container-wrapper">
-            <ThailandMap demographics={demographics} />
-            <p className="map-caption">
-              {t('alumni.mapCaption', 'See where our alumni are from, and where we still need to reach.')}
-            </p>
-          </div>
-        )}
-
-        <SmartInsights demographics={demographics} />
-
-        <CohortInsights allEntries={allEntries} demographics={demographics} />
-
         {(hasActiveFilter || showAllBrowse) ? (
           <div className="search-results-container is-visible">
-            <div className="results-header">
+            <div className="results-header" role="status">
               <h3 className="results-title">
                 {showAllBrowse && !searchKey
                   ? <>{t('alumni.browseAll', 'Browse all')} <strong>{searchResults.length}</strong> {t('alumni.people')}</>
@@ -549,7 +486,7 @@ const Alumni = ({ headingLevel = 'h2' }) => {
                         id={`batch-panel-${batch.id}`}
                         className="batch-expanded-content"
                       >
-                        <div className="batch-preview-scroll">
+                        <div className="batch-preview-scroll" tabIndex={0} aria-label={`${t('alumni.batch')} ${batch.id}`}>
                           <div className="batch-preview-grid">
                             {batchEntries.map((entry) => (
                               <article key={entry.id} className="batch-preview-card">
@@ -581,6 +518,72 @@ const Alumni = ({ headingLevel = 'h2' }) => {
             </div>
           </>
         )}
+
+        {demographics.provinces && Object.keys(demographics.provinces).length > 0 && (
+          <div className="map-container-wrapper">
+            <ThailandMap demographics={demographics} />
+            <p className="map-caption">
+              {t('alumni.mapCaption', 'See where our alumni are from, and where we still need to reach.')}
+            </p>
+          </div>
+        )}
+
+        <SmartInsights demographics={demographics} />
+
+        <CohortInsights allEntries={allEntries} demographics={demographics} />
+
+        <figure className="alumni-hero-banner">
+          <img
+            src={encodeURI(alumniHeroBanner)}
+            alt={t('alumni.heroBannerAlt')}
+            loading="lazy"
+          />
+        </figure>
+
+        <div className="alumni-network">
+          <div className="alumni-network-visuals">
+            <figure className="alumni-network-lead">
+              <img
+                src={encodeURI(alumniNetworkPhotos[0])}
+                alt={t('alumni.network.imageAlt', { number: 1 })}
+                loading="lazy"
+              />
+            </figure>
+
+            <div className="alumni-network-strip">
+              {alumniNetworkPhotos.slice(1).map((photo, index) => (
+                <figure key={photo} className="alumni-network-strip-photo">
+                  <img
+                    src={encodeURI(photo)}
+                    alt={t('alumni.network.imageAlt', { number: index + 2 })}
+                    loading="lazy"
+                  />
+                </figure>
+              ))}
+            </div>
+          </div>
+
+          <div className="alumni-network-copy">
+            <span className="section-kicker">{t('alumni.network.eyebrow')}</span>
+            <h3>{t('alumni.network.title')}</h3>
+            <p>{t('alumni.network.description')}</p>
+            <p className="alumni-network-caption">{t('alumni.network.caption')}</p>
+
+            <div className="alumni-network-perks">
+              {['visits', 'access', 'peers'].map((perk) => (
+                <article key={perk} className="alumni-network-perk">
+                  <h4>{t(`alumni.network.perks.${perk}.title`)}</h4>
+                  <p>{t(`alumni.network.perks.${perk}.description`)}</p>
+                </article>
+              ))}
+            </div>
+
+            <p className="alumni-network-sites-line">
+              <strong>{t('alumni.network.sitesLabel')}</strong> {networkVisitSites.join(' · ')}
+            </p>
+          </div>
+        </div>
+
       </div>
 
       {updateEntry && (

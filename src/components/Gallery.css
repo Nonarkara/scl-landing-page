@@ -16,7 +16,7 @@
 .gallery-subtitle {
   margin-top: 10px;
   color: var(--text-secondary);
-  font-size: 1.02rem;
+  font-size: var(--type-body);
   max-width: 40rem;
   line-height: 1.85;
 }
@@ -29,7 +29,7 @@
 
 .gallery-toggle {
   color: var(--text-main);
-  font-size: 0.9rem;
+  font-size: var(--type-body);
   font-weight: 600;
   cursor: pointer;
 }
@@ -40,10 +40,10 @@
 
 .gallery-chip {
   color: var(--text-muted);
-  font-size: 0.78rem;
+  font-size: var(--type-label);
   font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .masonry-grid {
@@ -62,8 +62,8 @@
   overflow: hidden;
   cursor: pointer;
   aspect-ratio: 4 / 3;
-  border-radius: 8px;
-  transition: transform 0.15s ease;
+  border-radius: 0;
+  transition: transform 0.15s ease-out;
 }
 
 .masonry-item:hover {
@@ -80,7 +80,7 @@
   height: 100%;
   object-fit: cover;
   filter: saturate(0.92);
-  transition: transform 0.25s ease, filter 0.25s ease;
+  transition: transform 0.25s ease-out, filter 0.25s ease-out;
 }
 
 .masonry-item:hover img,
@@ -109,15 +109,15 @@
   position: absolute;
   top: 20px;
   right: 20px;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 0;
   color: #ffffff;
   cursor: pointer;
-  transition: transform 0.12s ease, background 0.15s ease;
+  transition: transform 0.12s ease-out, background 0.15s ease-out;
 }
 
 .lightbox-close:hover {
@@ -146,7 +146,7 @@
 .lightbox-frame figcaption {
   text-align: center;
   color: rgba(255, 255, 255, 0.64);
-  font-size: 0.9rem;
+  font-size: var(--type-body);
 }
 
 .lightbox-nav-row {
@@ -162,10 +162,10 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
+  border-radius: 0;
   color: #ffffff;
   cursor: pointer;
-  transition: transform 0.12s ease, background 0.15s ease;
+  transition: transform 0.12s ease-out, background 0.15s ease-out;
 }
 
 .lightbox-nav:hover {
@@ -202,4 +202,7 @@
   .masonry-item {
     aspect-ratio: 4 / 3;
   }
+}
+.gallery-lightbox :focus-visible {
+  outline-color: #ffffff !important;
 }

@@ -3,6 +3,7 @@ import { ArrowLeft, ArrowRight, Expand, X } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { galleryPhotos } from '../data/galleryPhotos';
 import { useFadeIn } from '../hooks/useFadeIn';
+import Modal from './Modal';
 import './Gallery.css';
 
 const featuredCount = 6;
@@ -24,10 +25,7 @@ const Gallery = ({ headingLevel = 'h2' }) => {
   useEffect(() => {
     if (!activePhoto) return undefined;
 
-    document.body.style.overflow = 'hidden';
-
     const handleKeyDown = (event) => {
-      if (event.key === 'Escape') setActivePhoto(null);
       if (event.key === 'ArrowRight') setActivePhoto(galleryPhotos[(currentIndex + 1) % galleryPhotos.length]);
       if (event.key === 'ArrowLeft') setActivePhoto(galleryPhotos[(currentIndex - 1 + galleryPhotos.length) % galleryPhotos.length]);
     };
@@ -35,7 +33,6 @@ const Gallery = ({ headingLevel = 'h2' }) => {
     window.addEventListener('keydown', handleKeyDown);
     return () => {
       window.removeEventListener('keydown', handleKeyDown);
-      document.body.style.overflow = '';
     };
   }, [activePhoto, currentIndex]);
 
@@ -95,12 +92,10 @@ const Gallery = ({ headingLevel = 'h2' }) => {
       </section>
 
       {activePhoto && (
-        <div
+        <Modal
           className="gallery-lightbox"
-          role="dialog"
-          aria-modal="true"
           aria-label={t('gallery.openImage')}
-          onClick={(e) => { if (e.target === e.currentTarget) setActivePhoto(null); }}
+          onClose={() => setActivePhoto(null)}
         >
           <button
             type="button"
@@ -139,7 +134,7 @@ const Gallery = ({ headingLevel = 'h2' }) => {
               <ArrowRight size={20} />
             </button>
           </div>
-        </div>
+        </Modal>
       )}
     </>
   );

@@ -72,24 +72,6 @@ const CohortInsights = ({ allEntries, demographics }) => {
     return counts;
   }, [allEntries]);
 
-  const batchColors = {
-    1: '#3b82f6',
-    2: '#10b981',
-    3: '#f59e0b',
-    4: '#ec4899',
-    5: '#8b5cf6',
-    6: '#06b6d4'
-  };
-
-  const batchColorsLight = {
-    1: '#93c5fd',
-    2: '#6ee7b7',
-    3: '#fcd34d',
-    4: '#f9a8d4',
-    5: '#c4b5fd',
-    6: '#67e8f9'
-  };
-
   const handleShare = async () => {
     const basePath = import.meta.env.BASE_URL === '/' ? '' : import.meta.env.BASE_URL.replace(/\/$/, '');
     const shareUrl = `${window.location.origin}${basePath}/alumni`;
@@ -178,7 +160,7 @@ const CohortInsights = ({ allEntries, demographics }) => {
             {t('alumni.cohortGrowth', 'Cohort Growth')}
             <span className="panel-subtitle">{t('alumni.alumniPerBatch', 'Alumni per batch')}</span>
           </h4>
-          <div className="bar-chart">
+          <div className="bar-chart" aria-hidden="true">
             {alumniBatches.slice().reverse().map(batch => {
               const total = batchCounts[batch.id];
               const pub = batchPublicCounts[batch.id];
@@ -191,11 +173,11 @@ const CohortInsights = ({ allEntries, demographics }) => {
                   <div className="bar-track">
                     <div
                       className="bar-fill"
-                      style={{ width: `${Math.max(pubPct, 1)}%`, background: batchColors[batch.id] || '#16314b' }}
+                      style={{ width: `${pubPct}%`, background: 'var(--chart-public)' }}
                     />
                     <div
                       className="bar-fill"
-                      style={{ width: `${Math.max(privPct, 1)}%`, background: batchColorsLight[batch.id] || '#8fa3b1' }}
+                      style={{ width: `${privPct}%`, background: 'var(--chart-private)' }}
                     />
                   </div>
                   <span className="bar-value">{total}</span>
@@ -205,14 +187,21 @@ const CohortInsights = ({ allEntries, demographics }) => {
           </div>
           <div className="bar-legend">
             <span className="bar-legend-item">
-              <span className="bar-legend-dot" style={{ background: '#3b82f6' }} />
+              <span className="bar-legend-dot" style={{ background: 'var(--chart-public)' }} />
               {t('alumni.publicLabel', 'Public / State')}
             </span>
             <span className="bar-legend-item">
-              <span className="bar-legend-dot" style={{ background: '#93c5fd' }} />
+              <span className="bar-legend-dot" style={{ background: 'var(--chart-private)' }} />
               {t('alumni.privateLabel', 'Private / Other')}
             </span>
           </div>
+          <div className="sr-only"><table>
+            <caption>{t('alumni.cohortGrowth')}</caption>
+            <thead><tr><th scope="col">{t('alumni.batch')}</th><th scope="col">{t('alumni.publicLabel')}</th><th scope="col">{t('alumni.privateLabel')}</th><th scope="col">{t('alumni.totalLabel')}</th></tr></thead>
+            <tbody>{alumniBatches.slice().reverse().map((batch) => (
+              <tr key={batch.id}><th scope="row">SCL {batch.id}</th><td>{batchPublicCounts[batch.id]}</td><td>{batchCounts[batch.id] - batchPublicCounts[batch.id]}</td><td>{batchCounts[batch.id]}</td></tr>
+            ))}</tbody>
+          </table></div>
         </div>
 
         <div className="insight-panel">

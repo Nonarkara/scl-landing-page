@@ -82,6 +82,7 @@ export default function FAQ() {
           <Search size={18} className="faq-search-icon" />
           <input
             type="text"
+            aria-label={t('faq.searchPlaceholder')}
             placeholder={t('faq.searchPlaceholder')}
             value={searchTerm}
             onChange={(e) => {
@@ -99,6 +100,7 @@ export default function FAQ() {
         <div className="faq-categories">
           <button
             className={`faq-cat-btn ${activeCategory === 'all' ? 'active' : ''}`}
+            aria-pressed={activeCategory === 'all'}
             onClick={() => { setActiveCategory('all'); setActiveIndex(null); }}
           >
             {t('faq.allCategory', 'All')} ({faqData.length})
@@ -109,6 +111,7 @@ export default function FAQ() {
               <button
                 key={cat}
                 className={`faq-cat-btn ${activeCategory === cat ? 'active' : ''}`}
+                aria-pressed={activeCategory === cat}
                 onClick={() => { setActiveCategory(cat); setActiveIndex(null); }}
               >
                 {categoryLabel(cat)} ({count})
@@ -118,14 +121,14 @@ export default function FAQ() {
         </div>
       </div>
 
-      <div className="faq-results-count">
+      <div className="faq-results-count" role="status">
         {t('faq.resultsFound', { count: filteredFAQs.length })}
       </div>
 
       <div className="faq-list">
         {Object.entries(groupedFAQs).map(([category, items]) => (
           <div key={category} className="faq-category-block">
-            <h3 className="faq-category-title">{categoryLabel(category)}</h3>
+            <h2 className="faq-category-title">{categoryLabel(category)}</h2>
             {items.map((item) => {
               const idx = globalIndex++;
               const showPhotoBreak =
@@ -147,17 +150,21 @@ export default function FAQ() {
                   )}
                   <div
                     className={`faq-item ${activeIndex === idx ? 'active' : ''}`}
-                    onClick={() => toggleFAQ(idx)}
                   >
-                    <div className="faq-question">
+                    <button
+                      type="button"
+                      className="faq-question"
+                      id={`faq-question-${idx}`}
+                      aria-expanded={activeIndex === idx}
+                      aria-controls={`faq-answer-${idx}`}
+                      onClick={() => toggleFAQ(idx)}
+                    >
                       <span>{pick(item.question)}</span>
                       {activeIndex === idx ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
-                    </div>
-                    {activeIndex === idx && (
-                      <div className="faq-answer">
+                    </button>
+                      <div id={`faq-answer-${idx}`} className="faq-answer" hidden={activeIndex !== idx} aria-labelledby={`faq-question-${idx}`}>
                         <p>{pick(item.answer)}</p>
                       </div>
-                    )}
                   </div>
                 </React.Fragment>
               );

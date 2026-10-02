@@ -4,7 +4,7 @@ import PageReturn from '../components/PageReturn';
 
 export default function GalleryPage() {
   return (
-    <div style={{ paddingTop: '80px' }}>
+    <div style={{ paddingTop: '24px' }}>
       <div className="container">
         <PageReturn />
       </div>

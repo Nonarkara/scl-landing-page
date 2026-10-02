@@ -44,8 +44,13 @@
     "liveBadge2": "306 条已核验校友记录 · 覆盖 53 府",
     "liveBadge3": "6 期 · 2020–2026 · depa 旗舰课程",
     "title": "Smart City Leadership",
-    "valueStatement": "一门真正面向管理层的短期课程，帮助领导者更清晰地判断：严肃的智慧城市工作究竟应当如何推进。",
-    "subtitle": "SCL 的价值不在于把页面做成招生广告，而在于让读者迅速把握一个可信的智慧城市项目背后的战略、制度与实施逻辑——尤其是在泰国的语境下。",
+    "valueStatement": "面向公共与私营部门领导者的高管课程，将智慧城市规划落实为实际项目。",
+    "subtitle": "SCL 第六期已于 2026 年 5 月结束。请联系 depa，咨询后续课程、课程详情及申请事宜。",
+    "interestTitle": "对下一期课程感兴趣？",
+    "emailLabel": "您的电子邮箱",
+    "formatLabel": "天 / 学习小时",
+    "nationalContext": "泰国智慧城市概况",
+    "contextDate": "课程背景数据，2026 年 5 月",
     "ctaPrimary": "阅读 depa 官方来源",
     "ctaSecondary": "查看课程结构",
     "imageAlt": "SCL 校友网络参访考察现场，俯瞰曼谷",
@@ -300,6 +305,7 @@
     "statProvinces": "府"
   },
   "alumni": {
+    "mapData": "查看各府校友人数表格",
     "badge": "官方校友目录",
     "title": "高管校友名录",
     "subtitle": "基于 depa 公布的 {{cohorts}} 届官方名单，检索 {{count}} 位 SCL 领导者；对泰文与英文姓名均提供更稳健的匹配。",
@@ -549,10 +555,10 @@
   },
   "cta": {
     "kicker": "下一期",
-    "title": "准备好引领智慧城市的未来了吗？",
-    "desc": "SCL #7 申请即将开放。加入优先候补名单，以接收官方手册和申请通知。",
+    "title": "关注 SCL 课程动态",
+    "desc": "请联系 depa 团队，了解后续课程公告与课程详情。",
     "learnMore": "了解更多",
-    "waitlist": "加入候补名单"
+    "waitlist": "发送邮件给课程团队"
   },
   "loading": {
     "alumni": "正在加载校友数据...",
@@ -597,7 +603,7 @@
   "curriculum": {
     "kicker": "课程",
     "title": "围绕智慧城市真正落地方式而设计的六个模块",
-    "subtitle": "七周时间、六个模块，围绕 depa 真正落地运作的七大智慧城市支柱构建——以实地参访为根基，而非停留在口号。",
+    "subtitle": "七天培训、六个模块，围绕 depa 的七大智慧城市支柱，结合课堂学习与实地参访。",
     "modules": {
       "1": {
         "title": "数字化转型与智慧城市愿景",
@@ -761,6 +767,10 @@
     }
   },
   "common": {
+    "close": "关闭",
+    "loading": "正在加载…",
+    "lightMode": "切换至浅色模式",
+    "darkMode": "切换至深色模式",
     "backToHome": "返回首页"
   }
 }
