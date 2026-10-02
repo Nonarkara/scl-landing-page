@@ -68,7 +68,7 @@ const HeroSection = () => {
             </div>
 
             <h1 className="hero-title-v2">
-              {t('hero.title', 'Leading the')} <span className="text-highlight">{t('hero.highlight', 'Future')}</span> {t('hero.title2', 'of Smart Thailand')}
+              {t('hero.title', 'Leading the')}{' '}<span className="text-highlight">{t('hero.highlight', 'Future')}</span>{' '}{t('hero.title2', 'of Smart Thailand')}
             </h1>
 
             <p className="hero-value-statement">{t('hero.valueStatement')}</p>
@@ -83,6 +83,7 @@ const HeroSection = () => {
                   <Mail className="waitlist-icon" size={18} />
                   <input
                     type="email"
+                    aria-label={t('hero.emailPlaceholder', 'Enter your email address')}
                     required
                     placeholder={t('hero.emailPlaceholder', 'Enter your email address')}
                     value={waitlistEmail}

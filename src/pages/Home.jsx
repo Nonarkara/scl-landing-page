@@ -24,21 +24,14 @@ const Home = () => {
   };
 
   useEffect(() => {
-    if (tabsRef.current) {
-      const y = tabsRef.current.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
-      window.scrollTo({ top: y, behavior: 'smooth' });
-    }
-  }, [activeTab]);
-
-  useEffect(() => {
-    // On initial load with a tab param, bring the tab strip into view (below the navbar)
+    // A plain home visit starts at the introduction. Only explicit tab links
+    // scroll to the relevant programme section, including repeat visits.
     if (searchParams.get('tab') && tabsRef.current) {
       const y = tabsRef.current.getBoundingClientRect().top + window.scrollY - NAV_OFFSET;
       window.scrollTo({ top: y, behavior: 'instant' });
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-  
+  }, [searchParams]);
+
   const tabs = [
     { id: 'about', labelKey: 'home.tabs.about', fallback: 'About & History', icon: <History size={18} /> },
     { id: 'curriculum', labelKey: 'home.tabs.curriculum', fallback: 'Curriculum', icon: <BookOpen size={18} /> },
