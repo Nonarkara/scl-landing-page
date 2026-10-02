@@ -12,16 +12,27 @@ jobs:
   build-and-deploy:
     concurrency: ci-${{ github.ref }}
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
-      - name: Checkout 🛎️
-        uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v7
 
-      - name: Install and Build 🔧
+      - name: Set up Node
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Install and verify
         run: |
-          npm install
+          npm ci
+          npm run lint
+          npm run verify:assets
           npm run build
+          npx playwright install --with-deps chromium
+          npm run test:ui
 
-      - name: Deploy 🚀
+      - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist

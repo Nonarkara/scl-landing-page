@@ -14,16 +14,16 @@
 }
 
 .smart-insights-title {
-  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  font-size: var(--type-body);
   margin-top: 8px;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
 }
 
 .smart-insights-lead {
   margin-top: 12px;
   max-width: 62ch;
   color: var(--text-secondary);
-  font-size: 0.95rem;
+  font-size: var(--type-body);
   line-height: 1.7;
 }
 
@@ -33,7 +33,7 @@
   border-top: 1px solid var(--border-glass);
   max-width: 78ch;
   color: var(--text-muted);
-  font-size: 0.78rem;
+  font-size: var(--type-label);
   line-height: 1.6;
 }
 
@@ -73,26 +73,26 @@
 }
 
 .smart-stat-value {
-  font-size: 1.8rem;
+  font-size: var(--type-body);
   font-weight: 700;
   color: var(--text-main);
   line-height: 1;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
   font-variant-numeric: tabular-nums;
 }
 
 .smart-stat-label {
   margin-top: 10px;
-  font-size: 0.7rem;
+  font-size: var(--type-label);
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  text-transform: none;
+  letter-spacing: 0;
   color: var(--text-muted);
 }
 
 .smart-stat-sub {
   margin-top: 4px;
-  font-size: 0.8rem;
+  font-size: var(--type-label);
   color: var(--text-secondary);
   line-height: 1.5;
 }
@@ -131,12 +131,12 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.72rem;
+  font-size: var(--type-label);
   font-weight: 700;
   color: var(--text-muted);
   margin-bottom: 18px;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 .smart-panel-title svg {
@@ -158,7 +158,7 @@
 }
 
 .smart-bar-label {
-  font-size: 0.84rem;
+  font-size: var(--type-label);
   color: var(--text-secondary);
   white-space: nowrap;
   overflow: hidden;
@@ -177,12 +177,12 @@
   height: 100%;
   background: var(--depa-navy);
   border-radius: 0;
-  transition: width 0.6s ease;
+  transition: width 0.6s ease-out;
   opacity: 0.85;
 }
 
 .smart-bar-count {
-  font-size: 0.84rem;
+  font-size: var(--type-label);
   font-weight: 600;
   color: var(--text-main);
   text-align: right;
@@ -190,7 +190,7 @@
 }
 
 .smart-bar-pct {
-  font-size: 0.78rem;
+  font-size: var(--type-label);
   color: var(--text-muted);
   text-align: right;
   font-variant-numeric: tabular-nums;
@@ -211,15 +211,15 @@
 }
 
 .smart-rank-num {
-  font-size: 0.74rem;
+  font-size: var(--type-label);
   font-weight: 700;
   color: var(--text-muted);
   font-variant-numeric: tabular-nums;
-  letter-spacing: 0.04em;
+  letter-spacing: 0;
 }
 
 .smart-rank-name {
-  font-size: 0.86rem;
+  font-size: var(--type-label);
   color: var(--text-main);
   white-space: nowrap;
   overflow: hidden;
@@ -239,11 +239,11 @@
   background: var(--depa-navy);
   border-radius: 0;
   opacity: 0.65;
-  transition: width 0.6s ease;
+  transition: width 0.6s ease-out;
 }
 
 .smart-rank-count {
-  font-size: 0.82rem;
+  font-size: var(--type-label);
   font-weight: 700;
   color: var(--depa-navy);
   text-align: right;
@@ -282,21 +282,21 @@
   width: 100%;
   background: var(--depa-navy);
   border-radius: 0;
-  transition: height 0.6s ease;
+  transition: height 0.6s ease-out;
   min-height: 3px;
   opacity: 0.85;
 }
 
 .smart-batch-label {
-  font-size: 0.7rem;
+  font-size: var(--type-label);
   font-weight: 700;
   color: var(--text-muted);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .smart-batch-count {
-  font-size: 0.82rem;
+  font-size: var(--type-label);
   font-weight: 700;
   color: var(--text-main);
   font-variant-numeric: tabular-nums;
@@ -322,7 +322,7 @@
 }
 
 .smart-org-rank {
-  font-size: 0.72rem;
+  font-size: var(--type-label);
   font-weight: 700;
   color: var(--text-muted);
   width: 18px;
@@ -331,7 +331,7 @@
 
 .smart-org-name {
   flex: 1;
-  font-size: 0.84rem;
+  font-size: var(--type-label);
   color: var(--text-main);
   white-space: nowrap;
   overflow: hidden;
@@ -339,7 +339,7 @@
 }
 
 .smart-org-count {
-  font-size: 0.84rem;
+  font-size: var(--type-label);
   font-weight: 700;
   color: var(--depa-navy);
   font-variant-numeric: tabular-nums;
@@ -400,6 +400,6 @@
   }
 
   .smart-stat-value {
-    font-size: 1.4rem;
+    font-size: var(--type-body);
   }
 }

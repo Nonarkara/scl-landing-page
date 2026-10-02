@@ -44,8 +44,13 @@
     "liveBadge2": "306 verified alumni records · 53 provinces reached",
     "liveBadge3": "Six cohorts · 2020–2026 · depa flagship",
     "title": "Smart City Leadership",
-    "valueStatement": "A serious short-format program for leaders who need sharper judgment about how smart-city work actually gets delivered.",
-    "subtitle": "SCL is most useful when read not as a promotional course page, but as a compact operating brief: it helps public and private leaders understand the strategic, institutional, and implementation logic behind credible smart-city projects in Thailand.",
+    "valueStatement": "An executive programme for public and private leaders turning smart-city plans into working projects.",
+    "subtitle": "SCL #6 concluded in May 2026. Contact depa about future cohorts, course details and applications.",
+    "interestTitle": "Interested in the next cohort?",
+    "emailLabel": "Your email address",
+    "formatLabel": "Days / learning hours",
+    "nationalContext": "National smart-city context",
+    "contextDate": "Programme context, May 2026",
     "ctaPrimary": "Read the official depa source",
     "ctaSecondary": "See the program structure",
     "imageAlt": "SCL network visit overlooking Bangkok",
@@ -300,6 +305,7 @@
     "statProvinces": "Provinces"
   },
   "alumni": {
+    "mapData": "Province counts in a table",
     "badge": "Official alumni directory",
     "title": "Executive Alumni",
     "subtitle": "Search across {{count}} leaders from {{cohorts}} official SCL cohorts, with resilient matching for Thai and English names pulled from depa announcement lists.",
@@ -549,10 +555,10 @@
   },
   "cta": {
     "kicker": "Next Cohort",
-    "title": "Ready to lead the future of Smart Cities?",
-    "desc": "SCL #7 applications will open soon. Join the priority waitlist to receive the official brochure and application notification.",
+    "title": "Stay in touch with SCL",
+    "desc": "Contact the depa team for future cohort announcements and programme details.",
     "learnMore": "Learn More",
-    "waitlist": "Join the Waitlist"
+    "waitlist": "Email the Programme Team"
   },
   "loading": {
     "alumni": "Loading Alumni Data...",
@@ -597,7 +603,7 @@
   "curriculum": {
     "kicker": "Curriculum",
     "title": "Six modules built around how smart cities actually get delivered",
-    "subtitle": "Seven weeks. Six modules. Built around the seven smart-city pillars depa works against — and grounded in study visits, not slogans.",
+    "subtitle": "Seven training days. Six modules. Built around depa's seven smart-city pillars, with classroom sessions and study visits.",
     "modules": {
       "1": {
         "title": "Digital Transformation & Smart City Vision",
@@ -761,6 +767,10 @@
     }
   },
   "common": {
+    "close": "Close",
+    "loading": "Loading…",
+    "lightMode": "Switch to light mode",
+    "darkMode": "Switch to dark mode",
     "backToHome": "Back to Home"
   }
 }

@@ -12,10 +12,11 @@ function getInitialLanguage() {
     return 'th';
   }
 
-  const savedLanguage = window.localStorage.getItem(languageStorageKey);
+  let savedLanguage;
+  try { savedLanguage = window.localStorage.getItem(languageStorageKey); } catch { /* Use browser language when storage is unavailable. */ }
   // Migrate old 'zh' storage to 'cn'
   if (savedLanguage === 'zh') {
-    window.localStorage.setItem(languageStorageKey, 'cn');
+    try { window.localStorage.setItem(languageStorageKey, 'cn'); } catch { /* Storage is optional. */ }
     return 'cn';
   }
   if (savedLanguage && supportedLanguages.includes(savedLanguage)) {
@@ -53,7 +54,7 @@ if (typeof document !== 'undefined') {
 
 i18n.on('languageChanged', (language) => {
   if (typeof window !== 'undefined') {
-    window.localStorage.setItem(languageStorageKey, language);
+    try { window.localStorage.setItem(languageStorageKey, language); } catch { /* Storage is optional. */ }
   }
 
   if (typeof document !== 'undefined') {

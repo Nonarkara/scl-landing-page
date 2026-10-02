@@ -3,13 +3,13 @@
 }
 
 .testimonials-title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: var(--type-title);
   margin: 10px 0 8px;
 }
 
 .testimonials-desc {
   color: var(--text-secondary);
-  font-size: 1.02rem;
+  font-size: var(--type-body);
   line-height: 1.7;
   max-width: 38rem;
 }
@@ -27,7 +27,7 @@
   padding: 24px;
   background: var(--surface-strong);
   border: 1px solid var(--border-glass);
-  border-radius: var(--radius-md);
+  border-radius: 0;
   position: sticky;
   top: 100px;
 }
@@ -38,15 +38,15 @@
   width: 40px;
   height: 3px;
   background: var(--depa-yellow);
-  border-radius: 2px;
+  border-radius: 0;
   margin-bottom: 16px;
 }
 
 .testimonial-feature-quote {
   color: var(--text-main);
-  font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+  font-size: var(--type-body);
   line-height: 1.35;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   font-style: italic;
 }
 
@@ -62,7 +62,7 @@
 .testimonial-avatar {
   width: 52px;
   height: 52px;
-  border-radius: 50%;
+  border-radius: 0;
   object-fit: cover;
   border: 2px solid var(--border-glass);
 }
@@ -82,7 +82,7 @@
 }
 
 .testimonial-feature-name {
-  font-size: 0.98rem;
+  font-size: var(--type-body);
 }
 
 .testimonial-feature-role,
@@ -93,7 +93,7 @@
 }
 
 .testimonial-feature-role {
-  font-size: 0.88rem;
+  font-size: var(--type-label);
 }
 
 .testimonial-feature-batch,
@@ -101,10 +101,10 @@
   display: inline-flex;
   margin-top: 6px;
   color: var(--text-muted);
-  font-size: 0.72rem;
+  font-size: var(--type-label);
   font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .testimonials-list-compact {
@@ -121,8 +121,8 @@
   margin: 0;
   background: var(--surface-strong);
   border: 1px solid var(--border-glass);
-  border-radius: var(--radius-sm);
-  transition: border-color 0.2s ease, transform 0.15s ease;
+  border-radius: 0;
+  transition: border-color 0.2s ease-out, transform 0.15s ease-out;
 }
 
 .testimonial-item:hover {
@@ -132,7 +132,7 @@
 
 .testimonial-item-quote {
   color: var(--text-secondary);
-  font-size: 0.92rem;
+  font-size: var(--type-body);
   line-height: 1.75;
   font-style: normal;
 }
@@ -151,12 +151,12 @@
 }
 
 .testimonial-item-name {
-  font-size: 0.9rem;
+  font-size: var(--type-body);
   line-height: 1.35;
 }
 
 .testimonial-item-role {
-  font-size: 0.8rem;
+  font-size: var(--type-label);
 }
 
 @media (max-width: 900px) {

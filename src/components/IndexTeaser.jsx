@@ -5,13 +5,13 @@ import './IndexTeaser.css';
 const INDEX_URL = 'https://sciti.nonarkara.org';
 
 const PILLAR_COLORS = {
-  livability: '#2BA89C',
-  economy: '#E8913A',
-  safety: '#3D6BE8',
-  wellbeing: '#E84393',
-  environment: '#5CBD5C',
-  hospitality: '#D4A843',
-  digital: '#9B5DE5',
+  livability: 'var(--text-main)',
+  economy: 'var(--text-main)',
+  safety: 'var(--text-main)',
+  wellbeing: 'var(--text-main)',
+  environment: 'var(--text-main)',
+  hospitality: 'var(--text-main)',
+  digital: 'var(--text-main)',
 };
 
 const RankingsGraphic = () => (
